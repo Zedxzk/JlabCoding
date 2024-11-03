@@ -38,6 +38,9 @@ const int minEnergy = 0;
 const int energyBins = maxEnergy * 1000;
 const Float_t EcalLength = 2.1;
 const Float_t FcalLength = 4;
+using namespace classByZhikun;
+
+
 
 std::vector<std::vector<Double_t>> uselessVector(sizeOfEcal, vector<Double_t>(sizeOfEcal, 0));
 namespace globalVariables {

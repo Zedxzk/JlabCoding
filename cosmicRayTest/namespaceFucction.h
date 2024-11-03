@@ -145,7 +145,7 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
             gPad->SetTopMargin(0.10);
             hist2d->GetXaxis()->SetTickLength(0);
             hist2d->GetYaxis()->SetTickLength(0);
-            hist2d->GetXaxis()->SetRangeUser(0, EcalChannelNums)
+            hist2d->GetXaxis()->SetRangeUser(0, EcalChannelNums);
             // gStyle->SetPalette(1);
             gPad->Update();
             // 旋转 y 轴标题
