@@ -4,3 +4,8 @@
 Debugged some error and produce figures in row and column.
 
 Created some header files used to provide coherent standard for plots. They are in `/zhikunTemplate/*`
+
+If Want to remove add history, just type in 
+```
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch inputFiles/muons_smeared.hddm' --prune-empty --tag-name-filter cat -- --all
+```
