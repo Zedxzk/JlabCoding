@@ -1,0 +1,20 @@
+#!/bin/bash
+# 检查是否提供了 commit 信息
+if [ -z "$1" ]; then
+    echo "Usage: $0 'commit message'"
+    exit 1
+fi
+
+# 设置 commit 信息
+commit_message="$1"
+
+echo $commit_message
+
+# 添加所有更改的文件
+git add .
+
+# 提交更改
+git commit -m "$commit_message"
+
+# 推送到远程仓库
+; git push

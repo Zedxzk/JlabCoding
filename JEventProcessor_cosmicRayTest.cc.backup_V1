@@ -1,0 +1,167 @@
+// $Id$
+//
+//    File: JEventProcessor_cosmicRayTest.cc
+// Created: Mon Oct 14 11:54:33 AM EDT 2024
+// Creator: zhikun (on Linux ifarm2401.jlab.org 5.14.0-427.28.1.el9_4.x86_64 x86_64)
+//
+
+#include "JEventProcessor_cosmicRayTest.h"
+#include "namespaceFucction.cpp"
+using namespace jana;
+using namespace std;
+
+// Routine used to create our JEventProcessor
+#include <JANA/JApplication.h>
+#include <JANA/JFactory.h>
+#include <TDirectory.h>
+
+
+
+using std::chrono::high_resolution_clock;
+using std::chrono::duration_cast;
+using std::chrono::seconds;
+using std::chrono::duration;
+using std::chrono::system_clock;
+
+extern "C"{
+void InitPlugin(JApplication *app){
+	InitJANAPlugin(app);
+	app->AddProcessor(new JEventProcessor_cosmicRayTest());
+}
+} // "C"
+
+
+//------------------
+// JEventProcessor_cosmicRayTest (Constructor)
+//------------------
+JEventProcessor_cosmicRayTest::JEventProcessor_cosmicRayTest()
+{
+
+}
+
+//------------------
+// ~JEventProcessor_cosmicRayTest (Destructor)
+//------------------
+JEventProcessor_cosmicRayTest::~JEventProcessor_cosmicRayTest()
+{
+
+}
+
+//------------------
+// init
+//------------------
+jerror_t JEventProcessor_cosmicRayTest::init(void)
+{
+	TDirectory *main = gDirectory; // 保存当前的目录
+	gDirectory->mkdir("cosmicRay")->cd(); // 创建一个名为 "fcal" 的子目录并切换到该目录
+
+	startTime = std::chrono::high_resolution_clock::now();
+	startTimeString = getTimeString(startTime);
+	string fileNameTemplates = "coordinates";
+	static string fileName; 
+	newestFileName = fileNameTemplates + startTimeString ;
+	fileName = newestFileName + ".txt";
+	outputFile.open(fileName);
+	if(outputFile.is_open()){
+		cout<<"Output file opened successfully!";
+	}
+	else{
+		cout << "Output file is not opened!";	
+	}
+	hitsDistrubution = new TH2Poly();
+	hitsDistrubutionCanvas = initHitsDistribution(hitsDistrubution);
+	main->cd();
+	return NOERROR;
+}
+
+//------------------
+// brun
+//------------------
+jerror_t JEventProcessor_cosmicRayTest::brun(JEventLoop *eventLoop, int32_t runnumber)
+{
+	// This is called whenever the run number changes
+	return NOERROR;
+}
+
+//------------------
+// evnt
+//------------------
+jerror_t JEventProcessor_cosmicRayTest::evnt(JEventLoop *loop, uint64_t eventnumber)
+{
+	// This is called for every event. Use of common resources like writing
+	// to a file or filling a histogram should be mutex protected. Using
+	// loop->Get(...) to get reconstructed objects (and thereby activating the
+	// reconstruction algorithm) should be done outside of any mutex lock
+	// since multiple threads may call this method at the same time.
+	// Here's an example:
+	//
+	// vector<const MyDataClass*> mydataclasses;
+	// loop->Get(mydataclasses);
+	//
+	// japp->RootFillLock(this);
+	//  ... fill historgrams or trees ...
+	// japp->RootFillUnLock(this);
+	// eventLooped += 1;
+	// if (eventLooped % 10000 ==0){
+	// 	cout << "Event looped = " << eventLooped << endl;
+	// }
+	vector<const DECALHit *>ecalhits;
+	loop->Get(ecalhits);
+	vector<const DFCALHit *>fcalhits;
+	loop->Get(fcalhits);
+	// outputFile << "FCAL TRACK : ";
+	for(unsigned int i = 0; i < fcalhits.size(); i++){
+		// outputFile
+		// << "( " 
+		// << std::setw(2) << std::setfill(' ') << std::right << fcalhits[i]->row << " , " 
+		// << std::setw(2) << std::setfill(' ') << std::right << fcalhits[i]->column 
+		// << " )"
+		// << "   ->  ";
+		fillHitsDistrubution(fcalhits[i]->column,fcalhits[i]->row, hitsDistrubution, hitsDistrubutionCanvas, false);
+	}
+	// outputFile << '\n' << "ECAL TRACK : " ;
+	for (unsigned int i=0;i<ecalhits.size();i++){
+	// As an example:
+	// outputFile 
+		// << "( " 
+		// << std::setw(2) << std::setfill(' ') << std::right << ecalhits[i]->row << " , " 
+		// << std::setw(2) << std::setfill(' ') << std::right << ecalhits[i]->column 
+		// << " )"
+		// << "   ->  ";
+		fillHitsDistrubution(ecalhits[i]->column,ecalhits[i]->row, hitsDistrubution, hitsDistrubutionCanvas, true);
+	}
+	outputFile << endl << endl;
+	return NOERROR;
+}
+
+//------------------
+// erun
+//------------------
+jerror_t JEventProcessor_cosmicRayTest::erun(void)
+{
+	// This is called whenever the run number changes, before it is
+	// changed to give you a chance to clean up before processing
+	// events from the next run number.
+	return NOERROR;
+}
+
+//------------------
+// fini
+//------------------
+jerror_t JEventProcessor_cosmicRayTest::fini(void)
+{
+	outputFile.close();
+    endTime = system_clock::now();
+    durationTime = duration_cast<seconds>(startTime - endTime);
+    std::string timeCost = cosMicRayFunctions::getTimeString(system_clock::now());
+    std::cout << "Total Time: " << durationTime.count() << " seconds" << std::endl;
+	ofstream recordOfname("newestFile.txt");
+	recordOfname << newestFileName << endl;
+	recordOfname.close();
+	setHitsDiatributionPlotStyle(hitsDistrubution);
+	hitsDistrubutionCanvas->Print((newestFileName + ".pdf").c_str());
+	hitsDistrubution->Write();
+    // 在事件处理完成后调用的函数
+    return NOERROR; // 
+}
+
