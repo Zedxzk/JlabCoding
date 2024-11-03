@@ -52,10 +52,11 @@ JEventProcessor_cosmicRayTest::~JEventProcessor_cosmicRayTest()
 //------------------
 jerror_t JEventProcessor_cosmicRayTest::init(void)
 {
+// (j, i)
 	for(int i = 0;i < 40 ; i++){
 		for(int j = 0; j < 40; j++){
-			channelMapByCol[i][j] = (39 - j) * 39 + (39 - i) + 0.5;
-			channelMapByRow[i][j] = i * 39 + j + 0.5;
+			channelMapByCol[j][i] = (39 - j) * 40 + (39 - i) + 0.5;
+			channelMapByRow[j][i] = i * 40 + j + 0.5;
 		}
 	}
 	TDirectory *main = gDirectory; // 保存当前的目录
@@ -189,6 +190,7 @@ jerror_t JEventProcessor_cosmicRayTest::fini(void)
     endTime = system_clock::now();
 	endTimeString = getTimeString(endTime).c_str();
     // 创建文件夹
+	gSystem->mkdir(("../figures/" + endTimeString).c_str());
     if (gSystem->mkdir(endTimeString.c_str(), true) == 0) {
         std::cout << "目录创建成功: " << endTimeString << std::endl;
     } 

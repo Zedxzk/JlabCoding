@@ -208,7 +208,7 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
         float x = 0.5;
         TH1D* hist = obj.getHist();
         obj.getCanvas()->cd();
-        string dir = (ecal ? "/w/halld-scshelf2101/home/zhikun/geometryFiles/binsECAL.txt"
+        string dir = (ecal ?  "/w/halld-scshelf2101/home/zhikun/geometryFiles/binsECAL.txt"
                                    : "/w/halld-scshelf2101/home/zhikun/geometryFiles/binsFCAL.txt");
         // cout << dir << endl;
         std::ifstream binFile(ecal ? "/w/halld-scshelf2101/home/zhikun/geometryFiles/binsECAL.txt"
@@ -242,6 +242,7 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
             x++;
         }
         hist->Draw();
+        obj.getCanvas()->Print(("../figures" + endTimeString + "/" +   hist->GetName() + ".pdf").c_str());
         obj.getCanvas()->Print(("./" + endTimeString + "/" +   hist->GetName() + ".pdf").c_str());
         hist->Write();
     }
@@ -278,6 +279,7 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
             binFile2.close();
             setPlotStyleOfHits2D(obj);
             poly->Draw("COLZ L");        
+            obj.getCanvas()->Print(("../figures/" + endTimeString + "/" + poly->GetName() + ".pdf").c_str());
             obj.getCanvas()->Print(("./" + endTimeString + "/" + poly->GetName() + ".pdf").c_str());
             poly->Write();
             } 
@@ -286,6 +288,7 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
                 canvas->cd();
                 setPlotStyleOfHits2D(obj);
                 hist2d->Draw("COLZ L");
+                obj.getCanvas()->Print(("../figures/" + endTimeString + "/" + hist2d->GetName() + ".pdf").c_str());
                 obj.getCanvas()->Print(("./" + endTimeString + "/" + hist2d->GetName() + ".pdf").c_str());
                 hist2d->Write();
             } 

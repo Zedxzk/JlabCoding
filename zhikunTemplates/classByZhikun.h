@@ -103,7 +103,7 @@ namespace classByZhikun{
         // 默认析构函数
         ~plotEcalHits1D() {
             delete canvas;
-            delete hist1D;  // 释放动态分配的内存
+            // delete hist1D;  // 释放动态分配的内存
         }
 
         // 修改变量的函数

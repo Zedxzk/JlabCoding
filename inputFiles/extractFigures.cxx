@@ -3,6 +3,8 @@
 #include <TFile.h>
 #include <TImage.h>
 #include <TString.h>
+#include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
+#include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPlotConfig.h"
 
 using namespace std;
 
@@ -30,13 +32,17 @@ void splitTH2DE(const string &fileName, Int_t lengthX) {
 
     for (Int_t i = 0; i < lengthX; ++i) {
         TCanvas *canvas = new TCanvas(TString::Format("%s_%d.pdf", histName.c_str(), i), TString::Format("%s_%d.pdf", histName.c_str(), i), 800, 600);
-        Int_t startBinX = i * nbinsPerFileX;
-        Int_t endBinX = (i + 1) * nbinsPerFileX - 1;
+        Int_t startBinX = i * 40;
+        Int_t endBinX = (i + 1) * 40 - 1;
         hist->GetXaxis()->SetRange(startBinX, endBinX);
         hist->GetYaxis()->SetRangeUser(0, 0.04); // 设置Y轴范围为0到0.04
+        zhikunPalette::setPaletteStyleV1(hist);
+        zhikunPlotConfig::setPlotConfigV1();
         hist->Draw("COLZ L");
-        TString outputFileName = TString::Format("channelScan/%s_%d.pdf", histName.c_str(), i);
-        canvas->Print(outputFileName.Data());
+        TString outputFileName1 = TString::Format("channelScan/%s_%d.pdf", histName.c_str(), i);
+        TString outputFileName2 = TString::Format("../figures/channelScan/%s_%d.pdf", histName.c_str(), i);
+        canvas->Print(outputFileName1.Data());
+        canvas->Print(outputFileName2.Data());
         delete canvas;
     }
     file->Close();
@@ -64,13 +70,17 @@ void splitTH2DT(const string &fileName, Int_t lengthX) {
 
     for (Int_t i = 0; i < lengthX; ++i) {
         TCanvas *canvas = new TCanvas(TString::Format("%s_%d.pdf", histName.c_str(), i), TString::Format("%s_%d.pdf", histName.c_str(), i), 800, 600);
-        Int_t startBinX = i * nbinsPerFileX;
-        Int_t endBinX = (i + 1) * nbinsPerFileX - 1;
+        Int_t startBinX = i * 40;
+        Int_t endBinX = (i + 1) * 40 - 1;
         hist->GetXaxis()->SetRange(startBinX, endBinX);
         hist->GetYaxis()->SetRangeUser(0, 0.04); // 设置Y轴范围为0到0.04
+        zhikunPalette::setPaletteStyleV1(hist);
+        zhikunPlotConfig::setPlotConfigV1();
         hist->Draw("COLZ L");
-        TString outputFileName = TString::Format("channelScan/%s_%d.pdf", histName.c_str(), i);
-        canvas->Print(outputFileName.Data());
+        TString outputFileName1 = TString::Format("../figures/channelScan/%s_%d.pdf", histName.c_str(), i);
+        TString outputFileName2 = TString::Format("./channelScan/%s_%d.pdf", histName.c_str(), i);
+        canvas->Print(outputFileName1.Data());
+        canvas->Print(outputFileName2.Data());
         delete canvas;
     }
     file->Close();
@@ -79,6 +89,9 @@ void splitTH2DT(const string &fileName, Int_t lengthX) {
 void extractFigures() {
     string inputFile = "hd_root.root";
     Int_t lengthX = 40; // 设置X轴的分段长度
+    splitTH2DE(inputFile, lengthX);
+    splitTH2DT(inputFile, lengthX);
+    type = "column";
     splitTH2DE(inputFile, lengthX);
     splitTH2DT(inputFile, lengthX);
     return ;
