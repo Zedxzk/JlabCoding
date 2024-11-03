@@ -14,8 +14,8 @@ LIMIT=$((1048576 * 30))
 # 生成 .gitignore 文件
 echo "# Files larger than ${LIMIT} bytes" > .gitignore
 
-# 查找大于限制的文件并追加到 .gitignore 中
-find . -type f -size +${LIMIT}c -print >> .gitignore
+# 查找大于限制的文件并追加到 .gitignore 中，并移除 ./ 前缀
+find . -type f -size +${LIMIT}c -print | sed 's|^\./||' >> .gitignore
 
 # 添加所有更改的文件，忽略 .gitignore 中的文件
 git add .
@@ -24,4 +24,4 @@ git add .
 git commit -m "$commit_message"
 
 # 推送到远程仓库
-git push origin main
+git push
