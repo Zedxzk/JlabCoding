@@ -24,7 +24,7 @@
 #include "TStyle.h"
 #include <fstream>
 #include <fstream>
-#include "/w/halld-scshelf2101/home/zhikun/classByZhikun/classByZhikun.h"
+#include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/classByZhikun.h"
 
 const int sizeOfEcal = 40;
 const int sizeOfFcal = 59;
