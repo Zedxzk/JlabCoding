@@ -26,7 +26,10 @@ namespace zhikunPalette{
             palette->SetY1NDC(0.10);
             palette->SetY2NDC(0.90);
         }
-        
+        Double_t maxVal = hist->GetMaximum();
+        hist->SetMinimum(maxVal / 100);
+        gStyle->SetHistMinimumZero(kWhite);
+        gStyle->SetHistFillColor(kWhite);
         gPad->Update();
     }
 }
