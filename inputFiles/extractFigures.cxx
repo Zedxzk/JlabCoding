@@ -32,15 +32,19 @@ void splitTH2DE(const string &fileName, Int_t lengthX) {
 
     for (Int_t i = 0; i < lengthX; ++i) {
         TCanvas *canvas = new TCanvas(TString::Format("%s_%d.pdf", histName.c_str(), i), TString::Format("%s_%d.pdf", histName.c_str(), i), 800, 600);
-        Int_t startBinX = i * 40;
-        Int_t endBinX = (i + 1) * 40 - 1;
+        Int_t startBinX = i * 40 + 1;
+        Int_t endBinX = (i + 1) * 40 ;
         hist->GetXaxis()->SetRange(startBinX, endBinX);
-        hist->GetYaxis()->SetRangeUser(0, 0.04); // 设置Y轴范围为0到0.04
+        hist->GetYaxis()->SetRangeUser(0.005, 0.04); // 设置Y轴范围为0到0.04
         zhikunPalette::setPaletteStyleV1(hist);
+        Double_t maxVal = hist->GetMaximum();
+        hist->SetMinimum(maxVal / 10000);
+        gStyle->SetHistMinimumZero(kWhite);
+        gStyle->SetHistFillColor(kWhite);
         zhikunPlotConfig::setPlotConfigV1();
         hist->Draw("COLZ L");
-        TString outputFileName1 = TString::Format("channelScan/%s_%d.pdf", histName.c_str(), i);
-        TString outputFileName2 = TString::Format("../figures/channelScan/%s_%d.pdf", histName.c_str(), i);
+        TString outputFileName1 = TString::Format("channelScan/%s_%02d.pdf", histName.c_str(), i);
+        TString outputFileName2 = TString::Format("../figures/channelScan/%s_%02d.pdf", histName.c_str(), i);
         canvas->Print(outputFileName1.Data());
         canvas->Print(outputFileName2.Data());
         delete canvas;
@@ -71,14 +75,18 @@ void splitTH2DT(const string &fileName, Int_t lengthX) {
     for (Int_t i = 0; i < lengthX; ++i) {
         TCanvas *canvas = new TCanvas(TString::Format("%s_%d.pdf", histName.c_str(), i), TString::Format("%s_%d.pdf", histName.c_str(), i), 800, 600);
         Int_t startBinX = i * 40;
-        Int_t endBinX = (i + 1) * 40 - 1;
+        Int_t endBinX = (i + 1) * 40 ;
         hist->GetXaxis()->SetRange(startBinX, endBinX);
         hist->GetYaxis()->SetRangeUser(0, 0.04); // 设置Y轴范围为0到0.04
+        Double_t maxVal = hist->GetMaximum();
+        hist->SetMinimum(maxVal / 10000);
+        gStyle->SetHistMinimumZero(kWhite);
+        gStyle->SetHistFillColor(kWhite);
         zhikunPalette::setPaletteStyleV1(hist);
         zhikunPlotConfig::setPlotConfigV1();
         hist->Draw("COLZ L");
-        TString outputFileName1 = TString::Format("../figures/channelScan/%s_%d.pdf", histName.c_str(), i);
-        TString outputFileName2 = TString::Format("./channelScan/%s_%d.pdf", histName.c_str(), i);
+        TString outputFileName1 = TString::Format("../figures/channelScan/%s_%02d.pdf", histName.c_str(), i);
+        TString outputFileName2 = TString::Format("./channelScan/%s_%02d.pdf", histName.c_str(), i);
         canvas->Print(outputFileName1.Data());
         canvas->Print(outputFileName2.Data());
         delete canvas;
