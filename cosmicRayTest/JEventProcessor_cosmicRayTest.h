@@ -25,6 +25,7 @@
 #include <fstream>
 #include <fstream>
 #include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/classByZhikun.h"
+#include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/commonFunctions.h"
 
 const int sizeOfEcal = 40;
 const int sizeOfFcal = 59;
@@ -216,49 +217,37 @@ namespace figuresInCosmicRaysTest{
 		h2poly->Fill(x, y);
 		canvas->Update();
 }
-	void setHitsDiatributionPlotStyle(TH2Poly* h2poly){
-		h2poly->SetName("cosmicRayHits"); // 更新对象名称
-		h2poly->SetTitle("cosmicRayHits"); // 更新对象标题
+	// void setHitsDiatributionPlotStyle(TH2Poly* h2poly){
+	// 	h2poly->SetName("cosmicRayHits"); // 更新对象名称
+	// 	h2poly->SetTitle("cosmicRayHits"); // 更新对象标题
 
-		// Hide Stat
-		gStyle->SetOptStat(0);
-		// Get Maximun
-		Double_t maxVal = h2poly->GetMaximum();
+	// 	// Hide Stat
+	// 	gStyle->SetOptStat(0);
+	// 	// Get Maximun
+	// 	Double_t maxVal = h2poly->GetMaximum();
 
-		// 设置 Z 轴最小值为最大值的 1/10000
-		h2poly->SetMinimum(maxVal / 10000);
+	// 	// 设置 Z 轴最小值为最大值的 1/10000
+	// 	h2poly->SetMinimum(maxVal / 10000);
 
-		// 创建调色板，使用预定义颜色
-		gStyle->SetHistMinimumZero(kWhite);  // 允许直方图的空 bin 显示为背景色
-		gStyle->SetHistFillColor(kWhite);   // 设置背景色为白色
+	// 	// 创建调色板，使用预定义颜色
+	// 	gStyle->SetHistMinimumZero(kWhite);  // 允许直方图的空 bin 显示为背景色
+	// 	gStyle->SetHistFillColor(kWhite);   // 设置背景色为白色
 
 
-		// 自定义颜色渐变，最低为浅蓝色，最高为红色
-		const Int_t NRGBs = 3;
-		const Int_t NCont = 255;  // 用于细化颜色条的颗粒度
-		Double_t stops[NRGBs] = {0.00, 0.50, 1.00};  // 颜色过渡点
-		Double_t red[NRGBs]   = {0.70, 1.00, 1.00};  // 红色分量，最低值有一些红色分量用于浅蓝色
-		Double_t green[NRGBs] = {0.90, 1.00, 0.00};  // 绿色分量，浅蓝色有较高的绿分量
-		Double_t blue[NRGBs]  = {1.00, 0.00, 0.00};  // 蓝色分量，最低的为浅蓝色，最高的为红色
-		TColor::CreateGradientColorTable(NRGBs, stops, red, green, blue, NCont);
-		gStyle->SetNumberContours(NCont);  // 细化颜色条
-	}
-	void fillHits1DInCorrectPlaceAndPrint(plotEcalHits1D&  obj, Double_t* arrayToFill, bool, bool );
-	void fillHits2DInCorrectPlaceAndPrint(plotEcalHits2D&  obj, std::vector<std::vector<Double_t>>, std::vector<std::vector<Double_t>>);
+	// 	// 自定义颜色渐变，最低为浅蓝色，最高为红色
+	// 	const Int_t NRGBs = 3;
+	// 	const Int_t NCont = 255;  // 用于细化颜色条的颗粒度
+	// 	Double_t stops[NRGBs] = {0.00, 0.50, 1.00};  // 颜色过渡点
+	// 	Double_t red[NRGBs]   = {0.70, 1.00, 1.00};  // 红色分量，最低值有一些红色分量用于浅蓝色
+	// 	Double_t green[NRGBs] = {0.90, 1.00, 0.00};  // 绿色分量，浅蓝色有较高的绿分量
+	// 	Double_t blue[NRGBs]  = {1.00, 0.00, 0.00};  // 蓝色分量，最低的为浅蓝色，最高的为红色
+	// 	TColor::CreateGradientColorTable(NRGBs, stops, red, green, blue, NCont);
+	// 	gStyle->SetNumberContours(NCont);  // 细化颜色条
+	// }
+	// void fillHits1DInCorrectPlaceAndPrint(plotEcalHits1D&  obj, Double_t* arrayToFill, bool, bool );
+	// void fillHits2DInCorrectPlaceAndPrint(plotEcalHits2D&  obj, std::vector<std::vector<Double_t>>, std::vector<std::vector<Double_t>>);
 }
 
-
-namespace cosMicRayFunctions {
-    // 获取当前时间的字符串格式
-    std::string getTimeString(std::chrono::system_clock::time_point time) {
-        std::time_t now_time_t = std::chrono::system_clock::to_time_t(time);
-        std::tm now_tm = *std::localtime(&now_time_t);
-        std::ostringstream oss;
-        oss << std::put_time(&now_tm, "%Y_%m_%d_%H.%M.%S");
-        return oss.str();
-    }
-
-};
 
 
 class JEventProcessor_cosmicRayTest:public jana::JEventProcessor{

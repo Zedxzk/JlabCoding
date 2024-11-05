@@ -224,7 +224,7 @@ jerror_t JEventProcessor_cosmicRayTest::fini(void)
 
 
     durationTime = duration_cast<seconds>(endTime - startTime);
-    std::string timeCost = cosMicRayFunctions::getTimeString(system_clock::now());
+    std::string timeCost = commonFunctions::getTimeString(system_clock::now());
     std::cout << "Total Time: " << durationTime.count() << " seconds" << std::endl;
 	std::cout << "Max Time = " << lookingForMaxTime << endl;
 	std::cout << "Max Energy = " << lookingForMaxEnergy <<endl;
