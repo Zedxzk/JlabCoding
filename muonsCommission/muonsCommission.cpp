@@ -24,7 +24,7 @@ const Double_t energyUpperLimit = 0.040;
 const int      energyBinsInThisFile = int ((energyUpperLimit - energyLowerLimit) / energyBinsWidth);
 const Double_t energyAcceptLowerLimit = 0.020;
 const Double_t energyAcceptUpperLimit = 0.025;
-
+const Double_t chi2_ndfAcceptMaximum = 50.0;
 
 
 
@@ -48,10 +48,13 @@ void channelsFit(TH2D* hist2D, dataType type) {
     if (type == Energy) {
         std::ofstream outFile(textOut.Data());
         std::ofstream warnFile(textWarn.Data());
-        // for (int i = 0; i < EcalChannelNums; i++) {
-        for (int i = 0; i < 50; i++) {
+
+
+
+        // for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < EcalChannelNums; i++) {
             TCanvas *c = new TCanvas("c", "c", 800, 600);
-            TString histName = TString::Format("channelNumber_%d_fit", i);
+            TString histName = TString::Format("channelNumber_%04d_fit", i);
             TH1D *hist1D = new TH1D(histName, "Channel Number", energyBinsInThisFile, energyLowerLimit, energyUpperLimit);
 
             // 从hist2D中填充hist1D
@@ -79,8 +82,12 @@ void channelsFit(TH2D* hist2D, dataType type) {
 
             RooPlot* frame = x.frame();
             int col = 20 - i / 40;
-            int row = i % 40 - 20;
-            frame->SetTitle(TString::Format("Channel %d - (%d , %d)", i, col, row).Data());
+            if(col <= 0)  col --;
+            int row = 20 - i % 40;
+            if(row <= 0) row--;
+            frame->SetTitle(TString::Format("Channel %d          (X, Y) =  (%d , %d)", i, col, row).Data());
+            frame->SetTitleSize(0.05);   // 设置标题的字体大小（根据需要调整）
+            frame->SetTitleOffset(1.0);  // 控制标题与图形的距离
             data.plotOn(frame);
             model.plotOn(frame);
             model.plotOn(frame, RooFit::Components("cheb"), RooFit::LineStyle(kDashed));
@@ -116,7 +123,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             
             
             bool warn = false;
-            warn = mean.getVal() < energyAcceptLowerLimit || mean.getVal() > energyAcceptUpperLimit || (chi2_dof >= 50);
+            warn = mean.getVal() < energyAcceptLowerLimit || mean.getVal() > energyAcceptUpperLimit || (chi2_dof >= chi2_ndfAcceptMaximum);
             if(warn){
                 warnFile << std::setw(4) << std::setfill(' ') << i <<
                 "    " << "(" 
@@ -171,6 +178,9 @@ void muonsCommission() {
     } else {
         std::cout << "Successfully accessed histogram: " << hist2DName << std::endl;
     }
+    // int i = 1;
+    // TString histName = TString::Format("channelNumber_%04d_fit", i);
+    // cout << histName.Data() << std ::endl;
 
     channelsFit(hist2D, Energy);
 
