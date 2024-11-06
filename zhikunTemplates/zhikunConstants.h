@@ -12,13 +12,12 @@ namespace zhikunConstants{
     const int timeBins = int(maxTime / timeBinsWidth);
     const int maxEnergy = 1;
     const int minEnergy = 0;
-    const Double_t energyBinsWidth = 1.0 / 1000;       // bin width : 1 MeV
+    const Double_t energyBinsWidth = 1.0 / 1000;         // bin width : 1 MeV
     const int energyBins = int(maxEnergy * 1000);      // bin nums , actually 1000
     const Float_t EcalLength = 2.1;                    // unit: centimeter
     const Float_t FcalLength = 4.0;                    // unit: centimeter
 
-
 }
 
 using namespace zhikunConstants;
-#endif
+#endif 

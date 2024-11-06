@@ -9,5 +9,10 @@ namespace zhikunPlotConfig{
         gPad->SetBottomMargin(0.15);
         gPad->SetTopMargin(0.10);
     }
+
+    void setRooFitPlotStyleV1(RooPlot* frame){
+        frame->GetXaxis()->CenterTitle();
+        frame->GetYaxis()->CenterTitle();
+    }
 }
 #endif
