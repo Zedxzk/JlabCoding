@@ -11,3 +11,4 @@ namespace commonFunctions{
         return oss.str();
     }
 }
+#endif

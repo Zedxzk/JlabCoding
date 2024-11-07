@@ -63,7 +63,7 @@ jerror_t JEventProcessor_cosmicRayTest::init(void)
 	gDirectory->mkdir("cosmicRay")->cd(); // 创建一个名为 "fcal" 的子目录并切换到该目录
 
 	startTime = std::chrono::high_resolution_clock::now();
-	startTimeString = getTimeString(startTime);
+	startTimeString = commonFunctions::getTimeString(startTime);
 	string fileNameTemplates = "coordinates";
 	static string fileName; 
 	newestFileName = fileNameTemplates + startTimeString ;
@@ -188,7 +188,7 @@ jerror_t JEventProcessor_cosmicRayTest::fini(void)
 
 	// outputFile.close();
     endTime = system_clock::now();
-	endTimeString = getTimeString(endTime).c_str();
+	endTimeString = commonFunctions::getTimeString(endTime).c_str();
     // 创建文件夹
 	gSystem->mkdir(("../figures/" + endTimeString).c_str());
     if (gSystem->mkdir(endTimeString.c_str(), true) == 0) {

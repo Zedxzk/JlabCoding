@@ -26,24 +26,14 @@
 #include <fstream>
 #include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/classByZhikun.h"
 #include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/commonFunctions.h"
+#include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/zhikunConstants.h"
 
-const int sizeOfEcal = 40;
-const int sizeOfFcal = 59;
-const int FcalChannelNums = 2364;
-const int EcalChannelNums = 1600;
-const int maxTime = 200;
-const int timeResolution = 4;
-const int timeBins = maxTime * 10;
-const int maxEnergy = 1;
-const int minEnergy = 0;
-const int energyBins = maxEnergy * 1000;
-const Float_t EcalLength = 2.1;
-const Float_t FcalLength = 4;
 using namespace classByZhikun;
 
 
 
 std::vector<std::vector<Double_t>> uselessVector(sizeOfEcal, vector<Double_t>(sizeOfEcal, 0));
+
 namespace globalVariables {
     // 导入 std::chrono 内的常用类型
     string fileNameTemplates;
@@ -165,44 +155,6 @@ namespace figuresInCosmicRaysTest{
 	void setPlotStyleOfHits1D(plotEcalHits1D& ,bool ecal);
 	void setPalatteStyleV1();
 
-	// TCanvas*  initHitsDistribution(TH2Poly* h2poly){
-	// 	// 读取分bin规则
-	// 	std::ifstream binFile1("/w/halld-scshelf2101/home/zhikun/geometryFiles/binsECAL.txt");
-	// 	std::ifstream binFile2("/w/halld-scshelf2101/home/zhikun/geometryFiles/binsFCAL.txt");
-	// 	std::string line;
-	// 	while (std::getline(binFile1, line)) {
-	// 		// 忽略注释行
-	// 		if (line.empty() || line[0] == '#') continue;
-			
-	// 		std::istringstream iss(line);
-	// 		double xmin, ymin, xmax, ymax, col, row;
-	// 		if (!(iss >> col >> row >> xmin >> ymin >> xmax >> ymax)) { break; } // 读取失败则退出
-	// 		h2poly->AddBin(xmin, ymin, xmax, ymax);
-	// 	}
-	// 	while (std::getline(binFile2, line)) {
-	// 		// 忽略注释行
-	// 		if (line.empty() || line[0] == '#') continue;
-			
-	// 		std::istringstream iss(line);
-	// 		double xmin, ymin, xmax, ymax, col, row;
-	// 		if (!(iss >> col >> row >> xmin >> ymin >> xmax >> ymax)) { break; } // 读取失败则退出
-	// 		h2poly->AddBin(xmin, ymin, xmax, ymax);
-	// 	}
-
-	// 	h2poly->Draw("COLZ L");
-	// 	// 调整画布的边距，确保右边的颜色条不影响正方形区域
-	// 	gPad->SetRightMargin(0.15);  // 适当调整右边的空白区域，可以根据需要调整这个值
-	// 	gPad->SetLeftMargin(0.15);   // 确保左边的留白均衡
-	// 	gPad->SetBottomMargin(0.15); // 确保下方留白均衡
-	// 	gPad->SetTopMargin(0.10);    // 顶部留白
-	// 	// 隐藏 X 轴和 Y 轴的刻度标记
-	// 	h2poly->GetXaxis()->SetTickLength(0);  // 隐藏 X 轴刻度
-	// 	h2poly->GetYaxis()->SetTickLength(0);  // 隐藏 Y 轴刻度
-	// 	// 更新画布
-	// 	c1->Update();
-	// 	return c1;
-	// }
-
 	void fillHitsDistribution(int hitColum, int hitRow, TH2Poly* h2poly ,TCanvas* canvas, bool ecal = false) {
 		Double_t x, y;
 		if(!ecal){
@@ -217,35 +169,7 @@ namespace figuresInCosmicRaysTest{
 		h2poly->Fill(x, y);
 		canvas->Update();
 }
-	// void setHitsDiatributionPlotStyle(TH2Poly* h2poly){
-	// 	h2poly->SetName("cosmicRayHits"); // 更新对象名称
-	// 	h2poly->SetTitle("cosmicRayHits"); // 更新对象标题
 
-	// 	// Hide Stat
-	// 	gStyle->SetOptStat(0);
-	// 	// Get Maximun
-	// 	Double_t maxVal = h2poly->GetMaximum();
-
-	// 	// 设置 Z 轴最小值为最大值的 1/10000
-	// 	h2poly->SetMinimum(maxVal / 10000);
-
-	// 	// 创建调色板，使用预定义颜色
-	// 	gStyle->SetHistMinimumZero(kWhite);  // 允许直方图的空 bin 显示为背景色
-	// 	gStyle->SetHistFillColor(kWhite);   // 设置背景色为白色
-
-
-	// 	// 自定义颜色渐变，最低为浅蓝色，最高为红色
-	// 	const Int_t NRGBs = 3;
-	// 	const Int_t NCont = 255;  // 用于细化颜色条的颗粒度
-	// 	Double_t stops[NRGBs] = {0.00, 0.50, 1.00};  // 颜色过渡点
-	// 	Double_t red[NRGBs]   = {0.70, 1.00, 1.00};  // 红色分量，最低值有一些红色分量用于浅蓝色
-	// 	Double_t green[NRGBs] = {0.90, 1.00, 0.00};  // 绿色分量，浅蓝色有较高的绿分量
-	// 	Double_t blue[NRGBs]  = {1.00, 0.00, 0.00};  // 蓝色分量，最低的为浅蓝色，最高的为红色
-	// 	TColor::CreateGradientColorTable(NRGBs, stops, red, green, blue, NCont);
-	// 	gStyle->SetNumberContours(NCont);  // 细化颜色条
-	// }
-	// void fillHits1DInCorrectPlaceAndPrint(plotEcalHits1D&  obj, Double_t* arrayToFill, bool, bool );
-	// void fillHits2DInCorrectPlaceAndPrint(plotEcalHits2D&  obj, std::vector<std::vector<Double_t>>, std::vector<std::vector<Double_t>>);
 }
 
 
@@ -264,7 +188,6 @@ class JEventProcessor_cosmicRayTest:public jana::JEventProcessor{
 		jerror_t fini(void);						///< Called after last event of last event source has been processed.
 };
 
-using namespace cosMicRayFunctions;
 using namespace globalVariables;
 using namespace figuresInCosmicRaysTest;
 
