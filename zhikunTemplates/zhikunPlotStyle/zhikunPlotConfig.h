@@ -14,5 +14,14 @@ namespace zhikunPlotConfig{
         frame->GetXaxis()->CenterTitle();
         frame->GetYaxis()->CenterTitle();
     }
+
+    void setFontTimesNewRoman(){
+        // Set ALL fonts as Times New Roman 
+        gStyle->SetTextFont(3);        // 设置全局文本字体为 Times New Roman
+        gStyle->SetLabelFont(3);       // 设置轴标签字体为 Times New Roman
+        gStyle->SetTitleFont(3);       // 设置标题字体为 Times New Roman
+        }
 }
+
+
 #endif
