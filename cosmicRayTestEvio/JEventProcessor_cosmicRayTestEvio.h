@@ -27,29 +27,13 @@ class JEventProcessor_cosmicRayTestEvio:public jana::JEventProcessor{
 		"",        "", "HitsDistribution2D"     , "Hits Distribution"
 	//	string xAxis , string yAxis, string name,  string title
 	);
-	// plotEcalHits2D rowChannelEnergy2D(
-	// 	"Channel Number By Row", " Energy/GeV", "rowChannelEnergy2D", "Energy Distribution VS Channels by row",
-	// 	"rowChannelEnergy2D","Energy Distribution VS Channels by row", EcalChannelNums, 0, EcalChannelNums, energyBins, minEnergy, maxEnergy
-	// );
-	// plotEcalHits2D columnChannelEnergy2D(
-	// 	"Channel Number By Col", " Energy/GeV", "columnChannelEnergy2D", "Energy Distribution VS Channels by col",
-	// 	"columnChannelEnergy2D","Energy Distribution VS Channels by col", EcalChannelNums, 0, EcalChannelNums, energyBins, minEnergy, maxEnergy
-	// );
-	// plotEcalHits2D rowChannelTime2D(
-	// 	"Channel Number By Row", " Time/ns", "rowChannelTime2D", "Time Distribution VS Channels by row",
-	// 	"rowChannelTime2D","Time Distribution VS Channels by row", EcalChannelNums, 0, EcalChannelNums, timeBins, 0, maxTime
-	// );
-	// plotEcalHits2D columnChannelTime2D(
-	// 	"Channel Number By Col", " Time/ns", "columnChannelTime2D", "Time Distribution VS Channels by col",
-	// 	"columnChannelTime2D","Time Distribution VS Channels by row", EcalChannelNums, 0, EcalChannelNums, timeBins, 0, maxTime
-	// );
-	// Physical Values 2D plots variable VS chennel index
+
 	plotEcalHits2D rowChannelEnergy2D(
 		"Channel Number By Row", " Energy/GeV", "rowChannelEnergy2D", "Energy Distribution VS Channels by row",
 		new TH2D("rowChannelEnergy2D","Energy Distribution VS Channels by row", EcalChannelNums, 0, EcalChannelNums, energyBins, minEnergy, maxEnergy)
 	);
 	plotEcalHits2D columnChannelEnergy2D(
-		"Channel Number By Col", " Energy/GeV", "columnChannelEnergy2D", "Energy Distribution VS Channels by col",
+		"Channel Number By Column", " Energy/GeV", "columnChannelEnergy2D", "Energy Distribution VS Channels by col",
 		new TH2D("columnChannelEnergy2D","Energy Distribution VS Channels by col", EcalChannelNums, 0, EcalChannelNums, energyBins, minEnergy, maxEnergy)
 	);
 	plotEcalHits2D rowChannelTime2D(
@@ -57,7 +41,7 @@ class JEventProcessor_cosmicRayTestEvio:public jana::JEventProcessor{
 		new TH2D("rowChannelTime2D","Time Distribution VS Channels by row", EcalChannelNums, 0, EcalChannelNums, timeBins, 0, maxTime)
 	);
 	plotEcalHits2D columnChannelTime2D(
-		"Channel Number By Col", " Time/ns", "columnChannelTime2D", "Time Distribution VS Channels by col",
+		"Channel Number By Column", " Time/ns", "columnChannelTime2D", "Time Distribution VS Channels by col",
 		new TH2D("columnChannelTime2D","Time Distribution VS Channels by row", EcalChannelNums, 0, EcalChannelNums, timeBins, 0, maxTime)
 	);
 
@@ -67,7 +51,7 @@ class JEventProcessor_cosmicRayTestEvio:public jana::JEventProcessor{
 		new TH2D("rowChannelDigitalPeak2D","Digital Pause Peak VS Channels by row", EcalChannelNums, 0, EcalChannelNums, energyBins, minEnergy, maxEnergy)
 	);
 	plotEcalHits2D columnChannelDigitalPeak2D(
-		"Channel Number By Col", " Digital Pause Peak/Digital Counts", "columnChannelDigitalPeak2D", "Digital Pause Peak VS Channels by col",
+		"Channel Number By Column", " Digital Pulse Peak/Digital Counts", "columnChannelDigitalPeak2D", "Digital Pause Peak VS Channels by col",
 		new TH2D("columnChannelEnergy2D","Energy Distribution VS Channels by col", EcalChannelNums, 0, EcalChannelNums, energyBins, minEnergy, maxEnergy)
 	);
 
@@ -76,16 +60,16 @@ class JEventProcessor_cosmicRayTestEvio:public jana::JEventProcessor{
 		new TH2D("rowChannelDigitalIntegral2D","Digital Integral VS Channels by row", EcalChannelNums, 0, EcalChannelNums, timeBins, 0, maxTime)
 	);
 	plotEcalHits2D columnChannelDigitalIntegral2D(
-		"Channel Number By Col", " Pause Integral", "rowChannelDigitalIntegral2D", "Digital Integral VS Channels by col",
+		"Channel Number By Column", " Pause Integral", "rowChannelDigitalIntegral2D", "Digital Integral VS Channels by col",
 		new TH2D("columnChannelDigitalIntegral2D","Digital Integral VS Channels by row", EcalChannelNums, 0, EcalChannelNums, timeBins, 0, maxTime)
 	);
 
 	plotEcalHits2D rowChannelDigitalTime2D(
-		"Channel Number By Row", " Digital Time/sample", "rowChannelDigitalTime2D", "Digital Time Distribution VS Channels by row",
+		"Channel Number By Row", " Digital Time ", "rowChannelDigitalTime2D", "Digital Time Distribution VS Channels by row",
 		new TH2D("rowChannelDigitalTime2D","Time Distribution VS Channels by row", EcalChannelNums, 0, EcalChannelNums, timeBins, 0, maxTime)
 	);
 	plotEcalHits2D columnChannelDigitalTime2D(
-		"Channel Number By Col", "Digital Time/sample", "columnChannelDigitalTime2D", "Digital Time Distribution VS Channels by col",
+		"Channel Number By Column", "Digital Time/sample", "columnChannelDigitalTime2D", "Digital Time Distribution VS Channels by col",
 		new TH2D("columnChannelDigitalDigitalTime2D","Time Distribution VS Channels by row", EcalChannelNums, 0, EcalChannelNums, timeBins, 0, maxTime)
 	);
 
