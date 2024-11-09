@@ -16,7 +16,10 @@ namespace zhikunConstants{
     const Double_t energyBinsWidth = 1.0 / 1000;         // bin width : 1 MeV
     const Int_t energyBins = int(maxEnergy * 1000);      // bin nums , actually 1000
     const Float_t EcalLength = 2.1;                    // unit: centimeter
-    const Float_t FcalLength = 4.0;                    // unit: centimeter
+    const Float_t FcalLength = 4.0;                    // unit: centimeter  
+    
+    const Double_t digiHitsPeakPosLowerLimit = 0.;     // define peak position time cuts limit
+    const Double_t digiHitsPeakPosUpperLimit = 430.;   // define peak position time cuts limit
     
     // Some constant related to digital pulse
     const Int_t maxSample = 4096;
