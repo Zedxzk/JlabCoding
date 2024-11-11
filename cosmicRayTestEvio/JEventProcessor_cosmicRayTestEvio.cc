@@ -141,17 +141,21 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		pulse_integral = ecalDigitHits[i]->pulse_integral;
 		pulse_time     = ecalDigitHits[i]->pulse_time    ;
 		pulse_peak     = ecalDigitHits[i]->pulse_peak    ;
-		goodEvent[i] = (col > 20) && (pause_peak > digiHitsPeakPosLowerLimit) && (pause_peak < digiHitsPeakPosUpperLimit)
+		goodEvent[i-] = (col > 20) && (pause_peak > digiHitsPeakPosLowerLimit) && (pause_peak < digiHitsPeakPosUpperLimit)
 
+		
+		//Needs modification
 		if(goodEvent[i]){
 			EcalEnergyRecordMatrix[col][row] += energy;
 			EcalTimeRecordMatrix[col][row] += time;
 			EcalHitsRecordMatrix[col][row] += 1;
 			rowChannelEnergy2D.getHist2D()->Fill(channelMapByRow[col][row], energy);
 			columnChannelEnergy2D.getHist2D()->Fill(channelMapByCol[col][row], energy);
-			rowChannelTime2D.getHist2D()->Fill(channelMapByRow[col][row], time);
+			rowChannelTime2D.getHist2D()>Fill(channelMapByRow[col][row], time);
 			columnChannelTime2D.getHist2D()->Fill(channelMapByCol[col][row], time);
 		}
+
+
 		else{
 			continue;
 		}

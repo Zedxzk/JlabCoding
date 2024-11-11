@@ -1,4 +1,13 @@
 # JlabCoding
+## Pluggins Manual
+
+|   Direcrory Name   |    Usage  |  Extra Info    |
+| :--: | :--: | :--: |
+|    cosmicRayTest   |  Draw Some plots without ANY CUTS, it was first designed using MC event        |   Call ECAL hits and FCAL hits, save some useful information and plots. Detailed information can be found in the `README.md` in the directory             |
+|    cosmicRayTestEvio   |  Developed on the basis of `cosmicRayTest`, add some cuts condition, and can select whether to call FCAL(Because FCAL code is not working)       |                |
+|    muonsCommission  |   Extract the Energy deposition and Time distribution plots of individual column by the 2D histograms saved in the `.root` file. To extract the plots you should run `cosmicRayTest` or `cosmicRayTestEvio` First   |      |
+
+
 ## Update Log
 ### 2024.11.2
 Debugged some error and produce figures in row and column.
