@@ -10,6 +10,8 @@
 
 #include <JANA/JEventProcessor.h>
 
+const bool addCuts = true;
+
 class JEventProcessor_cosmicRayTestEvio:public jana::JEventProcessor{
 	public:
 		JEventProcessor_cosmicRayTestEvio();
