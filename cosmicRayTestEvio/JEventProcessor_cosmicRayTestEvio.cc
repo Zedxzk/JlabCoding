@@ -118,9 +118,12 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	// vector<const DFCALHit *>fcalhits;
 	// loop->Get(fcalhits);
 	int col, row;
-	Double_t pulse_integral, pulse_time, pulse_peak;
+	Double_t pulse_integral, pulse_time, pulse_peak,e, energy, time;
 	std::vector<bool> goodEvent(ecalDigitHits.size(), true);
 
+	if(addCuts){
+		
+	}
 	// 	for(unsigned int i = 0; i < ecalDigitHits.size(); i++){
 	// 	col = fcalhits[i]->column;
 	// 	row = fcalhits[i]->row;
