@@ -1,0 +1,1 @@
+Channel :   0    ( 39 ,  39)    MEAN: 26011.972 MeV    chi2/dof = 111.359
