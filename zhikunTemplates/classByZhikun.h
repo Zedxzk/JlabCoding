@@ -130,4 +130,5 @@ namespace classByZhikun{
     };
 
 }
+using namespace classByZhikun;
 #endif

@@ -9,19 +9,48 @@
 #define _JEventProcessor_cosmicRayTestEvio_
 
 #include <JANA/JEventProcessor.h>
+#include <ECAL/DECALHit.h>
+#include <ECAL/DECALDigiHit.h>
+#include <FCAL/DFCALHit.h>
+#include <iostream>
+#include <chrono>
+#include <ctime>
+#include <iomanip>
+#include <sstream>
+#include <string>
+#include <vector>
+#include "TCanvas.h"
+#include "TH2Poly.h"
+#include "TRandom.h"
+#include "TStyle.h"
+#include <TTree.h>
+#include <fstream>
+#include <fstream>
+#include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/classByZhikun.h"
+#include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/commonFunctions.h"
+#include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/zhikunConstants.h"
+#include "namespaceFucction.h"
+using namespace classByZhikun;
+using namespace std;
+namespace cutsConstants{
+	const bool addCuts = true;
+	const Double_t digiHitsPeakPosLowerLimit = 80 ;
+	const Double_t digiHitsPeakPosUpperLimit = 200;
+}
 
-const bool addCuts = true;
+using namespace std;
 
-class JEventProcessor_cosmicRayTestEvio:public jana::JEventProcessor{
-	public:
-		JEventProcessor_cosmicRayTestEvio();
-		~JEventProcessor_cosmicRayTestEvio();
-		const char* className(void){return "JEventProcessor_cosmicRayTestEvio";}
-		    plotEcalHits2D hitsEnergy2D(
-		"",        "", "EnergyDistribution2D"     , "Energy Distribution"
-	//	string xAxis , string yAxis, string name,  string title
-	);
-    plotEcalHits2D hitsTime2D(
+namespace globalVariables{
+    // std::ofstream outputFile;
+    int eventLooped = 0;
+    string newestFileName;
+    plotEcalHits2D hitsCount;
+	bool showInColumn = true;
+	plotEcalHits2D hitsEnergy2D(
+			"",        " ", "EnergyDistribution2D"     , "Energy Distribution"
+		//	string xAxis , string yAxis, string name,  string title
+		);
+	plotEcalHits2D hitsTime2D(
 		"",        "", "TimeDistribution2D"     , "Time Distribution"
 	//	string xAxis , string yAxis, string name,  string title
 	);
@@ -80,28 +109,28 @@ class JEventProcessor_cosmicRayTestEvio:public jana::JEventProcessor{
 	plotEcalHits1D EcalTimeColumnPlot1D = 
 	plotEcalHits1D(new TH1D("EcalTimeColumPlot1D", "Time Distribution of Ecal in column", EcalChannelNums, 0, EcalChannelNums));
 
-    plotEcalHits1D EcalEnergyColumnPlot1D = 
+	plotEcalHits1D EcalEnergyColumnPlot1D = 
 	plotEcalHits1D(new TH1D("EcalEnergyColumPlot1D", "Energy Distribution of Ecal in column", EcalChannelNums, 0, EcalChannelNums)); 
 	// 初始化，需要传递 hist 指针
 
 	plotEcalHits1D FcalTimeColumnPlot1D = 
 	plotEcalHits1D(new TH1D("FcalTimeColumPlot1D", "Time Distribution of Fcal in column", FcalChannelNums, 0, FcalChannelNums));
 
-    plotEcalHits1D FcalEnergyColumnPlot1D = 
+	plotEcalHits1D FcalEnergyColumnPlot1D = 
 	plotEcalHits1D(new TH1D("FcalEnergyColumPlot1D", "Energy Distribution of Fcal in column", FcalChannelNums, 0, FcalChannelNums)); 
 	// 初始化，需要传递 hist 指针
 	
 	plotEcalHits1D EcalTimeRowPlot1D = 
 	plotEcalHits1D(new TH1D("EcalTimeRowPlot1D", "Time Distribution of Ecal", EcalChannelNums, 0, EcalChannelNums));
 
-    plotEcalHits1D EcalEnergyRowPlot1D = 
+	plotEcalHits1D EcalEnergyRowPlot1D = 
 	plotEcalHits1D(new TH1D("EcalEnergyRowPlot1D", "Energy Distribution of Ecal", EcalChannelNums, 0, EcalChannelNums)); 
 
 
 	plotEcalHits1D FcalTimeRowPlot1D = 
 	plotEcalHits1D(new TH1D("FcalTimeRowPlot1D", "Time Distribution of Fcal", FcalChannelNums, 0, FcalChannelNums));
 
-    plotEcalHits1D FcalEnergyRowPlot1D = 
+	plotEcalHits1D FcalEnergyRowPlot1D = 
 	plotEcalHits1D(new TH1D("FcalEnergyRowPlot1D", "Energy Distribution of Fcal", FcalChannelNums, 0, FcalChannelNums)); 
 
 	std::vector<std::vector<Double_t>> EcalEnergyRecordMatrix(sizeOfEcal, std::vector<Double_t>(sizeOfEcal, 0));
@@ -113,19 +142,38 @@ class JEventProcessor_cosmicRayTestEvio:public jana::JEventProcessor{
 	float channelMapByRow[sizeOfEcal][sizeOfEcal] = {0,};
 	float channelMapByCol[sizeOfEcal][sizeOfEcal] = {0,};
 
+	Int_t channelNoByColumn;
+	Double_t energyBranchVar, timeBranchVar, pulsePeakBranchVar, pulseIntegralBranchVar, pulseTimeBranchVar;
+	// TTree* cosmicRayTree = new TTree("cosmicRayDistributions","Cosmic Rays Tree Of Distribution");		
+	// cosmicRayTree -> Branch("EcalEnergyDistributionByColumn"        , &  energyBranchVar       );
+	// cosmicRayTree -> Branch("EcalTimeDistributionByColumn"          , &  timeBranchVar         );
+	// cosmicRayTree -> Branch("EcalpulsePeakDistributionByColumn"     , &  pulsePeakBranchVar    );
+	// cosmicRayTree -> Branch("EcalpulseIntegralDistributionByColumn" , &  pulseIntegralBranchVar);
+	// cosmicRayTree -> Branch("EcalpulseTimeDistributionByColumn"     , &  pulseTimeBranchVar    );
+
+}
 
 
 
+class JEventProcessor_cosmicRayTestEvio:public jana::JEventProcessor{
+	public:
+		JEventProcessor_cosmicRayTestEvio();
+		~JEventProcessor_cosmicRayTestEvio();
+		const char* className(void){return "JEventProcessor_cosmicRayTestEvio";}
+		TTree* cosmicRayTree;
 	private:
 		jerror_t init(void);						///< Called once at program start.
 		jerror_t brun(jana::JEventLoop *eventLoop, int32_t runnumber);	///< Called everytime a new run number is detected.
 		jerror_t evnt(jana::JEventLoop *eventLoop, uint64_t eventnumber);	///< Called every event.
 		jerror_t erun(void);						///< Called everytime run number changes, provided brun has been called.
 		jerror_t fini(void);						///< Called after last event of last event source has been processed.
+		
 
 
 
 };
+
+using namespace globalVariables;
 
 #endif // _JEventProcessor_cosmicRayTestEvio_
 

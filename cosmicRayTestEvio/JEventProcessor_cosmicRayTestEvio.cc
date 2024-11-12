@@ -7,6 +7,7 @@
 
 #include "JEventProcessor_cosmicRayTestEvio.h"
 using namespace jana;
+using namespace cutsConstants;
 
 
 // Routine used to create our JEventProcessor
@@ -14,6 +15,7 @@ using namespace jana;
 #include <JANA/JFactory.h>
 #include <TTree.h>
 #include <TSystem.h>
+#include <set>
 extern "C"{
 void InitPlugin(JApplication *app){
 	InitJANAPlugin(app);
@@ -42,7 +44,14 @@ JEventProcessor_cosmicRayTestEvio::~JEventProcessor_cosmicRayTestEvio()
 // init
 //------------------
 jerror_t JEventProcessor_cosmicRayTestEvio::init(void)
-{
+{	
+	cosmicRayTree = new TTree("cosmicRayDistributions", "Cosmic Rays Tree Of Distribution"       );
+	cosmicRayTree->Branch("EcalChannelNo"                              , &channelNoByColumn       );
+	cosmicRayTree->Branch("EcalEnergyDistributionByColumn"             , &energyBranchVar        );
+	cosmicRayTree->Branch("EcalTimeDistributionByColumn"               , &timeBranchVar          );
+	cosmicRayTree->Branch("EcalpulsePeakDistributionByColumn"          , &pulsePeakBranchVar     );
+	cosmicRayTree->Branch("EcalpulseIntegralDistributionByColumn"      , &pulseIntegralBranchVar );
+	cosmicRayTree->Branch("EcalpulseTimeDistributionByColumn"          , &pulseTimeBranchVar     );
 	// This is called once at program startup. 
 	for(int i = 0;i < 40 ; i++){
 		for(int j = 0; j < 40; j++){
@@ -80,7 +89,6 @@ jerror_t JEventProcessor_cosmicRayTestEvio::init(void)
 	cout<< "ALL PLOTS INITIALIZED SUCCESSFULLY\n\n\n\n\n";
 
 
-
 	// hitsDistrubution = new TH2Poly();
 
 	return NOERROR;
@@ -114,15 +122,62 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	//  ... fill historgrams or trees ...
 	// japp->RootFillUnLock(this);
 	vector<const DECALDigiHit *> ecalDigitHits;
+	vector<const DECALHit *> ecalHits;
 	loop->Get(ecalDigitHits);
+	loop->Get(ecalHits);
 	// vector<const DFCALHit *>fcalhits;
 	// loop->Get(fcalhits);
 	int col, row;
-	Double_t pulse_integral, pulse_time, pulse_peak,e, energy, time;
-	std::vector<bool> goodEvent(ecalDigitHits.size(), true);
+	Double_t pulse_integral, pulse_time, pulse_peak, energy, time;
+	std::vector<bool> goodChannelEvent(ecalDigitHits.size(), true);
+	std::vector<bool> hasNeighbor(ecalDigitHits.size(), false);
 
 	if(addCuts){
-		
+		// 假设坐标数组 coords 格式为 {{x1, y1}, {x2, y2}, ...}
+		// cut those events without neighbor
+		vector<pair<int, int>> coordinatesEcal(ecalDigitHits.size(),{100, 100});
+		for(size_t i = 1; i < ecalDigitHits.size(); i++){
+			coordinatesEcal[i].first = ecalHits[i] -> column;
+			coordinatesEcal[i].second = ecalHits[i] -> row;
+		}
+		//  define the neighbros that we want to accept
+		vector<pair<int, int>> offsets = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
+		// use set for fast scan
+		set<pair<int, int>> coords_set(coordinatesEcal.begin(), coordinatesEcal.end());
+		// looking for a neighbor
+		vector<pair<int, int>> result;
+		for(size_t i = 0; i < ecalDigitHits.size(); i++){
+			coordinatesEcal[i].first  = ecalHits[i] -> column;
+			coordinatesEcal[i].second = ecalHits[i] -> row;
+		}
+		// 使用基于索引的循环遍历所有的坐标
+		for (size_t i = 0; i < coordinatesEcal.size(); ++i) {
+			if(hasNeighbor[i]) continue;
+			int x = coordinatesEcal[i].first;
+			int y = coordinatesEcal[i].second;
+			// 检查8个相邻位置
+			for (auto &offset : offsets) {
+				int dx = offset.first;
+				int dy = offset.second;
+				pair<int, int> neighbor = {x + dx, y + dy};
+				auto it = coords_set.find(neighbor);
+				if (it != coords_set.end()) {
+					size_t neighborIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), neighbor));
+					hasNeighbor[i] = true;
+					hasNeighbor[neighborIndex] = true;
+					result.push_back(coordinatesEcal[i]);
+					break;
+				}
+			}
+		}
+
+
+		for(size_t i = 0; i < ecalDigitHits.size(); i++){
+			goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> column >= 20);
+			goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time >= cutsConstants::digiHitsPeakPosLowerLimit );
+			goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time <= cutsConstants::digiHitsPeakPosUpperLimit);
+			goodChannelEvent[i] = goodChannelEvent[i] && (hasNeighbor[i]);
+		}
 	}
 	// 	for(unsigned int i = 0; i < ecalDigitHits.size(); i++){
 	// 	col = fcalhits[i]->column;
@@ -138,37 +193,28 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	// outputFile << '\n' << "ECAL TRACK : " ;
 
 	//for first cut, accepting col >= 20, time in time window
+
 	for (unsigned int i=0;i<ecalDigitHits.size();i++){
-		col = ecalDigitHits[i]->column;
-		row = ecalDigitHits[i]->row;
+	//if good channel in a single event, process next step
+		if(!goodChannelEvent[i]) continue;
+		col = ecalHits[i]->column;
+		row = ecalHits[i]->row;
+		col + row;
 		pulse_integral = ecalDigitHits[i]->pulse_integral;
 		pulse_time     = ecalDigitHits[i]->pulse_time    ;
 		pulse_peak     = ecalDigitHits[i]->pulse_peak    ;
-		goodEvent[i-] = (col > 20) && (pause_peak > digiHitsPeakPosLowerLimit) && (pause_peak < digiHitsPeakPosUpperLimit)
-
-		
-		//Needs modification
-		if(goodEvent[i]){
-			EcalEnergyRecordMatrix[col][row] += energy;
-			EcalTimeRecordMatrix[col][row] += time;
-			EcalHitsRecordMatrix[col][row] += 1;
-			rowChannelEnergy2D.getHist2D()->Fill(channelMapByRow[col][row], energy);
-			columnChannelEnergy2D.getHist2D()->Fill(channelMapByCol[col][row], energy);
-			rowChannelTime2D.getHist2D()>Fill(channelMapByRow[col][row], time);
-			columnChannelTime2D.getHist2D()->Fill(channelMapByCol[col][row], time);
-		}
-
-
-		else{
-			continue;
-		}
-
+		channelNoByColumn      = channelMapByCol[col][row];
+		energyBranchVar        = ecalHits[i] -> E;
+		timeBranchVar          = ecalHits[i] -> t;
+		pulsePeakBranchVar     = ecalDigitHits[i] -> pulse_peak    ;
+		pulseIntegralBranchVar = ecalDigitHits[i] -> pulse_integral;
+		pulseTimeBranchVar     = ecalDigitHits[i] -> pulse_time    ;
+		cosmicRayTree->Fill();
 	}
 	// outputFile << endl << endl;
 	// outputFile << "ENEVT LOOPED = " << eventNo << endl << endl;
 	// eventNo += 1;
 
-	
 
 	return NOERROR;
 }

@@ -1,7 +1,6 @@
 #ifndef _ZHIKUNCONSTANTS_H_
 #define _ZHIKUNCONSTANTS_H_
 
-#include<TTypes.h>
 namespace zhikunConstants{
     const Int_t sizeOfEcal = 40;
     const Int_t sizeOfFcal = 59;

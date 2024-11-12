@@ -1,6 +1,9 @@
 #ifndef  _FIGURE_EXTRACTION_H_
 #define _FIGURE_EXTRACTION_H_
 
+
+#include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
+#include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPlotConfig.h"
 string type;
 const double dpi = 400;
 
