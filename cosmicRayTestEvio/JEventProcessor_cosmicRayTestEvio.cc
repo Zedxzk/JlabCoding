@@ -199,7 +199,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	cout << "ecalDigitHits Size = " << ecalDigitHits.size() << endl;
 	for (unsigned int i=0;i<ecalHits.size();i++){
 	//if good channel in a single event, process next step
-		// if(!goodChannelEvent[i]) continue;
+		if(!goodChannelEvent[i]) continue;
 		col = ecalHits[i]->column;
 		row = ecalHits[i]->row;
 		cout << "if good channel in a single event, process next step" <<endl;
