@@ -20,7 +20,8 @@
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPlotConfig.h"
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
 
-const bool addFit = false;
+const bool addFit = true;
+const bool needOverView = false;
 const Double_t energyLowerLimit = 0;
 const Double_t energyUpperLimit = 100;
 const Int_t      energyBinsInThisFile = 100;
@@ -38,7 +39,8 @@ const Int_t maxColumnIndex = 800;
 const Int_t binsColumn     = 800;
 
 const TString branNameChannelNo = "EcalChannelNo";
-const Int_t    binsEnergy = int(energyUpperLimit);
+const Int_t   binsEnergy   = int(energyUpperLimit);
+const Int_t   binsEnergy1D = energyUpperLimit / 4;
 const TString branNameEnergy    = "EcalEnergyDistributionByColumn";
 const TString outputDir = "./cosmicCommissionOutput/";        // Create a directory for results
 
@@ -73,17 +75,31 @@ void channelsFit(TH2D* hist2D, dataType type) {
             int row = 39 - i % 40;
             // if(row <= 0) row--;
             TString histName = TString::Format("col_row_%02d_%02d_EnergyDeposit", col, row);
-            TH1D *hist1D = new TH1D(histName, "Channel Number", energyBinsInThisFile, energyLowerLimit, energyUpperLimit);
+            TH1D *hist1D = new TH1D(histName, "Channel Number", binsEnergy1D, energyLowerLimit, energyUpperLimit);
             hist1D->GetXaxis()->SetRangeUser(energyLowerLimit, energyUpperLimit);
+            
+            // 临时投影以获取数据
+            TH1D *tempHist = hist2D->ProjectionY(Form("tempHist_%d", i), i + 1, i + 40);
 
-            // 从hist2D中填充hist1D
-            for (int j = 1; j <= energyBinsInThisFile; j++) {
-                hist1D->SetBinContent(j, hist2D->GetBinContent(i + 1 , j));
+            // 将投影的数据逐条复制到自定义的 TH1D
+            for (int j = 1; j <= tempHist->GetNbinsX(); ++j) {
+                double binContent = tempHist->GetBinContent(j);
+                double binCenter = tempHist->GetBinCenter(j);
+                hist1D->Fill(binCenter, binContent);
             }
 
+            // 手动设置 total entries
+            hist1D->SetEntries(tempHist->GetEntries());
+            gStyle->SetOptStat("e");  // e: entries, m: mean, r: rms (均值和标准差)
+            hist1D->SetStats(kTRUE);  // 启用统计框     
+            // // 从hist2D中填充hist1D
+            // for (int j = 1; j <= energyBinsInThisFile; j++) {
+            //     hist1D->SetBinContent(j, hist2D->GetBinContent(i + 1 , j));
+            // }
+
             if(addFit){
-            RooRealVar mean("mean", "mean", 0.023, energyLowerLimit, energyUpperLimit);
-            RooRealVar sigma("sigma", "sigma", 0.001, 1e-4, 0.1);
+            RooRealVar mean("mean", "mean", 23, energyLowerLimit, energyUpperLimit);
+            RooRealVar sigma("sigma", "sigma", 3, 1e-4, 100);
             RooRealVar a0("a0", "a0", 0.0, -1.0, 1.0); // 切比雪夫多项式的一阶系数
             RooRealVar a1("a1", "a1", 0.5, -1.0, 1.0); // 切比雪夫多项式的一阶系数
             RooRealVar x("x", "x", energyLowerLimit, energyUpperLimit);
@@ -98,7 +114,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             model.fitTo(data);
 
             RooPlot* frame = x.frame();
-            frame->SetTitle(TString::Format("Channel %d   (col, row) = (%2d, %2d)", i, col , row).Data());
+            frame->SetTitle(TString::Format("Channel %4d   (col, row) = (%2d, %2d)", i, col , row).Data());
             frame->SetTitleSize(0.05);   // 设置标题的字体大小（根据需要调整）
             frame->SetTitleOffset(1.0);  // 控制标题与图形的距离
             data.plotOn(frame);
@@ -128,7 +144,8 @@ void channelsFit(TH2D* hist2D, dataType type) {
             frame->Draw();
             c->Update();
             pt->Draw();
-            c->SaveAs(outputDir + histName.Data() + ".pdf");
+            c->SaveAs(outputDir + histName.Data() + "_FIT.pdf");
+            c->SaveAs(outputDir + histName.Data() + "_FIT.png");
             
             
             bool warn = false;
@@ -159,16 +176,13 @@ void channelsFit(TH2D* hist2D, dataType type) {
             else{
                 gPad->SetGrid(0);
                 hist1D->GetXaxis()->SetTitle("Energy deposition/1MeV");
-
-                
                 hist1D->GetYaxis()->SetTitle("Events/MeV");
                 // 设置统计框显示内容
-                gStyle->SetOptStat("e");  // e: entries, m: mean, r: rms (均值和标准差)
                 hist1D->SetTitle(Form("Channel Number  %4d, (col, row) = (%02d, %02d)", i, col, row));
-                hist1D->SetStats(kTRUE);  // 启用统计框     
                 // 启用统计框
                 hist1D->SetStats(kTRUE);
-                hist1D->Draw();
+                // hist1D->SetErrorOption("e"); // "e" 表示显示误差棒
+                hist1D->Draw("HIST");
                 c->Print(outputDir + histName.Data() + ".pdf");
                 c->Print(outputDir + histName.Data() + ".png");
                 delete c;
@@ -219,79 +233,84 @@ void cosmicExtraction() {
     tree->SetBranchAddress(branNameEnergy.Data(), &energy);
 
 
-    RooRealVar channelInexEntries  (branNameChannelNo.Data(),branNameChannelNo.Data(),minColumnIndex    , maxColumnIndex      );
-    RooRealVar EnergyEntries       (branNameEnergy.Data()   ,branNameEnergy.Data()   ,energyLowerLimit , energyUpperLimit     );
+    // RooRealVar channelInexEntries  (branNameChannelNo.Data(),branNameChannelNo.Data(),minColumnIndex    , maxColumnIndex      );
+    // RooRealVar EnergyEntries       (branNameEnergy.Data()   ,branNameEnergy.Data()   ,energyLowerLimit , energyUpperLimit     );
     // RooDataSet dataSet("dataSet", "Data Set", RooArgSet(channelIndexEntries, EnergyEntries));
+
+
     TH2D* hist2d   = new TH2D("hist2d"  ,"", binsColumn, minColumnIndex,maxColumnIndex, binsEnergy, energyLowerLimit, energyUpperLimit );
-    TH2D* overview = new TH2D("overview","", sizeOfEcal, 0, sizeOfEcal, sizeOfEcal, 0, sizeOfEcal );
-    tree->Project("hist2d", Form("%s:%s", branNameEnergy.Data(), branNameChannelNo.Data()));
-    TCanvas* tempCanvas = new TCanvas("","", 2400, 1600);
-    hist2d->GetXaxis()->SetTitle("Channel Number");
-    hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
-	hist2d->GetXaxis()->CenterTitle();
-	hist2d->GetYaxis()->CenterTitle();
-        // 设置调色板（这里使用默认调色板，你可以根据需要选择其他调色板）
-    gStyle->SetPalette(kBird);
-
-    // 限制 Z 轴的范围
-    hist2d->SetMinimum(0);
-    hist2d->SetMaximum(20);
-    hist2d->Draw("COLZ");
-    tempCanvas->Print("test.pdf");
-    tempCanvas->Print("test.png");
-        // 遍历 X 轴范围，每 40 个 bin 输出一个图像
-    for (int i = 0; i < 800; i += 40) {
-        // 设置用户范围，限制 x 轴和 y 轴的显示范围
-        hist2d->GetXaxis()->SetRangeUser(i, i + 40);
-
-        // 创建临时画布并绘制直方图
-        TCanvas* tempCanvas = new TCanvas("", "", 2400, 2400);
-        hist2d->Draw("COLZ");
-
-        // 设置轴标签和标题
+    if(needOverView){
+        TH2D* overview = new TH2D("overview","", sizeOfEcal, 0, sizeOfEcal, sizeOfEcal, 0, sizeOfEcal );
+        tree->Project("hist2d", Form("%s:%s", branNameEnergy.Data(), branNameChannelNo.Data()));
+        TCanvas* tempCanvas = new TCanvas("","", 2400, 1600);
         hist2d->GetXaxis()->SetTitle("Channel Number");
         hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
         hist2d->GetXaxis()->CenterTitle();
         hist2d->GetYaxis()->CenterTitle();
-        hist2d->SetTitle(Form("column %02d",39 -  i / 40));
-        // gStyle->SetTitleAlign(23);  //
+            // 设置调色板（这里使用默认调色板，你可以根据需要选择其他调色板）
+        gStyle->SetPalette(kBird);
+
+        // 限制 Z 轴的范围
+        hist2d->SetMinimum(0);
+        hist2d->SetMaximum(20);
+        hist2d->Draw("COLZ");
+        tempCanvas->Print("test.pdf");
+        tempCanvas->Print("test.png");
+            // 遍历 X 轴范围，每 40 个 bin 输出一个图像
+        for (int i = 0; i < 800; i += 40) {
+            // 设置用户范围，限制 x 轴和 y 轴的显示范围
+            hist2d->GetXaxis()->SetRangeUser(i, i + 40);
+
+            // 创建临时画布并绘制直方图
+            TCanvas* tempCanvas = new TCanvas("", "", 2400, 2400);
+            hist2d->Draw("COLZ");
+
+            // 设置轴标签和标题
+            hist2d->GetXaxis()->SetTitle("Channel Number");
+            hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
+            hist2d->GetXaxis()->CenterTitle();
+            hist2d->GetYaxis()->CenterTitle();
+            hist2d->SetTitle(Form("column %02d",39 -  i / 40));
+            // gStyle->SetTitleAlign(23);  //
 
 
-        // 保存图像
-        tempCanvas->Print(Form("./columnView/column_%02d.png",39 -  i / 40));
-        tempCanvas->Print(Form("./columnView/column_%02d.pdf",39 -  i / 40));
+            // 保存图像
+            tempCanvas->Print(Form("./columnView/column_%02d.png",39 -  i / 40));
+            tempCanvas->Print(Form("./columnView/column_%02d.pdf",39 -  i / 40));
 
-        // 清理临时画布
-        delete tempCanvas;
+            // 清理临时画布
+            delete tempCanvas;
+        }
+        TCanvas* tempCanvas2 = new TCanvas("","", 2400, 1600);
+        // 循环遍历所有条目
+        Long64_t nEntries = tree->GetEntries();
+        for (Long64_t i = 0; i < nEntries; ++i) {
+            tree->GetEntry(i);
+            col = 39 - channelIndex / 40;
+            // if(col <= 0)  col --;
+            row = 39 - channelIndex % 40;
+            overview->Fill(col,row);
+            // std::cout << "Entry " << i << ": Channel Index = " << channelIndex 
+            // << ", col, row = " << col << ", " << row 
+            // << ", Energy = " << energy << std::endl;
+        }
+        tempCanvas2->cd();
+        gPad->SetGrid();
+        zhikunPalette::setPaletteStyleV1(overview);
+        overview->GetXaxis()->SetTitle("column");
+        overview->GetYaxis()->SetTitle("row");
+        overview->GetZaxis()->SetTitle("entries");
+        overview->GetXaxis()->CenterTitle();
+        overview->GetYaxis()->CenterTitle();
+        overview->GetZaxis()->CenterTitle();
+        overview->Draw("COLZ");
+        tempCanvas2->Print("overview.pdf");
+        tempCanvas2->Print("overview.png");
+
+
+
     }
-    TCanvas* tempCanvas2 = new TCanvas("","", 2400, 1600);
-    // 循环遍历所有条目
-    Long64_t nEntries = tree->GetEntries();
-    for (Long64_t i = 0; i < nEntries; ++i) {
-        tree->GetEntry(i);
-        col = 39 - channelIndex / 40;
-        // if(col <= 0)  col --;
-        row = 39 - channelIndex % 40;
-        overview->Fill(col,row);
-        // std::cout << "Entry " << i << ": Channel Index = " << channelIndex 
-        // << ", col, row = " << col << ", " << row 
-        // << ", Energy = " << energy << std::endl;
-    }
-    tempCanvas2->cd();
-    gPad->SetGrid();
-    zhikunPalette::setPaletteStyleV1(overview);
-    overview->GetXaxis()->SetTitle("column");
-    overview->GetYaxis()->SetTitle("row");
-    overview->GetZaxis()->SetTitle("entries");
-    overview->GetXaxis()->CenterTitle();
-    overview->GetYaxis()->CenterTitle();
-    overview->GetZaxis()->CenterTitle();
-    overview->Draw("COLLZ");
-    tempCanvas2->Print("overview.pdf");
-    tempCanvas2->Print("overview.png");
-
-
-
+    
     channelsFit(hist2d, Energy);
 
     fileInPtr->Close();
