@@ -20,8 +20,8 @@
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPlotConfig.h"
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
 
-// const bool addFit = true;
-const bool addFit = false;
+const bool addFit = true;
+// const bool addFit = false;
 // const bool needOverView = true;
 const bool needOverView = false;
 const Double_t energyLowerLimit = 0;
@@ -60,11 +60,17 @@ enum dataType {
 
 
 void channelsFit(TH2D* hist2D, dataType type) {
-    
     // std :: cout << energyUpperLimit - energyLowerLimit << "           "  << energyBinsWidth << std :: endl;
     if (type == Energy) {
-        std::ofstream outFile(textOut.Data());
-        std::ofstream warnFile(textWarn.Data());
+        std::ofstream outFile("useless.txt",std::ios::out);
+        std::ofstream warnFile("useless.txt",std::ios::out);
+        if(addFit){
+                // 使用构造函数初始化文件流对象
+            std::ofstream outFileInner(textOut.Data(),std::ios::out);
+            std::ofstream warnFileInner(textWarn.Data(),std::ios::out);
+            outFile = std::move(outFileInner);
+            warnFile = std::move(warnFileInner);
+        }
         // for (int i = 0; i < 50; i++) {
         for (int i = 0; i < 800; i++) {
             // zhikunPlotConfig::setFontTimesNewRoman();
@@ -152,7 +158,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
                 "    " << "(" 
                 << std::setw(3) << std::setfill(' ') << col <<" , "
                 << std::setw(3) << std::setfill(' ') << row << ")    " 
-                << TString::Format("%6.3f MeV    ",mean.getVal()*1000)
+                << TString::Format("%6.3f MeV    ",mean.getVal())
                 << chi2_dof << std::endl;
 
                 outFile 
@@ -161,15 +167,12 @@ void channelsFit(TH2D* hist2D, dataType type) {
                 "    " << "(" 
                 << std::setw(3) << std::setfill(' ') << col <<" , "
                 << std::setw(3) << std::setfill(' ') << row << ")    " 
-                << TString::Format("MEAN: %6.3f MeV    ",mean.getVal()*1000)
+                << TString::Format("MEAN: %6.3f MeV    ",mean.getVal())
                 << "chi2/dof = " << chi2_dof << std::endl;
                 delete c;
                 delete hist1D;
                 }
-                outFile.close();
-                warnFile.close();
             }
-            
             else{
                 gPad->SetGrid(0);
 
@@ -188,7 +191,8 @@ void channelsFit(TH2D* hist2D, dataType type) {
                 delete hist1D;
             }
             }
-
+            outFile.close();
+            warnFile.close();
 
     }
 }
