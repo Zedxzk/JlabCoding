@@ -159,6 +159,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             else{
                 hist1D->GetXaxis()->SetTitle("Events/1MeV")          ;
                 hist1D->GetYaxis()->SetTitle("Energy deposition/MeV");
+                hist1D->SetTitle(Form(".Channel Number  %0004d", i));
                 hist1D->Draw();
                 c->Print(outputDir + histName.Data() + ".pdf");
                 c->Print(outputDir + histName.Data() + ".png");
