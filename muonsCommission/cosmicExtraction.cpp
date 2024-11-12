@@ -157,9 +157,10 @@ void channelsFit(TH2D* hist2D, dataType type) {
             }
             
             else{
+                gPad->SetGrid(0);
                 hist1D->GetXaxis()->SetTitle("Energy deposition/1MeV")          ;
                 hist1D->GetYaxis()->SetTitle("Events/MeV");
-                hist1D->SetTitle(Form("Channel Number  %4d", i));
+                hist1D->SetTitle(Form("Channel Number  %4d, (col, row) = (%02d, %02d)", i, col, row));
                 hist1D->Draw();
                 c->Print(outputDir + histName.Data() + ".pdf");
                 c->Print(outputDir + histName.Data() + ".png");
@@ -270,6 +271,7 @@ void cosmicExtraction() {
         // << ", Energy = " << energy << std::endl;
     }
     tempCanvas2->cd();
+    gPad->SetGrid();
     zhikunPalette::setPaletteStyleV1(overview);
     overview->GetXaxis()->SetTitle("column");
     overview->GetYaxis()->SetTitle("row");
