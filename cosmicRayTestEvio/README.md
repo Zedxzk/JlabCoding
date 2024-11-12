@@ -10,7 +10,7 @@ To switch the cutting condition on or off, please change the variable `addCuts` 
 |    nGood       |      `nGood`         |      With in an trigger, after other cuts we expected at least 5 channels are left, if not we discard the whole trigger            |
 | A channel muse have some neighbors to be accepted       |      `hasNeighbor[i]`          |    To supress background. For now the restriction is not so tight, we expect another channel  lighten with in 3 rows, 1 column. If not satisfied we **only discard this channel** in this trigger              |    
 |    No multiple neighbors       |      `multiNeighbor[i]`    |  We discard all the channels whose both adjacent neighbors in the same row are lightened. Just to supress background |
-|           |               |                  |
+| ECAL hits size |  `ecalHits.size() > 8`   |     Typically the signal events have more than 10 channels triggered, so not satisfying this condition might be background      |
 |           |               |                  |
 |           |               |                  |
 |           |               |                  |
