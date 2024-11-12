@@ -20,8 +20,8 @@
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPlotConfig.h"
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
 
-// const bool addFit = true;
-const bool addFit = false;
+const bool addFit = true;
+// const bool addFit = false;
 // const bool needOverView = true;
 const bool needOverView = false;
 const Double_t energyLowerLimit = 0;
@@ -138,7 +138,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
                                     
             zhikunPlotConfig::setRooFitPlotStyleV1(frame);
             frame->SetXTitle("Energy deposition/GeV");
-            frame->SetYTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetYaxis()->GetBinWidth(1)));
+            frame->SetYTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
             frame->Draw();
             c->Update();
             pt->Draw();
@@ -173,8 +173,11 @@ void channelsFit(TH2D* hist2D, dataType type) {
             
             else{
                 gPad->SetGrid(0);
-                hist1D->GetXaxis()->SetTitle("Energy deposition/1MeV");
-                hist1D->GetYaxis()->SetTitle("Events/MeV");
+                hist1D->GetXaxis()->SetTitle("Energy deposition/MeV");
+                hist1D->GetYaxis()->SetTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
+                hist1D->GetXaxis()->CenterTitle();
+                hist1D->GetYaxis()->CenterTitle();
+
                 // 设置统计框显示内容
                 hist1D->SetTitle(Form("Channel %4d   (col, row) = (%2d, %2d)", i, col, row));
                 // 启用统计框
