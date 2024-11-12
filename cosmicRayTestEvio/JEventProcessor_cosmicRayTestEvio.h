@@ -143,6 +143,7 @@ namespace globalVariables{
 	float channelMapByCol[sizeOfEcal][sizeOfEcal] = {0,};
 
 	Int_t channelNoByColumn;
+	int numberGoodChannelEvents = 0;
 	Double_t energyBranchVar, timeBranchVar, pulsePeakBranchVar, pulseIntegralBranchVar, pulseTimeBranchVar;
 	// TTree* cosmicRayTree = new TTree("cosmicRayDistributions","Cosmic Rays Tree Of Distribution");		
 	// cosmicRayTree -> Branch("EcalEnergyDistributionByColumn"        , &  energyBranchVar       );
