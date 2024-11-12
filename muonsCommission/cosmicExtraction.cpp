@@ -178,7 +178,11 @@ void cosmicExtraction() {
 		}
     }
     // Initialization
-    gSystem->Load("libRooFit");
+    gSystem->Load("libRooFit");   // Load RooFit library
+    gSystem->Load("libHist");     // Load the ROOT Hist library if necessary
+    gSystem->Load("libCore");     // Load the ROOT Core library
+    gSystem->Load("libGraf");     // Load the ROOT Graphics library
+
     gROOT->SetStyle("Plain");
     gStyle->SetOptStat(0);
     gStyle->SetStripDecimals(kFALSE);
@@ -240,6 +244,9 @@ void cosmicExtraction() {
         hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
         hist2d->GetXaxis()->CenterTitle();
         hist2d->GetYaxis()->CenterTitle();
+        hist2d->SetTitle(Form("column %02d",39 -  i / 40));
+        // gStyle->SetTitleAlign(23);  //
+
 
         // 保存图像
         tempCanvas->Print(Form("./columnView/column_%02d.png",39 -  i / 40));
@@ -257,9 +264,9 @@ void cosmicExtraction() {
         // if(col <= 0)  col --;
         row = 39 - channelIndex % 40;
         overview->Fill(col,row);
-        std::cout << "Entry " << i << ": Channel Index = " << channelIndex 
-        << ", col, row = " << col << ", " << row 
-        << ", Energy = " << energy << std::endl;
+        // std::cout << "Entry " << i << ": Channel Index = " << channelIndex 
+        // << ", col, row = " << col << ", " << row 
+        // << ", Energy = " << energy << std::endl;
     }
     tempCanvas2->cd();
     zhikunPalette::setPaletteStyleV1(overview);
@@ -272,6 +279,11 @@ void cosmicExtraction() {
     overview->Draw("COLLZ");
     tempCanvas2->Print("overview.pdf");
     tempCanvas2->Print("overview.png");
+
+
+
+    channelsFit(hist2d, Energy);
+
     fileInPtr->Close();
     delete fileInPtr;
 }
