@@ -131,12 +131,12 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	Double_t pulse_integral, pulse_time, pulse_peak, energy, time;
 	std::vector<bool> goodChannelEvent(ecalHits.size(), true);
 	std::vector<bool> hasNeighbor(ecalHits.size(), false);
-
+	// cout<<__LINE__<endl;
 	if(addCuts){
 		// 假设坐标数组 coords 格式为 {{x1, y1}, {x2, y2}, ...}
 		// cut those events without neighbor
 		vector<pair<int, int>> coordinatesEcal(ecalHits.size(),{100, 100});
-		for(size_t i = 1; i < ecalDigitHits.size(); i++){
+		for(size_t i = 0; i < ecalHits.size(); i++){
 			coordinatesEcal[i].first = ecalHits[i] -> column;
 			coordinatesEcal[i].second = ecalHits[i] -> row;
 		}
@@ -149,6 +149,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		for(size_t i = 0; i < ecalHits.size(); i++){
 			coordinatesEcal[i].first  = ecalHits[i] -> column;
 			coordinatesEcal[i].second = ecalHits[i] -> row;
+			// cout<<__LINE__<endl;
 		}
 		// 使用基于索引的循环遍历所有的坐标
 		for (size_t i = 0; i < coordinatesEcal.size(); ++i) {
@@ -156,6 +157,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			int x = coordinatesEcal[i].first;
 			int y = coordinatesEcal[i].second;
 			// 检查8个相邻位置
+			// cout<<__LINE__<endl;
 			for (auto &offset : offsets) {
 				int dx = offset.first;
 				int dy = offset.second;
@@ -170,7 +172,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 				}
 			}
 		}
-
+		// cout<<__LINE__<endl;
 
 		for(size_t i = 0; i < ecalHits.size(); i++){
 			goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> column >= 20);
@@ -193,13 +195,14 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	// outputFile << '\n' << "ECAL TRACK : " ;
 
 	//for first cut, accepting col >= 20, time in time window
-	cout << "ecalDigitHits Size = " << ecalHits.size() << endl;
+	cout << "ecalHits Size = " << ecalHits.size() << endl;
+	cout << "ecalDigitHits Size = " << ecalDigitHits.size() << endl;
 	for (unsigned int i=0;i<ecalHits.size();i++){
 	//if good channel in a single event, process next step
 		// if(!goodChannelEvent[i]) continue;
 		col = ecalHits[i]->column;
 		row = ecalHits[i]->row;
-		col + row;
+		cout << "if good channel in a single event, process next step" <<endl;
 		pulse_integral = ecalDigitHits[i]->pulse_integral;
 		pulse_time     = ecalDigitHits[i]->pulse_time    ;
 		pulse_peak     = ecalDigitHits[i]->pulse_peak    ;
