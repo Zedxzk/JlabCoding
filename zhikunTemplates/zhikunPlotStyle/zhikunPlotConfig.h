@@ -2,7 +2,6 @@
 #define _ZHIKUNPLOTCONFIG_H_
 
 #include <RooPlot.h>
-
 namespace zhikunPlotConfig{
     void setPlotConfigV1(){
         gPad->SetRightMargin(0.12);
