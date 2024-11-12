@@ -20,7 +20,9 @@
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPlotConfig.h"
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
 
-const bool addFit = true;
+// const bool addFit = true;
+const bool addFit = false;
+// const bool needOverView = true;
 const bool needOverView = false;
 const Double_t energyLowerLimit = 0;
 const Double_t energyUpperLimit = 100;
@@ -54,9 +56,6 @@ enum dataType {
     Energy = 1,
     Time   = 2
 };
-
-
-
 
 
 
@@ -127,7 +126,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             double chi2_dof = frame->chiSquare(3);  // 这里的3是模型参数的个数
 
             // 创建文本框来显示 chi2/dof
-            TPaveText *pt = new TPaveText(0.60, 0.70, 0.89, 0.890, "BRNDC");
+            TPaveText *pt = new TPaveText(0.60, 0.70, 0.89, 0.89, "BRNDC");
             pt->SetBorderSize(0);
             pt->SetFillColor(0);
             pt->SetTextAlign(12);  // 文本居中
@@ -135,8 +134,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             pt->SetTextFont(42);
             // 显示 chi2/dofs
             pt->AddText(TString::Format("#chi^{2}/dof=%2.2f/%d=%2.1f", chi2_dof * dof, dof, chi2_dof));
-
-            // 将文本框绘制在画布上
+            model.paramOn(frame, RooFit::Parameters(RooArgSet(mean,sigma)), RooFit::Layout(0.6, 0.9,0.7));
                                     
             zhikunPlotConfig::setRooFitPlotStyleV1(frame);
             frame->SetXTitle("Energy deposition/GeV");
@@ -178,7 +176,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
                 hist1D->GetXaxis()->SetTitle("Energy deposition/1MeV");
                 hist1D->GetYaxis()->SetTitle("Events/MeV");
                 // 设置统计框显示内容
-                hist1D->SetTitle(Form("Channel Number  %4d, (col, row) = (%02d, %02d)", i, col, row));
+                hist1D->SetTitle(Form("Channel %4d   (col, row) = (%2d, %2d)", i, col, row));
                 // 启用统计框
                 hist1D->SetStats(kTRUE);
                 // hist1D->SetErrorOption("e"); // "e" 表示显示误差棒
