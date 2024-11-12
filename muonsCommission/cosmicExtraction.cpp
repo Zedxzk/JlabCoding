@@ -199,7 +199,11 @@ void cosmicExtraction() {
     RooRealVar Energy     (branNameEnergy.Data()   ,branNameEnergy.Data()   ,energyLowerLimit , energyUpperLimit     );
     TH2D* hist2d = new TH2D("hist2d","", binsColumn, minColumnIndex,maxColumnIndex, binsEnergy, energyLowerLimit, energyUpperLimit );
     tree->Project("hist2d", Form("%s:%s", branNameEnergy.Data(), branNameChannelNo.Data()));
-    TCanvas* tempCanvas = new TCanvas();
+    TCanvas* tempCanvas = new TCanvas("","", 2400, 1600);
+    hist2d->GetXaxis()->SetTitle("Channel Number");
+    hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
+	hist2d->GetXaxis()->CenterTitle();
+	hist2d->GetYaxis()->CenterTitle();
     hist2d->Draw("COLZ");
     tempCanvas->Print("test.pdf");
     tempCanvas->Print("test.png");
