@@ -158,9 +158,16 @@ void channelsFit(TH2D* hist2D, dataType type) {
             
             else{
                 gPad->SetGrid(0);
-                hist1D->GetXaxis()->SetTitle("Energy deposition/1MeV")          ;
+                hist1D->GetXaxis()->SetTitle("Energy deposition/1MeV");
+
+                
                 hist1D->GetYaxis()->SetTitle("Events/MeV");
+                // 设置统计框显示内容
+                gStyle->SetOptStat("e");  // e: entries, m: mean, r: rms (均值和标准差)
                 hist1D->SetTitle(Form("Channel Number  %4d, (col, row) = (%02d, %02d)", i, col, row));
+                hist1D->SetStats(kTRUE);  // 启用统计框     
+                // 启用统计框
+                hist1D->SetStats(kTRUE);
                 hist1D->Draw();
                 c->Print(outputDir + histName.Data() + ".pdf");
                 c->Print(outputDir + histName.Data() + ".png");
