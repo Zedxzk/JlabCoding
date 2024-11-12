@@ -18,14 +18,17 @@
 #include <TLatex.h>
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunConstants.h"
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPlotConfig.h"
+#include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
 
+const bool addFit = false;
 const Double_t energyLowerLimit = 0;
 const Double_t energyUpperLimit = 100;
-const int      energyBinsInThisFile = int ((energyUpperLimit - energyLowerLimit) / energyBinsWidth);
+const Int_t      energyBinsInThisFile = 100;
 const Double_t energyAcceptLowerLimit = 0.020;
 const Double_t energyAcceptUpperLimit = 0.025;
 const Double_t chi2_ndfAcceptMaximum = 50.0;
 float channelMapByCol[sizeOfEcal][sizeOfEcal] = {0,};
+
 
 
 const TString fileName = "../rootFiles/allRuns.root";       // The ROOT file to open
@@ -36,14 +39,8 @@ const Int_t binsColumn     = 800;
 
 const TString branNameChannelNo = "EcalChannelNo";
 const Int_t    binsEnergy = int(energyUpperLimit);
-
 const TString branNameEnergy    = "EcalEnergyDistributionByColumn";
-
-
-
-
-const TString outputDir = "./muonsCommissionOutput/";        // Create a directory for results
-const TString hist2DName = "columnChannelEnergy2D";          // Name of hist2D to read from root file
+const TString outputDir = "./cosmicCommissionOutput/";        // Create a directory for results
 
 const TString textOutName = "res.txt";        
 const TString textOutWarnName = "possible_bad_res.txt";   
@@ -67,11 +64,8 @@ void channelsFit(TH2D* hist2D, dataType type) {
     if (type == Energy) {
         std::ofstream outFile(textOut.Data());
         std::ofstream warnFile(textWarn.Data());
-
-
-
         // for (int i = 0; i < 50; i++) {
-        for (int i = 1; i <= EcalChannelNums; i++) {
+        for (int i = 0; i < 800; i++) {
             // zhikunPlotConfig::setFontTimesNewRoman();
             TCanvas *c = new TCanvas("c", "c", 800, 600);
             int col = 39 - i / 40;
@@ -80,15 +74,14 @@ void channelsFit(TH2D* hist2D, dataType type) {
             // if(row <= 0) row--;
             TString histName = TString::Format("col_row_%02d_%02d_EnergyDeposit", col, row);
             TH1D *hist1D = new TH1D(histName, "Channel Number", energyBinsInThisFile, energyLowerLimit, energyUpperLimit);
-
-            // 从hist2D中填充hist1D
-
-            for (int j = 1; j <= energyBinsInThisFile; j++) {
-                hist1D->SetBinContent(j, hist2D->GetBinContent(i + 1, j + 5));
-            }
-
             hist1D->GetXaxis()->SetRangeUser(energyLowerLimit, energyUpperLimit);
 
+            // 从hist2D中填充hist1D
+            for (int j = 1; j <= energyBinsInThisFile; j++) {
+                hist1D->SetBinContent(j, hist2D->GetBinContent(i + 1 , j));
+            }
+
+            if(addFit){
             RooRealVar mean("mean", "mean", 0.023, energyLowerLimit, energyUpperLimit);
             RooRealVar sigma("sigma", "sigma", 0.001, 1e-4, 0.1);
             RooRealVar a0("a0", "a0", 0.0, -1.0, 1.0); // 切比雪夫多项式的一阶系数
@@ -111,8 +104,6 @@ void channelsFit(TH2D* hist2D, dataType type) {
             data.plotOn(frame);
             model.plotOn(frame);
             model.plotOn(frame, RooFit::Components("cheb"), RooFit::LineStyle(kDashed));
-
-
             int dof = 32;  // 这里假设你已经知道自由度的数量
             RooChi2Var chi2("chi2", "chi2", model, data);
 
@@ -130,9 +121,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             pt->AddText(TString::Format("#chi^{2}/dof=%2.2f/%d=%2.1f", chi2_dof * dof, dof, chi2_dof));
 
             // 将文本框绘制在画布上
-
-
-            
+                                    
             zhikunPlotConfig::setRooFitPlotStyleV1(frame);
             frame->SetXTitle("Energy deposition/GeV");
             frame->SetYTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetYaxis()->GetBinWidth(1)));
@@ -151,21 +140,34 @@ void channelsFit(TH2D* hist2D, dataType type) {
                 << std::setw(3) << std::setfill(' ') << row << ")    " 
                 << TString::Format("%6.3f MeV    ",mean.getVal()*1000)
                 << chi2_dof << std::endl;
+
+                outFile 
+                << "Channel :"
+                << std::setw(4) << std::setfill(' ') << i <<
+                "    " << "(" 
+                << std::setw(3) << std::setfill(' ') << col <<" , "
+                << std::setw(3) << std::setfill(' ') << row << ")    " 
+                << TString::Format("MEAN: %6.3f MeV    ",mean.getVal()*1000)
+                << "chi2/dof = " << chi2_dof << std::endl;
+                delete c;
+                delete hist1D;
+                }
+                outFile.close();
+                warnFile.close();
+            }
+            
+            else{
+                hist1D->GetXaxis()->SetTitle("Events/1MeV")          ;
+                hist1D->GetYaxis()->SetTitle("Energy deposition/MeV");
+                hist1D->Draw();
+                c->Print(outputDir + histName.Data() + ".pdf");
+                c->Print(outputDir + histName.Data() + ".png");
+                delete c;
+                delete hist1D;
+            }
             }
 
-            outFile 
-            << "Channel :"
-            << std::setw(4) << std::setfill(' ') << i <<
-            "    " << "(" 
-            << std::setw(3) << std::setfill(' ') << col <<" , "
-            << std::setw(3) << std::setfill(' ') << row << ")    " 
-            << TString::Format("MEAN: %6.3f MeV    ",mean.getVal()*1000)
-            << "chi2/dof = " << chi2_dof << std::endl;
-            delete c;
-            delete hist1D;
-        }
-        outFile.close();
-        warnFile.close();
+
     }
 }
 
@@ -195,9 +197,20 @@ void cosmicExtraction() {
     }
     std::cout << "Successfully retrieved TTree: cosmicRayDistributions" << std::endl;
 
-    RooRealVar channelInex(branNameChannelNo.Data(),branNameChannelNo.Data(),minColumnIndex    , maxColumnIndex      );
-    RooRealVar Energy     (branNameEnergy.Data()   ,branNameEnergy.Data()   ,energyLowerLimit , energyUpperLimit     );
-    TH2D* hist2d = new TH2D("hist2d","", binsColumn, minColumnIndex,maxColumnIndex, binsEnergy, energyLowerLimit, energyUpperLimit );
+    Int_t channelIndex;
+    double energy;
+    int col, row;
+
+    // 将树的分支关联到变量
+    tree->SetBranchAddress(branNameChannelNo.Data(), &channelIndex);
+    tree->SetBranchAddress(branNameEnergy.Data(), &energy);
+
+
+    RooRealVar channelInexEntries  (branNameChannelNo.Data(),branNameChannelNo.Data(),minColumnIndex    , maxColumnIndex      );
+    RooRealVar EnergyEntries       (branNameEnergy.Data()   ,branNameEnergy.Data()   ,energyLowerLimit , energyUpperLimit     );
+    // RooDataSet dataSet("dataSet", "Data Set", RooArgSet(channelIndexEntries, EnergyEntries));
+    TH2D* hist2d   = new TH2D("hist2d"  ,"", binsColumn, minColumnIndex,maxColumnIndex, binsEnergy, energyLowerLimit, energyUpperLimit );
+    TH2D* overview = new TH2D("overview","", sizeOfEcal, 0, sizeOfEcal, sizeOfEcal, 0, sizeOfEcal );
     tree->Project("hist2d", Form("%s:%s", branNameEnergy.Data(), branNameChannelNo.Data()));
     TCanvas* tempCanvas = new TCanvas("","", 2400, 1600);
     hist2d->GetXaxis()->SetTitle("Channel Number");
@@ -207,23 +220,24 @@ void cosmicExtraction() {
     hist2d->Draw("COLZ");
     tempCanvas->Print("test.pdf");
     tempCanvas->Print("test.png");
-
-
-
-    // std::cout << "Attempting to get histogram: " << hist2DName << std::endl;
-    // TH2D *hist2D = (TH2D*)gDirectory->Get(hist2DName.Data());
-    // if (!hist2D) {
-    //     std::cerr << "Failed to get histogram: " << hist2DName << std::endl;
-    //     return;
-    // } else {
-    //     std::cout << "Successfully accessed histogram: " << hist2DName << std::endl;
-    // }
-    // int i = 1;
-    // TString histName = TString::Format("channelNumber_%04d_fit", i);
-    // cout << histName.Data() << std ::endl;
-
-    // channelsFit(hist2D, Energy);
-
+    TCanvas* tempCanvas2 = new TCanvas("","", 2400, 1600);
+    // 循环遍历所有条目
+    Long64_t nEntries = tree->GetEntries();
+    for (Long64_t i = 0; i < nEntries; ++i) {
+        tree->GetEntry(i);
+        col = 39 - channelIndex / 40;
+        // if(col <= 0)  col --;
+        row = 39 - channelIndex % 40;
+        overview->Fill(col,row);
+        std::cout << "Entry " << i << ": Channel Index = " << channelIndex 
+        << ", col, row = " << col << ", " << row 
+        << ", Energy = " << energy << std::endl;
+    }
+    tempCanvas2->cd();
+    zhikunPalette::setPaletteStyleV1(overview);
+    overview->Draw("COLLZ");
+    tempCanvas2->Print("overview.pdf");
+    tempCanvas2->Print("overview.png");
     fileInPtr->Close();
     delete fileInPtr;
 }
