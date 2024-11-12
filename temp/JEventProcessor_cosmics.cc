@@ -47,7 +47,7 @@ JEventProcessor_cosmics::~JEventProcessor_cosmics()
 jerror_t JEventProcessor_cosmics::init(void)
 {
 
-        gStyle->SetOptStat(0);
+    gStyle->SetOptStat(0);
   
 	gStyle->SetTitleFontSize(0.05);
   

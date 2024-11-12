@@ -11,19 +11,7 @@
 #include <JANA/JEventProcessor.h>
 #include <ECAL/DECALHit.h>
 #include <FCAL/DFCALHit.h>
-#include <iostream>
-#include <chrono>
-#include <ctime>
-#include <iomanip>
-#include <sstream>
-#include <string>
-#include <vector>
-#include "TCanvas.h"
-#include "TH2Poly.h"
-#include "TRandom.h"
-#include "TStyle.h"
-#include <fstream>
-#include <fstream>
+
 #include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/classByZhikun.h"
 #include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/commonFunctions.h"
 #include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/zhikunConstants.h"
