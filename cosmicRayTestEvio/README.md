@@ -19,12 +19,13 @@ To switch the cutting condition on or off, please change the variable `addCuts` 
 ## Root File gengerated
 The file will include a `TTree` object, in order to conveniently combine all the data in different run. As it is hard to record 2D data in TTree, I adopt another way which is include the channel index (starts from the upper right corner of ECAL and goes down until next column). So if we want to extract the plots using the `.root` file, simply convert the channel index into the column and row, the euqation  is as follows:
 
-$$
+<center>
+column = 39-channel index / 40 (interger devision of C++) 
 
-\mathrm{column = 39-channel~ index / 40~~~(interger ~devision~of~C++) }
-\\
-\mathrm{row~~~~~~ =39 - channel~ index ~mod ~ 40}
-$$
+
+row =39 - channel index mod  40
+
+</center>
 
 so when you loop over all the entries, just fill in the plots after conversion.
 
