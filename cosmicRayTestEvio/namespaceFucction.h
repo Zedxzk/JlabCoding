@@ -1,13 +1,23 @@
 #ifndef _namespaceFucction_cpp_
 #define _namespaceFucction_cpp_
-#include "JEventProcessor_cosmicRayTest.h"
 #include "TPaletteAxis.h"
 #include "TLatex.h"
 
-
-
 namespace figuresInCosmicRaysTest {
+    void initPlotStyleOfHits2D(plotEcalHits2D& obj);
+    void setPlotStyleOfHits1D(plotEcalHits1D& hist1D, bool ecal);
+    void setPalatteStyleV1();
+    void fillHits1DInCorrectPlaceAndPrint(plotEcalHits1D& obj, vector<vector<Double_t>>& arrayToFill, bool ecal, bool displayInColumn);
+    void setPlotStyleOfHits2D(plotEcalHits2D& obj);
+    string fileNameTemplates;
+    std::chrono::system_clock::time_point startTime;
+    std::chrono::system_clock::time_point endTime;
+    std::chrono::duration<long> durationTime;
+    string startTimeString;
+    string endTimeString;
+    string durationTimeString;
 
+    
     void testFunction(){
         std :: cout << "test" << endl;
         cout << "test" << endl;
@@ -302,5 +312,5 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
 }
 
 
-
+using namespace figuresInCosmicRaysTest;
 #endif

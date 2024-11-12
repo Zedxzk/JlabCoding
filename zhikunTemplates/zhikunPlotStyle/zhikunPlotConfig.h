@@ -1,6 +1,7 @@
 #ifndef _ZHIKUNPLOTCONFIG_H_
 #define _ZHIKUNPLOTCONFIG_H_
 
+#include <RooPlot.h>
 
 namespace zhikunPlotConfig{
     void setPlotConfigV1(){
