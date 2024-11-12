@@ -20,8 +20,8 @@
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPlotConfig.h"
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
 
-const bool addFit = true;
-// const bool addFit = false;
+// const bool addFit = true;
+const bool addFit = false;
 // const bool needOverView = true;
 const bool needOverView = false;
 const Double_t energyLowerLimit = 0;
@@ -78,7 +78,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             hist1D->GetXaxis()->SetRangeUser(energyLowerLimit, energyUpperLimit);
             
             // 临时投影以获取数据
-            TH1D *tempHist = hist2D->ProjectionY(Form("tempHist_%d", i), i + 1, i + 40);
+            TH1D *tempHist = hist2D->ProjectionY(Form("tempHist_%d", i), i + 1, i + 1);
 
             // 将投影的数据逐条复制到自定义的 TH1D
             for (int j = 1; j <= tempHist->GetNbinsX(); ++j) {
@@ -95,7 +95,8 @@ void channelsFit(TH2D* hist2D, dataType type) {
             // for (int j = 1; j <= energyBinsInThisFile; j++) {
             //     hist1D->SetBinContent(j, hist2D->GetBinContent(i + 1 , j));
             // }
-
+            hist1D->GetXaxis()->SetTitle("Energy deposition/MeV");
+            hist1D->GetYaxis()->SetTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
             if(addFit){
             RooRealVar mean("mean", "mean", 23, energyLowerLimit, energyUpperLimit);
             RooRealVar sigma("sigma", "sigma", 3, 1e-4, 100);
@@ -137,8 +138,6 @@ void channelsFit(TH2D* hist2D, dataType type) {
             model.paramOn(frame, RooFit::Parameters(RooArgSet(mean,sigma)), RooFit::Layout(0.6, 0.9,0.7));
                                     
             zhikunPlotConfig::setRooFitPlotStyleV1(frame);
-            frame->SetXTitle("Energy deposition/GeV");
-            frame->SetYTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
             frame->Draw();
             c->Update();
             pt->Draw();
@@ -173,8 +172,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             
             else{
                 gPad->SetGrid(0);
-                hist1D->GetXaxis()->SetTitle("Energy deposition/MeV");
-                hist1D->GetYaxis()->SetTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
+
                 hist1D->GetXaxis()->CenterTitle();
                 hist1D->GetYaxis()->CenterTitle();
 
