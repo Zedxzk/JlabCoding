@@ -35,7 +35,7 @@ const Int_t maxColumnIndex = 800;
 const Int_t binsColumn     = 800;
 
 const TString branNameChannelNo = "EcalChannelNo";
-const Int_t    binsEnergy = int(2 * energyUpperLimit);
+const Int_t    binsEnergy = int(energyUpperLimit);
 
 const TString branNameEnergy    = "EcalEnergyDistributionByColumn";
 
