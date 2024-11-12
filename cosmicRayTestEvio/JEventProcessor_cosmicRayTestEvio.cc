@@ -107,7 +107,8 @@ jerror_t JEventProcessor_cosmicRayTestEvio::brun(JEventLoop *eventLoop, int32_t 
 // evnt
 //------------------
 jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t eventnumber)
-{
+{	
+	int numberGoodChannelEvents = 0;
 	// This is called for every event. Use of common resources like writing
 	// to a file or filling a histogram should be mutex protected. Using
 	// loop->Get(...) to get reconstructed objects (and thereby activating the
@@ -210,12 +211,13 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		pulseIntegralBranchVar = ecalDigitHits[i] -> pulse_integral;
 		pulseTimeBranchVar     = ecalDigitHits[i] -> pulse_time    ;
 		cosmicRayTree->Fill();
+		numberGoodChannelEvents ++;
 	}
 	// outputFile << endl << endl;
 	// outputFile << "ENEVT LOOPED = " << eventNo << endl << endl;
 	// eventNo += 1;
 
-
+	cout << numberGoodChannelEvents << endl;
 	return NOERROR;
 }
 
