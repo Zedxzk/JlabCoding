@@ -217,9 +217,37 @@ void cosmicExtraction() {
     hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
 	hist2d->GetXaxis()->CenterTitle();
 	hist2d->GetYaxis()->CenterTitle();
+        // 设置调色板（这里使用默认调色板，你可以根据需要选择其他调色板）
+    gStyle->SetPalette(kBird);
+
+    // 限制 Z 轴的范围
+    hist2d->SetMinimum(0);
+    hist2d->SetMaximum(20);
     hist2d->Draw("COLZ");
     tempCanvas->Print("test.pdf");
     tempCanvas->Print("test.png");
+        // 遍历 X 轴范围，每 40 个 bin 输出一个图像
+    for (int i = 0; i < 800; i += 40) {
+        // 设置用户范围，限制 x 轴和 y 轴的显示范围
+        hist2d->GetXaxis()->SetRangeUser(i, i + 40);
+
+        // 创建临时画布并绘制直方图
+        TCanvas* tempCanvas = new TCanvas("", "", 2400, 2400);
+        hist2d->Draw("COLZ");
+
+        // 设置轴标签和标题
+        hist2d->GetXaxis()->SetTitle("Channel Number");
+        hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
+        hist2d->GetXaxis()->CenterTitle();
+        hist2d->GetYaxis()->CenterTitle();
+
+        // 保存图像
+        tempCanvas->Print(Form("./columnView/column_%02d.png",39 -  i / 40));
+        tempCanvas->Print(Form("./columnView/column_%02d.pdf",39 -  i / 40));
+
+        // 清理临时画布
+        delete tempCanvas;
+    }
     TCanvas* tempCanvas2 = new TCanvas("","", 2400, 1600);
     // 循环遍历所有条目
     Long64_t nEntries = tree->GetEntries();
@@ -235,6 +263,12 @@ void cosmicExtraction() {
     }
     tempCanvas2->cd();
     zhikunPalette::setPaletteStyleV1(overview);
+    overview->GetXaxis()->SetTitle("column");
+    overview->GetYaxis()->SetTitle("row");
+    overview->GetZaxis()->SetTitle("entries");
+    overview->GetXaxis()->CenterTitle();
+    overview->GetYaxis()->CenterTitle();
+    overview->GetZaxis()->CenterTitle();
     overview->Draw("COLLZ");
     tempCanvas2->Print("overview.pdf");
     tempCanvas2->Print("overview.png");
