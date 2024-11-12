@@ -40,7 +40,7 @@ const Int_t binsColumn     = 800;
 
 const TString branNameChannelNo = "EcalChannelNo";
 const Int_t   binsEnergy   = int(energyUpperLimit);
-const Int_t   binsEnergy1D = energyUpperLimit / 4;
+const Int_t   binsEnergy1D = energyUpperLimit / 2;
 const TString branNameEnergy    = "EcalEnergyDistributionByColumn";
 const TString outputDir = "./cosmicCommissionOutput/";        // Create a directory for results
 
@@ -239,17 +239,17 @@ void cosmicExtraction() {
 
 
     TH2D* hist2d   = new TH2D("hist2d"  ,"", binsColumn, minColumnIndex,maxColumnIndex, binsEnergy, energyLowerLimit, energyUpperLimit );
+    hist2d->GetXaxis()->SetTitle("Channel Number");
+    hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
+    hist2d->GetXaxis()->CenterTitle();
+    hist2d->GetYaxis()->CenterTitle();
+    tree->Project("hist2d", Form("%s:%s", branNameEnergy.Data(), branNameChannelNo.Data()));
+
     if(needOverView){
         TH2D* overview = new TH2D("overview","", sizeOfEcal, 0, sizeOfEcal, sizeOfEcal, 0, sizeOfEcal );
-        tree->Project("hist2d", Form("%s:%s", branNameEnergy.Data(), branNameChannelNo.Data()));
         TCanvas* tempCanvas = new TCanvas("","", 2400, 1600);
-        hist2d->GetXaxis()->SetTitle("Channel Number");
-        hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
-        hist2d->GetXaxis()->CenterTitle();
-        hist2d->GetYaxis()->CenterTitle();
-            // 设置调色板（这里使用默认调色板，你可以根据需要选择其他调色板）
+        // 设置调色板（这里使用默认调色板，你可以根据需要选择其他调色板）
         gStyle->SetPalette(kBird);
-
         // 限制 Z 轴的范围
         hist2d->SetMinimum(0);
         hist2d->SetMaximum(20);
@@ -283,6 +283,22 @@ void cosmicExtraction() {
         }
         TCanvas* tempCanvas2 = new TCanvas("","", 2400, 1600);
         // 循环遍历所有条目
+        	const char* dirPath = "columnView";
+
+        // 检查目录是否存在
+        if (gSystem->AccessPathName(dirPath) == 0) {
+            std::cout << "Directory exists. Deleting all files inside..." << std::endl;
+            
+            // 使用系统命令删除目录中的所有文件
+            gSystem->Exec(Form("rm -rf %s/*", dirPath));
+            std::cout << "All files deleted inside '" << dirPath << "'." << std::endl;
+        } else {
+            std::cout << "Directory does not exist. Creating it..." << std::endl;
+        }
+
+        // 创建目录
+        gSystem->Exec(Form("mkdir -p %s", dirPath));
+        std::cout << "Directory '" << dirPath << "' is ready for use." << std::endl;
         Long64_t nEntries = tree->GetEntries();
         for (Long64_t i = 0; i < nEntries; ++i) {
             tree->GetEntry(i);
