@@ -66,13 +66,15 @@ jerror_t JEventProcessor_cosmicRayTestEvio::init(void)
 	std::cout << "Directory '" << dirPath << "' is ready for use." << std::endl;
 
 
-	cosmicRayTree = new TTree("cosmicRayDistributions", "Cosmic Rays Tree Of Distribution"       );
-	cosmicRayTree->Branch("EcalChannelNo"                              , &channelNoByColumn       );
-	cosmicRayTree->Branch("EcalEnergyDistributionByColumn"             , &energyBranchVar        );
-	cosmicRayTree->Branch("EcalTimeDistributionByColumn"               , &timeBranchVar          );
-	cosmicRayTree->Branch("EcalpulsePeakDistributionByColumn"          , &pulsePeakBranchVar     );
-	cosmicRayTree->Branch("EcalpulseIntegralDistributionByColumn"      , &pulseIntegralBranchVar );
-	cosmicRayTree->Branch("EcalpulseTimeDistributionByColumn"          , &pulseTimeBranchVar     );
+	ecalHitsTree = new TTree("EcalHits", "EcalHits"       );
+	ecalHitsTree->Branch("EcalChannelNo"                              , &channelNoByColumn       );
+	ecalHitsTree->Branch("EcalEnergyDistributionByColumn"             , &energyBranchVar        );
+	ecalHitsTree->Branch("EcalTimeDistributionByColumn"               , &timeBranchVar          );
+	ecalDigitHitsTree = new TTree("EcalDigitHits", "EcalDigitHits" );
+	ecalDigitHitsTree->Branch("EcalChannelNo"                              , &digiChannelNoByColumn  );
+	ecalDigitHitsTree->Branch("EcalpulsePeakDistributionByColumn"          , &pulsePeakBranchVar     );
+	ecalDigitHitsTree->Branch("EcalpulseIntegralDistributionByColumn"      , &pulseIntegralBranchVar );
+	ecalDigitHitsTree->Branch("EcalpulseTimeDistributionByColumn"          , &pulseTimeBranchVar     );
 	// This is called once at program startup. 
 	for(int i = 0;i < 40 ; i++){
 		for(int j = 0; j < 40; j++){
@@ -127,14 +129,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::init(void)
 	
 	gStyle->SetTitleBorderSize(0);
 	
-
-  
-
-	my_canvas  = new TCanvas("ECAL ", "ECAL ",1000, 700,  1500, 1000);
 	
-	test = new TH1F("test","test", 100, -0.5, 99.5);
-	hen   = new TH1F("energy ","energy", 100, 0., 100.);
-	plot = new TH2F("Plot","Plot",40,-0.5,39.5,40,-0.5,39.5);
 	plot->GetXaxis()->SetTitle("Column");
 	plot->GetYaxis()->SetTitle("Row");
 	return NOERROR;
@@ -178,23 +173,39 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	vector<const DECALHit *> ecalHits;
 	loop->Get(ecalDigitHits);
 	loop->Get(ecalHits);
-	int nGood = 0;
 	// vector<const DFCALHit *>fcalhits;
 	// loop->Get(fcalhits);
+
+
+	int nGood  = 0;
+	int nGoodD = 0;
+
 	int col, row;
-	Double_t pulse_integral, pulse_time, pulse_peak, energy, time;
+	Double_t pulse_integral, pulse_time, pulse_peak, pedestal, energy, time;
 	std::vector<bool> goodChannelEvent(ecalHits.size(), true);
+	std::vector<bool> goodChannelEventD(ecalDigitHits.size(), true);
+
 	bool goodEvent = false;
-	std::vector<bool> hasNeighbor (ecalHits.size(), false);
-	std::vector<bool> multiNeighbor(ecalHits.size(), false);
+
+	std::vector<bool> hasNeighbor   (ecalHits.size(), false);
+	std::vector<bool> multiNeighbor (ecalHits.size(), false);
+	std::vector<bool> hasNeighborD  (ecalDigitHits.size(), false);
+	std::vector<bool> multiNeighborD(ecalDigitHits.size(), false);
+
+
 	// cout<<__LINE__<endl;
 	if(addCuts && ecalHits.size() >= MinEcalSizeToAccept){
 		// 假设坐标数组 coords 格式为 {{x1, y1}, {x2, y2}, ...}
 		// cut those events without neighbor
-		vector<pair<int, int>> coordinatesEcal(ecalHits.size(),{100, 100});
+		vector<pair<int, int>> coordinatesEcal (ecalHits.size(),{100, 100});
+		vector<pair<int, int>> coordinatesEcalD(ecalDigitHits.size(),{100, 100});
 		for(size_t i = 0; i < ecalHits.size(); i++){
 			coordinatesEcal[i].first =  ecalHits[i] -> column;
 			coordinatesEcal[i].second = ecalHits[i] -> row;
+		}
+		for(size_t i = 0; i < ecalHits.size(); i++){
+			coordinatesEcalD[i].first =  ecalDigitHits[i] -> column;
+			coordinatesEcalD[i].second = ecalDigitHits[i] -> row;
 		}
 		//  define the neighbros that we want to accept
 		vector<pair<int, int>> offsets = {
@@ -207,7 +218,8 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			{-1, -3}, {0, -3}, { 1, -3}
 		};
 		// looking for a neighbor
-		set<pair<int, int>> coords_set(coordinatesEcal.begin(), coordinatesEcal.end());
+		set<pair<int, int>> coords_set (coordinatesEcal.begin() , coordinatesEcal.end() );
+		set<pair<int, int>> coords_setD(coordinatesEcalD.begin(), coordinatesEcalD.end());
         vector<pair<int, int>> result;
 		// 使用基于索引的循环遍历所有的坐标
 		for (size_t i = 0; i < coordinatesEcal.size(); ++i) {
@@ -223,7 +235,6 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 					size_t neighborIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), neighbor));
 					hasNeighbor[i] = true;
 					hasNeighbor[neighborIndex] = true;
-					result.push_back(coordinatesEcal[i]);
 					// 检查特定邻居 (x-1, y) 和 (x+1, y)
 					pair<int, int> leftNeighbor = {x - 1, y};  // (x-1, y)
 					pair<int, int> rightNeighbor = {x + 1, y};  // (x+1, y)
@@ -232,18 +243,77 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 					bool foundRight = coords_set.find(rightNeighbor) != coords_set.end();
 
 					// 如果都找到了，修改 multiNeighbor 标志
-					if (foundLeft && foundRight) {
+					// if (foundLeft && foundRight) {
+					// 	size_t leftIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), leftNeighbor));
+					// 	size_t rightIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), rightNeighbor));
+					// 	multiNeighbor[i] = true;
+					// 	multiNeighbor[leftIndex] = true;  // 修改 (x-1, y) 对应的 multiNeighbor
+					// 	multiNeighbor[rightIndex] = true;  // 修改 (x+1, y) 对应的 multiNeighbor
+					// }
+
+					if (foundRight) {
 						size_t leftIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), leftNeighbor));
-						size_t rightIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), rightNeighbor));
 						multiNeighbor[i] = true;
 						multiNeighbor[leftIndex] = true;  // 修改 (x-1, y) 对应的 multiNeighbor
+					}
+
+					if (foundLeft) {
+						size_t rightIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), rightNeighbor));
+						multiNeighbor[i] = true;
 						multiNeighbor[rightIndex] = true;  // 修改 (x+1, y) 对应的 multiNeighbor
+					}
+
+					break;
+				}
+			}
+		}
+
+
+		for (size_t i = 0; i < coordinatesEcalD.size(); ++i) {
+			if(hasNeighborD[i] && multiNeighborD[i]) continue;
+			int x = coordinatesEcalD[i].first;
+			int y = coordinatesEcalD[i].second;
+			for (auto &offset : offsets) {
+				int dx = offset.first;
+				int dy = offset.second;
+				pair<int, int> neighbor = {x + dx, y + dy};
+				auto it = coords_setD.find(neighbor);
+				if (it != coords_setD.end()) {
+					size_t neighborIndex = distance(coordinatesEcalD.begin(), find(coordinatesEcalD.begin(), coordinatesEcalD.end(), neighbor));
+					hasNeighborD[i] = true;
+					hasNeighborD[neighborIndex] = true;
+					// 检查特定邻居 (x-1, y) 和 (x+1, y)
+					pair<int, int> leftNeighbor = {x - 1, y};  // (x-1, y)
+					pair<int, int> rightNeighbor = {x + 1, y};  // (x+1, y)
+
+					bool foundLeft = coords_setD.find(leftNeighbor) != coords_setD.end();
+					bool foundRight = coords_setD.find(rightNeighbor) != coords_setD.end();
+
+					// 如果都找到了，修改 multiNeighbor 标志
+					// if (foundLeft && foundRight) {
+					// 	size_t leftIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), leftNeighbor));
+					// 	size_t rightIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), rightNeighbor));
+					// 	multiNeighbor[i] = true;
+					// 	multiNeighbor[leftIndex] = true;  // 修改 (x-1, y) 对应的 multiNeighbor
+					// 	multiNeighbor[rightIndex] = true;  // 修改 (x+1, y) 对应的 multiNeighbor
+					// }
+
+					if (foundRight) {
+						size_t leftIndex = distance(coordinatesEcalD.begin(), find(coordinatesEcalD.begin(), coordinatesEcalD.end(), leftNeighbor));
+						multiNeighborD[i] = true;
+						multiNeighborD[leftIndex] = true;  // 修改 (x-1, y) 对应的 multiNeighbor
+					}
+
+					if (foundLeft) {
+						size_t rightIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), rightNeighbor));
+						multiNeighborD[i] = true;
+						multiNeighborD[rightIndex] = true;  // 修改 (x+1, y) 对应的 multiNeighbor
 					}
 					break;
 				}
 			}
 		}
-		// cout<<__LINE__<endl;
+		
 
 		for(size_t i = 0; i < ecalHits.size(); i++){
 			goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> column >= 20);
@@ -254,6 +324,17 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			if(goodChannelEvent[i]) nGood ++;
 		}
 	}
+		for(size_t i = 0; i < ecalHits.size(); i++){
+			goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> column >= 20);
+			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time >= cutsConstants::digiHitsPeakPosLowerLimit );
+			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time <= cutsConstants::digiHitsPeakPosUpperLimit);
+			goodChannelEventD[i] = goodChannelEventD[i] && (hasNeighborD[i]);
+			goodChannelEventD[i] = goodChannelEventD[i] && (!multiNeighborD[i]);
+			if(goodChannelEventD[i]) nGoodD ++;
+		}
+	
+	// END cut condition
+
 	// 	for(unsigned int i = 0; i < ecalDigitHits.size(); i++){
 	// 	col = fcalhits[i]->column;
 	// 	row = fcalhits[i]->row;
@@ -270,24 +351,25 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	//for first cut, accepting col >= 20, time in time window
 	cout << "ecalHits Size = " << ecalHits.size() << endl;
 	cout << "ecalDigitHits Size = " << ecalDigitHits.size() << endl;
+
+
+	//   *******************        Start to Fill Tree  **********************
+	//   *******************      Ecal Hits Tree       ***********************
 	for (unsigned int i=0;i<ecalHits.size();i++){
+	//if no enough good channel in a single event, or the channels that passed cuts are not enough, discard the trigger
 		if(ecalHits.size() < MinEcalSizeToAccept) break;
 		if(nGood < 5) break;
-	//if good channel in a single event, process next step
+	// 	if accept the trigger, then go on
+	// 	if the channel did not pass cuts, then it is background, ignore this channel
 		if(!goodChannelEvent[i]) continue;
+	// 	if it is signal, then fill the tree
 		col = ecalHits[i]->column;
 		row = ecalHits[i]->row;
-		// cout << "if good channel in a single event, process next step" <<endl;
-		pulse_integral = ecalDigitHits[i]->pulse_integral;
-		pulse_time     = ecalDigitHits[i]->pulse_time    ;
-		pulse_peak     = ecalDigitHits[i]->pulse_peak    ;
 		channelNoByColumn      = channelMapByCol[col][row];
 		energyBranchVar        = ecalHits[i] -> E;
 		timeBranchVar          = ecalHits[i] -> t;
-		pulsePeakBranchVar     = ecalDigitHits[i] -> pulse_peak    ;
-		pulseIntegralBranchVar = ecalDigitHits[i] -> pulse_integral;
-		pulseTimeBranchVar     = ecalDigitHits[i] -> pulse_time    ;
-		cosmicRayTree->Fill();
+		ecalHitsTree->Fill();
+		
 		numberGoodChannelEvents ++;
 		plot->Fill(col,row,energyBranchVar);
 		goodEvent = true;
@@ -297,8 +379,41 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		my_canvas->Update();
 		if(ecalHits.size() >= MinEcalSizeToAccept && nGood >= 5){
 			plot->Draw("zcol");
-			my_canvas->Print(TString::Format("./figures/plotsNo_%03d.pdf", plotIndex));
-			my_canvas->Print(TString::Format("./figures/plotsNo_%03d.png", plotIndex));
+			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%03d.pdf", plotIndex));
+			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%03d.png", plotIndex));
+			plotIndex ++;
+		}
+		my_canvas->Clear();
+		plot->Reset();
+	// Do the same with Ecal Digit Hit
+	//   ******************     ECAL Digit Hits Tree      ***************************
+	for (unsigned int i=0;i<ecalDigitHits.size();i++){
+		//if no enough good channel in a single event, or the channels that passed cuts are not enough, discard the trigger
+		if(ecalDigitHits.size() < MinEcalSizeToAccept) break;
+		if(nGoodD < 5) break;
+		// 	if accept the trigger, then go on
+		// 	if the channel did not pass cuts, then it is background, ignore this channel
+		if(!goodChannelEvent[i]) continue;
+		col = ecalDigitHits[i]->column;
+		row = ecalDigitHits[i]->row;
+		// cout << "if good channel in a single event, process next step" <<endl;
+		pulse_integral = ecalDigitHits[i]->pulse_integral;
+		pulse_time     = ecalDigitHits[i]->pulse_time    ;
+		pulse_peak     = ecalDigitHits[i]->pulse_peak - ecalDigitHits[i]->pedestal / 4.0;
+		channelNoByColumn      = channelMapByCol[col][row];
+		ecalDigitHitsTree->Fill();
+		numberGoodChannelEvents ++;
+	}
+
+	//    ********************** End filling Tree   ********************************
+
+		my_canvas->cd();
+		gPad->SetGrid(1);
+		my_canvas->Update();
+		if(ecalHits.size() >= MinEcalSizeToAccept && nGood >= 5){
+			plot->Draw("zcol");
+			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%03d_Digit.pdf", plotIndex));
+			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%03d_Digit.png", plotIndex));
 			plotIndex ++;
 		}
 		my_canvas->Clear();
