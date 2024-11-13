@@ -1,6 +1,7 @@
 # Files larger than 31457280 bytes
 temp/muons_smeared.hddm
 inputFilesEvio/hd_rawdata_130063_000.evio
+.git/objects/pack/pack-e563aea9b4189106ddb3be02f22cb609fe07f9b5.pack
 .git/objects/pack/pack-6a0f5232fab7492cc3de3c1bf7a9e8ff9fb4a1b6.pack
 .git/objects/pack/pack-f4875a1748e23672968ade1dc77e371a3da769e5.pack
 .git/objects/pack/pack-20448a209d76d8289c679e579e434784a401cf2b.pack
