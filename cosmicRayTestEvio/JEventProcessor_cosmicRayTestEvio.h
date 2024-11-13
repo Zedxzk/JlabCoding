@@ -142,16 +142,13 @@ namespace globalVariables{
 	float channelMapByRow[sizeOfEcal][sizeOfEcal] = {0,};
 	float channelMapByCol[sizeOfEcal][sizeOfEcal] = {0,};
 
-	Int_t channelNoByColumn;
+	Int_t channelNoByColumn, digiChannelNoByColumn;
 	int numberGoodChannelEvents = 0;
 	Double_t energyBranchVar, timeBranchVar, pulsePeakBranchVar, pulseIntegralBranchVar, pulseTimeBranchVar;
-	// TTree* cosmicRayTree = new TTree("cosmicRayDistributions","Cosmic Rays Tree Of Distribution");		
-	// cosmicRayTree -> Branch("EcalEnergyDistributionByColumn"        , &  energyBranchVar       );
-	// cosmicRayTree -> Branch("EcalTimeDistributionByColumn"          , &  timeBranchVar         );
-	// cosmicRayTree -> Branch("EcalpulsePeakDistributionByColumn"     , &  pulsePeakBranchVar    );
-	// cosmicRayTree -> Branch("EcalpulseIntegralDistributionByColumn" , &  pulseIntegralBranchVar);
-	// cosmicRayTree -> Branch("EcalpulseTimeDistributionByColumn"     , &  pulseTimeBranchVar    );
-
+	
+	TCanvas *my_canvas  = new TCanvas("", "",2400, 1600);
+	TH2D    *plot       = new TH2D   ("", "", sizeOfEcal, 0, sizeOfEcal, sizeOfEcal, 0, sizeOfEcal);
+	
 }
 
 
@@ -161,11 +158,9 @@ class JEventProcessor_cosmicRayTestEvio:public jana::JEventProcessor{
 		JEventProcessor_cosmicRayTestEvio();
 		~JEventProcessor_cosmicRayTestEvio();
 		const char* className(void){return "JEventProcessor_cosmicRayTestEvio";}
-		TTree* cosmicRayTree;
-		TCanvas *my_canvas;
-		TH1F *test;
-		TH1F *hen;
-		TH2F *plot;
+		TTree* ecalHitsTree;
+		TTree* ecalDigitHitsTree;
+	
   
 	private:
 		jerror_t init(void);						///< Called once at program start.
