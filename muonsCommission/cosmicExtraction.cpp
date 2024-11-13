@@ -27,8 +27,8 @@ const bool needOverView = false;
 const Double_t energyLowerLimit = 0;
 const Double_t energyUpperLimit = 100;
 const Int_t      energyBinsInThisFile = 100;
-const Double_t energyAcceptLowerLimit = 0.020;
-const Double_t energyAcceptUpperLimit = 0.025;
+const Double_t energyAcceptLowerLimit = 20;
+const Double_t energyAcceptUpperLimit = 25;
 const Double_t chi2_ndfAcceptMaximum = 50.0;
 float channelMapByCol[sizeOfEcal][sizeOfEcal] = {0,};
 
@@ -105,7 +105,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             hist1D->GetYaxis()->SetTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
             if(addFit){
             RooRealVar mean("mean", "mean", 23, energyLowerLimit, energyUpperLimit);
-            RooRealVar sigma("sigma", "sigma", 3, 1e-4, 100);
+            RooRealVar sigma("sigma", "sigma", 3, 1e-4, 5);
             RooRealVar a0("a0", "a0", 0.0, -1.0, 1.0); // 切比雪夫多项式的一阶系数
             RooRealVar a1("a1", "a1", 0.5, -1.0, 1.0); // 切比雪夫多项式的一阶系数
             RooRealVar x("x", "x", energyLowerLimit, energyUpperLimit);
@@ -144,6 +144,8 @@ void channelsFit(TH2D* hist2D, dataType type) {
             model.paramOn(frame, RooFit::Parameters(RooArgSet(mean,sigma)), RooFit::Layout(0.6, 0.9,0.7));
                                     
             zhikunPlotConfig::setRooFitPlotStyleV1(frame);
+            frame->SetXTitle("Energy deposition/MeV");            
+            frame->SetYTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
             frame->Draw();
             c->Update();
             pt->Draw();
