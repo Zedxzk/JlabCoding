@@ -225,7 +225,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
         vector<pair<int, int>> result;
 		// 使用基于索引的循环遍历所有的坐标
 		for (size_t i = 0; i < coordinatesEcal.size(); ++i) {
-			if(hasNeighbor[i]) continue;
+			// if(hasNeighbor[i]) continue;
 			int x = coordinatesEcal[i].first;
 			int y = coordinatesEcal[i].second;
 			for (auto &offset : offsets) {
@@ -272,7 +272,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 
 
 		for (size_t i = 0; i < coordinatesEcalD.size(); ++i) {
-			if(hasNeighborD[i] && multiNeighborD[i]) continue;
+			// if(hasNeighborD[i] && multiNeighborD[i]) continue;
 			int x = coordinatesEcalD[i].first;
 			int y = coordinatesEcalD[i].second;
 			for (auto &offset : offsets) {
@@ -330,8 +330,8 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> column >= 20);
 			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time >= cutsConstants::digiHitsPeakPosLowerLimit );
 			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time <= cutsConstants::digiHitsPeakPosUpperLimit);
-			// goodChannelEventD[i] = goodChannelEventD[i] && (hasNeighborD[i]);
-			// goodChannelEventD[i] = goodChannelEventD[i] && (!multiNeighborD[i]);
+			goodChannelEventD[i] = goodChannelEventD[i] && (hasNeighborD[i]);
+			goodChannelEventD[i] = goodChannelEventD[i] && (!multiNeighborD[i]);
 			if(goodChannelEventD[i]) nGoodD ++;
 		}
 	
