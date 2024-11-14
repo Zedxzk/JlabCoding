@@ -337,7 +337,9 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			if(goodChannelEventD[i]) nGoodD ++;
 		}
 	
-	// END cut condition
+	// **************************   END cut condition  ************************************
+	// ************************************************************************************
+
 
 	// 	for(unsigned int i = 0; i < ecalDigitHits.size(); i++){
 	// 	col = fcalhits[i]->column;
@@ -408,10 +410,14 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		pulseTimeBranchVar     = ecalDigitHits[i]->pulse_time    ;
 		pulsePeakBranchVar     = ecalDigitHits[i]->pulse_peak - ecalDigitHits[i]->pedestal / 4.0;
 		digiChannelNoByColumn  = channelMapByCol[col][row];
+		if(digiChannelNoByColumn > 200){
+			cout << "(col, row) =  " col << " , " << row << endl;
+			
+		}
 		ecalDigitHitsTree->Fill();
 		numberGoodChannelEvents ++;
 	}
-
+	getchar();
 	//    ********************** End filling Tree   ********************************
 	if(printAllAcceptedEventsAfterCuts){
 		my_canvas->cd();
