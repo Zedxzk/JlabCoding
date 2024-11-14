@@ -321,8 +321,8 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> column >= 20);
 			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time >= cutsConstants::digiHitsPeakPosLowerLimit );
 			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time <= cutsConstants::digiHitsPeakPosUpperLimit);
-			// goodChannelEvent[i] = goodChannelEvent[i] && (hasNeighbor[i]);
-			// goodChannelEvent[i] = goodChannelEvent[i] && (!multiNeighbor[i]);
+			goodChannelEvent[i] = goodChannelEvent[i] && (hasNeighbor[i]);
+			goodChannelEvent[i] = goodChannelEvent[i] && (!multiNeighbor[i]);
 			if(goodChannelEvent[i]) nGood ++;
 		}
 	}
