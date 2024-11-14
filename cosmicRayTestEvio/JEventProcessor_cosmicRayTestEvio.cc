@@ -196,7 +196,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	std::vector<bool> hasNeighborD  (ecalDigitHits.size(), false);
 	std::vector<bool> multiNeighborD(ecalDigitHits.size(), false);
 
-
+	// ************************* Start Cutting condition *****************************
 	// cout<<__LINE__<endl;
 	if(addCuts && ecalHits.size() >= MinEcalSizeToAccept){
 		// 假设坐标数组 coords 格式为 {{x1, y1}, {x2, y2}, ...}
@@ -328,7 +328,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			if(goodChannelEvent[i]) nGood ++;
 		}
 	}
-		for(size_t i = 0; i < ecalHits.size(); i++){
+		for(size_t i = 0; i < ecaDigitlHits.size(); i++){
 			goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> column >= 20);
 			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time >= cutsConstants::digiHitsPeakPosLowerLimit );
 			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time <= cutsConstants::digiHitsPeakPosUpperLimit);
@@ -400,7 +400,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		if(nGoodD < 5) break;
 		// 	if accept the trigger, then go on
 		// 	if the channel did not pass cuts, then it is background, ignore this channel
-		if(!goodChannelEvent[i]) continue;
+		if(!goodChannelEventD[i]) continue;
 		col = ecalDigitHits[i]->column;
 		row = ecalDigitHits[i]->row;
 		// cout << "if good channel in a single event, process next step" <<endl;
