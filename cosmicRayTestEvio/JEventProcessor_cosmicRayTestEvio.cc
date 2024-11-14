@@ -404,10 +404,10 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		col = ecalDigitHits[i]->column;
 		row = ecalDigitHits[i]->row;
 		// cout << "if good channel in a single event, process next step" <<endl;
-		pulse_integral = ecalDigitHits[i]->pulse_integral;
-		pulse_time     = ecalDigitHits[i]->pulse_time    ;
-		pulse_peak     = ecalDigitHits[i]->pulse_peak - ecalDigitHits[i]->pedestal / 4.0;
-		channelNoByColumn      = channelMapByCol[col][row];
+		pulseIntegralBranchVar = ecalDigitHits[i]->pulse_integral;
+		pulseTimeBranchVar     = ecalDigitHits[i]->pulse_time    ;
+		pulsePeakBranchVar     = ecalDigitHits[i]->pulse_peak - ecalDigitHits[i]->pedestal / 4.0;
+		digiChannelNoByColumn  = channelMapByCol[col][row];
 		ecalDigitHitsTree->Fill();
 		numberGoodChannelEvents ++;
 	}
