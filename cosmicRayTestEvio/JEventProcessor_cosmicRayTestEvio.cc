@@ -9,6 +9,8 @@
 using namespace jana;
 using namespace cutsConstants;
 
+const bool printAllAcceptedEventsAfterCuts = false;
+
 
 // Routine used to create our JEventProcessor
 #include <JANA/JApplication.h>
@@ -48,22 +50,24 @@ JEventProcessor_cosmicRayTestEvio::~JEventProcessor_cosmicRayTestEvio()
 //------------------
 jerror_t JEventProcessor_cosmicRayTestEvio::init(void)
 {	
-	const char* dirPath = "figures";
+	if(printAllAcceptedEventsAfterCuts){
+		const char* dirPath = "figures";
+		// 检查目录是否存在
+		if (gSystem->AccessPathName(dirPath) == 0) {
+			std::cout << "Directory exists. Deleting all files inside..." << std::endl;
+			
+			// 使用系统命令删除目录中的所有文件
+			gSystem->Exec(Form("rm -rf %s/*", dirPath));
+			std::cout << "All files deleted inside '" << dirPath << "'." << std::endl;
+		} else {
+			std::cout << "Directory does not exist. Creating it..." << std::endl;
+		}
 
-	// 检查目录是否存在
-	if (gSystem->AccessPathName(dirPath) == 0) {
-		std::cout << "Directory exists. Deleting all files inside..." << std::endl;
-		
-		// 使用系统命令删除目录中的所有文件
-		gSystem->Exec(Form("rm -rf %s/*", dirPath));
-		std::cout << "All files deleted inside '" << dirPath << "'." << std::endl;
-	} else {
-		std::cout << "Directory does not exist. Creating it..." << std::endl;
+		// 创建目录
+		gSystem->Exec(Form("mkdir -p %s", dirPath));
+		std::cout << "Directory '" << dirPath << "' is ready for use." << std::endl;
 	}
 
-	// 创建目录
-	gSystem->Exec(Form("mkdir -p %s", dirPath));
-	std::cout << "Directory '" << dirPath << "' is ready for use." << std::endl;
 
 
 	ecalHitsTree = new TTree("EcalHits", "EcalHits"       );
@@ -349,8 +353,8 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	// outputFile << '\n' << "ECAL TRACK : " ;
 
 	//for first cut, accepting col >= 20, time in time window
-	cout << "ecalHits Size = " << ecalHits.size() << endl;
-	cout << "ecalDigitHits Size = " << ecalDigitHits.size() << endl;
+	// cout << "ecalHits Size = " << ecalHits.size() << endl;
+	// cout << "ecalDigitHits Size = " << ecalDigitHits.size() << endl;
 
 
 	//   *******************        Start to Fill Tree  **********************
@@ -374,6 +378,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		plot->Fill(col,row,energyBranchVar);
 		goodEvent = true;
 	}
+	if(printAllAcceptedEventsAfterCuts){
 		my_canvas->cd();
 		gPad->SetGrid(1);
 		my_canvas->Update();
@@ -385,6 +390,8 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		}
 		my_canvas->Clear();
 		plot->Reset();
+	}
+
 	// Do the same with Ecal Digit Hit
 	//   ******************     ECAL Digit Hits Tree      ***************************
 	for (unsigned int i=0;i<ecalDigitHits.size();i++){
@@ -406,7 +413,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	}
 
 	//    ********************** End filling Tree   ********************************
-
+	if(printAllAcceptedEventsAfterCuts){
 		my_canvas->cd();
 		gPad->SetGrid(1);
 		my_canvas->Update();
@@ -418,11 +425,13 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		}
 		my_canvas->Clear();
 		plot->Reset();
+	}
+
 	// outputFile << endl << endl;
 	// outputFile << "ENEVT LOOPED = " << eventNo << endl << endl;
 	// eventNo += 1;
 
-	cout << numberGoodChannelEvents << endl;
+	// cout << numberGoodChannelEvents << endl;
 	return NOERROR;
 }
 
@@ -444,11 +453,12 @@ jerror_t JEventProcessor_cosmicRayTestEvio::fini(void)
 {
 	cout << "****************************\n"<< numberGoodChannelEvents << endl;
 	// Called before program exit after event processing is finished.
-	cout << numberGoodChannelEvents << endl;
-	cout << numberGoodChannelEvents << endl;
-	cout << numberGoodChannelEvents << endl;
-	cout << numberGoodChannelEvents << endl;
-	cout << numberGoodChannelEvents << endl;
+	cout 
+	<< endl << "Entries that passed cuts in total  =  "
+	<< numberGoodChannelEvents << endl
+	<< "****************************\n\n\n"
+	;
+
 
 	return NOERROR;
 }
