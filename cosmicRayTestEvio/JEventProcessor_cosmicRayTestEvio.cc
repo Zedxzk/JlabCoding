@@ -185,11 +185,9 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	int nGoodD = 0;
 
 	int col, row;
-	Double_t pulse_integral, pulse_time, pulse_peak, pedestal, energy, time;
+	Double_t pulse_integral, pulse_time, pulse_peak, pedestal ;
 	std::vector<bool> goodChannelEvent(ecalHits.size(), true);
 	std::vector<bool> goodChannelEventD(ecalDigitHits.size(), true);
-
-	bool goodEvent = false;
 
 	std::vector<bool> hasNeighbor   (ecalHits.size(), false);
 	std::vector<bool> multiNeighbor (ecalHits.size(), false);
@@ -328,7 +326,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			if(goodChannelEvent[i]) nGood ++;
 		}
 	}
-		for(size_t i = 0; i < ecaDigitlHits.size(); i++){
+		for(size_t i = 0; i < ecalDigitHits.size(); i++){
 			goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> column >= 20);
 			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time >= cutsConstants::digiHitsPeakPosLowerLimit );
 			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time <= cutsConstants::digiHitsPeakPosUpperLimit);
@@ -378,7 +376,6 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		
 		numberGoodChannelEvents ++;
 		plot->Fill(col,row,energyBranchVar);
-		goodEvent = true;
 	}
 	if(printAllAcceptedEventsAfterCuts){
 		my_canvas->cd();
@@ -410,14 +407,14 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		pulseTimeBranchVar     = ecalDigitHits[i]->pulse_time    ;
 		pulsePeakBranchVar     = ecalDigitHits[i]->pulse_peak - ecalDigitHits[i]->pedestal / 4.0;
 		digiChannelNoByColumn  = channelMapByCol[col][row];
-		if(digiChannelNoByColumn > 200){
-			cout << "(col, row) =  " col << " , " << row << endl;
+		if(digiChannelNoByColumn > 800){
+			cout << "(col, row) =  "<< col << " , " << row  << endl;
 			
 		}
 		ecalDigitHitsTree->Fill();
 		numberGoodChannelEvents ++;
 	}
-	getchar();
+	// getchar();
 	//    ********************** End filling Tree   ********************************
 	if(printAllAcceptedEventsAfterCuts){
 		my_canvas->cd();
