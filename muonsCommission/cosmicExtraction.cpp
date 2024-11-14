@@ -16,14 +16,39 @@
 #include <RooPlot.h>
 #include <RooChi2Var.h>
 #include <TLatex.h>
+#include <RooFit.h>
+#include <string>
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunConstants.h"
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPlotConfig.h"
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
 
-const bool addFit = true;
-// const bool addFit = false;
-// const bool needOverView = true;
-const bool needOverView = false;
+using namespace std;
+// #define addBkg
+// const bool addBkg = true;
+const bool addBkg = false;
+// const bool addFit = true;
+const bool addFit = false;
+const bool needOverView = true;
+// const bool needOverView = false;
+
+const char perfix[] = "PulseAmplitude";
+const char varName[] = "Peak Position/ADC Counts";
+const char anotherAxisName[] = "Events / %.1f ADC Counts";
+const char outputFileTitle[] = "// index column row  mean sigma chi2/ndf width\n";
+const char warnFileTitle[]   = "// index column row  mean sigma chi2/ndf width  status\n";
+string dirPath = "./columnView/";
+string columnViewName =  dirPath + "column_%02d";
+//
+const Double_t varLowerLimit       = 0;
+const Double_t varUpperLimit       = 60;
+const Int_t    varBinsInThisFile   = 60;
+const Int_t    binsForFit          = 60;
+const Double_t varAcceptLowerLimit = 7;
+const Double_t varAcceptUpperLimit = 10;
+const Int_t minColumnIndex = 0;
+const Int_t maxColumnIndex = 800;
+const Int_t binsColumn     = 800;
+
 const Double_t energyLowerLimit = 0;
 const Double_t energyUpperLimit = 100;
 const Int_t      energyBinsInThisFile = 100;
@@ -34,23 +59,18 @@ float channelMapByCol[sizeOfEcal][sizeOfEcal] = {0,};
 
 
 
-const TString fileName = "../rootFiles/allRuns.root";       // The ROOT file to open
-const TString treeName = "cosmicRayDistributions";       // The ROOT file to open
-const Int_t minColumnIndex = 0;
-const Int_t maxColumnIndex = 800;
-const Int_t binsColumn     = 800;
+const TString fileName = "allRuns.root";       // The ROOT file to open
+const TString treeName = "EcalDigitHits";       // The ROOT file to open
+
 
 const TString branNameChannelNo = "EcalChannelNo";
-const Int_t   binsEnergy   = int(energyUpperLimit);
-const Int_t   binsEnergy1D = energyUpperLimit / 2;
-const TString branNameEnergy    = "EcalEnergyDistributionByColumn";
-const TString outputDir = "./cosmicCommissionOutput/";        // Create a directory for results
+const TString branNameVar    = "EcalpulsePeakDistributionByColumn";
+const TString outputDir = "./DigitHits/";        // Create a directory for results
 
 const TString textOutName = "res.txt";        
 const TString textOutWarnName = "possible_bad_res.txt";   
 const TString textOut = outputDir + textOutName;             // Output file recording the position of peaks and chi2
 const TString textWarn = outputDir + textOutWarnName;
-
 
 enum dataType {   
     Energy = 1,
@@ -58,30 +78,50 @@ enum dataType {
 };
 
 
+Double_t estimateFWHM(RooLandau& landau, RooRealVar& mean, RooRealVar& sigma) {  
+    // Define a TF1 function for the Landau distribution
+    TF1 landauFunc("landauFunc", "[0] * TMath::Landau(x, [1], [2])", varLowerLimit, varUpperLimit);
+    Double_t normValue = landau.getParameters(RooArgSet(mean, sigma))->getRealValue("norm");
+    landauFunc.SetParameters(normValue, mean.getVal(), sigma.getVal());  // Set parameters
+
+    // Find the maximum of the Landau function
+    Double_t peak = landauFunc.GetMaximum();
+    Double_t halfMax = peak / 2;
+
+    // Find the points where the function is equal to half of the peak
+    Double_t leftX = landauFunc.GetX(halfMax, varLowerLimit, mean.getVal());  // Left half-maximum point
+    Double_t rightX = landauFunc.GetX(halfMax, mean.getVal(), varUpperLimit); // Right half-maximum point
+
+    // Return the FWHM (difference between the two points)
+    return rightX - leftX;
+}
+
 
 void channelsFit(TH2D* hist2D, dataType type) {
-    // std :: cout << energyUpperLimit - energyLowerLimit << "           "  << energyBinsWidth << std :: endl;
+    // std :: cout << energyUpperLimit - varLowerLimit << "           "  << energyBinsWidth << std :: endl;
     if (type == Energy) {
-        std::ofstream outFile("useless.txt",std::ios::out);
+        std::ofstream outFile ("useless.txt",std::ios::out);
         std::ofstream warnFile("useless.txt",std::ios::out);
         if(addFit){
                 // 使用构造函数初始化文件流对象
             std::ofstream outFileInner(textOut.Data(),std::ios::out);
             std::ofstream warnFileInner(textWarn.Data(),std::ios::out);
-            outFile = std::move(outFileInner);
+            outFile  = std::move(outFileInner);
             warnFile = std::move(warnFileInner);
+            outFile<< outputFileTitle;
+            warnFile<< warnFileTitle;
         }
         // for (int i = 0; i < 50; i++) {
-        for (int i = 0; i < 800; i++) {
+        for (int i = 0; i < binsColumn; i++) {
             // zhikunPlotConfig::setFontTimesNewRoman();
-            TCanvas *c = new TCanvas("c", "c", 800, 600);
+            TCanvas *c = new TCanvas("c", "c", 1200, 800);
             int col = 39 - i / 40;
             // if(col <= 0)  col --;
             int row = 39 - i % 40;
             // if(row <= 0) row--;
-            TString histName = TString::Format("col_row_%02d_%02d_EnergyDeposit", col, row);
-            TH1D *hist1D = new TH1D(histName, "Channel Number", binsEnergy1D, energyLowerLimit, energyUpperLimit);
-            hist1D->GetXaxis()->SetRangeUser(energyLowerLimit, energyUpperLimit);
+            TString histName = TString::Format("col_row_%02d_%02d_", col, row) + perfix;
+            TH1D *hist1D = new TH1D(histName, "Channel Number", binsForFit, varLowerLimit, varUpperLimit);
+            hist1D->GetXaxis()->SetRangeUser(varLowerLimit, varUpperLimit);
             
             // 临时投影以获取数据
             TH1D *tempHist = hist2D->ProjectionY(Form("tempHist_%d", i), i + 1, i + 1);
@@ -101,23 +141,29 @@ void channelsFit(TH2D* hist2D, dataType type) {
             // for (int j = 1; j <= energyBinsInThisFile; j++) {
             //     hist1D->SetBinContent(j, hist2D->GetBinContent(i + 1 , j));
             // }
-            hist1D->GetXaxis()->SetTitle("Energy deposition/MeV");
-            hist1D->GetYaxis()->SetTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
+            hist1D->GetXaxis()->SetTitle("Peak Position/");
+            hist1D->GetYaxis()->SetTitle(TString::Format(anotherAxisName,  hist1D->GetXaxis()->GetBinWidth(1)));
             if(addFit){
-            RooRealVar mean("mean", "mean", 23, energyLowerLimit, energyUpperLimit);
+            RooRealVar mean("mean", "mean", 8, varLowerLimit, varUpperLimit);
             RooRealVar sigma("sigma", "sigma", 3, 1e-4, 5);
             RooRealVar a0("a0", "a0", 0.0, -1.0, 1.0); // 切比雪夫多项式的一阶系数
             RooRealVar a1("a1", "a1", 0.5, -1.0, 1.0); // 切比雪夫多项式的一阶系数
-            RooRealVar x("x", "x", energyLowerLimit, energyUpperLimit);
+            RooRealVar x("x", "x", varLowerLimit, varUpperLimit);
 
             RooLandau landau("landau", "landau", x, mean, sigma);
             RooChebychev cheb("cheb", "cheb", x, RooArgList(a0));
-
-            RooRealVar frac("frac", "frac", 0.5, 0.0, 1.0);  // 加权参数
-            RooAddPdf model("model", "landau + cheb", RooArgList(landau, cheb), RooArgList(frac));
-
+            RooRealVar frac("frac", "frac", 1.0, 0.0, 1.0);  // 加权参数
             RooDataHist data("data", "data", x, hist1D);
-            model.fitTo(data);
+            RooAddPdf model("model", "landau + cheb", RooArgList(landau, cheb), RooArgList(frac));
+            if(!addBkg){
+                frac.setConstant();
+            }
+
+
+            // model.fitTo(data,RooFit::Extended(kTRUE));
+            RooFitResult* result = model.fitTo(data);
+
+            // model.fitTo(data);
 
             RooPlot* frame = x.frame();
             frame->SetTitle(TString::Format("Channel %4d   (col, row) = (%2d, %2d)", i, col , row).Data());
@@ -144,36 +190,45 @@ void channelsFit(TH2D* hist2D, dataType type) {
             model.paramOn(frame, RooFit::Parameters(RooArgSet(mean,sigma)), RooFit::Layout(0.6, 0.9,0.7));
                                     
             zhikunPlotConfig::setRooFitPlotStyleV1(frame);
-            frame->SetXTitle("Energy deposition/MeV");            
-            frame->SetYTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
+            frame->SetXTitle(varName);            
+            frame->SetYTitle(TString::Format(anotherAxisName,  hist1D->GetXaxis()->GetBinWidth(1)));
             frame->Draw();
             c->Update();
             pt->Draw();
             c->SaveAs(outputDir + histName.Data() + "_FIT.pdf");
             c->SaveAs(outputDir + histName.Data() + "_FIT.png");
             
-            
+            Double_t width = estimateFWHM(landau, mean, sigma);
+            // std::cout<<__LINE__<<endl;
             bool warn = false;
-            warn = mean.getVal() < energyAcceptLowerLimit || mean.getVal() > energyAcceptUpperLimit || (chi2_dof >= chi2_ndfAcceptMaximum);
+            warn = mean.getVal() < varAcceptLowerLimit || mean.getVal() > varAcceptUpperLimit || (chi2_dof >= chi2_ndfAcceptMaximum);
+            // std::cout<<__LINE__<<endl;
+            warn = warn || width >=12 || (result == nullptr) || (result->status() != 0);
             if(warn){
-                warnFile << std::setw(4) << std::setfill(' ') << i <<
-                "    " << "(" 
-                << std::setw(3) << std::setfill(' ') << col <<" , "
-                << std::setw(3) << std::setfill(' ') << row << ")    " 
-                << TString::Format("%6.3f MeV    ",mean.getVal())
-                << chi2_dof << std::endl;
+                warnFile 
+                << std::setw(4) << std::setfill(' ') << i 
+                << std::setw(5) << std::setfill(' ') << col 
+                << std::setw(5) << std::setfill(' ') << row 
+                << TString::Format("%8.3f   ",mean.getVal()).Data()
+                << TString::Format("%6.3f   ",sigma.getVal()).Data()
+                << TString::Format("%6.3f   ",chi2_dof).Data()
+                << TString::Format("%7.3f   ",width).Data() 
+                << ((result == nullptr )? "nullptr" : ((result->status() != 0) ? "SUCCESS" : "FAILED" ))
+                << std:: endl;
+            }
+            // std::cout<<__LINE__<<endl;
 
-                outFile 
-                << "Channel :"
-                << std::setw(4) << std::setfill(' ') << i <<
-                "    " << "(" 
-                << std::setw(3) << std::setfill(' ') << col <<" , "
-                << std::setw(3) << std::setfill(' ') << row << ")    " 
-                << TString::Format("MEAN: %6.3f MeV    ",mean.getVal())
-                << "chi2/dof = " << chi2_dof << std::endl;
-                delete c;
-                delete hist1D;
-                }
+            outFile 
+            << std::setw(4) << std::setfill(' ') << i 
+            << std::setw(5) << std::setfill(' ') << col 
+            << std::setw(5) << std::setfill(' ') << row 
+            << TString::Format("%8.3f   ",mean.getVal()).Data()
+            << TString::Format("%6.3f   ",sigma.getVal()).Data()
+            << TString::Format("%6.3f   ",chi2_dof).Data()
+            << TString::Format("%7.3f   ",width).Data() << std:: endl;
+            delete c;
+            delete hist1D;
+            
             }
             else{
                 gPad->SetGrid(0);
@@ -235,29 +290,42 @@ void cosmicExtraction() {
 
     // 将树的分支关联到变量
     tree->SetBranchAddress(branNameChannelNo.Data(), &channelIndex);
-    tree->SetBranchAddress(branNameEnergy.Data(), &energy);
+    tree->SetBranchAddress(branNameVar.Data(), &energy);
 
 
     // RooRealVar channelInexEntries  (branNameChannelNo.Data(),branNameChannelNo.Data(),minColumnIndex    , maxColumnIndex      );
-    // RooRealVar EnergyEntries       (branNameEnergy.Data()   ,branNameEnergy.Data()   ,energyLowerLimit , energyUpperLimit     );
+    // RooRealVar EnergyEntries       (branNameVar.Data()   ,branNameVar.Data()   ,varLowerLimit , energyUpperLimit     );
     // RooDataSet dataSet("dataSet", "Data Set", RooArgSet(channelIndexEntries, EnergyEntries));
 
 
-    TH2D* hist2d   = new TH2D("hist2d"  ,"", binsColumn, minColumnIndex,maxColumnIndex, binsEnergy, energyLowerLimit, energyUpperLimit );
+    TH2D* hist2d   = new TH2D("hist2d"  ,"", binsColumn, minColumnIndex,maxColumnIndex, varBinsInThisFile, varLowerLimit, varUpperLimit );
     hist2d->GetXaxis()->SetTitle("Channel Number");
-    hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
+    hist2d->GetYaxis()->SetTitle(varName);
     hist2d->GetXaxis()->CenterTitle();
     hist2d->GetYaxis()->CenterTitle();
-    tree->Project("hist2d", Form("%s:%s", branNameEnergy.Data(), branNameChannelNo.Data()));
+    tree->Project("hist2d", Form("%s:%s", branNameVar.Data(), branNameChannelNo.Data()));
 
     if(needOverView){
+        // 检查目录是否存在
+        if (gSystem->AccessPathName(dirPath.c_str()) == 0) {
+            std::cout << "Directory exists. Deleting all files inside..." << std::endl;
+            
+            // 使用系统命令删除目录中的所有文件
+            gSystem->Exec(Form("rm -rf %s/*", dirPath.c_str()));
+            std::cout << "All files deleted inside '" << dirPath << "'." << std::endl;
+        } else {
+            std::cout << "Directory does not exist. Creating it..." << std::endl;
+        }
+        // 创建目录
+        gSystem->Exec(Form("mkdir -p %s", dirPath.c_str()));
+        std::cout << "Directory '" << dirPath.c_str() << "' is ready for use." << std::endl;
         TH2D* overview = new TH2D("overview","", sizeOfEcal, 0, sizeOfEcal, sizeOfEcal, 0, sizeOfEcal );
         TCanvas* tempCanvas = new TCanvas("","", 2400, 1600);
         // 设置调色板（这里使用默认调色板，你可以根据需要选择其他调色板）
         gStyle->SetPalette(kBird);
         // 限制 Z 轴的范围
         hist2d->SetMinimum(0);
-        hist2d->SetMaximum(20);
+        hist2d->SetMaximum(40);
         hist2d->Draw("COLZ");
         tempCanvas->Print("test.pdf");
         tempCanvas->Print("test.png");
@@ -272,38 +340,23 @@ void cosmicExtraction() {
 
             // 设置轴标签和标题
             hist2d->GetXaxis()->SetTitle("Channel Number");
-            hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
+            hist2d->GetYaxis()->SetTitle(varName);
             hist2d->GetXaxis()->CenterTitle();
             hist2d->GetYaxis()->CenterTitle();
             hist2d->SetTitle(Form("column %02d",39 -  i / 40));
             // gStyle->SetTitleAlign(23);  //
-
-
             // 保存图像
-            tempCanvas->Print(Form("./columnView/column_%02d.png",39 -  i / 40));
-            tempCanvas->Print(Form("./columnView/column_%02d.pdf",39 -  i / 40));
+            tempCanvas->Print(Form((columnViewName+".pdf").c_str(),39 -  i / 40));
+            tempCanvas->Print(Form((columnViewName+".png").c_str(),39 -  i / 40));
 
             // 清理临时画布
             delete tempCanvas;
         }
         TCanvas* tempCanvas2 = new TCanvas("","", 2400, 1600);
-        // 循环遍历所有条目
-        	const char* dirPath = "columnView";
 
-        // 检查目录是否存在
-        if (gSystem->AccessPathName(dirPath) == 0) {
-            std::cout << "Directory exists. Deleting all files inside..." << std::endl;
-            
-            // 使用系统命令删除目录中的所有文件
-            gSystem->Exec(Form("rm -rf %s/*", dirPath));
-            std::cout << "All files deleted inside '" << dirPath << "'." << std::endl;
-        } else {
-            std::cout << "Directory does not exist. Creating it..." << std::endl;
-        }
 
-        // 创建目录
-        gSystem->Exec(Form("mkdir -p %s", dirPath));
-        std::cout << "Directory '" << dirPath << "' is ready for use." << std::endl;
+        
+
         Long64_t nEntries = tree->GetEntries();
         for (Long64_t i = 0; i < nEntries; ++i) {
             tree->GetEntry(i);
@@ -327,9 +380,6 @@ void cosmicExtraction() {
         overview->Draw("COLZ");
         tempCanvas2->Print("overview.pdf");
         tempCanvas2->Print("overview.png");
-
-
-
     }
     
     channelsFit(hist2d, Energy);
