@@ -30,20 +30,21 @@ if __name__ == "__main__":
 
 import re
 import fnmatch
-
+from pprint import pprint
 
 def runAction():
     importParas()
     # setup_paths
 # 列出目录中的所有文件
     all_files = os.listdir(inputDir)
-    print('parameters.py' in os.getcwd())
+    # print('parameters.py' in os.getcwd())
     
     # 找到所有 .evio 文件
     evioFiles = [file for file in all_files if fnmatch.fnmatch(file, "*" + fileType)]
-    
+    evioFiles.sort()
     # 打印找到的 .evio 文件
-    print(f"Found {fileType} files:", evioFiles)
+    pprint(f"Found {fileType} files:" )
+    pprint(evioFiles)
     
     if evioFiles == []:
         print(Fore.RED + "Can't find any evio file! Please check your directory!\nSuspensed!" + Style.RESET_ALL)
