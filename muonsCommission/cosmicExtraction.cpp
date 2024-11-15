@@ -23,19 +23,19 @@
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
 
 using namespace std;
+const bool addFit = true;
+// const bool addFit = false;
 // #define addBkg
-// const bool addBkg = true;
-const bool addBkg = false;
-// const bool addFit = true;
-const bool addFit = false;
-const bool needOverView = true;
-// const bool needOverView = false;
+const bool addBkg = true;
+// const bool addBkg = false;
+// const bool needOverView = true;
+const bool needOverView = false;
 
 const char perfix[] = "PulseAmplitude";
 const char varName[] = "Peak Position/ADC Counts";
 const char anotherAxisName[] = "Events / %.1f ADC Counts";
-const char outputFileTitle[] = "// index column row  mean sigma chi2/ndf width\n";
-const char warnFileTitle[]   = "// index column row  mean sigma chi2/ndf width  status\n";
+const char outputFileTitle[] = "// index column row  mean  error sigma   chi2/ndf width\n";
+const char warnFileTitle[]   = "// index column row  mean  error sigma   chi2/ndf width  status\n";
 string dirPath = "./columnView/";
 string columnViewName =  dirPath + "column_%02d";
 //
@@ -161,7 +161,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
 
 
             // model.fitTo(data,RooFit::Extended(kTRUE));
-            RooFitResult* result = model.fitTo(data);
+            RooFitResult* result = model.fitTo(data,RooFit::Save(kTRUE),RooFit::Extended(kTRUE));
 
             // model.fitTo(data);
 
@@ -210,6 +210,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
                 << std::setw(5) << std::setfill(' ') << col 
                 << std::setw(5) << std::setfill(' ') << row 
                 << TString::Format("%8.3f   ",mean.getVal()).Data()
+                << TString::Format("%6.3f   ",mean.getErr()).Data()
                 << TString::Format("%6.3f   ",sigma.getVal()).Data()
                 << TString::Format("%6.3f   ",chi2_dof).Data()
                 << TString::Format("%7.3f   ",width).Data() 
@@ -223,6 +224,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             << std::setw(5) << std::setfill(' ') << col 
             << std::setw(5) << std::setfill(' ') << row 
             << TString::Format("%8.3f   ",mean.getVal()).Data()
+            << TString::Format("%8.3f   ",mean.getError()).Data()
             << TString::Format("%6.3f   ",sigma.getVal()).Data()
             << TString::Format("%6.3f   ",chi2_dof).Data()
             << TString::Format("%7.3f   ",width).Data() << std:: endl;
