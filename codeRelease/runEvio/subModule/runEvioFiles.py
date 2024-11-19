@@ -4,6 +4,8 @@ import argparse
 import subprocess
 import importlib.util
 import os
+sys.path.append(os.path.dirname((os.path.abspath(__file__))))
+from import_parameters import *
 from colorama import Fore, Back, Style # type: ignore
 # if 'parameters.py' in os.listdir("."):
 #     sys.path.append(os.getcwd())
@@ -14,19 +16,9 @@ reset = Style.RESET_ALL
 green = Fore.GREEN
 yellow = Fore.YELLOW 
 #common import
-        # if there is 'parameters.py', run local version
-if __name__ == "__main__":
-    try:
-        current_working_dir = os.getcwd()
-        parameters_file = os.path.join(current_working_dir, "parameters.py")
-        spec = importlib.util.spec_from_file_location("parameters", parameters_file)
-        parameters = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(parameters)
-        globals().update({k: getattr(parameters, k) for k in dir(parameters) if not k.startswith("__")})
-    # or, use template
-    except Exception as e:
-        print(Fore.RED + f"Error:\n {e} \noccurred when loading parameters.py, Exit!" + Style.RESET_ALL)
-        exit(1)
+
+
+
 
 import re
 import fnmatch
@@ -47,7 +39,7 @@ def runAction():
     pprint(evioFiles)
     
     if evioFiles == []:
-        print(Fore.RED + "Can't find any evio file! Please check your directory!\nSuspensed!" + Style.RESET_ALL)
+        print(Fore.RED + f"Can't find any {fileType} file! Please check your directory!\nSuspensed!" + Style.RESET_ALL)
         exit(1)
     else:
         print("Do you want to keep on?  "+ Fore.GREEN + " (y/n)" + Style.RESET_ALL)

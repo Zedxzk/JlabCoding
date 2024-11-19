@@ -9,6 +9,7 @@ sys.path.append(os.path.dirname((os.path.abspath(__file__))))
 from pprint import pprint
 from subModule import setupEnvironment # type: ignore
 from subModule import runEvioFiles # type: ignore
+from subModule import hvConfig # type: ignore
 import textwrap
 
 
@@ -26,7 +27,6 @@ Then check the file parameter.py, put all the files that you want to run in the 
 # print(greeting)
 
 def main():
-    print(os.path.dirname(os.path.abspath(__file__)))
     try:
         from colorama import Fore, Back, Style # type: ignore
     except ImportError:
@@ -39,12 +39,20 @@ def main():
     parser = argparse.ArgumentParser(description="runEvio script")
     parser.add_argument('-run'  , action='store_true', help='Run the program')
     parser.add_argument('-init' , action='store_true',help=' initialize the environment')
+    parser.add_argument('-hvConfig' , action='store_true',help=' run High Voltage Configuration')
     args = parser.parse_args()
         # 根据传递的参数执行相应的操作
 
     if args.run:
         # 获取当前工作目录
         current_directory = os.getcwd()
+        allFiles = os.listdir(".")
+        for i in range(len(allFiles)):
+            if(os.path.isdir(allFiles[i])):
+                allFiles[i] = "./" + allFiles[i] + "/"
+        localPara = False
+        if 'parameters.py' in allFiles:
+            localPara = True
         print(Fore.BLUE + "current working directory:", current_directory + Style.RESET_ALL)
         setupEnvironment.checkInitializationStatus()    # 添加命令行参数
         print("Program is running...")
@@ -54,6 +62,8 @@ def main():
     if args.init:
         print(f"Initialization start")
         setupEnvironment.checkInitializationStatus()  
+    if args.hvConfig:
+        hvConfig.hvConfigureAction()
 
 
 
