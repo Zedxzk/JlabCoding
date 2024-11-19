@@ -33,8 +33,6 @@ def calculateVoltage(currentVoltage, currentADC, aimADC=aimADC, hvCap=hvCap, hvB
     return newVoltage
 
 
-
-
 def readResTable(fileIn):
     lines = fileIn.readlines()   
 
@@ -163,8 +161,6 @@ def processConfiguration():
 def hvConfigureAction():
     try:
         processConfiguration()
-
-
     except Exception as e:
         print(red + f"Error Occurred! \n{e}" + Style.RESET_ALL)
         exit(1)

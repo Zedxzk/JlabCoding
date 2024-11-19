@@ -100,16 +100,3 @@ def checkInitializationStatus():
             print(yellow + f"{hvTemplateFile} already exist!" + reset)
         else:
             createHvTemplate()
-
-def importParas():
-    try:
-        current_working_dir = os.getcwd()
-        parameters_file = os.path.join(current_working_dir, "parameters.py")
-        spec = importlib.util.spec_from_file_location("parameters", parameters_file)
-        parameters = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(parameters)
-        globals().update({k: getattr(parameters, k) for k in dir(parameters) if not k.startswith("__")})
-    # or, use template
-    except Exception as e:
-        print(Fore.RED + f"Error:\n {e} \noccurred when loading parameters.py, Exit!" + Style.RESET_ALL)
-        exit(1)
