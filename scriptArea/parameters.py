@@ -8,11 +8,20 @@ outputDir = "./outputRootFiles/"
 
 
 # type the command you want to run herem do not include the files, you can add other parameters
-runCommand = "hd_root -PTT:XML_FILENAME=tt_RunPeriod-2025-01-default.xml -PPLUGINS=cosmicRayTestEvio "
+runCommand = "hd_root -PPLUGINS=cosmicRayTestEvio "
 fileType = ".evio" #can be changed to ".hddm"
 
-#if want to run in personal folder, leave publicFileDir empty.
-#if want to run in /cache, type in the whole path that includes the folder
-# Eg. '/cache/halld/RunPeriod-2025-01/rawdata/Run130069/'
-publicFileDir = ['']
-runId = [(),]
+runId = []
+
+# High Voltage Configuration :
+#    ******************  Attention!!!   *****************
+hvTemplateFile = 'temp.snap' # please input your current HV config File!
+#    ******************  Attention!!!   *****************
+itemToConfig   = "v0set 1 "
+fitResDir      = "../muonsCommission/DigitHits/res.txt"
+aimADC         = 10
+#  ADC Countes = A * ( hv ) ^ alpha
+#  Here A is canceled out and not needed
+alpha          = 8
+hvCap          = 1050
+hvBot          = 900

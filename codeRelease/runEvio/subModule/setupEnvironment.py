@@ -4,9 +4,12 @@ import argparse
 import subprocess
 import importlib.util
 import os
+sys.path.append(os.path.dirname((os.path.abspath(__file__))))
+from import_parameters import *
+
 from colorama import Fore, Back, Style # type: ignore
-sys.path.append(os.path.dirname((os.path.abspath(__file__)+"/../")))
-from parameters import runCommand, inputDir, outputDir, fileType # type: ignore
+# sys.path.append(os.path.dirname((os.path.abspath(__file__)+"/../")))
+# from parameters import runCommand, inputDir, outputDir, fileType # type: ignore
 reset = Style.RESET_ALL
 green = Fore.GREEN
 yellow = Fore.YELLOW 
@@ -44,6 +47,16 @@ def createOutputFolder():
         print(yellow + f"Other Error: {e}" +  reset)
 
 
+def createHvTemplate():
+    current_file_path = os.path.dirname(__file__)
+    templateFile = current_file_path +  "/../temp.snap"
+    paraCopy = subprocess.run(['bash', '-c', f'cp {templateFile} .'], capture_output=True)
+    if paraCopy.returncode == 0:
+        print(green + "temp.snap successfully created" + reset)
+    else:
+        print(yellow +"Failed to create parameters.py, please check your permission!" + reset)
+
+
 def initialization():
         # if True:
         # print(runCommand)
@@ -54,6 +67,7 @@ def initialization():
         createPara()
         createInputFolder()
         createOutputFolder()
+        createHvTemplate()
 
 def checkInitializationStatus():
     # importParas()
@@ -82,6 +96,10 @@ def checkInitializationStatus():
             print(yellow + f"{outputDir} already exists, do backup data!!!!!!" + reset)
         else:
             createOutputFolder()
+        if hvTemplateFile in allFiles:
+            print(yellow + f"{hvTemplateFile} already exist!" + reset)
+        else:
+            createHvTemplate()
 
 def importParas():
     try:
