@@ -27,14 +27,14 @@ from pprint import pprint
 def runAction():
     importParas()
     # setup_paths
-# 列出目录中的所有文件
+    # list all the files in the `inputDir`
     all_files = os.listdir(inputDir)
     # print('parameters.py' in os.getcwd())
     
-    # 找到所有 .evio 文件
+    # find .evio files
     evioFiles = [file for file in all_files if fnmatch.fnmatch(file, "*" + fileType)]
     evioFiles.sort()
-    # 打印找到的 .evio 文件
+    # print  .evio files found
     pprint(f"Found {fileType} files:" )
     pprint(evioFiles)
     
@@ -75,25 +75,3 @@ def runAllFiles(evioFiles):
         subprocess.run(['bash', '-c', f'cp hd_root.root {outputDir + fileName}.root'])
     return 0
 
-
-# def setup_paths():
-#     if 'parameters.py' in os.listdir("."):
-#         sys.path.append(os.getcwd())
-#     else:
-#         sys.path.append(os.path.dirname((os.path.abspath(__file__) + "/../")))
-#     from parameters import runCommand, inputDir, outputDir  # type: ignore
-# if __name__ == "__main__":
-#     pass
-
-def importParas():
-    try:
-        current_working_dir = os.getcwd()
-        parameters_file = os.path.join(current_working_dir, "parameters.py")
-        spec = importlib.util.spec_from_file_location("parameters", parameters_file)
-        parameters = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(parameters)
-        globals().update({k: getattr(parameters, k) for k in dir(parameters) if not k.startswith("__")})
-    # or, use template
-    except Exception as e:
-        print(Fore.RED + f"Error:\n {e} \noccurred when loading parameters.py, Exit!" + Style.RESET_ALL)
-        exit(1)
