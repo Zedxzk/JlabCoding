@@ -2,12 +2,17 @@
 temp/muons_smeared.hddm
 inputFilesEvio/hd_rawdata_130063_000.evio
 scriptArea/evioFiles/hd_rawdata_130063_000.evio
+code-1.95.3-1731513157.el8.x86_64.rpm
 .git/objects/pack/pack-e563aea9b4189106ddb3be02f22cb609fe07f9b5.pack
 .git/objects/pack/pack-6a0f5232fab7492cc3de3c1bf7a9e8ff9fb4a1b6.pack
 .git/objects/pack/pack-f4875a1748e23672968ade1dc77e371a3da769e5.pack
 .git/objects/pack/pack-82d2b80a20fe3d70e25198ae1203fa2827903a5e.pack
 .git/objects/pack/pack-20448a209d76d8289c679e579e434784a401cf2b.pack
+.git/objects/pack/pack-0e11f0c0c09efaf6f29680fae8ad8332bfd8613f.pack
+.git/objects/pack/pack-577dedb647a73ddb25fa0e8ca70c57bd32f367f7.pack
 .git/objects/pack/pack-9b39fa5044ba106b2dad844ca38d49fd9db2db17.pack
+code_1.95.3-1731513102_amd64.deb
+code-stable-x64-1731511985.tar.gz
 lumi_skim/lumi_primex3/individual/Run110737/lumi_ps_110737_033.root
 lumi_skim/lumi_primex3/individual/Run110737/lumi_ps_110737_037.root
 lumi_skim/lumi_primex3/individual/Run110737/lumi_ps_110737_006.root
@@ -44,3 +49,4 @@ lumi_skim/lumi_primex3/individual/Run110737/lumi_ps_110737_010.root
 lumi_skim/lumi_primex3/individual/Run110737/lumi_ps_110737_021.root
 lumi_skim/lumi_primex3/individual/Run110737/lumi_ps_110737_025.root
 lumi_skim/lumi_primex3/individual/Run110737/lumi_ps_110737_014.root
+LMS/outputRootFiles/run130043.root
