@@ -25,7 +25,6 @@ import fnmatch
 from pprint import pprint
 
 def runAction():
-    importParas()
     # setup_paths
     # list all the files in the `inputDir`
     all_files = os.listdir(inputDir)
