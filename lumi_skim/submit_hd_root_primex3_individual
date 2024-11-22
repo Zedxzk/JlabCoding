@@ -1,0 +1,99 @@
+#!/bin/tcsh -f
+
+
+set runlist=$1
+
+set wf=$runlist
+
+
+swif2 create -workflow $wf
+swif2 run $wf
+
+
+set n = 1
+
+foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_he3`)
+
+# foreach file (`awk '{print}' list_of_runs_test`)
+
+  echo $n
+  @ n = $n + 1 
+
+#  set my_file = `echo $file | sed -e s/run_/Run0/g`
+
+#For Igal's skims
+
+#  set my_file1 = `echo $file | sed -e s/run_/0/g`
+
+#  set run_num = `echo $file | sed -e s/run_//g`
+
+
+
+#  echo $my_file
+
+#  echo $my_file1
+
+#  echo $run_num
+
+  set my_run = $file
+  set out_dir=Run$my_run
+
+  echo $out_dir
+  
+ls  /cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run$my_run   | grep evio > lumi_primex3/individual/list_Run$my_run
+
+
+
+# mkdir /cache/halld/RunPeriod-2022-08/production/ver05_lumi/$out_dir
+# mkdir /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/$out_dir
+
+
+mkdir -p /volatile/halld/home/zhikun/ver05_lumi/$out_dir
+
+mkdir -p /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/$out_dir
+
+mkdir -p /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/err/$out_dir
+
+mkdir -p /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/scripts/$out_dir
+
+foreach file1 (`awk '{print}' lumi_primex3/individual/list_Run$my_run `)
+
+     echo $file1
+     
+     set tmp = `echo $file1 | sed -e s/.ps//g -e s/.evio//g -e s/hd_rawdata/ps/g`
+
+
+     echo $tmp
+     
+     set runfile = /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/scripts/${out_dir}/run_ps_skims_$file1.csh
+
+     set ntuple=$file
+
+     set outfile=/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/err/${out_dir}/$tmp.out
+     set errfile=/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/err/${out_dir}/$tmp.err
+
+#    set root_dir='\"\/cache\/halld\/RunPeriod-2022-08\/production\/ver05_lumi\/'${out_dir}'\/'lumi_${tmp}.root'\"'
+
+#    set root_dir='\"\/work\/halld\/home\/zhikun\/lumi_skim\/lumi_primex3\/individual\/'${out_dir}'\/'lumi_${tmp}.root'\"'
+
+     set root_dir='\"\/volatile\/halld\/home\/zhikun\/ver05_lumi\/'${out_dir}'\/'lumi_${tmp}.root'\"' 
+
+     
+     echo $root_dir
+
+     set evio_file = ''${out_dir}'\/'${file1}''
+
+     echo $evio_file
+      
+     cat run_hd_root_primex3_individual | sed -e s/RUN_NUM/${out_dir}/g -e s/RUNDIR/${out_dir}/g  -e s/FILE/$tmp/g  -e s/TREE/$root_dir/g   -e s/EVIO/$evio_file/g  >  $runfile  
+
+     chmod 777 $runfile
+
+  echo "SUBMIT to SWIF2"
+     
+swif2 add-job -workflow $wf -account halld  -partition production -name $ntuple -cores 4 -disk 3GB -ram 4GB -time 12h -stdout $outfile -stderr $errfile /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/scripts/${out_dir}/run_ps_skims_$file1.csh
+
+  end
+
+end 
+
