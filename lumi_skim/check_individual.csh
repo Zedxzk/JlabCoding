@@ -4,9 +4,15 @@
 # foreach file (`awk '{print}' list_of_runs_primex2/list_of_runs_he2`)
 # foreach file (`awk '{print}' list_of_runs_primex2/list_of_runs_he3`)
 
+<<<<<<< HEAD
 foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_he3`)
 
 # foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_test`)
+=======
+# foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_he3`)
+
+foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_test`)
+>>>>>>> 1ae420e50e02d38ab9ee9eb5dec97407be6fc269
 
 
 #  echo $file

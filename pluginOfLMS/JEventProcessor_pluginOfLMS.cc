@@ -379,12 +379,19 @@ jerror_t JEventProcessor_pluginOfLMS::evnt(JEventLoop *loop, uint64_t eventnumbe
 		channelNoByColumn      = channelMapByCol[col][row];
 		energyBranchVar        = ecalHits[i] -> E;
 		timeBranchVar          = ecalHits[i] -> t;
+<<<<<<< HEAD
 		if (pulsePeakBranchVar <= 0 ) break;
 		if(col < 20) break;
 		ecalHitsTree->Fill();
 		
 		numberGoodChannelEvents ++;
 		// plot->Fill(col,row,energyBranchVar);
+=======
+		ecalHitsTree->Fill();
+		
+		numberGoodChannelEvents ++;
+		plot->Fill(col,row,energyBranchVar);
+>>>>>>> 1ae420e50e02d38ab9ee9eb5dec97407be6fc269
 	}
 	if(printAllAcceptedEventsAfterCuts){
 		my_canvas->cd();
@@ -416,7 +423,11 @@ jerror_t JEventProcessor_pluginOfLMS::evnt(JEventLoop *loop, uint64_t eventnumbe
 		pulseTimeBranchVar     = ecalDigitHits[i]->pulse_time    ;
 		pulsePeakBranchVar     = ecalDigitHits[i]->pulse_peak - ecalDigitHits[i]->pedestal / 4.0;
 		if (pulsePeakBranchVar <= 0 ) break;
+<<<<<<< HEAD
 		if(col < 20) break;
+=======
+		if(cok < 20) break;
+>>>>>>> 1ae420e50e02d38ab9ee9eb5dec97407be6fc269
 		digiChannelNoByColumn  = channelMapByCol[col][row];
 		if(digiChannelNoByColumn > 800){
 			cout << "(col, row) =  "<< col << " , " << row  << endl;

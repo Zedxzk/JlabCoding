@@ -7,6 +7,7 @@ inputFilesEvio/hd_rawdata_130063_000.evio
 scriptArea/evioFiles/hd_rawdata_130063_000.evio
 code-1.95.3-1731513157.el8.x86_64.rpm
 .git/objects/pack/pack-15cc912dea5c0ddcf1e38705b81d98a5324bf5fa.pack
+.git/objects/pack/pack-18bc2338378a9d26e46e111a927cf0c2f372c424.pack
 code_1.95.3-1731513102_amd64.deb
 code-stable-x64-1731511985.tar.gz
 lumi_skim/lumi_primex3/individual/Run110737/lumi_ps_110737_033.root
@@ -46,8 +47,5 @@ lumi_skim/lumi_primex3/individual/Run110737/lumi_ps_110737_021.root
 lumi_skim/lumi_primex3/individual/Run110737/lumi_ps_110737_025.root
 lumi_skim/lumi_primex3/individual/Run110737/lumi_ps_110737_014.root
 LMS/outputRootFiles/test.root
-LMS/outputRootFiles/hd_rawdata_130043_000.root
-LMS/outputRootFiles/hd_rawdata_130043_001.root
 LMS/outputRootFiles/run130043.root
-LMS/hd_root.root
 LMS/.nfs000000005007f39800001b8e
