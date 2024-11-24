@@ -11,11 +11,21 @@ echo "Commit message: $commit_message"  # 调试行
 
 # 设置文件大小限制（以字节为单位，例如 1MB = 1048576 字节）
 LIMIT=$((1048576 * 30))
+
+# 定义要忽略的文件夹
+ignore_folders=("folder1" "folder2" "folder3")
+
 # 生成 .gitignore 文件
 echo "# Files larger than ${LIMIT} bytes" > .gitignore
 
+# 添加要忽略的文件夹到 .gitignore 文件
+for folder in "${ignore_folders[@]}"; do
+    echo "$folder/" >> .gitignore
+done
+
 # 查找大于限制的文件并追加到 .gitignore 中，并移除 ./ 前缀
-find . -type f -size +${LIMIT}c -print | sed 's|^\./||' >> .gitignore
+# 排除指定文件夹
+find . \( $(printf "! -path './%s/*' -a " "${ignore_folders[@]}") -false \) -o -type f -size +${LIMIT}c -print | sed 's|^\./||' >> .gitignore
 
 # 添加所有更改的文件，忽略 .gitignore 中的文件
 git add .

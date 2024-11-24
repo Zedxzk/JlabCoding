@@ -10,6 +10,7 @@ from pprint import pprint
 from subModule import setupEnvironment # type: ignore
 from subModule import runEvioFiles # type: ignore
 from subModule import hvConfig # type: ignore
+from subModule import clean # type: ignore
 import textwrap
 
 
@@ -40,6 +41,7 @@ def main():
     parser.add_argument('-run'  , action='store_true', help='Run the program')
     parser.add_argument('-init' , action='store_true',help=' initialize the environment')
     parser.add_argument('-hvConfig' , action='store_true',help=' run High Voltage Configuration')
+    parser.add_argument('-clean' , action='store_true',help='clean up environment')
     args = parser.parse_args()
         # 根据传递的参数执行相应的操作
 
@@ -64,6 +66,9 @@ def main():
         setupEnvironment.checkInitializationStatus()  
     if args.hvConfig:
         hvConfig.hvConfigureAction()
+    if args.clean:
+        clean.cleanAction()
+
 
 
 

@@ -58,6 +58,9 @@ def createHvTemplate():
 
 
 def initialization():
+        print("Do you want to initialize?(y/n)")
+        if input().strip().lower() != 'y':
+            exit(1)
         # if True:
         # print(runCommand)
         print("\nEmpty folder, initialzing!")
@@ -100,3 +103,6 @@ def checkInitializationStatus():
             print(yellow + f"{hvTemplateFile} already exist!" + reset)
         else:
             createHvTemplate()
+
+
+

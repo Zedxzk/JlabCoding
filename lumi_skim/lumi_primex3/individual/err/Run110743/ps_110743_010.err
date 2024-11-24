@@ -1,0 +1,4 @@
+export: Command not found.
+export: Command not found.
+Killed
+slurmstepd: error: Detected 1 oom_kill event in StepId=33452244.batch. Some of the step tasks have been OOM Killed.

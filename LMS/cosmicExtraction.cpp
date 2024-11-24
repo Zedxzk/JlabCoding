@@ -43,9 +43,9 @@ string dirPath = "./columnView/";
 string columnViewName =  dirPath + "column_%02d";
 //
 const Double_t varLowerLimit       = 0;
-const Double_t varUpperLimit       = 200;
-const Int_t    varBinsInThisFile   = 100;
-const Int_t    binsForFit          = 100;
+const Double_t varUpperLimit       = 600;
+const Int_t    varBinsInThisFile   = 600;
+const Int_t    binsForFit          = 600;
 const Double_t varAcceptLowerLimit = 7;
 const Double_t varAcceptUpperLimit = 10;
 const Int_t minColumnIndex = 0;

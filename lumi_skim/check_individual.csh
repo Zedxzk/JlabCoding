@@ -4,9 +4,9 @@
 # foreach file (`awk '{print}' list_of_runs_primex2/list_of_runs_he2`)
 # foreach file (`awk '{print}' list_of_runs_primex2/list_of_runs_he3`)
 
-# foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_he3`)
+foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_he3`)
 
-foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_test`)
+# foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_test`)
 
 
 #  echo $file

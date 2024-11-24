@@ -8,7 +8,8 @@ outputDir = "./outputRootFiles/"
 
 
 # type the command you want to run herem do not include the files, you can add other parameters
-runCommand = "hd_root -PPLUGINS=pluginOfLMS -PTT:NO_CCDB=1 -PTT:XML_FILENAME=tt_RunPeriod-2025-01-default.xml "
+runCommand = "hd_root -PPLUGINS=pluginOfLMS"
+# runCommand = "hd_root -PPLUGINS=pluginOfLMS -PTT:NO_CCDB=1 -PTT:XML_FILENAME=tt_RunPeriod-2025-01-default.xml "
 fileType = ".evio" #can be changed to ".hddm"
 
 
