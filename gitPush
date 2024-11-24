@@ -24,8 +24,8 @@ for folder in "${ignore_folders[@]}"; do
 done
 
 # 查找大于限制的文件并追加到 .gitignore 中，并移除 ./ 前缀
-# 排除指定文件夹
-find . \( $(printf "! -path './%s/*' -a " "${ignore_folders[@]}") -false \) -o -type f -size +${LIMIT}c -print | sed 's|^\./||' >> .gitignore
+# 排除指定文件夹和符号链接
+find . \( $(printf "! -path './%s/*' -a " "${ignore_folders[@]}") -false \) -o -type f -not -type l -size +${LIMIT}c -print | sed 's|^\./||' >> .gitignore
 
 # 添加所有更改的文件，忽略 .gitignore 中的文件
 git add .
