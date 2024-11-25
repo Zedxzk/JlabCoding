@@ -1,0 +1,359 @@
+2024-11-23 23:42:23,263 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110800/
+2024-11-23 23:42:25,425 - INFO - Fetch command executed successfully for Run 110800.
+2024-11-23 23:42:25,426 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110801/
+2024-11-23 23:42:27,442 - INFO - Fetch command executed successfully for Run 110801.
+2024-11-23 23:42:27,442 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110802/
+2024-11-23 23:42:29,332 - INFO - Fetch command executed successfully for Run 110802.
+2024-11-23 23:42:29,333 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110803/
+2024-11-23 23:42:31,377 - INFO - Fetch command executed successfully for Run 110803.
+2024-11-23 23:42:31,377 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110804/
+2024-11-23 23:42:33,328 - INFO - Fetch command executed successfully for Run 110804.
+2024-11-23 23:42:33,328 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110805/
+2024-11-23 23:42:35,206 - INFO - Fetch command executed successfully for Run 110805.
+2024-11-23 23:42:35,206 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110806/
+2024-11-23 23:42:37,116 - INFO - Fetch command executed successfully for Run 110806.
+2024-11-23 23:42:37,116 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110807/
+2024-11-23 23:42:39,033 - INFO - Fetch command executed successfully for Run 110807.
+2024-11-23 23:42:39,034 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110808/
+2024-11-23 23:42:41,042 - INFO - Fetch command executed successfully for Run 110808.
+2024-11-23 23:42:41,042 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110809/
+2024-11-23 23:42:43,010 - INFO - Fetch command executed successfully for Run 110809.
+2024-11-23 23:42:43,010 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110810/
+2024-11-23 23:42:44,873 - INFO - Fetch command executed successfully for Run 110810.
+2024-11-23 23:42:44,873 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110811/
+2024-11-23 23:42:46,763 - INFO - Fetch command executed successfully for Run 110811.
+2024-11-23 23:42:46,763 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110812/
+2024-11-23 23:42:48,701 - INFO - Fetch command executed successfully for Run 110812.
+2024-11-23 23:42:48,702 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110814/
+2024-11-23 23:42:50,579 - INFO - Fetch command executed successfully for Run 110814.
+2024-11-23 23:42:50,579 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110815/
+2024-11-23 23:42:52,543 - INFO - Fetch command executed successfully for Run 110815.
+2024-11-23 23:42:52,543 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110816/
+2024-11-23 23:42:54,321 - INFO - Fetch command executed successfully for Run 110816.
+2024-11-23 23:42:54,321 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110817/
+2024-11-23 23:42:56,076 - INFO - Fetch command executed successfully for Run 110817.
+2024-11-23 23:42:56,076 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110818/
+2024-11-23 23:42:58,268 - INFO - Fetch command executed successfully for Run 110818.
+2024-11-23 23:42:58,268 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110819/
+2024-11-23 23:43:00,080 - INFO - Fetch command executed successfully for Run 110819.
+2024-11-23 23:43:00,080 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110820/
+2024-11-23 23:43:01,959 - INFO - Fetch command executed successfully for Run 110820.
+2024-11-23 23:43:01,959 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110821/
+2024-11-23 23:43:03,948 - INFO - Fetch command executed successfully for Run 110821.
+2024-11-23 23:43:03,948 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110822/
+2024-11-23 23:43:05,887 - INFO - Fetch command executed successfully for Run 110822.
+2024-11-23 23:43:05,887 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110824/
+2024-11-23 23:43:07,709 - INFO - Fetch command executed successfully for Run 110824.
+2024-11-23 23:43:07,709 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110825/
+2024-11-23 23:43:09,480 - INFO - Fetch command executed successfully for Run 110825.
+2024-11-23 23:43:09,480 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110828/
+2024-11-23 23:43:11,368 - INFO - Fetch command executed successfully for Run 110828.
+2024-11-23 23:43:11,368 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110829/
+2024-11-23 23:43:13,135 - INFO - Fetch command executed successfully for Run 110829.
+2024-11-23 23:43:13,135 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110830/
+2024-11-23 23:43:14,975 - INFO - Fetch command executed successfully for Run 110830.
+2024-11-23 23:43:14,975 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110831/
+2024-11-23 23:43:16,757 - INFO - Fetch command executed successfully for Run 110831.
+2024-11-23 23:43:16,758 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110833/
+2024-11-23 23:43:18,523 - INFO - Fetch command executed successfully for Run 110833.
+2024-11-23 23:43:18,523 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110834/
+2024-11-23 23:43:20,362 - INFO - Fetch command executed successfully for Run 110834.
+2024-11-23 23:43:20,362 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110835/
+2024-11-23 23:43:22,106 - INFO - Fetch command executed successfully for Run 110835.
+2024-11-23 23:43:22,106 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110836/
+2024-11-23 23:43:23,876 - INFO - Fetch command executed successfully for Run 110836.
+2024-11-23 23:43:23,876 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110837/
+2024-11-23 23:43:25,673 - INFO - Fetch command executed successfully for Run 110837.
+2024-11-23 23:43:25,674 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110841/
+2024-11-23 23:43:27,449 - INFO - Fetch command executed successfully for Run 110841.
+2024-11-23 23:43:27,449 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110842/
+2024-11-23 23:43:29,187 - INFO - Fetch command executed successfully for Run 110842.
+2024-11-23 23:43:29,187 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110843/
+2024-11-23 23:43:31,218 - INFO - Fetch command executed successfully for Run 110843.
+2024-11-23 23:43:31,218 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110844/
+2024-11-23 23:43:32,968 - INFO - Fetch command executed successfully for Run 110844.
+2024-11-23 23:43:32,968 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110845/
+2024-11-23 23:43:34,701 - INFO - Fetch command executed successfully for Run 110845.
+2024-11-23 23:43:34,701 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110846/
+2024-11-23 23:43:36,494 - INFO - Fetch command executed successfully for Run 110846.
+2024-11-23 23:43:36,494 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110847/
+2024-11-23 23:43:38,441 - INFO - Fetch command executed successfully for Run 110847.
+2024-11-23 23:43:38,441 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110848/
+2024-11-23 23:43:40,313 - INFO - Fetch command executed successfully for Run 110848.
+2024-11-23 23:43:40,313 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110849/
+2024-11-23 23:43:42,234 - INFO - Fetch command executed successfully for Run 110849.
+2024-11-23 23:43:42,234 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110850/
+2024-11-23 23:43:43,984 - INFO - Fetch command executed successfully for Run 110850.
+2024-11-23 23:43:43,984 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110851/
+2024-11-23 23:43:45,858 - INFO - Fetch command executed successfully for Run 110851.
+2024-11-23 23:43:45,858 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110852/
+2024-11-23 23:43:47,834 - INFO - Fetch command executed successfully for Run 110852.
+2024-11-23 23:43:47,834 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110853/
+2024-11-23 23:43:49,783 - INFO - Fetch command executed successfully for Run 110853.
+2024-11-23 23:43:49,783 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110854/
+2024-11-23 23:43:51,720 - INFO - Fetch command executed successfully for Run 110854.
+2024-11-23 23:43:51,720 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110855/
+2024-11-23 23:43:53,513 - INFO - Fetch command executed successfully for Run 110855.
+2024-11-23 23:43:53,513 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110856/
+2024-11-23 23:43:55,306 - INFO - Fetch command executed successfully for Run 110856.
+2024-11-23 23:43:55,306 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110857/
+2024-11-23 23:43:57,028 - INFO - Fetch command executed successfully for Run 110857.
+2024-11-23 23:43:57,028 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110858/
+2024-11-23 23:43:58,837 - INFO - Fetch command executed successfully for Run 110858.
+2024-11-23 23:43:58,837 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110859/
+2024-11-23 23:45:12,165 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110800/
+2024-11-23 23:45:14,451 - INFO - Fetch command executed successfully for Run 110800.
+2024-11-23 23:45:14,451 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110801/
+2024-11-23 23:45:16,474 - INFO - Fetch command executed successfully for Run 110801.
+2024-11-23 23:45:16,474 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110802/
+2024-11-23 23:45:18,348 - INFO - Fetch command executed successfully for Run 110802.
+2024-11-23 23:45:18,348 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110803/
+2024-11-23 23:45:20,583 - INFO - Fetch command executed successfully for Run 110803.
+2024-11-23 23:45:20,583 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110804/
+2024-11-23 23:45:22,518 - INFO - Fetch command executed successfully for Run 110804.
+2024-11-23 23:45:22,518 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110805/
+2024-11-23 23:45:24,449 - INFO - Fetch command executed successfully for Run 110805.
+2024-11-23 23:45:24,449 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110806/
+2024-11-23 23:45:26,308 - ERROR - Fetch command failed for Run 110806: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110806/* -> fail (not in tape library) 
+2024-11-23 23:45:26,308 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110807/
+2024-11-23 23:45:28,055 - ERROR - Fetch command failed for Run 110807: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110807/* -> fail (not in tape library) 
+2024-11-23 23:45:28,055 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110808/
+2024-11-23 23:45:30,105 - INFO - Fetch command executed successfully for Run 110808.
+2024-11-23 23:45:30,105 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110809/
+2024-11-23 23:45:32,320 - INFO - Fetch command executed successfully for Run 110809.
+2024-11-23 23:45:32,320 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110810/
+2024-11-23 23:45:34,187 - INFO - Fetch command executed successfully for Run 110810.
+2024-11-23 23:45:34,187 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110811/
+2024-11-23 23:45:36,037 - INFO - Fetch command executed successfully for Run 110811.
+2024-11-23 23:45:36,037 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110812/
+2024-11-23 23:45:37,890 - INFO - Fetch command executed successfully for Run 110812.
+2024-11-23 23:45:37,891 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110814/
+2024-11-23 23:45:39,718 - INFO - Fetch command executed successfully for Run 110814.
+2024-11-23 23:45:39,718 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110815/
+2024-11-23 23:45:41,640 - INFO - Fetch command executed successfully for Run 110815.
+2024-11-23 23:45:41,641 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110816/
+2024-11-23 23:45:43,434 - ERROR - Fetch command failed for Run 110816: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110816/* -> fail (not in tape library) 
+2024-11-23 23:45:43,434 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110817/
+2024-11-23 23:45:45,223 - ERROR - Fetch command failed for Run 110817: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110817/* -> fail (not in tape library) 
+2024-11-23 23:45:45,223 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110818/
+2024-11-23 23:45:47,115 - INFO - Fetch command executed successfully for Run 110818.
+2024-11-23 23:45:47,115 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110819/
+2024-11-23 23:45:48,867 - INFO - Fetch command executed successfully for Run 110819.
+2024-11-23 23:45:48,867 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110820/
+2024-11-23 23:45:50,773 - INFO - Fetch command executed successfully for Run 110820.
+2024-11-23 23:45:50,773 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110821/
+2024-11-23 23:45:52,702 - INFO - Fetch command executed successfully for Run 110821.
+2024-11-23 23:45:52,702 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110822/
+2024-11-23 23:45:54,594 - INFO - Fetch command executed successfully for Run 110822.
+2024-11-23 23:45:54,594 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110824/
+2024-11-23 23:45:56,360 - ERROR - Fetch command failed for Run 110824: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110824/* -> fail (not in tape library) 
+2024-11-23 23:45:56,360 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110825/
+2024-11-23 23:45:58,121 - ERROR - Fetch command failed for Run 110825: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110825/* -> fail (not in tape library) 
+2024-11-23 23:45:58,121 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110828/
+2024-11-23 23:45:59,930 - INFO - Fetch command executed successfully for Run 110828.
+2024-11-23 23:45:59,930 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110829/
+2024-11-23 23:46:01,765 - ERROR - Fetch command failed for Run 110829: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110829/* -> fail (not in tape library) 
+2024-11-23 23:46:01,765 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110830/
+2024-11-23 23:46:03,513 - ERROR - Fetch command failed for Run 110830: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110830/* -> fail (not in tape library) 
+2024-11-23 23:46:03,514 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110831/
+2024-11-23 23:46:05,313 - ERROR - Fetch command failed for Run 110831: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110831/* -> fail (not in tape library) 
+2024-11-23 23:46:05,314 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110833/
+2024-11-23 23:46:07,139 - INFO - Fetch command executed successfully for Run 110833.
+2024-11-23 23:46:07,140 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110834/
+2024-11-23 23:46:08,987 - INFO - Fetch command executed successfully for Run 110834.
+2024-11-23 23:46:08,987 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110835/
+2024-11-23 23:46:10,750 - ERROR - Fetch command failed for Run 110835: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110835/* -> fail (not in tape library) 
+2024-11-23 23:46:10,750 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110836/
+2024-11-23 23:46:12,594 - INFO - Fetch command executed successfully for Run 110836.
+2024-11-23 23:46:12,594 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110837/
+2024-11-23 23:46:14,442 - INFO - Fetch command executed successfully for Run 110837.
+2024-11-23 23:46:14,442 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110841/
+2024-11-23 23:46:16,178 - INFO - Fetch command executed successfully for Run 110841.
+2024-11-23 23:46:16,178 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110842/
+2024-11-23 23:46:17,902 - ERROR - Fetch command failed for Run 110842: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110842/* -> fail (not in tape library) 
+2024-11-23 23:46:17,902 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110843/
+2024-11-23 23:46:19,801 - INFO - Fetch command executed successfully for Run 110843.
+2024-11-23 23:46:19,801 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110844/
+2024-11-23 23:46:21,634 - ERROR - Fetch command failed for Run 110844: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110844/* -> fail (not in tape library) 
+2024-11-23 23:46:21,634 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110845/
+2024-11-23 23:46:23,434 - ERROR - Fetch command failed for Run 110845: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110845/* -> fail (not in tape library) 
+2024-11-23 23:46:23,435 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110846/
+2024-11-23 23:46:25,175 - ERROR - Fetch command failed for Run 110846: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110846/* -> fail (not in tape library) 
+2024-11-23 23:46:25,175 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110847/
+2024-11-23 23:46:27,132 - INFO - Fetch command executed successfully for Run 110847.
+2024-11-23 23:46:27,132 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110848/
+2024-11-23 23:46:28,916 - INFO - Fetch command executed successfully for Run 110848.
+2024-11-23 23:46:28,916 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110849/
+2024-11-23 23:46:30,832 - INFO - Fetch command executed successfully for Run 110849.
+2024-11-23 23:46:30,833 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110850/
+2024-11-23 23:46:32,670 - ERROR - Fetch command failed for Run 110850: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110850/* -> fail (not in tape library) 
+2024-11-23 23:46:32,670 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110851/
+2024-11-23 23:46:34,471 - INFO - Fetch command executed successfully for Run 110851.
+2024-11-23 23:46:34,471 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110852/
+2024-11-23 23:46:36,406 - INFO - Fetch command executed successfully for Run 110852.
+2024-11-23 23:46:36,407 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110853/
+2024-11-23 23:46:38,298 - INFO - Fetch command executed successfully for Run 110853.
+2024-11-23 23:46:38,298 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110854/
+2024-11-23 23:46:40,264 - INFO - Fetch command executed successfully for Run 110854.
+2024-11-23 23:46:40,264 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110855/
+2024-11-23 23:46:42,017 - ERROR - Fetch command failed for Run 110855: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110855/* -> fail (not in tape library) 
+2024-11-23 23:46:42,018 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110856/
+2024-11-23 23:46:43,766 - ERROR - Fetch command failed for Run 110856: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110856/* -> fail (not in tape library) 
+2024-11-23 23:46:43,766 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110857/
+2024-11-23 23:46:45,551 - ERROR - Fetch command failed for Run 110857: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110857/* -> fail (not in tape library) 
+2024-11-23 23:46:45,551 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110858/
+2024-11-23 23:46:47,324 - ERROR - Fetch command failed for Run 110858: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110858/* -> fail (not in tape library) 
+2024-11-23 23:46:47,324 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110859/
+2024-11-23 23:46:49,151 - INFO - Fetch command executed successfully for Run 110859.
+2024-11-23 23:46:49,151 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110860/
+2024-11-23 23:46:51,110 - INFO - Fetch command executed successfully for Run 110860.
+2024-11-23 23:46:51,110 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110861/
+2024-11-23 23:46:52,853 - INFO - Fetch command executed successfully for Run 110861.
+2024-11-23 23:46:52,853 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110862/
+2024-11-23 23:46:54,643 - ERROR - Fetch command failed for Run 110862: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110862/* -> fail (not in tape library) 
+2024-11-23 23:46:54,643 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110863/
+2024-11-23 23:46:56,403 - INFO - Fetch command executed successfully for Run 110863.
+2024-11-23 23:46:56,403 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110864/
+2024-11-23 23:46:58,324 - INFO - Fetch command executed successfully for Run 110864.
+2024-11-23 23:46:58,324 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110865/
+2024-11-23 23:47:00,200 - INFO - Fetch command executed successfully for Run 110865.
+2024-11-23 23:47:00,200 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110866/
+2024-11-23 23:47:02,091 - INFO - Fetch command executed successfully for Run 110866.
+2024-11-23 23:47:02,091 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110867/
+2024-11-23 23:47:03,857 - INFO - Fetch command executed successfully for Run 110867.
+2024-11-23 23:47:03,857 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110868/
+2024-11-23 23:47:05,640 - INFO - Fetch command executed successfully for Run 110868.
+2024-11-23 23:47:05,640 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110869/
+2024-11-23 23:47:07,496 - INFO - Fetch command executed successfully for Run 110869.
+2024-11-23 23:47:07,496 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110870/
+2024-11-23 23:47:09,291 - INFO - Fetch command executed successfully for Run 110870.
+2024-11-23 23:47:09,291 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110871/
+2024-11-23 23:47:11,224 - INFO - Fetch command executed successfully for Run 110871.
+2024-11-23 23:47:11,224 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110872/
+2024-11-23 23:47:13,205 - INFO - Fetch command executed successfully for Run 110872.
+2024-11-23 23:47:13,205 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110873/
+2024-11-23 23:47:15,164 - INFO - Fetch command executed successfully for Run 110873.
+2024-11-23 23:47:15,165 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110874/
+2024-11-23 23:47:17,034 - INFO - Fetch command executed successfully for Run 110874.
+2024-11-23 23:47:17,034 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110875/
+2024-11-23 23:47:18,842 - INFO - Fetch command executed successfully for Run 110875.
+2024-11-23 23:47:18,842 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110876/
+2024-11-23 23:47:20,657 - INFO - Fetch command executed successfully for Run 110876.
+2024-11-23 23:47:20,657 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110877/
+2024-11-23 23:47:22,562 - INFO - Fetch command executed successfully for Run 110877.
+2024-11-23 23:47:22,562 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110878/
+2024-11-23 23:47:24,439 - INFO - Fetch command executed successfully for Run 110878.
+2024-11-23 23:47:24,439 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110879/
+2024-11-23 23:47:26,233 - ERROR - Fetch command failed for Run 110879: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110879/* -> fail (not in tape library) 
+2024-11-23 23:47:26,234 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110881/
+2024-11-23 23:47:28,203 - INFO - Fetch command executed successfully for Run 110881.
+2024-11-23 23:47:28,203 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110882/
+2024-11-23 23:47:29,963 - INFO - Fetch command executed successfully for Run 110882.
+2024-11-23 23:47:29,963 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110896/
+2024-11-23 23:47:31,726 - ERROR - Fetch command failed for Run 110896: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110896/* -> fail (not in tape library) 
+2024-11-23 23:47:31,726 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110897/
+2024-11-23 23:47:33,550 - INFO - Fetch command executed successfully for Run 110897.
+2024-11-23 23:47:33,550 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110899/
+2024-11-23 23:47:35,381 - ERROR - Fetch command failed for Run 110899: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110899/* -> fail (not in tape library) 
+2024-11-23 23:47:35,381 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110900/
+2024-11-23 23:47:37,140 - INFO - Fetch command executed successfully for Run 110900.
+2024-11-23 23:47:37,140 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110901/
+2024-11-23 23:47:38,924 - INFO - Fetch command executed successfully for Run 110901.
+2024-11-23 23:47:38,924 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110902/
+2024-11-23 23:47:40,649 - INFO - Fetch command executed successfully for Run 110902.
+2024-11-23 23:47:40,649 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110903/
+2024-11-23 23:47:42,433 - INFO - Fetch command executed successfully for Run 110903.
+2024-11-23 23:47:42,433 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110904/
+2024-11-23 23:47:44,202 - INFO - Fetch command executed successfully for Run 110904.
+2024-11-23 23:47:44,202 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110905/
+2024-11-23 23:47:45,948 - INFO - Fetch command executed successfully for Run 110905.
+2024-11-23 23:47:45,949 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110907/
+2024-11-23 23:47:47,659 - INFO - Fetch command executed successfully for Run 110907.
+2024-11-23 23:47:47,659 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110909/
+2024-11-23 23:47:49,538 - INFO - Fetch command executed successfully for Run 110909.
+2024-11-23 23:47:49,538 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110910/
+2024-11-23 23:47:51,289 - INFO - Fetch command executed successfully for Run 110910.
+2024-11-23 23:47:51,289 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110911/
+2024-11-23 23:47:53,080 - ERROR - Fetch command failed for Run 110911: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110911/* -> fail (not in tape library) 
+2024-11-23 23:47:53,080 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110912/
+2024-11-23 23:47:54,877 - INFO - Fetch command executed successfully for Run 110912.
+2024-11-23 23:47:54,877 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110913/
+2024-11-23 23:47:56,620 - INFO - Fetch command executed successfully for Run 110913.
+2024-11-23 23:47:56,620 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110914/
+2024-11-23 23:47:58,513 - INFO - Fetch command executed successfully for Run 110914.
+2024-11-23 23:47:58,514 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110915/
+2024-11-23 23:48:00,265 - INFO - Fetch command executed successfully for Run 110915.
+2024-11-23 23:48:00,265 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110916/
+2024-11-23 23:48:02,031 - INFO - Fetch command executed successfully for Run 110916.
+2024-11-23 23:48:02,031 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110917/
+2024-11-23 23:48:03,810 - INFO - Fetch command executed successfully for Run 110917.
+2024-11-23 23:48:03,810 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110918/
+2024-11-23 23:48:05,603 - INFO - Fetch command executed successfully for Run 110918.
+2024-11-23 23:48:05,603 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110919/
+2024-11-23 23:48:07,395 - INFO - Fetch command executed successfully for Run 110919.
+2024-11-23 23:48:07,395 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110920/
+2024-11-23 23:48:09,149 - ERROR - Fetch command failed for Run 110920: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110920/* -> fail (not in tape library) 
+2024-11-23 23:48:09,150 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110921/
+2024-11-23 23:48:10,927 - INFO - Fetch command executed successfully for Run 110921.
+2024-11-23 23:48:10,927 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110922/
+2024-11-23 23:48:12,760 - INFO - Fetch command executed successfully for Run 110922.
+2024-11-23 23:48:12,760 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110923/
+2024-11-23 23:48:14,526 - INFO - Fetch command executed successfully for Run 110923.
+2024-11-23 23:48:14,526 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110924/
+2024-11-23 23:48:16,421 - INFO - Fetch command executed successfully for Run 110924.
+2024-11-23 23:48:16,421 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110925/
+2024-11-23 23:48:18,192 - INFO - Fetch command executed successfully for Run 110925.
+2024-11-23 23:48:18,192 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110926/
+2024-11-23 23:48:19,937 - INFO - Fetch command executed successfully for Run 110926.
+2024-11-23 23:48:19,937 - INFO - Fetching files from: /mss/halld/RunPeriod-2022-08/calib/ver01/PS/Run110927/
+2024-11-23 23:48:21,703 - INFO - Fetch command executed successfully for Run 110927.

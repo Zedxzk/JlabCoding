@@ -1,0 +1,53 @@
+import re
+import sys
+
+# 错误信息示例
+error_messages = [
+    "Error: The file /w/halld-scshelf2101/home/zhikun/lumi_skim/lumi_primex3/individual/list_Run110754 is empty.",
+    "Error: No events in file /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110755/ps_110755_015.log",
+    "Error: Unable to open file /path/to/some/file.ps_110756_001.log",
+    "Error: File processing failed for /work/halld/home/zhikun/logs/ps_110757_002.log"
+]
+
+# 定义两种匹配模式
+pattern1 = re.compile(r"Error: The file (.+(\d{6})) is empty.")
+pattern2 = re.compile(r"Error: (.+?) No events in file (.+?/ps_(\d{6})_(\d{3}).log)")
+
+def match_error(message):
+    # 创建一个字典来存储匹配的结果
+    result = {}
+
+    # 尝试匹配第一种格式
+    match1 = pattern1.search(message)
+    if match1:
+        first_number = match1.group(2)  # 第一个数字（六位）
+        result[(first_number, '*')] = 'empty_file'  # 错误类型为 'empty_file'
+        return result
+
+    # 尝试匹配第二种格式
+    match2 = pattern2.search(message)
+    if match2:
+        error_type = match2.group(1)  # 捕获的错误类型
+        first_number = match2.group(3)  # 第一个数字（六位）
+        second_number = match2.group(4)  # 第二个数字（三位，只有通过动态匹配捕获时才存在）
+        # 将匹配到的结果添加到字典，根据错误类型定义不同的值
+        result[(first_number, second_number)] = error_type.strip()  # 动态错误类型
+        return result
+
+    # 若两种格式都不匹配，抛出异常并退出
+    raise ValueError(f"No matching error pattern found in:\n {message}\n")
+
+# 收集所有匹配的结果
+all_results = {}
+
+# 处理每个错误信息
+for message in error_messages:
+    try:
+        result = match_error(message)
+        all_results.update(result)  # 更新结果字典
+    except ValueError as e:
+        print(f"\nError: {e}")
+        sys.exit(1)  # 退出程序
+
+# 打印所有匹配的结果
+print("Matched Results:", all_results)

@@ -1,0 +1,75 @@
+2024-11-23 23:45:26,308 - ERROR - Fetch command failed for Run 110806: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110806/* -> fail (not in tape library) 
+2024-11-23 23:45:28,055 - ERROR - Fetch command failed for Run 110807: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110807/* -> fail (not in tape library) 
+2024-11-23 23:45:43,434 - ERROR - Fetch command failed for Run 110816: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110816/* -> fail (not in tape library) 
+2024-11-23 23:45:45,223 - ERROR - Fetch command failed for Run 110817: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110817/* -> fail (not in tape library) 
+2024-11-23 23:45:56,360 - ERROR - Fetch command failed for Run 110824: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110824/* -> fail (not in tape library) 
+2024-11-23 23:45:58,121 - ERROR - Fetch command failed for Run 110825: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110825/* -> fail (not in tape library) 
+2024-11-23 23:46:01,765 - ERROR - Fetch command failed for Run 110829: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110829/* -> fail (not in tape library) 
+2024-11-23 23:46:03,513 - ERROR - Fetch command failed for Run 110830: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110830/* -> fail (not in tape library) 
+2024-11-23 23:46:05,313 - ERROR - Fetch command failed for Run 110831: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110831/* -> fail (not in tape library) 
+2024-11-23 23:46:10,750 - ERROR - Fetch command failed for Run 110835: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110835/* -> fail (not in tape library) 
+2024-11-23 23:46:17,902 - ERROR - Fetch command failed for Run 110842: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110842/* -> fail (not in tape library) 
+2024-11-23 23:46:21,634 - ERROR - Fetch command failed for Run 110844: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110844/* -> fail (not in tape library) 
+2024-11-23 23:46:23,434 - ERROR - Fetch command failed for Run 110845: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110845/* -> fail (not in tape library) 
+2024-11-23 23:46:25,175 - ERROR - Fetch command failed for Run 110846: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110846/* -> fail (not in tape library) 
+2024-11-23 23:46:32,670 - ERROR - Fetch command failed for Run 110850: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110850/* -> fail (not in tape library) 
+2024-11-23 23:46:42,017 - ERROR - Fetch command failed for Run 110855: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110855/* -> fail (not in tape library) 
+2024-11-23 23:46:43,766 - ERROR - Fetch command failed for Run 110856: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110856/* -> fail (not in tape library) 
+2024-11-23 23:46:45,551 - ERROR - Fetch command failed for Run 110857: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110857/* -> fail (not in tape library) 
+2024-11-23 23:46:47,324 - ERROR - Fetch command failed for Run 110858: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110858/* -> fail (not in tape library) 
+2024-11-23 23:46:54,643 - ERROR - Fetch command failed for Run 110862: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110862/* -> fail (not in tape library) 
+2024-11-23 23:47:26,233 - ERROR - Fetch command failed for Run 110879: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110879/* -> fail (not in tape library) 
+2024-11-23 23:47:31,726 - ERROR - Fetch command failed for Run 110896: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110896/* -> fail (not in tape library) 
+2024-11-23 23:47:35,381 - ERROR - Fetch command failed for Run 110899: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110899/* -> fail (not in tape library) 
+2024-11-23 23:47:53,080 - ERROR - Fetch command failed for Run 110911: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110911/* -> fail (not in tape library) 
+2024-11-23 23:48:09,149 - ERROR - Fetch command failed for Run 110920: get request: -1
+status: failed
+/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110920/* -> fail (not in tape library) 
