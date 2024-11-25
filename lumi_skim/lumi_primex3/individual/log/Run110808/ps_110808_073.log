@@ -1,0 +1,82 @@
+JANA >>OUTPUT_FILENAME: /volatile/halld/home/zhikun/ver05_lumi/Run110808/ps_110808_073.root
+JANA >>Initializing plugin "/work/halld/home/zhikun/lumi_skim/lumi_skim.so" ...
+Opened ROOT file "/volatile/halld/home/zhikun/ver05_lumi/Run110808/ps_110808_073.root" ...
+ SASCHA -1
+/volatile/halld/home/zhikun/ver05_lumi/Run110808/lumi_ps_110808_073.root
+JANA >>Launching threads ....
+JANA >>Opening source "/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110808/hd_rawdata_110808_073.ps.evio" of type: EVIOpp  - Reads EVIO formatted data from file or ET system
+loading VERSION 3
+
+
+JANA >>Created JCalibration object of type: JCalibrationCCDB
+JANA >>Generated via: JCalibration using CCDB for MySQL and SQLite databases
+JANA >>Run:110808
+JANA >>URL: mysql://ccdb_user@hallddb-farm.jlab.org/ccdb
+JANA >>context: variation=default
+JANA >>comment: Default constants for analyzing data
+  3.0 events processed  (3.0 events read)  6.0Hz  (avg.: 0.0Hz)     JANA >>Creating DGeometry:
+JANA >>  Run requested:110808  found:110808
+JANA >>  Run validity range: 110808-110808
+JANA >>  URL="ccdb:///GEOMETRY/main_HDDS.xml"  context="default"
+JANA >>  Type="JGeometryXML"
+JANA >>Found 25 material maps in calib. DB
+  3.0 events processed  (3.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>Read in 25 material maps for run 110808 containing 76153 grid points total
+JANA >>Creating DTranslationTable for run 110808
+JANA >>Reading translation table from calib DB: Translation/DAQ2detector ...
+  3.0 events processed  (3.0 events read)  0.0Hz  (avg.: 0.0Hz)       3.0 events processed  (3.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>40636 channels defined in translation table
+JANA >>In DPSHit_factory, loading constants...
+JANA >>In DPSCHit_factory, loading constants...
+JANA >>In DTAGHHit_factory, loading constants...
+JANA >> Correct Beam Photon Energy (TAGH) = 11.555 (GeV)
+JANA >>In DTAGMHit_factory_Calib, loading constants...
+JANA >> Correct Beam Photon Energy (TAGM) = 11.555 (GeV)
+JANA >>
+JANA >> --- Configuration Parameters --
+JANA >>[1m LUMI_PRIMEX:DIR                                                = /volatile/halld/home/zhikun/ver05_lumi/Run110808/lumi_ps_110808_073.root[0m
+JANA >>[1m NTHREADS                                                       = 4                                                                       [0m
+JANA >>[1m OUTPUT_FILENAME                                                = /volatile/halld/home/zhikun/ver05_lumi/Run110808/ps_110808_073.root     [0m
+JANA >>[1m PLUGINS                                                        = lumi_skim                                                               [0m
+JANA >>[1m[31m[1m[5m Run110808/hd_rawdata_110808_073.ps.evio:SKIP_F250_FORMAT_ERROR = 1                                                                        <-- NO DEFAULT! (TYPO?)[0m[0m
+JANA >>[1m THREAD_TIMEOUT                                                 = 30 seconds                                                              [0m
+JANA >> -------------------------------
+  4.0 events processed  (4.0 events read)  2.0Hz  (avg.: 0.0Hz)       783.0 events processed  (793.0 events read)  1.6kHz  (avg.: 1.6kHz)       1.6k events processed  (1.6k events read)  1.6kHz  (avg.: 1.6kHz)       2.4k events processed  (2.4k events read)  1.6kHz  (avg.: 1.6kHz)       3.2k events processed  (3.2k events read)  1.6kHz  (avg.: 1.6kHz)       4.0k events processed  (4.0k events read)  1.6kHz  (avg.: 1.6kHz)       4.7k events processed  (4.7k events read)  1446.0Hz  (avg.: 1.6kHz)       5.4k events processed  (5.5k events read)  1.5kHz  (avg.: 1.6kHz)       6.2k events processed  (6.2k events read)  1.6kHz  (avg.: 1.6kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  7.0k events processed  (7.1k events read)  1.6kHz  (avg.: 1.6kHz)       7.8k events processed  (7.9k events read)  1.6kHz  (avg.: 1.6kHz)       8.7k events processed  (8.7k events read)  1.7kHz  (avg.: 1.6kHz)       9.6k events processed  (9.6k events read)  1.8kHz  (avg.: 1.6kHz)       10.5k events processed  (10.5k events read)  1.8kHz  (avg.: 1.6kHz)       11.5k events processed  (11.5k events read)  2.0kHz  (avg.: 1.6kHz)       12.3k events processed  (12.3k events read)  1.6kHz  (avg.: 1.6kHz)       13.2k events processed  (13.2k events read)  1.8kHz  (avg.: 1.7kHz)       14.1k events processed  (14.1k events read)  1.8kHz  (avg.: 1.7kHz)       15.0k events processed  (15.0k events read)  1.8kHz  (avg.: 1.7kHz)       16.0k events processed  (16.0k events read)  1.8kHz  (avg.: 1.7kHz)       16.9k events processed  (16.9k events read)  1.8kHz  (avg.: 1.7kHz)       17.8k events processed  (17.8k events read)  1.8kHz  (avg.: 1.7kHz)       18.3k events processed  (18.3k events read)  966.0Hz  (avg.: 1.7kHz)       18.3k events processed  (18.3k events read)  0.0Hz  (avg.: 1.6kHz)       18.3k events processed  (18.3k events read)  0.0Hz  (avg.: 1.5kHz)       18.3k events processed  (18.3k events read)  0.0Hz  (avg.: 1461.0Hz)       18.3k events processed  (18.3k events read)  0.0Hz  (avg.: 1404.8Hz)       18.3k events processed  (18.3k events read)  0.0Hz  (avg.: 1352.8Hz)       18.3k events processed  (18.3k events read)  0.0Hz  (avg.: 1304.5Hz)       18.3k events processed  (18.3k events read)  0.0Hz  (avg.: 1259.5Hz)     Error reading EVIO event (truncated?)
+words_left_in_file (before read): 2583338772
+            bytes tried to read : 8658093064
+                total_size_bytes: 2703343656   tellg: -1
+JANA >>
+JANA >>No more event sources
+JANA >>
+JANA >>No more event sources
+JANA >>
+JANA >>No more event sources
+JANA >>
+JANA >>No more event sources
+JANA >>Thread 0x7f397f7fe640 completed gracefully: Sun Nov 24 21:47:52 2024
+JANA >>Thread 0x7f3984d8e640 completed gracefully: Sun Nov 24 21:47:52 2024
+JANA >>Thread 0x7f397ffff640 completed gracefully: Sun Nov 24 21:47:52 2024
+JANA >>Thread 0x7f3990d76640 completed gracefully: Sun Nov 24 21:47:52 2024
+JANA >>Merging thread 0 (0x7f397f7fe640) ...
+JANA >>Merging thread 1 (0x7f3984d8e640) ...
+JANA >>Merging thread 2 (0x7f397ffff640) ...
+JANA >>Merging thread 3 (0x7f3990d76640) ...
+
+ EVIO Processing rate = 1017.96 Hz
+  NDISPATCHER_STALLED =      12712 (70.8%)
+      NPARSER_STALLED =      11381 (31.7%)
+   NEVENTBUFF_STALLED =      10770 (60.0%)
+
+EVIO Statistics for /cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run110808/hd_rawdata_110808_073.ps.evio :
+------------------------
+    Nblocks: 186
+    Nevents: 18268
+    Nerrors: 0
+Nbad_blocks: 0
+Nbad_events: 0
+
+JANA >>Merging event reader thread ...
+JANA >> 18267 events processed  (18268 events read) Average rate: 1217.5Hz
+
+Closed ROOT file
+JANA >>Closing shared object handle 0 ...

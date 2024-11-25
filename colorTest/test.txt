@@ -1,0 +1,6 @@
+\033[91m[ERROR] This is an error message.\033[0m
+\033[92m[SUCCESS] This is a success message.\033[0m
+\033[93m[WARNING] This is a warning message.\033[0m
+\033[94m[INFO] This is an informational message.\033[0m
+\033[95m[DEBUG] This is a debug message.\033[0m
+\033[96m[TRACE] This is a trace message.\033[0m

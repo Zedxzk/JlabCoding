@@ -1,10 +1,10 @@
 import os
 
 # 文件路径定义
-list_file_path = "list_of_runs_primex3/list_of_runs_he3"
+list_file_path = "list_of_runs_primex3/list_of_runs_he4"
 individual_dir = "lumi_primex3/individual"
 log_base_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/"
-res_file = "res_new.txt"
+res_file = "res_new_he4.txt"
 
 # 初始化标志变量
 has_error = False
@@ -46,7 +46,7 @@ def parse_log_file(log_path):
 
         return errors, event_count
     except FileNotFoundError:
-        return [("red", f"Error: Log file {log_path} not found")], 0
+        return [("red", f"Error: Log file not found {log_path}")], 0
     except Exception as e:
         return [("red", f"Error reading log file {log_path}: {e}")], 0
 
