@@ -3,10 +3,10 @@ import os
 empty_line_printed = False
 
 # 文件路径定义
-list_file_path = "/w/halld-scshelf2101/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_he3"
-individual_dir = "/w/halld-scshelf2101/home/zhikun/lumi_skim/lumi_primex3/individual"
+list_file_path = "/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_he4"
+individual_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/"
 log_base_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/"
-res_file = "res.txt"
+res_file = "res_old_he4_test.txt"
 
 # 初始化标志变量
 has_error = False
@@ -16,12 +16,13 @@ open(res_file, "w").close()
 
 def print_error(message, color_code):
     """打印带颜色的错误消息"""
+    color_code = "\033[1;31m" if color_code == "red" else "\033[1;33m" if color_code == "yellow" else "\033[1;34m"
     print(f"{color_code}{message}\033[0m")
 
 def parse_log_file(log_path):
     """解析日志文件，返回错误信息和事件数"""
     try:
-        with open(log_path, "r", errors="ignore") as log_file:
+        with open(log_path, "r",errors="ignore") as log_file:
         # with open(log_path, "r") as log_file:
             log_content = log_file.read()
 
@@ -49,8 +50,9 @@ def parse_log_file(log_path):
 
         return errors, event_count
     except FileNotFoundError:
-        return [("red", f"Error: Log file {log_path} not found")], 0
+        return [("red", f"Error: Log file not found {log_path} ")], 0
     except Exception as e:
+        # exit(1)
         return [("red", f"Error reading log file {log_path}: {e}")], 0
 
 # 定义错误严重度的顺序
@@ -69,11 +71,11 @@ with open(list_file_path, "r") as list_file:
         if not file:
             continue
 
-        my_file = file.replace("run_", "Run0")
+        my_file = file.replace("run_", "Run")
         print(my_file)
-        total_files = 0
-        good_files = 0
-        evt_total = 0
+        # total_files = 0
+        # good_files = 0
+        # evt_total = 0
 
         # 读取对应的 individual 文件列表
         individual_list_path = os.path.join(individual_dir, f"list_Run{my_file}")
@@ -88,8 +90,8 @@ with open(list_file_path, "r") as list_file:
 
         # 如果该文件为空，给出提示并添加错误
         if os.path.getsize(individual_list_path) == 0:
-            error_message = f"Error: The file {individual_list_path} is empty."
-            print_error(error_message, "\033[1;31m")
+            error_message = f"Error: The directory {individual_list_path} is empty."
+            print_error(error_message, "red")
             all_errors.append(("red", error_message))
             has_error = True
             continue
@@ -102,9 +104,15 @@ with open(list_file_path, "r") as list_file:
                     continue
 
                 my_file_log = file1.replace("ps.", "").replace("hd_rawdata", "ps").replace("evio", "log")
+                log_dir = os.path.join(log_base_dir, f"Run{my_file}")
+                if not os.listdir(log_dir):
+                    error_message = f"Error: The directory {log_dir} is empty."
+                    print_error(error_message,"red")
+                    all_errors.append(("red", error_message))
+                    break
                 log_path = os.path.join(log_base_dir, f"Run{my_file}", my_file_log)
 
-                total_files += 1
+                # total_files += 1
 
                 # 检查日志文件
                 errors, event_count = parse_log_file(log_path)
@@ -114,10 +122,11 @@ with open(list_file_path, "r") as list_file:
                     has_error = True
                     for color, error in errors:
                         all_errors.append((color, error))
-                        print_error(error, "\033[1;31m" if color == "red" else "\033[1;33m" if color == "yellow" else "\033[1;34m")
+                        print_error(error, color)
                 else:
-                    evt_total += event_count
-                    good_files += 1
+                    # evt_total += event_count
+                    # good_files += 1
+                    pass
 
         # 在每个运行结束后输出空行
         print()  # 打印一个空行以分隔不同的运行

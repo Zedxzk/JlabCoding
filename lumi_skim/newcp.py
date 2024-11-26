@@ -288,7 +288,7 @@ def replace_all(errors_1, errors_2):
     return errors_1
 
 # 执行所有操作
-copy_all()  # Uncomment to run copy operations
+# copy_all()  # Uncomment to run copy operations
 
 errors_1, errors_2 = check_all()
 

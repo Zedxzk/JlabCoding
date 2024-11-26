@@ -1,0 +1,160 @@
+JANA >>OUTPUT_FILENAME: /volatile/halld/home/zhikun/ver05_lumi/Run111057/ps_111057_010.root
+JANA >>Initializing plugin "/work/halld/home/zhikun/lumi_skim/lumi_skim.so" ...
+Opened ROOT file "/volatile/halld/home/zhikun/ver05_lumi/Run111057/ps_111057_010.root" ...
+ SASCHA -1
+/volatile/halld/home/zhikun/ver05_lumi/Run111057/lumi_ps_111057_010.root
+JANA >>Launching threads ....
+JANA >>Opening source "/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run111057/hd_rawdata_111057_010.ps.evio" of type: EVIOpp  - Reads EVIO formatted data from file or ET system
+loading VERSION 3
+  0.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA ERROR>> 
+JANA ERROR>> Automatic relaunching of threads is disabled. If you wish to
+JANA ERROR>> have the program relaunch a replacement thread when a stalled
+JANA ERROR>> one is killed, set the JANA:MAX_RELAUNCH_THREADS configuration
+JANA ERROR>> parameter to a value greater than zero. E.g.:
+JANA ERROR>> 
+JANA ERROR>>     jana -PJANA:MAX_RELAUNCH_THREADS=10
+JANA ERROR>> 
+JANA ERROR>> The program will quit now.
+JANA >>
+JANA >>Telling all threads to quit ...
+
+
+JANA >>Created JCalibration object of type: JCalibrationCCDB
+JANA >>Generated via: JCalibration using CCDB for MySQL and SQLite databases
+JANA >>Run:111057
+JANA >>URL: mysql://ccdb_user@hallddb-farm.jlab.org/ccdb
+JANA >>context: variation=default
+JANA >>comment: Default constants for analyzing data
+JANA >>Creating DGeometry:
+JANA >>  Run requested:111057  found:111057
+JANA >>  Run validity range: 111057-111057
+JANA >>  URL="ccdb:///GEOMETRY/main_HDDS.xml"  context="default"
+JANA >>  Type="JGeometryXML"
+JANA >>Found 25 material maps in calib. DB
+JANA >>
+JANA >>Telling all threads to quit ...
+JANA >>
+JANA >>No more event sources
+  1.0 events processed  (1.0 events read)  2.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>No more event sources
+JANA >>Thread 0x7f5270dea640 completed gracefully: Mon Nov 25 19:18:25 2024
+JANA >>Thread 0x7f526458d640 completed gracefully: Mon Nov 25 19:18:25 2024
+JANA >>
+JANA >>No more event sources
+JANA >>Thread 0x7f5263d8c640 completed gracefully: Mon Nov 25 19:18:25 2024
+JANA >>Read in 25 material maps for run 111057 containing 76153 grid points total
+JANA >>Merging thread 0 (0x7f5270dea640) ...
+JANA >>Merging thread 1 (0x7f526458d640) ...
+JANA >>Merging thread 2 (0x7f5263d8c640) ...
+JANA >>Creating DTranslationTable for run 111057
+JANA >>Reading translation table from calib DB: Translation/DAQ2detector ...
+JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>40636 channels defined in translation table
+JANA >>In DPSHit_factory, loading constants...
+JANA >>In DPSCHit_factory, loading constants...
+JANA >>In DTAGHHit_factory, loading constants...
+JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >> Correct Beam Photon Energy (TAGH) = 11.555 (GeV)
+JANA >>In DTAGMHit_factory_Calib, loading constants...
+JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>
+JANA >>Telling all threads to quit ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >> Correct Beam Photon Energy (TAGM) = 11.555 (GeV)
+JANA >>
+JANA >> --- Configuration Parameters --
+JANA >>[1m LUMI_PRIMEX:DIR                                                = /volatile/halld/home/zhikun/ver05_lumi/Run111057/lumi_ps_111057_010.root[0m
+JANA >>[1m NTHREADS                                                       = 4                                                                       [0m
+JANA >>[1m OUTPUT_FILENAME                                                = /volatile/halld/home/zhikun/ver05_lumi/Run111057/ps_111057_010.root     [0m
+JANA >>[1m PLUGINS                                                        = lumi_skim                                                               [0m
+JANA >>[1m[31m[1m[5m Run111057/hd_rawdata_111057_010.ps.evio:SKIP_F250_FORMAT_ERROR = 1                                                                        <-- NO DEFAULT! (TYPO?)[0m[0m
+JANA >>[1m THREAD_TIMEOUT                                                 = 30 seconds                                                              [0m
+JANA >> -------------------------------
+JANA >>Thread 0x7f5264d8e640 completed gracefully: Mon Nov 25 19:18:45 2024
+JANA >>
+JANA >>Telling all threads to quit ...
+JANA >>Merging thread 0 (0x7f5264d8e640) ...
+
+ EVIO Processing rate = 0.0463921 Hz
+  NDISPATCHER_STALLED =      19501 (90.5%)
+      NPARSER_STALLED =      38516 (89.3%)
+   NEVENTBUFF_STALLED =          0 ( 0.0%)
+
+EVIO Statistics for /cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run111057/hd_rawdata_111057_010.ps.evio :
+------------------------
+    Nblocks: 3
+    Nevents: 131
+    Nerrors: 0
+Nbad_blocks: 0
+Nbad_events: 0
+
+JANA >>Merging event reader thread ...
+JANA >> 1 events processed  (11 events read) Average rate: 0.0Hz
+
+Closed ROOT file
+Exit code: 70
+JANA >>Closing shared object handle 0 ...

@@ -14,7 +14,9 @@ set n = 1
 
 # foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_he3`)
 
-foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_he4`)
+# foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_he4`)
+
+foreach file (`awk '{print}' list_of_runs_primex3/list_of_runs_he5`)
 
 # foreach file (`awk '{print}' list_of_runs_test`)
 

@@ -1,0 +1,5 @@
+JANA >>OUTPUT_FILENAME: /volatile/halld/home/zhikun/ver05_lumi/Run110957/ps_110957_048.root
+JANA ERROR>>
+JANA ERROR>>***ERROR : Couldn't find plugin "lumi_skim"!***
+JANA ERROR>>***        make sure the JANA_PLUGIN_PATH environment variable is set correctly.
+JANA ERROR>>***        To see paths checked, set PRINT_PLUGIN_PATHS config. parameter

@@ -46,8 +46,10 @@ def parse_log_file(log_path):
 
         return errors, event_count
     except FileNotFoundError:
+        errors.append(("red",f"Error: Log file not found {log_path}"))
         return [("red", f"Error: Log file not found {log_path} ")], 0
     except Exception as e:
+        errors.append(("red",f"Error: Log file not found {log_path}"))
         return [("red", f"Error reading log file {log_path}: {e}")], 0
 
 # 定义错误严重度的顺序

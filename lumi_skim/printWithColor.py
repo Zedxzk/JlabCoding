@@ -1,3 +1,5 @@
+destination_res_dir = "/lustre24/expphy/volatile/halld/home/test_lumi/copy_and_replace_res_he4.txt"
+
 def log_result(file_path):
     # 定义颜色代码
     RED = "\033[91m"    # 红色
@@ -39,5 +41,4 @@ def log_result(file_path):
         print(f"{RED}Error: File '{file_path}' not found.{RESET}")
 
 if __name__ == "__main__":
-    destination_res_dir = "/lustre24/expphy/volatile/halld/home/test_lumi/copy_and_replace_res.txt"
     log_result(destination_res_dir)
