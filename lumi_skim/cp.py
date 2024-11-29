@@ -5,23 +5,25 @@ import logging
 import glob
 import subprocess
 
+
+he_version = "he5"
 # Paths Setup
 rootDir1 = "/volatile/halld/home/zhikun/ver05_lumi/"
 logDir1 = "/w/halld-scshelf2101/home/zhikun/lumi_skim/lumi_primex3/individual/log"
-resDir1 = "/w/halld-scshelf2101/home/zhikun/lumi_skim/res_old_he4_test.txt"
+resDir1 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
 
 rootDir2 = "/volatile/halld/home/somov/ver05_lumi/"
 logDir2 = "/w/halld-scshelf2101/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
-resDir2 = "/w/halld-scshelf2101/home/zhikun/lumi_skim/res_new_he4_test.txt"
+resDir2 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_new_{he_version}_test.txt"
 
-destination_root_dir = "/lustre24/expphy/volatile/halld/home/test_lumi/"
-destination_log_dir = "/lustre24/expphy/volatile/halld/home/test_lumi/log/"
+destination_root_dir = "/volatile/halld/home/test_lumi/"
+destination_log_dir = "/volatile/halld/home/test_lumi/log/"
 
-destination_res_dir = "/lustre24/expphy/volatile/halld/home/test_lumi/copy_and_replace_res_he4_test.txt"
-logfile_path = "/lustre24/expphy/volatile/halld/home/test_lumi/loginfo_he4_test.log"
-manual_check_path = "/lustre24/expphy/volatile/halld/home/test_lumi/manual_check.log"
+destination_res_dir = f"/volatile/halld/home/test_lumi/copy_and_replace_res_{he_version}_test.txt"
+logfile_path = f"/volatile/halld/home/test_lumi/loginfo_{he_version}_test.log"
+manual_check_path = f"/volatile/halld/home/test_lumi/manual_check_{he_version}.log"
 
-list_file_path = "/w/halld-scshelf2101/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_he4"
+list_file_path = f"/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 
 
 
@@ -261,6 +263,7 @@ def replace_all(errors_1, errors_2):
                 manual_check_messages.append(f"source_run_dir = {source_run_dir} is also empty, PLEASE CHECK MANUALLY!!!!")
                 events_manual_check += 1
             else:
+                pass
                 destination_run_dir = os.path.join(destination_log_dir, run_dir)
 
                 if os.path.exists(source_run_dir):
@@ -303,6 +306,7 @@ def replace_all(errors_1, errors_2):
                 manual_check_messages.append(msg)
                 events_manual_check += 1
                 log(msg, is_error=True)  # 此处用红色输出，并标记为错误
+                
             else:
                 run_id = key[0]  
                 run_dir = f"Run{run_id}"  

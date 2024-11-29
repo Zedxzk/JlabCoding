@@ -2,14 +2,16 @@ import os
 
 empty_line_printed = False
 
+he_version = "he5"
 # 文件路径定义
-list_file_path = "/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_he4"
+list_file_path = f"/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 individual_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/"
 log_base_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/"
-res_file = "res_old_he4_test.txt"
+res_file = f"res_old_{he_version}_test.txt"
 
 # 初始化标志变量
 has_error = False
+
 
 # 清空或创建 res.txt 文件
 open(res_file, "w").close()

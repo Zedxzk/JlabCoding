@@ -2,11 +2,12 @@ import os
 
 empty_line_printed = False
 
+he_version = "he5"
 # 文件路径定义
-list_file_path = "/work/halld3/home/somov/lumi_skim/list_of_runs_primex3/list_of_runs_he4"
+list_file_path = f"/work/halld3/home/somov/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 individual_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/"
 log_base_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/"
-res_file = "res_new_he4_test.txt"
+res_file = f"res_new_{he_version}_test.txt"
 
 # 初始化标志变量
 has_error = False

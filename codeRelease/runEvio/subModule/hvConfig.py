@@ -1,4 +1,5 @@
 #common import
+from pprint import pprint
 import sys
 import argparse
 import subprocess
@@ -16,6 +17,14 @@ red = Fore.RED
 from datetime import datetime
 import re
 
+linesToWrite =[]
+
+def get_hv_numbers(line):
+    match = re.search(r"hv:(-?\d+):(-?\d+)", line)
+    if match:
+        return int(match.group(1)), int(match.group(2))
+    exit(line)
+
 
 def findTemplate():
     if hvTemplateFile in os.listdir(os.getcwd()):
@@ -25,10 +34,12 @@ def findTemplate():
         exit(1)
 
 def calculateVoltage(currentVoltage, currentADC, aimADC=aimADC, hvCap=hvCap, hvBot=hvBot, alpha=alpha):
-    newVoltage = currentVoltage * (aimADC/currentADC) ** (1 / alpha)
+    if currentADC <= 0.5:
+        return False
+    newVoltage = currentVoltage * (aimADC/currentADC) ** (1. / alpha)
     newVoltage = newVoltage if newVoltage <= hvCap else hvCap
-    newVoltage = newVoltage if newVoltage >= hvBot else hvBot
-    newVoltage = float(f"{newVoltage:.3f}")
+    newVoltage = newVoltage if newVoltage >= hvBot else hvBot 
+    # print(currentVoltage, currentADC, new
     # print(currentVoltage, currentADC, newVoltage)
     return newVoltage
 
@@ -57,7 +68,8 @@ def readResTable(fileIn):
         column = values[col_col]
         row = values[row_col]
         mean = values[mean_col]
-        print(index_col,col_col, row_col, mean_col)
+        
+        # print(index_col,col_col, row_col, mean_col)
         
         # 将读取的数据存入数据列表
         data.append({
@@ -93,7 +105,6 @@ def processAimConfig(line, dataDict):
             # 获取对应的配置数据
             current_config = dataDict[index]
             # print(f"Found Config for index {index}: {current_config}")
-
             # 假设 column 和 row 是你要对比的目标值
             target_column = dataDict[index]['column']
             target_row = dataDict[index]['row']
@@ -102,14 +113,20 @@ def processAimConfig(line, dataDict):
             if col_2 == target_column and row_2 == target_row:
                 # print(f"成果比对: 在 index {index} 下，col_2={col_2} 和 row_2={row_2} 与目标值 column={target_column} 和 row={target_row} 匹配。")
                 newHV = calculateVoltage(currentVoltage, currentADC)
-                return f"ECAL:hv:{col}:{row}:{itemToConfig}{newHV}\n"
+                # print(f"(column, row) = ({col_2}, {row_2})")
+                if(newHV == False):
+                    print(f"(column, row) = ({col_2}, {row_2})")
+                    print("Illigal fitting result of mean! Return current voltage setting of this channel.")
+                    input("Please check manually! Type Enter to continue")
+                    newHV = currentVoltage if currentVoltage <= hvCap else currentVoltage if currentVoltage > hvBot else hvBot
+                return f"ECAL:hv:{col}:{row}:{itemToConfig}{newHV:.3f}\n"
             else:
-                print(red + f"成果比对失败: 在 index {index} 下，col={col} 和 row={row} ,col_2={col_2} 和 row_2={row_2} 不匹配目标值 column={target_column} 和 row={target_row}。")
+                # print(red + f"成果比对失败: 在 index {index} 下，col={col} 和 row={row} ,col_2={col_2} 和 row_2={row_2} 不匹配目标值 column={target_column} 和 row={target_row}。")
                 print(f"Index does not match! Check the index in {fitResDir} and index in {hvTemplateFile}" + Style.RESET_ALL)
                 exit(1)                
 
         else:
-            print(yellow + f"Warnning!: No config found for index {index}!" +Style.RESET_ALL)
+           # print(yellow + f"Warnning!: No config found for index {index}!" +Style.RESET_ALL)
             try:
                 return line
             except Exception as e:
@@ -147,20 +164,22 @@ def processConfiguration():
                 fileOut.write(line)
             else:
                 lineToWrite = processAimConfig(line, currentRes)
-                fileOut.write(lineToWrite)
+                # print(lineToWrite)
+                linesToWrite.append(lineToWrite)
+                # fileOut.write(lineToWrite)
                 
                 # 不匹配的行直接写入输出文件
-        
-        # 如果需要在文件末尾附加额外的内容，可以在此处添加
-        fileOut.write(f"\nAdditional processed data related to {itemToConfig}\n")
-
+  
+        sorted_lines = sorted(linesToWrite, key=get_hv_numbers)
+        for line in sorted_lines:
+            fileOut.write(line)
     print(f"All res Successfully proceeded!New Configuration File: {fileOut}")
 
 
 
 def hvConfigureAction():
-    try:
+    # try:
         processConfiguration()
-    except Exception as e:
-        print(red + f"Error Occurred! \n{e}" + Style.RESET_ALL)
-        exit(1)
+    # except Exception as e:
+    #     print(red + f"Error Occurred! \n{e}" + Style.RESET_ALL)
+    #     exit(1)

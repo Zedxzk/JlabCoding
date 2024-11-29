@@ -1,0 +1,195 @@
+JANA >>OUTPUT_FILENAME: /volatile/halld/home/zhikun/ver05_lumi/Run111154/ps_111154_052.root
+JANA >>Initializing plugin "/work/halld/home/zhikun/lumi_skim/lumi_skim.so" ...
+Opened ROOT file "/volatile/halld/home/zhikun/ver05_lumi/Run111154/ps_111154_052.root" ...
+ SASCHA -1
+/volatile/halld/home/zhikun/ver05_lumi/Run111154/lumi_ps_111154_052.root
+JANA >>Launching threads ....
+JANA >>Opening source "/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run111154/hd_rawdata_111154_052.ps.evio" of type: EVIOpp  - Reads EVIO formatted data from file or ET system
+loading VERSION 3
+
+
+JANA >>Created JCalibration object of type: JCalibrationCCDB
+JANA >>Generated via: JCalibration using CCDB for MySQL and SQLite databases
+JANA >>Run:111154
+JANA >>URL: mysql://ccdb_user@hallddb-farm.jlab.org/ccdb
+JANA >>context: variation=default
+JANA >>comment: Default constants for analyzing data
+  2.0 events processed  (2.0 events read)  4.0Hz  (avg.: 0.0Hz)     JANA >>Creating DGeometry:
+JANA >>  Run requested:111154  found:111154
+JANA >>  Run validity range: 111154-111154
+JANA >>  URL="ccdb:///GEOMETRY/main_HDDS.xml"  context="default"
+JANA >>  Type="JGeometryXML"
+JANA >>Found 25 material maps in calib. DB
+  2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>Read in 25 material maps for run 111154 containing 76153 grid points total
+JANA >>Creating DTranslationTable for run 111154
+JANA >>Reading translation table from calib DB: Translation/DAQ2detector ...
+  2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>40636 channels defined in translation table
+JANA >>In DPSHit_factory, loading constants...
+JANA >>In DPSCHit_factory, loading constants...
+JANA >>In DTAGHHit_factory, loading constants...
+JANA >> Correct Beam Photon Energy (TAGH) = 11.555 (GeV)
+JANA >>In DTAGMHit_factory_Calib, loading constants...
+JANA >> Correct Beam Photon Energy (TAGM) = 11.555 (GeV)
+JANA >>
+JANA >> --- Configuration Parameters --
+JANA >>[1m LUMI_PRIMEX:DIR                                                = /volatile/halld/home/zhikun/ver05_lumi/Run111154/lumi_ps_111154_052.root[0m
+JANA >>[1m NTHREADS                                                       = 4                                                                       [0m
+JANA >>[1m OUTPUT_FILENAME                                                = /volatile/halld/home/zhikun/ver05_lumi/Run111154/ps_111154_052.root     [0m
+JANA >>[1m PLUGINS                                                        = lumi_skim                                                               [0m
+JANA >>[1m[31m[1m[5m Run111154/hd_rawdata_111154_052.ps.evio:SKIP_F250_FORMAT_ERROR = 1                                                                        <-- NO DEFAULT! (TYPO?)[0m[0m
+JANA >>[1m THREAD_TIMEOUT                                                 = 30 seconds                                                              [0m
+JANA >> -------------------------------
+  124.0 events processed  (134.0 events read)  244.0Hz  (avg.: 244.0Hz)       1018.0 events processed  (1018.0 events read)  1.8kHz  (avg.: 1016.0Hz)       1.8k events processed  (1.8k events read)  1.5kHz  (avg.: 1189.3Hz)       2.5k events processed  (2.5k events read)  1498.0Hz  (avg.: 1266.5Hz)       3.3k events processed  (3.3k events read)  1.5kHz  (avg.: 1321.6Hz)       4.1k events processed  (4.1k events read)  1.6kHz  (avg.: 1360.3Hz)       4.8k events processed  (4.8k events read)  1.5kHz  (avg.: 1384.6Hz)       5.6k events processed  (5.6k events read)  1.5kHz  (avg.: 1404.0Hz)       6.4k events processed  (6.4k events read)  1.5kHz  (avg.: 1420.0Hz)       7.2k events processed  (7.2k events read)  1.5kHz  (avg.: 1432.0Hz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  7.9k events processed  (7.9k events read)  1.5kHz  (avg.: 1440.7Hz)       8.7k events processed  (8.7k events read)  1.6kHz  (avg.: 1453.2Hz)       9.5k events processed  (9.5k events read)  1.6kHz  (avg.: 1465.8Hz)       10.3k events processed  (10.3k events read)  1.5kHz  (avg.: 1469.7Hz)       11.1k events processed  (11.1k events read)  1.5kHz  (avg.: 1474.7Hz)       11.8k events processed  (11.8k events read)  1.5kHz  (avg.: 1478.6Hz)       12.6k events processed  (12.6k events read)  1.5kHz  (avg.: 1482.2Hz)       13.4k events processed  (13.4k events read)  1.5kHz  (avg.: 1484.6Hz)       14.1k events processed  (14.1k events read)  1.5kHz  (avg.: 1487.9Hz)       14.9k events processed  (14.9k events read)  1.5kHz  (avg.: 1490.8Hz)       15.7k events processed  (15.7k events read)  1.5kHz  (avg.: 1493.0Hz)       16.5k events processed  (16.5k events read)  1.6kHz  (avg.: 1496.0Hz)       17.2k events processed  (17.2k events read)  1.5kHz  (avg.: 1498.1Hz)       18.0k events processed  (18.0k events read)  1.6kHz  (avg.: 1.5kHz)       18.8k events processed  (18.8k events read)  1.6kHz  (avg.: 1.5kHz)       19.6k events processed  (19.6k events read)  1.5kHz  (avg.: 1.5kHz)       20.3k events processed  (20.3k events read)  1.5kHz  (avg.: 1.5kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  21.1k events processed  (21.1k events read)  1.6kHz  (avg.: 1.5kHz)       21.9k events processed  (21.9k events read)  1.5kHz  (avg.: 1.5kHz)       22.7k events processed  (22.7k events read)  1.6kHz  (avg.: 1.5kHz)       23.4k events processed  (23.4k events read)  1.6kHz  (avg.: 1.5kHz)       24.2k events processed  (24.2k events read)  1.6kHz  (avg.: 1.5kHz)       25.0k events processed  (25.0k events read)  1.5kHz  (avg.: 1.5kHz)       25.8k events processed  (25.8k events read)  1.5kHz  (avg.: 1.5kHz)       26.6k events processed  (26.6k events read)  1.6kHz  (avg.: 1.5kHz)       27.3k events processed  (27.3k events read)  1.5kHz  (avg.: 1.5kHz)       28.1k events processed  (28.1k events read)  1.5kHz  (avg.: 1.5kHz)       28.9k events processed  (28.9k events read)  1.5kHz  (avg.: 1.5kHz)       29.6k events processed  (29.6k events read)  1.5kHz  (avg.: 1.5kHz)       30.4k events processed  (30.4k events read)  1.5kHz  (avg.: 1.5kHz)       31.2k events processed  (31.2k events read)  1.5kHz  (avg.: 1.5kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  32.0k events processed  (32.0k events read)  1.5kHz  (avg.: 1.5kHz)       32.7k events processed  (32.7k events read)  1.6kHz  (avg.: 1.5kHz)       33.5k events processed  (33.5k events read)  1.5kHz  (avg.: 1.5kHz)       34.3k events processed  (34.3k events read)  1.5kHz  (avg.: 1.5kHz)       35.0k events processed  (35.0k events read)  1.5kHz  (avg.: 1.5kHz)       35.8k events processed  (35.8k events read)  1.5kHz  (avg.: 1.5kHz)       36.6k events processed  (36.6k events read)  1.5kHz  (avg.: 1.5kHz)       37.3k events processed  (37.3k events read)  1.5kHz  (avg.: 1.5kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  38.1k events processed  (38.1k events read)  1.5kHz  (avg.: 1.5kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  38.9k events processed  (38.9k events read)  1.6kHz  (avg.: 1.5kHz)       39.7k events processed  (39.7k events read)  1.6kHz  (avg.: 1.5kHz)       40.4k events processed  (40.4k events read)  1.6kHz  (avg.: 1.5kHz)       41.2k events processed  (41.2k events read)  1.5kHz  (avg.: 1.5kHz)       42.0k events processed  (42.0k events read)  1.5kHz  (avg.: 1.5kHz)       42.7k events processed  (42.7k events read)  1.5kHz  (avg.: 1.5kHz)       43.5k events processed  (43.5k events read)  1.5kHz  (avg.: 1.5kHz)       44.3k events processed  (44.3k events read)  1.5kHz  (avg.: 1.5kHz)       45.0k events processed  (45.0k events read)  1.5kHz  (avg.: 1.5kHz)       45.8k events processed  (45.8k events read)  1.5kHz  (avg.: 1.5kHz)       46.6k events processed  (46.6k events read)  1.5kHz  (avg.: 1.5kHz)       47.3k events processed  (47.3k events read)  1.5kHz  (avg.: 1.5kHz)       48.1k events processed  (48.1k events read)  1.5kHz  (avg.: 1.5kHz)       48.8k events processed  (48.8k events read)  1.5kHz  (avg.: 1.5kHz)       49.6k events processed  (49.6k events read)  1.5kHz  (avg.: 1.5kHz)       50.4k events processed  (50.4k events read)  1.5kHz  (avg.: 1.5kHz)       51.2k events processed  (51.2k events read)  1.5kHz  (avg.: 1.5kHz)       51.9k events processed  (51.9k events read)  1.6kHz  (avg.: 1.5kHz)       52.7k events processed  (52.7k events read)  1.5kHz  (avg.: 1.5kHz)       53.5k events processed  (53.5k events read)  1.5kHz  (avg.: 1.5kHz)       54.3k events processed  (54.3k events read)  1.6kHz  (avg.: 1.5kHz)       55.0k events processed  (55.0k events read)  1.6kHz  (avg.: 1.5kHz)       55.8k events processed  (55.8k events read)  1.6kHz  (avg.: 1.5kHz)       56.6k events processed  (56.6k events read)  1.5kHz  (avg.: 1.5kHz)       57.4k events processed  (57.4k events read)  1.5kHz  (avg.: 1.5kHz)       58.1k events processed  (58.1k events read)  1.5kHz  (avg.: 1.5kHz)       58.9k events processed  (58.9k events read)  1.5kHz  (avg.: 1.5kHz)       59.7k events processed  (59.7k events read)  1.5kHz  (avg.: 1.5kHz)       60.5k events processed  (60.5k events read)  1.5kHz  (avg.: 1.5kHz)       61.2k events processed  (61.2k events read)  1.6kHz  (avg.: 1.5kHz)       62.0k events processed  (62.0k events read)  1.5kHz  (avg.: 1.5kHz)       62.8k events processed  (62.8k events read)  1.6kHz  (avg.: 1.5kHz)       63.6k events processed  (63.6k events read)  1.6kHz  (avg.: 1.5kHz)       64.3k events processed  (64.3k events read)  1.6kHz  (avg.: 1.5kHz)       65.1k events processed  (65.1k events read)  1.6kHz  (avg.: 1.5kHz)       65.9k events processed  (65.9k events read)  1.6kHz  (avg.: 1.5kHz)       66.7k events processed  (66.7k events read)  1.6kHz  (avg.: 1.5kHz)       67.5k events processed  (67.5k events read)  1.6kHz  (avg.: 1.5kHz)       68.2k events processed  (68.2k events read)  1.5kHz  (avg.: 1.5kHz)       69.0k events processed  (69.0k events read)  1.5kHz  (avg.: 1.5kHz)       69.8k events processed  (69.8k events read)  1.6kHz  (avg.: 1.5kHz)       70.5k events processed  (70.5k events read)  1.5kHz  (avg.: 1.5kHz)       71.3k events processed  (71.3k events read)  1.6kHz  (avg.: 1.5kHz)       71.6k events processed  (71.6k events read)  518.0Hz  (avg.: 1.5kHz)       72.4k events processed  (72.4k events read)  1.7kHz  (avg.: 1.5kHz)       73.2k events processed  (73.2k events read)  1.5kHz  (avg.: 1.5kHz)       74.0k events processed  (74.0k events read)  1.5kHz  (avg.: 1.5kHz)       74.7k events processed  (74.7k events read)  1.6kHz  (avg.: 1.5kHz)       75.5k events processed  (75.5k events read)  1.6kHz  (avg.: 1.5kHz)       76.3k events processed  (76.3k events read)  1.6kHz  (avg.: 1.5kHz)       77.1k events processed  (77.1k events read)  1.5kHz  (avg.: 1.5kHz)       77.8k events processed  (77.8k events read)  1.5kHz  (avg.: 1.5kHz)       78.6k events processed  (78.6k events read)  1.6kHz  (avg.: 1.5kHz)       79.4k events processed  (79.4k events read)  1.6kHz  (avg.: 1.5kHz)       80.2k events processed  (80.2k events read)  1.6kHz  (avg.: 1.5kHz)       81.0k events processed  (81.0k events read)  1.6kHz  (avg.: 1.5kHz)       81.8k events processed  (81.8k events read)  1.5kHz  (avg.: 1.5kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values == LAST WARNING
+  82.5k events processed  (82.5k events read)  1.5kHz  (avg.: 1.5kHz)       83.3k events processed  (83.3k events read)  1.6kHz  (avg.: 1.5kHz)       84.1k events processed  (84.1k events read)  1.6kHz  (avg.: 1.5kHz)       84.9k events processed  (84.9k events read)  1.6kHz  (avg.: 1.5kHz)       85.7k events processed  (85.7k events read)  1.6kHz  (avg.: 1.5kHz)       86.5k events processed  (86.5k events read)  1.6kHz  (avg.: 1.5kHz)       87.2k events processed  (87.2k events read)  1.6kHz  (avg.: 1.5kHz)       88.0k events processed  (88.0k events read)  1.5kHz  (avg.: 1.5kHz)       88.8k events processed  (88.8k events read)  1.6kHz  (avg.: 1.5kHz)       89.6k events processed  (89.6k events read)  1.6kHz  (avg.: 1.5kHz)       90.4k events processed  (90.4k events read)  1.6kHz  (avg.: 1.5kHz)       91.1k events processed  (91.1k events read)  1.5kHz  (avg.: 1.5kHz)       91.9k events processed  (91.9k events read)  1.6kHz  (avg.: 1.5kHz)       92.7k events processed  (92.7k events read)  1.6kHz  (avg.: 1.5kHz)       92.8k events processed  (92.8k events read)  196.0Hz  (avg.: 1.5kHz)       92.8k events processed  (92.8k events read)  0.0Hz  (avg.: 1.5kHz)     JANA ERROR>> didn't sleep full 0.5 seconds!
+  92.8k events processed  (92.8k events read)  0.0Hz  (avg.: 1.5kHz)     
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+
+Thread 10 (Thread 0x7fd6737fe640 (LWP 310682) "hd_root"):
+#0  0x00007fd6b04fd9ec in read () from /lib64/libc.so.6
+#1  0x00007fd6b08d0eff in std::__basic_file<char>::xsgetn(char*, long) () from /lib64/libstdc++.so.6
+#2  0x00007fd6b0912d21 in std::basic_filebuf<char, std::char_traits<char> >::xsgetn(char*, long) () from /lib64/libstdc++.so.6
+#3  0x000000000129e8c8 in async_filebuf::readloop() ()
+#4  0x00007fd6b08dbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#5  0x00007fd6b0489c02 in start_thread () from /lib64/libc.so.6
+#6  0x00007fd6b050ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 9 (Thread 0x7fd673fff640 (LWP 308225) "hd_root"):
+#0  0x00007fd6b048679a in __futex_abstimed_wait_common () from /lib64/libc.so.6
+#1  0x00007fd6b0489572 in pthread_cond_clockwait
+GLIBC_2.30 () from /lib64/libc.so.6
+#2  0x00000000012b89a6 in DEVIOWorkerThread::Run() ()
+#3  0x00007fd6b08dbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#4  0x00007fd6b0489c02 in start_thread () from /lib64/libc.so.6
+#5  0x00007fd6b050ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 8 (Thread 0x7fd688d8e640 (LWP 308224) "hd_root"):
+#0  0x00007fd6b04d8a3f in wait4 () from /lib64/libc.so.6
+#1  0x00007fd6b044b243 in do_system () from /lib64/libc.so.6
+#2  0x00007fd6b31e272c in TUnixSystem::StackTrace() () from /group/halld/Software/builds/Linux_Alma9-x86_64-gcc11.4.1/root/root-6.24.04/lib/libCore.so
+#3  0x00007fd6b31dfd65 in TUnixSystem::DispatchSignals(ESignals) () from /group/halld/Software/builds/Linux_Alma9-x86_64-gcc11.4.1/root/root-6.24.04/lib/libCore.so
+#4  <signal handler called>
+#5  0x00000000012d1078 in swap_bank(unsigned int*, unsigned int*, unsigned int) ()
+#6  0x00000000012b8a36 in DEVIOWorkerThread::Run() ()
+#7  0x00007fd6b08dbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#8  0x00007fd6b0489c02 in start_thread () from /lib64/libc.so.6
+#9  0x00007fd6b050ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 7 (Thread 0x7fd696e46640 (LWP 308223) "hd_root"):
+#0  0x00007fd6b048679a in __futex_abstimed_wait_common () from /lib64/libc.so.6
+#1  0x00007fd6b0488fa0 in pthread_cond_wait
+
+GLIBC_2.3.2 () from /lib64/libc.so.6
+#2  0x00007fd6b08d56b0 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib64/libstdc++.so.6
+#3  0x000000000129f60b in async_filebuf::underflow() ()
+#4  0x000000000129e736 in async_filebuf::xsgetn(char*, long) ()
+#5  0x00007fd6b09203b2 in std::istream::read(char*, long) () from /lib64/libstdc++.so.6
+#6  0x0000000001254924 in HDEVIO::readNoFileBuff(unsigned int*, unsigned int, bool) ()
+#7  0x000000000128a29b in JEventSource_EVIOpp::Dispatcher() ()
+#8  0x00007fd6b08dbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#9  0x00007fd6b0489c02 in start_thread () from /lib64/libc.so.6
+#10 0x00007fd6b050ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 6 (Thread 0x7fd694e42640 (LWP 308199) "hd_root"):
+#0  0x00007fd6b04d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007fd6b04d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007fd6b0504b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ba16a in jana::JApplication::NextEvent (this=0x7ffe4b5c2650, event=...) at src/JANA/JApplication.cc:614
+#4  0x00000000014e53c1 in jana::JEventLoop::OneEvent (this=0x7fd674000b60) at src/JANA/JEventLoop.cc:591
+#5  0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7fd674000b60) at src/JANA/JEventLoop.cc:496
+#6  0x00000000014ba3c5 in LaunchThread (arg=0x7ffe4b5c2650) at src/JANA/JApplication.cc:1382
+#7  0x00007fd6b0489c02 in start_thread () from /lib64/libc.so.6
+#8  0x00007fd6b050ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 5 (Thread 0x7fd695643640 (LWP 308198) "hd_root"):
+#0  0x00007fd6b04d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007fd6b04d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007fd6b0504b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ba16a in jana::JApplication::NextEvent (this=0x7ffe4b5c2650, event=...) at src/JANA/JApplication.cc:614
+#4  0x00000000014e53c1 in jana::JEventLoop::OneEvent (this=0x7fd680000b60) at src/JANA/JEventLoop.cc:591
+#5  0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7fd680000b60) at src/JANA/JEventLoop.cc:496
+#6  0x00000000014ba3c5 in LaunchThread (arg=0x7ffe4b5c2650) at src/JANA/JApplication.cc:1382
+#7  0x00007fd6b0489c02 in start_thread () from /lib64/libc.so.6
+#8  0x00007fd6b050ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 4 (Thread 0x7fd695e44640 (LWP 308197) "hd_root"):
+#0  0x00007fd6b04d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007fd6b04d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007fd6b0504b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ba16a in jana::JApplication::NextEvent (this=0x7ffe4b5c2650, event=...) at src/JANA/JApplication.cc:614
+#4  0x00000000014e53c1 in jana::JEventLoop::OneEvent (this=0x7fd67c000b60) at src/JANA/JEventLoop.cc:591
+#5  0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7fd67c000b60) at src/JANA/JEventLoop.cc:496
+#6  0x00000000014ba3c5 in LaunchThread (arg=0x7ffe4b5c2650) at src/JANA/JApplication.cc:1382
+#7  0x00007fd6b0489c02 in start_thread () from /lib64/libc.so.6
+#8  0x00007fd6b050ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7fd696645640 (LWP 308196) "hd_root"):
+#0  0x00007fd6b04d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007fd6b04d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007fd6b0504b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ba16a in jana::JApplication::NextEvent (this=0x7ffe4b5c2650, event=...) at src/JANA/JApplication.cc:614
+#4  0x00000000014e53c1 in jana::JEventLoop::OneEvent (this=0x7fd684000b60) at src/JANA/JEventLoop.cc:591
+#5  0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7fd684000b60) at src/JANA/JEventLoop.cc:496
+#6  0x00000000014ba3c5 in LaunchThread (arg=0x7ffe4b5c2650) at src/JANA/JApplication.cc:1382
+#7  0x00007fd6b0489c02 in start_thread () from /lib64/libc.so.6
+#8  0x00007fd6b050ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7fd697647640 (LWP 308190) "hd_root"):
+#0  0x00007fd6b048679a in __futex_abstimed_wait_common () from /lib64/libc.so.6
+#1  0x00007fd6b0489572 in pthread_cond_clockwait
+GLIBC_2.30 () from /lib64/libc.so.6
+#2  0x0000000001288c98 in JEventSource_EVIOpp::GetEvent(jana::JEvent&) ()
+#3  0x00000000014cd10b in jana::JApplication::ReadEvent (this=0x7ffe4b5c2650, event=...) at src/JANA/JApplication.cc:824
+#4  0x00000000014cce37 in jana::JApplication::EventBufferThread (this=0x7ffe4b5c2650) at src/JANA/JApplication.cc:753
+#5  0x00000000014cd0ea in LaunchEventBufferThread (arg=0x7ffe4b5c2650) at src/JANA/JApplication.cc:666
+#6  0x00007fd6b0489c02 in start_thread () from /lib64/libc.so.6
+#7  0x00007fd6b050ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7fd6ad3204c0 (LWP 308158) "hd_root"):
+#0  0x00007fd6b04d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007fd6b04d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00000000014c78ef in jana::JApplication::Run (this=0x7ffe4b5c2650, proc=<optimized out>, Nthreads=<optimized out>) at src/JANA/JApplication.cc:1613
+#3  0x000000000072a48d in main ()
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+You may get help by asking at the ROOT forum https://root.cern.ch/forum
+Only if you are really convinced it is a bug in ROOT then please submit a
+report at https://root.cern.ch/bugs Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  0x00000000012d1078 in swap_bank(unsigned int*, unsigned int*, unsigned int) ()
+#6  0x00000000012b8a36 in DEVIOWorkerThread::Run() ()
+#7  0x00007fd6b08dbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#8  0x00007fd6b0489c02 in start_thread () from /lib64/libc.so.6
+#9  0x00007fd6b050ec40 in clone3 () from /lib64/libc.so.6
+
+===========================================================
+
+
+JANA ERROR>> didn't sleep full 0.5 seconds!
+  92.8k events processed  (92.8k events read)  0.0Hz  (avg.: 1.5kHz)       92.8k events processed  (92.8k events read)  0.0Hz  (avg.: 1496.9Hz)     

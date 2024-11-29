@@ -32,7 +32,7 @@ const bool addBkg = true;
 const bool needOverView = false;
 
 const char perfix[] = "PulseAmplitude";
-const char varName[] = "Peak Position/ADC Counts";
+const char varName[] = "Amplitude/ADC Counts";
 const char anotherAxisName[] = "Events / %.1f ADC Counts";
 const char outputFileTitle[] = "// index column row  mean  error sigma   chi2/ndf width\n";
 const char warnFileTitle[]   = "// index column row  mean  error sigma   chi2/ndf width  status\n";
@@ -210,7 +210,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
                 << std::setw(5) << std::setfill(' ') << col 
                 << std::setw(5) << std::setfill(' ') << row 
                 << TString::Format("%8.3f   ",mean.getVal()).Data()
-                << TString::Format("%6.3f   ",mean.getErr()).Data()
+                << TString::Format("%6.3f   ",mean.getError()).Data()
                 << TString::Format("%6.3f   ",sigma.getVal()).Data()
                 << TString::Format("%6.3f   ",chi2_dof).Data()
                 << TString::Format("%7.3f   ",width).Data() 

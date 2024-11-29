@@ -19,9 +19,9 @@ hvTemplateFile = 'temp.snap' # please input your current HV config File!
 #    ******************  Attention!!!   *****************
 itemToConfig   = "v0set 1 "
 fitResDir      = "../muonsCommission/DigitHits/res.txt"
-aimADC         = 10
+aimADC         = 9
 #  ADC Countes = A * ( hv ) ^ alpha
 #  Here A is canceled out and not needed
-alpha          = 8
-hvCap          = 1050
-hvBot          = 900
+alpha          = 8.4
+hvCap          = 1040
+hvBot          = 800
