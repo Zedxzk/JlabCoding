@@ -1,0 +1,188 @@
+JANA >>OUTPUT_FILENAME: /volatile/halld/home/zhikun/ver05_lumi/Run111897/ps_111897_013.root
+JANA >>Initializing plugin "/work/halld/home/zhikun/lumi_skim/lumi_skim.so" ...
+Opened ROOT file "/volatile/halld/home/zhikun/ver05_lumi/Run111897/ps_111897_013.root" ...
+ SASCHA -1
+/volatile/halld/home/zhikun/ver05_lumi/Run111897/lumi_ps_111897_013.root
+JANA >>Launching threads ....
+JANA >>Opening source "/cache/halld/RunPeriod-2022-08/calib/ver01/PS/Run111897/hd_rawdata_111897_013.ps.evio" of type: EVIOpp  - Reads EVIO formatted data from file or ET system
+loading VERSION 3
+
+
+JANA >>Created JCalibration object of type: JCalibrationCCDB
+JANA >>Generated via: JCalibration using CCDB for MySQL and SQLite databases
+JANA >>Run:111897
+JANA >>URL: mysql://ccdb_user@hallddb-farm.jlab.org/ccdb
+JANA >>context: variation=default
+JANA >>comment: Default constants for analyzing data
+  2.0 events processed  (2.0 events read)  4.0Hz  (avg.: 0.0Hz)     JANA >>Creating DGeometry:
+JANA >>  Run requested:111897  found:111897
+JANA >>  Run validity range: 111897-111897
+JANA >>  URL="ccdb:///GEOMETRY/main_HDDS.xml"  context="default"
+JANA >>  Type="JGeometryXML"
+JANA >>Found 25 material maps in calib. DB
+  2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>Read in 25 material maps for run 111897 containing 76153 grid points total
+JANA >>Creating DTranslationTable for run 111897
+JANA >>Reading translation table from calib DB: Translation/DAQ2detector ...
+  2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>40636 channels defined in translation table
+JANA >>In DPSHit_factory, loading constants...
+  2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>In DPSCHit_factory, loading constants...
+  2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>In DTAGHHit_factory, loading constants...
+  2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >> Correct Beam Photon Energy (TAGH) = 11.555 (GeV)
+JANA >>In DTAGMHit_factory_Calib, loading constants...
+  2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)       2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >> Correct Beam Photon Energy (TAGM) = 11.555 (GeV)
+JANA >>
+JANA >> --- Configuration Parameters --
+JANA >>[1m LUMI_PRIMEX:DIR                                                = /volatile/halld/home/zhikun/ver05_lumi/Run111897/lumi_ps_111897_013.root[0m
+JANA >>[1m NTHREADS                                                       = 4                                                                       [0m
+JANA >>[1m OUTPUT_FILENAME                                                = /volatile/halld/home/zhikun/ver05_lumi/Run111897/ps_111897_013.root     [0m
+JANA >>[1m PLUGINS                                                        = lumi_skim                                                               [0m
+JANA >>[1m[31m[1m[5m Run111897/hd_rawdata_111897_013.ps.evio:SKIP_F250_FORMAT_ERROR = 1                                                                        <-- NO DEFAULT! (TYPO?)[0m[0m
+JANA >>[1m THREAD_TIMEOUT                                                 = 30 seconds                                                              [0m
+JANA >> -------------------------------
+  1007.0 events processed  (1007.0 events read)  2.0kHz  (avg.: 2.0kHz)       2.0k events processed  (2.0k events read)  1.9kHz  (avg.: 2.0kHz)       2.9k events processed  (2.9k events read)  1.9kHz  (avg.: 1.9kHz)       3.8k events processed  (3.8k events read)  1.9kHz  (avg.: 1.9kHz)       4.8k events processed  (4.8k events read)  1.9kHz  (avg.: 1.9kHz)       5.7k events processed  (5.7k events read)  1.9kHz  (avg.: 1.9kHz)       6.7k events processed  (6.7k events read)  1.9kHz  (avg.: 1.9kHz)       7.6k events processed  (7.6k events read)  1.9kHz  (avg.: 1.9kHz)       8.6k events processed  (8.6k events read)  1.9kHz  (avg.: 1.9kHz)       9.5k events processed  (9.5k events read)  1.9kHz  (avg.: 1.9kHz)       10.4k events processed  (10.4k events read)  1.9kHz  (avg.: 1.9kHz)       11.4k events processed  (11.4k events read)  1.9kHz  (avg.: 1.9kHz)       12.3k events processed  (12.3k events read)  1.9kHz  (avg.: 1.9kHz)       13.3k events processed  (13.3k events read)  1.9kHz  (avg.: 1.9kHz)       14.2k events processed  (14.2k events read)  1.9kHz  (avg.: 1.9kHz)       15.2k events processed  (15.2k events read)  1.9kHz  (avg.: 1.9kHz)       16.1k events processed  (16.1k events read)  1.9kHz  (avg.: 1.9kHz)       17.1k events processed  (17.1k events read)  1.9kHz  (avg.: 1.9kHz)       18.0k events processed  (18.0k events read)  1.9kHz  (avg.: 1.9kHz)       18.9k events processed  (18.9k events read)  1.9kHz  (avg.: 1.9kHz)       19.9k events processed  (19.9k events read)  1.9kHz  (avg.: 1.9kHz)       20.8k events processed  (20.8k events read)  1.9kHz  (avg.: 1.9kHz)       21.8k events processed  (21.8k events read)  1.9kHz  (avg.: 1.9kHz)       22.7k events processed  (22.7k events read)  1.9kHz  (avg.: 1.9kHz)       23.7k events processed  (23.7k events read)  1.9kHz  (avg.: 1.9kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  24.6k events processed  (24.6k events read)  1.9kHz  (avg.: 1.9kHz)       25.6k events processed  (25.6k events read)  1.9kHz  (avg.: 1.9kHz)       26.5k events processed  (26.5k events read)  1.9kHz  (avg.: 1.9kHz)       27.4k events processed  (27.4k events read)  1.9kHz  (avg.: 1.9kHz)       28.4k events processed  (28.4k events read)  1.9kHz  (avg.: 1.9kHz)       29.3k events processed  (29.3k events read)  1.9kHz  (avg.: 1.9kHz)       29.9k events processed  (29.9k events read)  1112.0Hz  (avg.: 1.9kHz)       29.9k events processed  (29.9k events read)  14.0Hz  (avg.: 1.8kHz)       29.9k events processed  (29.9k events read)  2.0Hz  (avg.: 1.8kHz)       29.9k events processed  (29.9k events read)  0.0Hz  (avg.: 1.7kHz)       29.9k events processed  (29.9k events read)  0.0Hz  (avg.: 1.7kHz)     Error reading EVIO event (truncated?)
+words_left_in_file (before read): 342825328
+            bytes tried to read : 9277800488
+                total_size_bytes: 1963857740   tellg: -1
+  29.9k events processed  (29.9k events read)  0.0Hz  (avg.: 1.6kHz)     JANA ERROR>> didn't sleep full 0.5 seconds!
+  29.9k events processed  (29.9k events read)  0.0Hz  (avg.: 1.6kHz)     
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+
+Thread 10 (Thread 0x7f886a7fc640 (LWP 2134236) "hd_root"):
+#0  0x00007f889688679a in __futex_abstimed_wait_common () from /lib64/libc.so.6
+#1  0x00007f8896888fa0 in pthread_cond_wait
+
+GLIBC_2.3.2 () from /lib64/libc.so.6
+#2  0x00007f8896cd56b0 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib64/libstdc++.so.6
+#3  0x000000000129e80f in async_filebuf::readloop() ()
+#4  0x00007f8896cdbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#5  0x00007f8896889c02 in start_thread () from /lib64/libc.so.6
+#6  0x00007f889690ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 9 (Thread 0x7f886affd640 (LWP 2134173) "hd_root"):
+#0  0x00007f889688679a in __futex_abstimed_wait_common () from /lib64/libc.so.6
+#1  0x00007f8896889572 in pthread_cond_clockwait
+GLIBC_2.30 () from /lib64/libc.so.6
+#2  0x00000000012b89a6 in DEVIOWorkerThread::Run() ()
+#3  0x00007f8896cdbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#4  0x00007f8896889c02 in start_thread () from /lib64/libc.so.6
+#5  0x00007f889690ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 8 (Thread 0x7f886b7fe640 (LWP 2134172) "hd_root"):
+#0  0x00007f88968d8a3f in wait4 () from /lib64/libc.so.6
+#1  0x00007f889684b243 in do_system () from /lib64/libc.so.6
+#2  0x00007f88995e272c in TUnixSystem::StackTrace() () from /group/halld/Software/builds/Linux_Alma9-x86_64-gcc11.4.1/root/root-6.24.04/lib/libCore.so
+#3  0x00007f88995dfd65 in TUnixSystem::DispatchSignals(ESignals) () from /group/halld/Software/builds/Linux_Alma9-x86_64-gcc11.4.1/root/root-6.24.04/lib/libCore.so
+#4  <signal handler called>
+#5  0x00000000012d05d1 in swap_segment(unsigned int*, unsigned int*, unsigned int) ()
+#6  0x00000000012d1287 in swap_bank(unsigned int*, unsigned int*, unsigned int) ()
+#7  0x00000000012b8a36 in DEVIOWorkerThread::Run() ()
+#8  0x00007f8896cdbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#9  0x00007f8896889c02 in start_thread () from /lib64/libc.so.6
+#10 0x00007f889690ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 7 (Thread 0x7f887d22e640 (LWP 2134171) "hd_root"):
+#0  0x00007f88968d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f88968d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x000000000128a10b in JEventSource_EVIOpp::Dispatcher() ()
+#3  0x00007f8896cdbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#4  0x00007f8896889c02 in start_thread () from /lib64/libc.so.6
+#5  0x00007f889690ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 6 (Thread 0x7f88637fe640 (LWP 2134163) "hd_root"):
+#0  0x00007f88968d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f88968d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007f8896904b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ba16a in jana::JApplication::NextEvent (this=0x7ffd915e9330, event=...) at src/JANA/JApplication.cc:614
+#4  0x00000000014e53c1 in jana::JEventLoop::OneEvent (this=0x7f8854000b60) at src/JANA/JEventLoop.cc:591
+#5  0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7f8854000b60) at src/JANA/JEventLoop.cc:496
+#6  0x00000000014ba3c5 in LaunchThread (arg=0x7ffd915e9330) at src/JANA/JApplication.cc:1382
+#7  0x00007f8896889c02 in start_thread () from /lib64/libc.so.6
+#8  0x00007f889690ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 5 (Thread 0x7f886bfff640 (LWP 2134162) "hd_root"):
+#0  0x00007f88968d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f88968d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007f8896904b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ba16a in jana::JApplication::NextEvent (this=0x7ffd915e9330, event=...) at src/JANA/JApplication.cc:614
+#4  0x00000000014e53c1 in jana::JEventLoop::OneEvent (this=0x7f885c000b60) at src/JANA/JEventLoop.cc:591
+#5  0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7f885c000b60) at src/JANA/JEventLoop.cc:496
+#6  0x00000000014ba3c5 in LaunchThread (arg=0x7ffd915e9330) at src/JANA/JApplication.cc:1382
+#7  0x00007f8896889c02 in start_thread () from /lib64/libc.so.6
+#8  0x00007f889690ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 4 (Thread 0x7f8870d8e640 (LWP 2134161) "hd_root"):
+#0  0x00007f88968d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f88968d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007f8896904b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ba16a in jana::JApplication::NextEvent (this=0x7ffd915e9330, event=...) at src/JANA/JApplication.cc:614
+#4  0x00000000014e53c1 in jana::JEventLoop::OneEvent (this=0x7f8864000b60) at src/JANA/JEventLoop.cc:591
+#5  0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7f8864000b60) at src/JANA/JEventLoop.cc:496
+#6  0x00000000014ba3c5 in LaunchThread (arg=0x7ffd915e9330) at src/JANA/JApplication.cc:1382
+#7  0x00007f8896889c02 in start_thread () from /lib64/libc.so.6
+#8  0x00007f889690ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7f887ca2d640 (LWP 2134160) "hd_root"):
+#0  0x00007f88968d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f88968d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007f8896904b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ba16a in jana::JApplication::NextEvent (this=0x7ffd915e9330, event=...) at src/JANA/JApplication.cc:614
+#4  0x00000000014e53c1 in jana::JEventLoop::OneEvent (this=0x7f886c000b60) at src/JANA/JEventLoop.cc:591
+#5  0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7f886c000b60) at src/JANA/JEventLoop.cc:496
+#6  0x00000000014ba3c5 in LaunchThread (arg=0x7ffd915e9330) at src/JANA/JApplication.cc:1382
+#7  0x00007f8896889c02 in start_thread () from /lib64/libc.so.6
+#8  0x00007f889690ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f887da2f640 (LWP 2134157) "hd_root"):
+#0  0x00007f889688679a in __futex_abstimed_wait_common () from /lib64/libc.so.6
+#1  0x00007f8896889572 in pthread_cond_clockwait
+GLIBC_2.30 () from /lib64/libc.so.6
+#2  0x0000000001288c98 in JEventSource_EVIOpp::GetEvent(jana::JEvent&) ()
+#3  0x00000000014cd10b in jana::JApplication::ReadEvent (this=0x7ffd915e9330, event=...) at src/JANA/JApplication.cc:824
+#4  0x00000000014cce37 in jana::JApplication::EventBufferThread (this=0x7ffd915e9330) at src/JANA/JApplication.cc:753
+#5  0x00000000014cd0ea in LaunchEventBufferThread (arg=0x7ffd915e9330) at src/JANA/JApplication.cc:666
+#6  0x00007f8896889c02 in start_thread () from /lib64/libc.so.6
+#7  0x00007f889690ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f88936fb4c0 (LWP 2134086) "hd_root"):
+#0  0x00007f88968d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f88968d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00000000014c78ef in jana::JApplication::Run (this=0x7ffd915e9330, proc=<optimized out>, Nthreads=<optimized out>) at src/JANA/JApplication.cc:1613
+#3  0x000000000072a48d in main ()
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+You may get help by asking at the ROOT forum https://root.cern.ch/forum
+Only if you are really convinced it is a bug in ROOT then please submit a
+report at https://root.cern.ch/bugs Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  0x00000000012d05d1 in swap_segment(unsigned int*, unsigned int*, unsigned int) ()
+#6  0x00000000012d1287 in swap_bank(unsigned int*, unsigned int*, unsigned int) ()
+#7  0x00000000012b8a36 in DEVIOWorkerThread::Run() ()
+#8  0x00007f8896cdbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#9  0x00007f8896889c02 in start_thread () from /lib64/libc.so.6
+#10 0x00007f889690ec40 in clone3 () from /lib64/libc.so.6
+
+===========================================================
+
+
+JANA ERROR>> didn't sleep full 0.5 seconds!
+  29.9k events processed  (29.9k events read)  0.0Hz  (avg.: 1.6kHz)     

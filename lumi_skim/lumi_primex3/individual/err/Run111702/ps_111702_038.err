@@ -1,2 +1,5 @@
 export: Command not found.
 export: Command not found.
+slurmstepd: error: *** JOB 33960995 ON farm1925 CANCELLED AT 2024-12-02T08:04:21 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 33960995 STEPD TERMINATED ON farm1925 AT 2024-12-02T08:06:21 DUE TO JOB NOT ENDING WITH SIGNALS ***
+slurmstepd: error: Container 1053787 in cgroup plugin has 2 processes, giving up after 127 sec

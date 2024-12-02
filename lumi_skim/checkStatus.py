@@ -2,10 +2,10 @@ import os
 
 empty_line_printed = False
 
-he_version = "he7"
+he_version = "he9"
 # 文件路径定义
-list_file_path = f"/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
-individual_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/"
+list_file_path = f"/work/halld3/home/somov/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
+list_of_evio_files = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"
 log_base_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/"
 res_file = f"res_old_{he_version}_test.txt"
 
@@ -81,7 +81,7 @@ with open(list_file_path, "r") as list_file:
         # evt_total = 0
 
         # 读取对应的 individual 文件列表
-        individual_list_path = os.path.join(individual_dir, f"list_Run{my_file}")
+        individual_list_path = os.path.join(list_of_evio_files, f"list_Run{my_file}")
 
         # 检查 individual_list_path 文件是否存在
         if not os.path.exists(individual_list_path):

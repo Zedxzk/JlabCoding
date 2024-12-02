@@ -69,6 +69,7 @@ Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_prim
 Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111269/ps_111269_075.log 
 Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111269/ps_111269_083.log 
 Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111269/ps_111269_096.log 
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111269/ps_111269_097.log 
  
 Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111270/ps_111270_006.log 
 Error: 'There was a crash.' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111270/ps_111270_007.log
@@ -211,6 +212,7 @@ Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individ
 Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_045.log 
 Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_046.log 
 Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_047.log 
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_048.log 
 Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_049.log 
 Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_050.log 
 Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_051.log 

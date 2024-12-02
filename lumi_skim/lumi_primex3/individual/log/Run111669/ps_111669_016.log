@@ -82,3 +82,6 @@ Nbad_events: 0
 
 JANA >>Merging event reader thread ...
 JANA >> 1060006 events processed  (1060007 events read) Average rate: 1.9kHz
+
+Closed ROOT file
+JANA >>Closing shared object handle 0 ...

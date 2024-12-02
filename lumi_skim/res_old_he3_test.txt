@@ -1,3 +1,16 @@
+ 
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110738/ps_110738_021.log
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110738/ps_110738_032.log
+ 
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110739/ps_110739_005.log
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110739/ps_110739_023.log
+ 
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110741/ps_110741_021.log 
+ 
+Error: No events in file /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110743/ps_110743_010.log
+ 
+Error: No events in file /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110744/ps_110744_009.log
+ 
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110745/ps_110745_002.log
 Error: No events in file /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110745/ps_110745_027.log
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110745/ps_110745_030.log
@@ -9,7 +22,6 @@ Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_prim
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110750/ps_110750_009.log
  
 Error: 'There was a crash.' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110751/ps_110751_027.log
-Error: No events in file /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110751/ps_110751_027.log
  
 Error: The directory /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110754 is empty.
  
@@ -20,7 +32,6 @@ Error: No events in file /work/halld/home/zhikun/lumi_skim/lumi_primex3/individu
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110771/ps_110771_004.log
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110771/ps_110771_041.log
  
-Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110772/ps_110772_086.log
 Error: 'There was a crash.' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110772/ps_110772_086.log
  
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110775/ps_110775_091.log
@@ -52,14 +63,12 @@ Error: The directory /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/l
  
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110792/ps_110792_046.log
  
-Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110793/ps_110793_005.log
 Error: 'There was a crash.' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110793/ps_110793_005.log
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110793/ps_110793_012.log
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110793/ps_110793_014.log
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110793/ps_110793_116.log
  
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110795/ps_110795_023.log
-Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110795/ps_110795_102.log
 Error: 'There was a crash.' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110795/ps_110795_102.log
  
 Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/Run110798/ps_110798_037.log

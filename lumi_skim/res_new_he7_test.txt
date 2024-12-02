@@ -2,11 +2,15 @@ Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_prim
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111231/ps_111231_029.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111232/ps_111232_085.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111232/ps_111232_101.log 
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111233/ps_111233_021.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111234/ps_111234_030.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111234/ps_111234_041.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111234/ps_111234_083.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111235/ps_111235_011.log 
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111236/ps_111236_019.log
  
@@ -14,12 +18,16 @@ Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_prim
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111237/ps_111237_097.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111238/ps_111238_013.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111238/ps_111238_045.log 
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111239/ps_111239_013.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111239/ps_111239_064.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111239/ps_111239_066.log 
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111242/ps_111242_047.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111242/ps_111242_105.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111243/ps_111243_011.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111243/ps_111243_018.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111244/ps_111244_087.log
@@ -29,11 +37,15 @@ Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_prim
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111253/ps_111253_125.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111253/ps_111253_129.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111257/ps_111257_088.log 
+ 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111259/ps_111259_024.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111259/ps_111259_040.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111259/ps_111259_043.log
 Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111259/ps_111259_049.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111259/ps_111259_055.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111260/ps_111260_044.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111260/ps_111260_049.log
 Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111260/ps_111260_075.log
  
@@ -44,20 +56,27 @@ Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_prim
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111265/ps_111265_074.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111267/ps_111267_036.log 
+ 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111268/ps_111268_070.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111268/ps_111268_078.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111268/ps_111268_081.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111268/ps_111268_102.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111269/ps_111269_057.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111269/ps_111269_095.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111269/ps_111269_097.log 
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111270/ps_111270_013.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111272/ps_111272_007.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111272/ps_111272_050.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111273/ps_111273_009.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111274/ps_111274_108.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111275/ps_111275_002.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111275/ps_111275_052.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111276/ps_111276_000.log
@@ -71,8 +90,15 @@ Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_prim
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111279/ps_111279_011.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111282/ps_111282_001.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111282/ps_111282_119.log 
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111283/ps_111283_013.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111283/ps_111283_036.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111285/ps_111285_020.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111285/ps_111285_089.log 
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111287/ps_111287_005.log 
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111288/ps_111288_018.log
  
@@ -86,6 +112,9 @@ Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3/individu
 Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111293/ps_111293_017.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111294/ps_111294_000.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111294/ps_111294_037.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111294/ps_111294_042.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111294/ps_111294_044.log 
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111295/ps_111295_036.log
  
@@ -103,6 +132,7 @@ Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3/individu
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111299/ps_111299_035.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111300/ps_111300_023.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111300/ps_111300_037.log 
  
 Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111301/ps_111301_028.log
  
@@ -130,21 +160,31 @@ Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_prim
 Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111311/ps_111311_010.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111311/ps_111311_011.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111330/ps_111330_052.log 
+ 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111331/ps_111331_049.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111332/ps_111332_025.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111332/ps_111332_084.log 
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111333/ps_111333_027.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111335/ps_111335_053.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111335/ps_111335_078.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111335/ps_111335_086.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111337/ps_111337_050.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111337/ps_111337_079.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111337/ps_111337_099.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111338/ps_111338_069.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111338/ps_111338_081.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111340/ps_111340_005.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_006.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_017.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_048.log 
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111343/ps_111343_045.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111343/ps_111343_059.log
@@ -163,8 +203,10 @@ Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_prim
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111349/ps_111349_041.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111349/ps_111349_120.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111350/ps_111350_031.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111350/ps_111350_045.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111353/ps_111353_021.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111353/ps_111353_059.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111353/ps_111353_090.log
  
@@ -173,19 +215,24 @@ Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_prim
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111356/ps_111356_014.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111356/ps_111356_019.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111356/ps_111356_062.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111356/ps_111356_088.log 
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111358/ps_111358_070.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111358/ps_111358_094.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111359/ps_111359_005.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111360/ps_111360_014.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111360/ps_111360_048.log 
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111361/ps_111361_011.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111361/ps_111361_033.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111362/ps_111362_008.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111366/ps_111366_011.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111366/ps_111366_023.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111366/ps_111366_055.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111366/ps_111366_062.log
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111366/ps_111366_077.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111366/ps_111366_078.log 
@@ -223,6 +270,7 @@ Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individ
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111367/ps_111367_056.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111367/ps_111367_065.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111367/ps_111367_066.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111367/ps_111367_088.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111367/ps_111367_093.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111367/ps_111367_094.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111367/ps_111367_095.log 
@@ -233,6 +281,8 @@ Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_prim
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111369/ps_111369_103.log
  
 Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111370/ps_111370_013.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111370/ps_111370_091.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111370/ps_111370_092.log 
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111371/ps_111371_030.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111371/ps_111371_039.log
@@ -263,15 +313,19 @@ Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individ
  
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111375/ps_111375_003.log 
 Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111375/ps_111375_011.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111375/ps_111375_013.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111375/ps_111375_056.log 
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111377/ps_111377_099.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111378/ps_111378_013.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111378/ps_111378_058.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111378/ps_111378_062.log
  
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111379/ps_111379_033.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111379/ps_111379_098.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111381/ps_111381_018.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111381/ps_111381_047.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111381/ps_111381_050.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111381/ps_111381_051.log 
@@ -294,6 +348,7 @@ Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individ
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111382/ps_111382_035.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111382/ps_111382_037.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111382/ps_111382_049.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111382/ps_111382_053.log 
 Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111382/ps_111382_062.log
  
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111385/ps_111385_003.log 
@@ -320,12 +375,16 @@ Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_prim
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111390/ps_111390_040.log
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111390/ps_111390_047.log
  
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111391/ps_111391_031.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111391/ps_111391_041.log 
+ 
 Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111392/ps_111392_027.log
 Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111392/ps_111392_051.log
  
 Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111393/ps_111393_000.log
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111393/ps_111393_005.log 
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111393/ps_111393_013.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111393/ps_111393_029.log 
 Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111393/ps_111393_056.log
  
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111394/ps_111394_006.log 
@@ -351,6 +410,7 @@ Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_prim
 Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111395/ps_111395_087.log
  
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111396/ps_111396_009.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111396/ps_111396_024.log 
  
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111398/ps_111398_012.log 
 Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111398/ps_111398_013.log 

@@ -6,10 +6,11 @@ import glob
 import subprocess
 
 
-he_version = "he7"
+he_version = "he9"
 
-extraInfo = "zhikun_reverse"
+
 # Paths Setup
+# extraInfo = "v2"
 # rootDir1 = "/volatile/halld/home/zhikun/ver05_lumi/"
 # logDir1 = "/w/halld-scshelf2101/home/zhikun/lumi_skim/lumi_primex3/individual/log"
 # resDir1 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
@@ -18,13 +19,15 @@ extraInfo = "zhikun_reverse"
 # logDir2 = "/w/halld-scshelf2101/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
 # resDir2 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_new_{he_version}_test.txt"
 
+
+extraInfo = "v2_reversed"
 rootDir2 = "/volatile/halld/home/zhikun/ver05_lumi/"
-logDir2 = "/w/halld-scshelf2101/home/zhikun/lumi_skim/lumi_primex3/individual/log"
-resDir2 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
+logDir2 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log"
+resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
 
 rootDir1 = "/volatile/halld/home/somov/ver05_lumi/"
-logDir1 = "/w/halld-scshelf2101/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
-resDir1 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_new_{he_version}_test.txt"
+logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
+resDir1 = f"/work/halld/home/zhikun/lumi_skim/res_new_{he_version}_test.txt"
 
 
 
@@ -37,12 +40,13 @@ manual_check_path = f"/volatile/halld/home/test_lumi/manual_check_{he_version}_{
 
 list_file_path = f"/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 
-# make copy_files if you want to debug, look at log files and don't need to copy files.
+# change copy_files as you like if you want to debug, look at log files and don't need to copy files.
+# copy_files = False
 copy_files = True
 
 def main():
     # 执行所有操作
-    # copy_all()  # Uncomment to run copy operations
+    copy_all()  # Uncomment to run copy operations
     errors_1, errors_2 = check_all()
     replace_all(errors_1, errors_2)
     # 保存快速浏览日志到目标文件
@@ -127,7 +131,7 @@ def copy_one_root(run_id, file_id):
         for source_file_path in source_file_paths:
             file_name = os.path.basename(source_file_path)
             destination_file_path = os.path.join(destination_run_dir, file_name)
-            if not copy_files:
+            if copy_files:
                 copy_with_subprocess(source_file_path, destination_file_path, is_dir=False)
     else:
         log(f"No source files match the pattern: {source_file_pattern}")
@@ -150,7 +154,7 @@ def copy_one_log(run_id, file_id):
         for source_file_path in source_file_paths:
             file_name = os.path.basename(source_file_path)
             destination_file_path = os.path.join(destination_run_dir, file_name)
-            if not copy_files:
+            if copy_files:
                 copy_with_subprocess(source_file_path, destination_file_path, is_dir=False)
     else:
         log(f"No source files match the pattern: {source_file_pattern}")
@@ -176,7 +180,7 @@ def copy_all_log():
             if not os.path.exists(source_run_dir):
                 log(f"Source directory {source_run_dir} does not exist.")
                 continue
-            if not copy_files:
+            if copy_files:
                 copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
 
 def copy_all_root():
@@ -200,7 +204,7 @@ def copy_all_root():
             if not os.path.exists(source_run_dir):
                 log(f"Source directory {source_run_dir} does not exist.")
                 continue
-            if not copy_files:
+            if copy_files:
                 copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
 
 def copy_all():
@@ -294,7 +298,7 @@ def replace_all(errors_1, errors_2):
                 destination_run_dir = os.path.join(destination_log_dir, run_dir)
 
                 if os.path.exists(source_run_dir):
-                    if not copy_files:
+                    if copy_files:
                         copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
                     log(f"Successfully copied from {source_run_dir} to {destination_run_dir}")  # 成功消息用绿色输出
                 else:
@@ -304,7 +308,7 @@ def replace_all(errors_1, errors_2):
                 destination_run_dir = os.path.join(destination_root_dir, run_dir)
 
                 if os.path.exists(source_run_dir):
-                    if not copy_files:
+                    if copy_files:
                         copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
                     log(f"Successfully copied from {source_run_dir} to {destination_run_dir}")  # 成功消息用绿色输出
                 else:
@@ -350,12 +354,14 @@ def replace_all(errors_1, errors_2):
                     ])
                     log(msg,is_error=True)
                     manual_check_messages.append(msg)
+                    events_manual_check += 1
+                    continue
                 lowLevelError1 = True if 'words_left_in_file' in errors_1[key] else False
                 lowLevelError2 = True if 'words_left_in_file' in errors_2[msg_key] else False
                 if lowLevelError2 and not lowLevelError1:
                     msg = '\n'.join([
                         stars,
-                        f"Errors of : {key} exist in both directory!! PLEASE CHECK MANUALLY",
+                        f"Errors of : {key} exist in both directory!! PLEASE CHECK MANUALLY, but not ALL are FATAL",
                         errors_1[key],
                         errors_2[msg_key],
                         f"copy file form {source_run_dir}",
