@@ -6,24 +6,50 @@ import glob
 import subprocess
 
 
-he_version = "he5"
-# Paths Setup
-rootDir1 = "/volatile/halld/home/zhikun/ver05_lumi/"
-logDir1 = "/w/halld-scshelf2101/home/zhikun/lumi_skim/lumi_primex3/individual/log"
-resDir1 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
+he_version = "he7"
 
-rootDir2 = "/volatile/halld/home/somov/ver05_lumi/"
-logDir2 = "/w/halld-scshelf2101/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
-resDir2 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_new_{he_version}_test.txt"
+extraInfo = "zhikun_reverse"
+# Paths Setup
+# rootDir1 = "/volatile/halld/home/zhikun/ver05_lumi/"
+# logDir1 = "/w/halld-scshelf2101/home/zhikun/lumi_skim/lumi_primex3/individual/log"
+# resDir1 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
+
+# rootDir2 = "/volatile/halld/home/somov/ver05_lumi/"
+# logDir2 = "/w/halld-scshelf2101/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
+# resDir2 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_new_{he_version}_test.txt"
+
+rootDir2 = "/volatile/halld/home/zhikun/ver05_lumi/"
+logDir2 = "/w/halld-scshelf2101/home/zhikun/lumi_skim/lumi_primex3/individual/log"
+resDir2 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
+
+rootDir1 = "/volatile/halld/home/somov/ver05_lumi/"
+logDir1 = "/w/halld-scshelf2101/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
+resDir1 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_new_{he_version}_test.txt"
+
+
 
 destination_root_dir = "/volatile/halld/home/test_lumi/"
 destination_log_dir = "/volatile/halld/home/test_lumi/log/"
 
-destination_res_dir = f"/volatile/halld/home/test_lumi/copy_and_replace_res_{he_version}_test.txt"
-logfile_path = f"/volatile/halld/home/test_lumi/loginfo_{he_version}_test.log"
-manual_check_path = f"/volatile/halld/home/test_lumi/manual_check_{he_version}.log"
+destination_res_dir = f"/volatile/halld/home/test_lumi/copy_and_replace_res_{he_version}_test_{extraInfo}.txt"
+logfile_path = f"/volatile/halld/home/test_lumi/loginfo_{he_version}_test_{extraInfo}.log"
+manual_check_path = f"/volatile/halld/home/test_lumi/manual_check_{he_version}_{extraInfo}.log"
 
 list_file_path = f"/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
+
+# make copy_files if you want to debug, look at log files and don't need to copy files.
+copy_files = True
+
+def main():
+    # 执行所有操作
+    # copy_all()  # Uncomment to run copy operations
+    errors_1, errors_2 = check_all()
+    replace_all(errors_1, errors_2)
+    # 保存快速浏览日志到目标文件
+    save_log(destination_res_dir)
+    save_manual_check_log(manual_check_path)
+
+
 
 
 
@@ -72,7 +98,8 @@ def save_manual_check_log(message):
 def copy_with_subprocess(src, dst, is_dir=False):
     """使用 subprocess 复制文件或目录"""
     if is_dir:
-        command = ["rsync", "-a", src + "/", dst + "/"]  # 使用 rsync 复制目录
+        command = ["rsync", "-r", src + "/", dst + "/"]  # 使用 rsync 复制目录
+        # command = ["rsync", "-r","--no-times", "--no-perms", src + "/", dst + "/"]  # 使用 rsync 复制目录
     else:
         command = ["cp", "-p", src, dst]  # 使用 cp 复制文件
 
@@ -100,8 +127,8 @@ def copy_one_root(run_id, file_id):
         for source_file_path in source_file_paths:
             file_name = os.path.basename(source_file_path)
             destination_file_path = os.path.join(destination_run_dir, file_name)
-
-            copy_with_subprocess(source_file_path, destination_file_path, is_dir=False)
+            if not copy_files:
+                copy_with_subprocess(source_file_path, destination_file_path, is_dir=False)
     else:
         log(f"No source files match the pattern: {source_file_pattern}")
 
@@ -123,8 +150,8 @@ def copy_one_log(run_id, file_id):
         for source_file_path in source_file_paths:
             file_name = os.path.basename(source_file_path)
             destination_file_path = os.path.join(destination_run_dir, file_name)
-
-            copy_with_subprocess(source_file_path, destination_file_path, is_dir=False)
+            if not copy_files:
+                copy_with_subprocess(source_file_path, destination_file_path, is_dir=False)
     else:
         log(f"No source files match the pattern: {source_file_pattern}")
 
@@ -149,8 +176,8 @@ def copy_all_log():
             if not os.path.exists(source_run_dir):
                 log(f"Source directory {source_run_dir} does not exist.")
                 continue
-            
-            copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
+            if not copy_files:
+                copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
 
 def copy_all_root():
     """复制所有根文件。"""
@@ -173,8 +200,8 @@ def copy_all_root():
             if not os.path.exists(source_run_dir):
                 log(f"Source directory {source_run_dir} does not exist.")
                 continue
-            
-            copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
+            if not copy_files:
+                copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
 
 def copy_all():
     """复制所有文件和目录。"""
@@ -207,6 +234,7 @@ def format_error(message):
         return result
 
     match2 = pattern2.search(message)
+    print()
     if match2:
         first_number = match2.group(4)
         second_number = match2.group(5)
@@ -263,11 +291,11 @@ def replace_all(errors_1, errors_2):
                 manual_check_messages.append(f"source_run_dir = {source_run_dir} is also empty, PLEASE CHECK MANUALLY!!!!")
                 events_manual_check += 1
             else:
-                pass
                 destination_run_dir = os.path.join(destination_log_dir, run_dir)
 
                 if os.path.exists(source_run_dir):
-                    copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
+                    if not copy_files:
+                        copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
                     log(f"Successfully copied from {source_run_dir} to {destination_run_dir}")  # 成功消息用绿色输出
                 else:
                     log(f"Source directory {source_run_dir} does not exist.", is_error=True)
@@ -276,7 +304,8 @@ def replace_all(errors_1, errors_2):
                 destination_run_dir = os.path.join(destination_root_dir, run_dir)
 
                 if os.path.exists(source_run_dir):
-                    copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
+                    if not copy_files:
+                        copy_with_subprocess(source_run_dir, destination_run_dir, is_dir=True)
                     log(f"Successfully copied from {source_run_dir} to {destination_run_dir}")  # 成功消息用绿色输出
                 else:
                     log(f"Source directory {source_run_dir} does not exist.", is_error=True)
@@ -295,25 +324,66 @@ def replace_all(errors_1, errors_2):
                 log(f"No matching errors found in {source_run_dir}.")  # 成功消息用绿色输出
             
         else:
+            run_id = key[0]  
+            run_dir = f"Run{run_id}"  
+            source_run_dir = os.path.join(rootDir2, run_dir)
+            destination_run_dir = os.path.join(destination_root_dir, run_dir)
+            
             if key in errors_2.keys():
-                msg = '\n'.join([
-                    stars,
-                    f"Errors of : {key} exist in both directory!! PLEASE CHECK MANUALLY",
-                    errors_1[key],
-                    errors_2[key],
-                    stars
-                ])
-                manual_check_messages.append(msg)
-                events_manual_check += 1
-                log(msg, is_error=True)  # 此处用红色输出，并标记为错误
+                # 如果直接找到 key，则用 key 访问
+                msg_key = key
+
+            else:
+                # 如果没有找到，尝试找到与 key[0] 相同且第二个元素为 '*' 的键
+                matching_key = next(((k, errors_2[k]) for k in errors_2.keys() if k[0] == key[0] and k[1] == '*'), (None, None))
+                msg_key = matching_key[0]  # 获取找到的键，如果没有找到则为 None
+
+            if msg_key is not None:
+                # 生成错误消息
+                if msg_key[1] == "*":
+                    msg = '\n'.join([
+                        stars,
+                        f"Errors of : {key} exist in both directory!! PLEASE CHECK MANUALLY",
+                        errors_1.get(key),
+                        errors_2.get(msg_key),
+                        stars
+                    ])
+                    log(msg,is_error=True)
+                    manual_check_messages.append(msg)
+                lowLevelError1 = True if 'words_left_in_file' in errors_1[key] else False
+                lowLevelError2 = True if 'words_left_in_file' in errors_2[msg_key] else False
+                if lowLevelError2 and not lowLevelError1:
+                    msg = '\n'.join([
+                        stars,
+                        f"Errors of : {key} exist in both directory!! PLEASE CHECK MANUALLY",
+                        errors_1[key],
+                        errors_2[msg_key],
+                        f"copy file form {source_run_dir}",
+                        stars
+                    ])
+                    manual_check_messages.append(msg)
+
+                    if os.path.exists(source_run_dir):
+                        copy_one_root(run_id, key[1])
+                        copy_one_log(run_id, key[1])
+                        log(f"Successfully copied from {source_run_dir} to {destination_run_dir}")  # 成功消息用绿色输出
+                    else:
+                        log(f"Source directory {source_run_dir} does not exist.", is_error=True)  # 此处用红色输出，并标记为错误
+                    events_manual_check += 1
+                    log(msg, is_error=True)  # 此处用红色输出，并标记为错误
+                else:
+                    msg = '\n'.join([
+                        stars,
+                        f"Errors of : {key} exist in both directory!! PLEASE CHECK MANUALLY",
+                        errors_1[key],
+                        errors_2[msg_key],
+                        stars
+                    ])
+                    manual_check_messages.append(msg)
+                    events_manual_check += 1
+                    log(msg, is_error=True)  # 此处用红色输出，并标记为错误
                 
             else:
-                run_id = key[0]  
-                run_dir = f"Run{run_id}"  
-                
-                source_run_dir = os.path.join(rootDir2, run_dir)
-                destination_run_dir = os.path.join(destination_root_dir, run_dir)
-
                 msg = '\n'.join([
                     stars, 
                     f"Error of {key} only exists in \n{errors_1[key]}",
@@ -330,13 +400,6 @@ def replace_all(errors_1, errors_2):
                     log(f"Source directory {source_run_dir} does not exist.", is_error=True)  # 此处用红色输出，并标记为错误
     return errors_1
 
-# 执行所有操作
-# copy_all()  # Uncomment to run copy operations
 
-errors_1, errors_2 = check_all()
 
-replace_all(errors_1, errors_2)
-
-# 保存快速浏览日志到目标文件
-save_log(destination_res_dir)
-save_manual_check_log(manual_check_path)
+main()

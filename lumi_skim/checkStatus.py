@@ -2,7 +2,7 @@ import os
 
 empty_line_printed = False
 
-he_version = "he5"
+he_version = "he7"
 # 文件路径定义
 list_file_path = f"/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 individual_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/"
@@ -31,14 +31,15 @@ def parse_log_file(log_path):
         errors = []
         event_count = 0
 
+        # 检查 "There was a crash."
+        if "There was a crash." in log_content:
+            errors.append(("red", f"Error: 'There was a crash.' found in {log_path}"))
+            return errors, event_count
+
         # 检查 "words_left_in_file" 错误
         if "words_left_in_file" in log_content:
             errors.append(("blue", f"Error: 'words_left_in_file' found in {log_path}"))
         
-        # 检查 "There was a crash."
-        if "There was a crash." in log_content:
-            errors.append(("red", f"Error: 'There was a crash.' found in {log_path}"))
-
         # 提取事件数量
         evt_lines = [line for line in log_content.splitlines() if "Nevents" in line]
         if not evt_lines:
