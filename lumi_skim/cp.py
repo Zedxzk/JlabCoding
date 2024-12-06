@@ -6,7 +6,7 @@ import glob
 import subprocess
 
 
-he_version = "he9"
+he_version = "he10"
 
 
 # Paths Setup

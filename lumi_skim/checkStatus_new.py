@@ -2,7 +2,7 @@ import os
 
 empty_line_printed = False
 
-he_version = "he9"
+he_version = "he10"
 # 文件路径定义
 list_file_path = f"/work/halld3/home/somov/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 individual_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"

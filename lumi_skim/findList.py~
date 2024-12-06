@@ -1,0 +1,57 @@
+import os
+import re
+from pprint import pprint
+list_of_runs_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss"
+list_of_good_runs_dir = "/work/halld/home/zhikun/lumi_skim/goodRuns"
+list_of_error_files = "/work/halld/home/zhikun/lumi_skim/error_files"
+
+pattern1 = re.compile(r"(Error: The directory (.+?(\d{6})) is empty.)")
+pattern2 = re.compile(r"(Error: (.+?) (/w.+?/ps_(\d{6})_(\d{3}).log))")
+
+bad_runs = {}
+
+def add_bad_run(key, value):
+    if key in bad_runs.keys():
+        bad_runs[key].append(value)
+    else:
+        bad_runs[key] = [value]  # Use list notation to create a new list with the value
+
+
+for i in range(3,11):
+    with open(os.path.join(list_of_good_runs_dir, f'goodRuns_he{i}.txt'),'w') as goodRuns:
+        list_of_runs = os.path.join(list_of_runs_dir, f"list_of_runs_he{i}")
+        with open(list_of_runs,'r') as f1:
+            runs = [item.strip() for item in f1.readlines()]
+        with open(f"res_new_he{i}_test.txt") as f1:
+            errors = [ item.strip() for item in f1.readlines()]
+
+        print(runs)
+        for error in errors:
+            match1 = pattern1.search(error)
+            if match1:
+                first_number = str(match1.group(3))
+                add_bad_run(first_number, "*")
+                if first_number in runs:
+                    print(first_number)
+                    runs.remove(str(first_number))
+
+            match2 = pattern2.search(error)
+            # print()
+            if match2:
+                first_number = match2.group(4)
+                second_number = match2.group(5)
+                add_bad_run(first_number, second_number)
+                if first_number in runs:
+                    print(first_number)
+                    runs.remove(str(first_number))
+        pprint(bad_runs)
+        for run in runs:
+            goodRuns.write(f"{run}\n")
+        
+with open("files_need_to_be_reprocessed.txt", 'w') as f:
+    for key, value in bad_runs.items():
+        f.write(key+'\n')
+        f.write(f"{value}")
+        f.write("\n\n\n")
+
+

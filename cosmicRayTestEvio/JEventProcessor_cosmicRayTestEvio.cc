@@ -21,6 +21,7 @@ const bool printAllAcceptedEventsAfterCuts = false;
 
 Int_t plotIndex = 1;
 Int_t MinEcalSizeToAccept = 8;
+Double_t Threshold = 4;
 extern "C"{
 void InitPlugin(JApplication *app){
 	InitJANAPlugin(app);
@@ -406,6 +407,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		pulseIntegralBranchVar = ecalDigitHits[i]->pulse_integral;
 		pulseTimeBranchVar     = ecalDigitHits[i]->pulse_time    ;
 		pulsePeakBranchVar     = ecalDigitHits[i]->pulse_peak - ecalDigitHits[i]->pedestal / 4.0;
+		if(pulsePeakBranchVar < Threshold) continue;
 		digiChannelNoByColumn  = channelMapByCol[col][row];
 		if(digiChannelNoByColumn > 800){
 			cout << "(col, row) =  "<< col << " , " << row  << endl;

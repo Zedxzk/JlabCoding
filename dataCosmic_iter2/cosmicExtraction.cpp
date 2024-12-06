@@ -23,13 +23,13 @@
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
 
 using namespace std;
-// const bool addFit = true;
-const bool addFit = false;
+const bool addFit = true;
+// const bool addFit = false;
 // #define addBkg
 const bool addBkg = true;
 // const bool addBkg = false;
-const bool needOverView = true;
-// const bool needOverView = false;
+// const bool needOverView = true;
+const bool needOverView = false;
 
 const char perfix[] = "PulseAmplitude";
 const char varName[] = "Amplitude/ADC Counts";
@@ -40,9 +40,9 @@ string dirPath = "./columnView/";
 string columnViewName =  dirPath + "column_%02d";
 //
 const Double_t varLowerLimit       = 0;
-const Double_t varUpperLimit       = 60;
-const Int_t    varBinsInThisFile   = 60;
-const Int_t    binsForFit          = 60;
+const Double_t varUpperLimit       = 40;
+const Int_t    varBinsInThisFile   = 40;
+const Int_t    binsForFit          = 40;
 const Double_t varAcceptLowerLimit = 7;
 const Double_t varAcceptUpperLimit = 10;
 const Int_t minColumnIndex = 0;
@@ -144,7 +144,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             hist1D->GetXaxis()->SetTitle("Peak Position/");
             hist1D->GetYaxis()->SetTitle(TString::Format(anotherAxisName,  hist1D->GetXaxis()->GetBinWidth(1)));
             if(addFit){
-            RooRealVar mean("mean", "mean", 8, varLowerLimit, varUpperLimit);
+            RooRealVar mean("mean", "mean", 15, varLowerLimit, varUpperLimit);
             RooRealVar sigma("sigma", "sigma", 3, 1e-4, 5);
             RooRealVar a0("a0", "a0", 0.0, -1.0, 1.0); // 切比雪夫多项式的一阶系数
             RooRealVar a1("a1", "a1", 0.5, -1.0, 1.0); // 切比雪夫多项式的一阶系数
@@ -322,15 +322,15 @@ void cosmicExtraction() {
         gSystem->Exec(Form("mkdir -p %s", dirPath.c_str()));
         std::cout << "Directory '" << dirPath.c_str() << "' is ready for use." << std::endl;
         TH2D* overview = new TH2D("overview","", sizeOfEcal, 0, sizeOfEcal, sizeOfEcal, 0, sizeOfEcal );
-        TCanvas* tempCanvas = new TCanvas("","", 2400, 1600);
+        TCanvas* tempCanvas = new TCanvas("","", 3600, 1200);
         // 设置调色板（这里使用默认调色板，你可以根据需要选择其他调色板）
         gStyle->SetPalette(kBird);
         // 限制 Z 轴的范围
         hist2d->SetMinimum(0);
         hist2d->SetMaximum(40);
         hist2d->Draw("COLZ");
-        tempCanvas->Print("test.pdf");
-        tempCanvas->Print("test.png");
+        tempCanvas->Print("All_channels_1D.pdf");
+        tempCanvas->Print("All_channels_1D.png");
             // 遍历 X 轴范围，每 40 个 bin 输出一个图像
         for (int i = 0; i < 800; i += 40) {
             // 设置用户范围，限制 x 轴和 y 轴的显示范围
