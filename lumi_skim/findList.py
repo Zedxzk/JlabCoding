@@ -2,14 +2,21 @@ import os
 import re
 from pprint import pprint
 list_of_runs_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss"
-list_of_good_runs_dir = "/work/halld/home/zhikun/lumi_skim/goodRuns"
+list_of_good_runs_dir = "/work/halld/home/zhikun/lumi_skim/goodRuns_after_resubmission"
+list_of_good_runs_after_merging_dir = "/work/halld/home/zhikun/lumi_skim/goodRuns_merged_after_resubmission"
+manual_check_log_dir = "/volatile/halld/home/test_lumi/"
 list_of_error_files = "/work/halld/home/zhikun/lumi_skim/error_files"
 evio_dir = "/mss/halld/RunPeriod-2022-08/recon/ver01/ps/"
 jobs_to_resubmit_dir = "/work/halld/home/zhikun/lumi_skim/jobs_to_resubmit/"
 
+
 pattern1 = re.compile(r"(Error: The directory (.+?(\d{6})) is empty.)")
 pattern2 = re.compile(r"(Error: (.+?) (/w.+?/ps_(\d{6})_(\d{3}).log))")
+pattern3 = re.compile(r"\('(\d+)', '(\d+|\*)'\)")
 
+he_version = [3, 4, 5, 6, 7, 8, 9, 10]
+extra_info = "after_resubmission"
+bad_runs_after_merging = set()
 bad_runs = {}
 terminated_and_missing_files = {}
 existing_evio_but_missing_log_files = {}
@@ -28,16 +35,33 @@ def add_bad_run(key, value, dict = bad_runs):
         dict[key] = [value]  # Use list notation to create a new list with the value
 
 
-for i in range(3,11):
+for i in he_version:
     with open(os.path.join(list_of_good_runs_dir, f'goodRuns_he{i}.txt'),'w') as goodRuns:
         list_of_runs = os.path.join(list_of_runs_dir, f"list_of_runs_he{i}")
         with open(list_of_runs,'r') as f1:
             runs = [item.strip() for item in f1.readlines()]
-        with open(f"res_new_he{i}_test.txt") as f1:
-            errors = [ item.strip() for item in f1.readlines() if  item.strip() != ""]
+        with open(f"res_new_he{i}_{extra_info}.txt") as f1:
+            errors_new = [ item.strip() for item in f1.readlines() if  item.strip() != ""]
+        with open(f"res_new_he{i}_{extra_info}.txt") as f2:
+            errors_old = [ item.strip() for item in f2.readlines() if  item.strip() != ""]
+        manual_check_log_path = os.path.join(manual_check_log_dir, f"manual_check_he{i}_after_resubmission.log")
+
+        
+        with open(manual_check_log_path,'r') as file:
+            for line in file:
+                matches = re.findall(pattern3, line)
+                for match in matches:
+                    # 添加第一个数字到集合中
+                    bad_runs_after_merging.add(match[0])
+
+        with open(os.path.join(list_of_good_runs_after_merging_dir, f'goodRuns_he{i}.txt'),'w') as goodRuns_merged:
+            for run in runs:
+                if run not in bad_runs_after_merging:
+                    goodRuns_merged.write(f"{run}\n")
+
 
         # print(runs)
-        for error in errors:
+        for error in errors_new:
             match1 = pattern1.search(error)
             if match1:
                 first_number = str(match1.group(3))
@@ -80,7 +104,7 @@ for i in range(3,11):
             
 num_total = num_missing + num_crashed + num_truncated + num_terminated
 
-with open("files_need_to_be_reprocessed.txt", 'w') as f:
+with open(f"files_need_to_be_reprocessed_{extra_info}.txt", 'w') as f:
     msg = '\n'.join([
         "***********************************************",
         f"Total error nums    = {num_total}",
@@ -102,7 +126,7 @@ with open("files_need_to_be_reprocessed.txt", 'w') as f:
     f.write(msg)
         
 num_total = num_missing + num_terminated
-with open("files_need_to_be_resubmitted.txt", 'w') as f:
+with open(f"files_need_to_be_resubmitted.txt_{extra_info}", 'w') as f:
     msg = '\n'.join([
         "***********************************************",
         f"Total error nums    = {num_total}",
@@ -121,8 +145,8 @@ with open("files_need_to_be_resubmitted.txt", 'w') as f:
         f.write("\n\n\n")
     f.write(msg)
 
-with open("list_of_resubmission", "w") as fi:
-    with open("existing_evio_but_missing_log.txt", 'w') as f:
+with open(f"list_of_resubmission_{extra_info}", "w") as fi:
+    with open(f"existing_evio_but_missing_log_{extra_info}.txt", 'w') as f:
         for key, value in existing_evio_but_missing_log_files.items():
             fi.write(f"{key}\n")
             with open(os.path.join(jobs_to_resubmit_dir, f"list_Run{key}"),"w") as file:
@@ -135,3 +159,7 @@ with open("list_of_resubmission", "w") as fi:
 
             f.write("\n\n")
         f.write(msg)
+
+
+
+

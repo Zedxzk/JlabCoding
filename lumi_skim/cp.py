@@ -20,14 +20,15 @@ he_version = "he10"
 # resDir2 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_new_{he_version}_test.txt"
 
 
-extraInfo = "v2_reversed"
+extraInfo = "after_resubmission"
 rootDir2 = "/volatile/halld/home/zhikun/ver05_lumi/"
 logDir2 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log"
+# resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_{extraInfo}.txt"
 resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
 
 rootDir1 = "/volatile/halld/home/somov/ver05_lumi/"
 logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
-resDir1 = f"/work/halld/home/zhikun/lumi_skim/res_new_{he_version}_test.txt"
+resDir1 = f"/work/halld/home/zhikun/lumi_skim/res_new_{he_version}_{extraInfo}.txt"
 
 
 

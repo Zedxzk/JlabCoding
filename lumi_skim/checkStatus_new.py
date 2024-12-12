@@ -3,11 +3,14 @@ import os
 empty_line_printed = False
 
 he_version = "he10"
+extra_info = "after_resubmission"
 # 文件路径定义
 list_file_path = f"/work/halld3/home/somov/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
-individual_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"
+# list_file_path = f"/work/halld3/home/somov/lumi_skim/list_of_resubmission"
+# list_of_evio_files_dir = "/work/halld/home/zhikun/lumi_skim/jobs_to_resubmit/"
+list_of_evio_files_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"
 log_base_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/"
-res_file = f"res_new_{he_version}_test.txt"
+res_file = f"res_new_{he_version}_{extra_info}.txt"
 
 # 初始化标志变量
 has_error = False
@@ -80,7 +83,7 @@ with open(list_file_path, "r") as list_file:
         # evt_total = 0
 
         # 读取对应的 individual 文件列表
-        individual_list_path = os.path.join(individual_dir, f"list_Run{my_file}")
+        individual_list_path = os.path.join(list_of_evio_files_dir, f"list_Run{my_file}")
 
         # 检查 individual_list_path 文件是否存在
         if not os.path.exists(individual_list_path):

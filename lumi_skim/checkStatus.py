@@ -2,12 +2,13 @@ import os
 
 empty_line_printed = False
 
-he_version = "he10"
+he_version = "he3"
+extra_info = "after_resubmission"
 # 文件路径定义
 list_file_path = f"/work/halld3/home/somov/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 list_of_evio_files = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"
 log_base_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log/"
-res_file = f"res_old_{he_version}_test.txt"
+res_file = f"res_old_{he_version}_{extra_info}.txt"
 
 # 初始化标志变量
 has_error = False
