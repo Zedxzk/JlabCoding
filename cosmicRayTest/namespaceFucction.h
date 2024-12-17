@@ -3,7 +3,8 @@
 #include "JEventProcessor_cosmicRayTest.h"
 #include "TPaletteAxis.h"
 #include "TLatex.h"
-
+#include "TColor.h"
+#include "TStyle.h"
 
 
 namespace figuresInCosmicRaysTest {
@@ -242,7 +243,7 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
             x++;
         }
         hist->Draw();
-        obj.getCanvas()->Print(("../figures" + endTimeString + "/" +   hist->GetName() + ".pdf").c_str());
+        obj.getCanvas()->Print(("../figures/" + endTimeString + "/" +   hist->GetName() + ".pdf").c_str());
         obj.getCanvas()->Print(("./" + endTimeString + "/" +   hist->GetName() + ".pdf").c_str());
         hist->Write();
     }
@@ -253,7 +254,6 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
         TH2D* hist2d = dynamic_cast<TH2D*>(hist2D); 
         TCanvas* canvas = obj.getCanvas();
         if (poly) {
-
             // 成功转换为TH2Poly，你现在可以使用poly作为TH2Poly 
             canvas->cd();
             std::ifstream binFile1("/w/halld-scshelf2101/home/zhikun/geometryFiles/binsECAL.txt");

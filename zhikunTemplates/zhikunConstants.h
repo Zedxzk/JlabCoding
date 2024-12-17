@@ -6,11 +6,11 @@ namespace zhikunConstants{
     const Int_t sizeOfFcal = 59;
     const Int_t FcalChannelNums = 2364;
     const Int_t EcalChannelNums = 1600;
-    const Int_t maxTime = 200;
+    const Int_t maxTime = 16;
     const Int_t timeResolution = 4;                      // A sample width equals to 4 ns
     const Double_t timeBinsWidth = 1.0 / 10;           // bin width : 0.1 ns
     const Int_t timeBins = int(maxTime / timeBinsWidth);
-    const Int_t maxEnergy = 1;
+    const Int_t maxEnergy = 0.1;
     const Int_t minEnergy = 0;
     const Double_t energyBinsWidth = 1.0 / 1000;         // bin width : 1 MeV
     const Int_t energyBins = int(maxEnergy * 1000);      // bin nums , actually 1000

@@ -18,7 +18,10 @@ set n = 1
 # 
 # foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he8.txt`)
 
-foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he9.txt`)
+# foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he9.txt`)
+
+
+foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he10.txt`)
 
 
 # foreach file (`awk '{print}' ../list_of_runs_primex2/list_of_runs_he_empty2`)

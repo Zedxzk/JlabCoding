@@ -7,6 +7,8 @@
 
 #include "JEventProcessor_cosmicRayTest.h"
 #include "namespaceFucction.h"
+
+
 using namespace jana;
 using namespace std;
 
@@ -200,9 +202,7 @@ jerror_t JEventProcessor_cosmicRayTest::fini(void)
 	TDirectory *main = gDirectory; // 保存当前的目录
 	gDirectory->cd("cosmicRay"); // 创建一个名为 "fcal" 的子目录并切换到该目录
 
-	std::cout << "test" << endl;
 
-	testFunction();
 	fillHits1DInCorrectPlaceAndPrint(EcalEnergyColumnPlot1D, EcalEnergyRecordMatrix,true, true);
 	fillHits1DInCorrectPlaceAndPrint(EcalEnergyRowPlot1D, EcalEnergyRecordMatrix,true, false);
 	fillHits1DInCorrectPlaceAndPrint(EcalTimeColumnPlot1D, EcalEnergyRecordMatrix,true, true);
