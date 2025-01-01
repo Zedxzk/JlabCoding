@@ -1,0 +1,193 @@
+JANA >>OUTPUT_FILENAME: /volatile/halld/home/somov/ver05_lumi/Run111569/ps_111569_005.root
+JANA >>Initializing plugin "/work/halld3/home/somov/lumi_skim/Linux_Alma9-x86_64-gcc11.4.1/plugins/lumi_skim.so" ...
+Opened ROOT file "/volatile/halld/home/somov/ver05_lumi/Run111569/ps_111569_005.root" ...
+ SASCHA -1
+/volatile/halld/home/somov/ver05_lumi/Run111569/lumi_ps_111569_005.root
+JANA >>Opening source "/cache/halld/RunPeriod-2022-08/recon/ver01/ps/111569/ps_111569_005.evio" of type: EVIOpp  - Reads EVIO formatted data from file or ET system
+Sun Dec  1 18:43:28 2024 # thr=140147575146048 # --- EVIO ---: No more events
+loading VERSION 3
+No more events
+JANA >>Launching threads ....
+
+
+JANA >>Created JCalibration object of type: JCalibrationCCDB
+JANA >>Generated via: JCalibration using CCDB for MySQL and SQLite databases
+JANA >>Run:0
+JANA >>URL: mysql://ccdb_user@hallddb-farm.jlab.org/ccdb
+JANA >>context: variation=default
+JANA >>comment: Default constants for analyzing data
+  1.0 events processed  (1.0 events read)  2.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA ERROR>> Failed to get XML for /GEOMETRY/main_HDDS.xml! Geometry info not available!!
+JANA >>Creating DGeometry:
+JANA >>  Run requested:0  found:-1939951024
+JANA >>  Run validity range: -1--1
+JANA >>  URL="ccdb:///GEOMETRY/main_HDDS.xml"  context="default"
+JANA >>  Type="JGeometryXML"
+JANA >>Found 25 material maps in calib. DB
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>Read in 25 material maps for run 0 containing 76153 grid points total
+JANA >>Creating DTranslationTable for run 0
+JANA >>Reading translation table from calib DB: Translation/DAQ2detector ...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>23122 channels defined in translation table
+JANA >>In DPSHit_factory, loading constants...
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA ERROR>> Failed to get XML for /GEOMETRY/main_HDDS.xml! Geometry info not available!!
+JANA >>Creating DGeometry:
+JANA >>  Run requested:0  found:842018352
+JANA >>  Run validity range: -1--1
+JANA >>  URL="ccdb:///GEOMETRY/main_HDDS.xml"  context="default"
+JANA >>  Type="JGeometryXML"
+JANA >>Found 25 material maps in calib. DB
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>Read in 25 material maps for run 0 containing 76153 grid points total
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA ERROR>> didn't sleep full 0.5 seconds!
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+
+Thread 8 (Thread 0x7f76927fc640 (LWP 1778112) "hd_root"):
+#0  0x00007f76bf4d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f76bf4d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007f76bf504b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ba16a in jana::JApplication::NextEvent (this=0x7fff98fe55f0, event=...) at src/JANA/JApplication.cc:614
+#4  0x00000000014e53c1 in jana::JEventLoop::OneEvent (this=0x7f7684000b60) at src/JANA/JEventLoop.cc:591
+#5  0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7f7684000b60) at src/JANA/JEventLoop.cc:496
+#6  0x00000000014ba3c5 in LaunchThread (arg=0x7fff98fe55f0) at src/JANA/JApplication.cc:1382
+#7  0x00007f76bf489c02 in start_thread () from /lib64/libc.so.6
+#8  0x00007f76bf50ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 7 (Thread 0x7f7692ffd640 (LWP 1778111) "hd_root"):
+#0  0x00007f76bf4d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f76bf4d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007f76bf504b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ba16a in jana::JApplication::NextEvent (this=0x7fff98fe55f0, event=...) at src/JANA/JApplication.cc:614
+#4  0x00000000014e53c1 in jana::JEventLoop::OneEvent (this=0x7f7680000b60) at src/JANA/JEventLoop.cc:591
+#5  0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7f7680000b60) at src/JANA/JEventLoop.cc:496
+#6  0x00000000014ba3c5 in LaunchThread (arg=0x7fff98fe55f0) at src/JANA/JApplication.cc:1382
+#7  0x00007f76bf489c02 in start_thread () from /lib64/libc.so.6
+#8  0x00007f76bf50ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 6 (Thread 0x7f76937fe640 (LWP 1778110) "hd_root"):
+#0  0x00007f76bf4d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f76bf4d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007f76bf504b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ba16a in jana::JApplication::NextEvent (this=0x7fff98fe55f0, event=...) at src/JANA/JApplication.cc:614
+#4  0x00000000014e53c1 in jana::JEventLoop::OneEvent (this=0x7f7688000b60) at src/JANA/JEventLoop.cc:591
+#5  0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7f7688000b60) at src/JANA/JEventLoop.cc:496
+#6  0x00000000014ba3c5 in LaunchThread (arg=0x7fff98fe55f0) at src/JANA/JApplication.cc:1382
+#7  0x00007f76bf489c02 in start_thread () from /lib64/libc.so.6
+#8  0x00007f76bf50ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 5 (Thread 0x7f7693fff640 (LWP 1778109) "hd_root"):
+#0  0x00007f76bf4d8a3f in wait4 () from /lib64/libc.so.6
+#1  0x00007f76bf44b243 in do_system () from /lib64/libc.so.6
+#2  0x00007f76c23e272c in TUnixSystem::StackTrace() () from /group/halld/Software/builds/Linux_Alma9-x86_64-gcc11.4.1/root/root-6.24.04/lib/libCore.so
+#3  0x00007f76c23dfd65 in TUnixSystem::DispatchSignals(ESignals) () from /group/halld/Software/builds/Linux_Alma9-x86_64-gcc11.4.1/root/root-6.24.04/lib/libCore.so
+#4  <signal handler called>
+#5  0x0000000000e61e3e in DTOFGeometry::DTOFGeometry(DGeometry const*) ()
+#6  0x0000000000e6f1f1 in DTOFGeometry_factory::brun(jana::JEventLoop*, int) ()
+#7  0x00000000008c04cd in jana::JFactory<DTOFGeometry>::Get(std::vector<DTOFGeometry const*, std::allocator<DTOFGeometry const*> >&) ()
+#8  0x00000000008ced35 in jana::JFactory<DTOFGeometry>* jana::JEventLoop::GetFromFactory<DTOFGeometry>(std::vector<DTOFGeometry const*, std::allocator<DTOFGeometry const*> >&, char const*, jana::JEventLoop::data_source_t&, bool) ()
+#9  0x00000000008cf0f1 in jana::JFactory<DTOFGeometry>* jana::JEventLoop::Get<DTOFGeometry>(std::vector<DTOFGeometry const*, std::allocator<DTOFGeometry const*> >&, char const*, bool) ()
+#10 0x000000000118fd27 in DTTabUtilities_factory::brun(jana::JEventLoop*, int) ()
+#11 0x0000000000af902d in jana::JFactory<DTTabUtilities>::Get(std::vector<DTTabUtilities const*, std::allocator<DTTabUtilities const*> >&) ()
+#12 0x0000000000af9a74 in jana::JFactory<DTTabUtilities>* jana::JEventLoop::GetFromFactory<DTTabUtilities>(std::vector<DTTabUtilities const*, std::allocator<DTTabUtilities const*> >&, char const*, jana::JEventLoop::data_source_t&, bool) ()
+#13 0x0000000000af9e01 in jana::JFactory<DTTabUtilities>* jana::JEventLoop::Get<DTTabUtilities>(std::vector<DTTabUtilities const*, std::allocator<DTTabUtilities const*> >&, char const*, bool) ()
+#14 0x0000000000e14fa6 in DPSHit_factory::evnt(jana::JEventLoop*, unsigned long) ()
+#15 0x0000000000dfb530 in jana::JFactory<DPSHit>::Get(std::vector<DPSHit const*, std::allocator<DPSHit const*> >&) ()
+#16 0x0000000000e05955 in jana::JFactory<DPSHit>* jana::JEventLoop::GetFromFactory<DPSHit>(std::vector<DPSHit const*, std::allocator<DPSHit const*> >&, char const*, jana::JEventLoop::data_source_t&, bool) ()
+#17 0x0000000000e05d21 in jana::JFactory<DPSHit>* jana::JEventLoop::Get<DPSHit>(std::vector<DPSHit const*, std::allocator<DPSHit const*> >&, char const*, bool) ()
+#18 0x0000000000e1643f in DPSPair_factory::evnt(jana::JEventLoop*, unsigned long) ()
+#19 0x0000000000df80e0 in jana::JFactory<DPSPair>::Get(std::vector<DPSPair const*, std::allocator<DPSPair const*> >&) ()
+#20 0x0000000000e01db5 in jana::JFactory<DPSPair>* jana::JEventLoop::GetFromFactory<DPSPair>(std::vector<DPSPair const*, std::allocator<DPSPair const*> >&, char const*, jana::JEventLoop::data_source_t&, bool) ()
+#21 0x0000000000e02186 in jana::JFactory<DPSPair>* jana::JEventLoop::Get<DPSPair>(std::vector<DPSPair const*, std::allocator<DPSPair const*> >&, char const*, bool) ()
+#22 0x00007f76aeec5843 in DEventProcessor_lumi_primex::evnt (this=0x3413400, loop=0x7f768c004a20, eventnumber=0) at DEventProcessor_lumi_primex.cc:333
+#23 0x00000000014e4e72 in jana::JEventLoop::OneEvent (this=0x7f768c004a20) at src/JANA/JEventLoop.cc:693
+#24 0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7f768c004a20) at src/JANA/JEventLoop.cc:496
+#25 0x00000000014ba3c5 in LaunchThread (arg=0x7fff98fe55f0) at src/JANA/JApplication.cc:1382
+#26 0x00007f76bf489c02 in start_thread () from /lib64/libc.so.6
+#27 0x00007f76bf50ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 4 (Thread 0x7f7698d8e640 (LWP 1778104) "hd_root"):
+#0  0x00007f76bf48679a in __futex_abstimed_wait_common () from /lib64/libc.so.6
+#1  0x00007f76bf488fa0 in pthread_cond_wait
+
+GLIBC_2.3.2 () from /lib64/libc.so.6
+#2  0x00007f76bf8d56b0 in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /lib64/libstdc++.so.6
+#3  0x000000000129e80f in async_filebuf::readloop() ()
+#4  0x00007f76bf8dbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#5  0x00007f76bf489c02 in start_thread () from /lib64/libc.so.6
+#6  0x00007f76bf50ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7f76a5eeb640 (LWP 1778101) "hd_root"):
+#0  0x00007f76bf4d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f76bf4d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x000000000128a1b5 in JEventSource_EVIOpp::Dispatcher() ()
+#3  0x00007f76bf8dbad4 in execute_native_thread_routine () from /lib64/libstdc++.so.6
+#4  0x00007f76bf489c02 in start_thread () from /lib64/libc.so.6
+#5  0x00007f76bf50ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f76a66ec640 (LWP 1778096) "hd_root"):
+#0  0x00007f76bf4d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f76bf4d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00007f76bf504b29 in usleep () from /lib64/libc.so.6
+#3  0x00000000014ccf7a in jana::JApplication::EventBufferThread (this=0x7fff98fe55f0) at src/JANA/JApplication.cc:726
+#4  0x00000000014cd0ea in LaunchEventBufferThread (arg=0x7fff98fe55f0) at src/JANA/JApplication.cc:666
+#5  0x00007f76bf489c02 in start_thread () from /lib64/libc.so.6
+#6  0x00007f76bf50ec40 in clone3 () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f76bc4054c0 (LWP 1777552) "hd_root"):
+#0  0x00007f76bf4d4075 in clock_nanosleep
+GLIBC_2.2.5 () from /lib64/libc.so.6
+#1  0x00007f76bf4d8c87 in nanosleep () from /lib64/libc.so.6
+#2  0x00000000014c78ef in jana::JApplication::Run (this=0x7fff98fe55f0, proc=<optimized out>, Nthreads=<optimized out>) at src/JANA/JApplication.cc:1613
+#3  0x000000000072a48d in main ()
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+You may get help by asking at the ROOT forum https://root.cern.ch/forum
+Only if you are really convinced it is a bug in ROOT then please submit a
+report at https://root.cern.ch/bugs Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  0x0000000000e61e3e in DTOFGeometry::DTOFGeometry(DGeometry const*) ()
+#6  0x0000000000e6f1f1 in DTOFGeometry_factory::brun(jana::JEventLoop*, int) ()
+#7  0x00000000008c04cd in jana::JFactory<DTOFGeometry>::Get(std::vector<DTOFGeometry const*, std::allocator<DTOFGeometry const*> >&) ()
+#8  0x00000000008ced35 in jana::JFactory<DTOFGeometry>* jana::JEventLoop::GetFromFactory<DTOFGeometry>(std::vector<DTOFGeometry const*, std::allocator<DTOFGeometry const*> >&, char const*, jana::JEventLoop::data_source_t&, bool) ()
+#9  0x00000000008cf0f1 in jana::JFactory<DTOFGeometry>* jana::JEventLoop::Get<DTOFGeometry>(std::vector<DTOFGeometry const*, std::allocator<DTOFGeometry const*> >&, char const*, bool) ()
+#10 0x000000000118fd27 in DTTabUtilities_factory::brun(jana::JEventLoop*, int) ()
+#11 0x0000000000af902d in jana::JFactory<DTTabUtilities>::Get(std::vector<DTTabUtilities const*, std::allocator<DTTabUtilities const*> >&) ()
+#12 0x0000000000af9a74 in jana::JFactory<DTTabUtilities>* jana::JEventLoop::GetFromFactory<DTTabUtilities>(std::vector<DTTabUtilities const*, std::allocator<DTTabUtilities const*> >&, char const*, jana::JEventLoop::data_source_t&, bool) ()
+#13 0x0000000000af9e01 in jana::JFactory<DTTabUtilities>* jana::JEventLoop::Get<DTTabUtilities>(std::vector<DTTabUtilities const*, std::allocator<DTTabUtilities const*> >&, char const*, bool) ()
+#14 0x0000000000e14fa6 in DPSHit_factory::evnt(jana::JEventLoop*, unsigned long) ()
+#15 0x0000000000dfb530 in jana::JFactory<DPSHit>::Get(std::vector<DPSHit const*, std::allocator<DPSHit const*> >&) ()
+#16 0x0000000000e05955 in jana::JFactory<DPSHit>* jana::JEventLoop::GetFromFactory<DPSHit>(std::vector<DPSHit const*, std::allocator<DPSHit const*> >&, char const*, jana::JEventLoop::data_source_t&, bool) ()
+#17 0x0000000000e05d21 in jana::JFactory<DPSHit>* jana::JEventLoop::Get<DPSHit>(std::vector<DPSHit const*, std::allocator<DPSHit const*> >&, char const*, bool) ()
+#18 0x0000000000e1643f in DPSPair_factory::evnt(jana::JEventLoop*, unsigned long) ()
+#19 0x0000000000df80e0 in jana::JFactory<DPSPair>::Get(std::vector<DPSPair const*, std::allocator<DPSPair const*> >&) ()
+#20 0x0000000000e01db5 in jana::JFactory<DPSPair>* jana::JEventLoop::GetFromFactory<DPSPair>(std::vector<DPSPair const*, std::allocator<DPSPair const*> >&, char const*, jana::JEventLoop::data_source_t&, bool) ()
+#21 0x0000000000e02186 in jana::JFactory<DPSPair>* jana::JEventLoop::Get<DPSPair>(std::vector<DPSPair const*, std::allocator<DPSPair const*> >&, char const*, bool) ()
+#22 0x00007f76aeec5843 in DEventProcessor_lumi_primex::evnt (this=0x3413400, loop=0x7f768c004a20, eventnumber=0) at DEventProcessor_lumi_primex.cc:333
+#23 0x00000000014e4e72 in jana::JEventLoop::OneEvent (this=0x7f768c004a20) at src/JANA/JEventLoop.cc:693
+#24 0x00000000014e5494 in jana::JEventLoop::Loop (this=this
+entry=0x7f768c004a20) at src/JANA/JEventLoop.cc:496
+#25 0x00000000014ba3c5 in LaunchThread (arg=0x7fff98fe55f0) at src/JANA/JApplication.cc:1382
+#26 0x00007f76bf489c02 in start_thread () from /lib64/libc.so.6
+#27 0x00007f76bf50ec40 in clone3 () from /lib64/libc.so.6
+
+===========================================================
+
+
+JANA ERROR>> didn't sleep full 0.5 seconds!
+  1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)       1.0 events processed  (1.0 events read)  0.0Hz  (avg.: 0.0Hz)     

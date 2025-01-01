@@ -1,0 +1,86 @@
+JANA >>OUTPUT_FILENAME: /volatile/halld/home/somov/ver05_lumi/Run110776/ps_110776_109.root
+JANA >>Initializing plugin "/work/halld3/home/somov/lumi_skim/Linux_Alma9-x86_64-gcc11.4.1/plugins/lumi_skim.so" ...
+Opened ROOT file "/volatile/halld/home/somov/ver05_lumi/Run110776/ps_110776_109.root" ...
+ SASCHA -1
+/volatile/halld/home/somov/ver05_lumi/Run110776/lumi_ps_110776_109.root
+JANA >>Launching threads ....
+JANA >>Opening source "/cache/halld/RunPeriod-2022-08/recon/ver01/ps/110776/ps_110776_109.evio" of type: EVIOpp  - Reads EVIO formatted data from file or ET system
+loading VERSION 3
+
+
+JANA >>Created JCalibration object of type: JCalibrationCCDB
+JANA >>Generated via: JCalibration using CCDB for MySQL and SQLite databases
+JANA >>Run:110776
+JANA >>URL: mysql://ccdb_user@hallddb-farm.jlab.org/ccdb
+JANA >>context: variation=default
+JANA >>comment: Default constants for analyzing data
+JANA >>Creating DGeometry:
+JANA >>  Run requested:110776  found:110776
+JANA >>  Run validity range: 110776-110776
+JANA >>  URL="ccdb:///GEOMETRY/main_HDDS.xml"  context="default"
+JANA >>  Type="JGeometryXML"
+JANA >>Found 25 material maps in calib. DB
+  3.0 events processed  (3.0 events read)  6.0Hz  (avg.: 0.0Hz)     JANA >>Read in 25 material maps for run 110776 containing 76153 grid points total
+JANA >>Creating DTranslationTable for run 110776
+JANA >>Reading translation table from calib DB: Translation/DAQ2detector ...
+  3.0 events processed  (3.0 events read)  0.0Hz  (avg.: 0.0Hz)       3.0 events processed  (3.0 events read)  0.0Hz  (avg.: 0.0Hz)       3.0 events processed  (3.0 events read)  0.0Hz  (avg.: 0.0Hz)       3.0 events processed  (3.0 events read)  0.0Hz  (avg.: 0.0Hz)       3.0 events processed  (3.0 events read)  0.0Hz  (avg.: 0.0Hz)       3.0 events processed  (3.0 events read)  0.0Hz  (avg.: 0.0Hz)       3.0 events processed  (3.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>40636 channels defined in translation table
+JANA >>In DPSHit_factory, loading constants...
+JANA >>In DPSCHit_factory, loading constants...
+JANA >>In DTAGHHit_factory, loading constants...
+JANA >>In DTAGMHit_factory_Calib, loading constants...
+JANA >> Correct Beam Photon Energy (TAGH) = 11.555 (GeV)
+JANA >> Correct Beam Photon Energy (TAGM) = 11.555 (GeV)
+JANA >>
+JANA >> --- Configuration Parameters --
+JANA >>[1m LUMI_PRIMEX:DIR = /volatile/halld/home/somov/ver05_lumi/Run110776/lumi_ps_110776_109.root[0m
+JANA >>[1m NTHREADS        = 4                                                                      [0m
+JANA >>[1m OUTPUT_FILENAME = /volatile/halld/home/somov/ver05_lumi/Run110776/ps_110776_109.root     [0m
+JANA >>[1m PLUGINS         = lumi_skim                                                              [0m
+JANA >>[1m THREAD_TIMEOUT  = 30 seconds                                                             [0m
+JANA >> -------------------------------
+  487.0 events processed  (497.0 events read)  968.0Hz  (avg.: 968.0Hz)       1447.0 events processed  (1447.0 events read)  1.9kHz  (avg.: 1444.0Hz)       2.3k events processed  (2.3k events read)  1.7kHz  (avg.: 1.5kHz)       3.2k events processed  (3.2k events read)  1.9kHz  (avg.: 1.6kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  4.1k events processed  (4.1k events read)  1.8kHz  (avg.: 1.7kHz)       5.1k events processed  (5.1k events read)  1.8kHz  (avg.: 1.7kHz)       6.0k events processed  (6.0k events read)  1.8kHz  (avg.: 1.7kHz)       6.9k events processed  (6.9k events read)  1.8kHz  (avg.: 1.7kHz)       7.8k events processed  (7.8k events read)  1.8kHz  (avg.: 1.7kHz)       8.7k events processed  (8.7k events read)  1.8kHz  (avg.: 1.7kHz)       9.6k events processed  (9.6k events read)  1.8kHz  (avg.: 1.7kHz)       10.5k events processed  (10.5k events read)  1.8kHz  (avg.: 1.8kHz)       11.5k events processed  (11.5k events read)  1.8kHz  (avg.: 1.8kHz)       12.4k events processed  (12.4k events read)  1.8kHz  (avg.: 1.8kHz)       13.3k events processed  (13.3k events read)  1.8kHz  (avg.: 1.8kHz)       14.2k events processed  (14.2k events read)  1.8kHz  (avg.: 1.8kHz)       15.1k events processed  (15.1k events read)  1.9kHz  (avg.: 1.8kHz)       16.0k events processed  (16.0k events read)  1.8kHz  (avg.: 1.8kHz)       16.9k events processed  (16.9k events read)  1.8kHz  (avg.: 1.8kHz)       17.8k events processed  (17.8k events read)  1.8kHz  (avg.: 1.8kHz)       18.8k events processed  (18.8k events read)  1.9kHz  (avg.: 1.8kHz)       19.7k events processed  (19.7k events read)  1.8kHz  (avg.: 1.8kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  20.6k events processed  (20.6k events read)  1.8kHz  (avg.: 1.8kHz)       21.5k events processed  (21.5k events read)  1.8kHz  (avg.: 1.8kHz)       22.4k events processed  (22.4k events read)  1.8kHz  (avg.: 1.8kHz)       23.3k events processed  (23.3k events read)  1.8kHz  (avg.: 1.8kHz)       24.2k events processed  (24.2k events read)  1.8kHz  (avg.: 1.8kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  25.1k events processed  (25.1k events read)  1.8kHz  (avg.: 1.8kHz)       26.0k events processed  (26.0k events read)  1.8kHz  (avg.: 1.8kHz)       26.9k events processed  (26.9k events read)  1.8kHz  (avg.: 1.8kHz)       27.8k events processed  (27.8k events read)  1.8kHz  (avg.: 1.8kHz)       28.7k events processed  (28.7k events read)  1.8kHz  (avg.: 1.8kHz)       29.6k events processed  (29.6k events read)  1.8kHz  (avg.: 1.8kHz)       30.5k events processed  (30.5k events read)  1.8kHz  (avg.: 1.8kHz)       31.4k events processed  (31.4k events read)  1.8kHz  (avg.: 1.8kHz)       32.4k events processed  (32.4k events read)  1.8kHz  (avg.: 1.8kHz)       33.3k events processed  (33.3k events read)  1.8kHz  (avg.: 1.8kHz)       34.2k events processed  (34.2k events read)  1.8kHz  (avg.: 1.8kHz)       35.1k events processed  (35.1k events read)  1.8kHz  (avg.: 1.8kHz)       36.0k events processed  (36.0k events read)  1.8kHz  (avg.: 1.8kHz)       36.9k events processed  (36.9k events read)  1.8kHz  (avg.: 1.8kHz)       37.8k events processed  (37.8k events read)  1.9kHz  (avg.: 1.8kHz)       38.7k events processed  (38.7k events read)  1.8kHz  (avg.: 1.8kHz)       39.6k events processed  (39.6k events read)  1.8kHz  (avg.: 1.8kHz)       40.5k events processed  (40.5k events read)  1.8kHz  (avg.: 1.8kHz)       41.4k events processed  (41.4k events read)  1.8kHz  (avg.: 1.8kHz)       42.3k events processed  (42.3k events read)  1.8kHz  (avg.: 1.8kHz)       43.1k events processed  (43.2k events read)  1.6kHz  (avg.: 1.8kHz)       44.1k events processed  (44.1k events read)  1.9kHz  (avg.: 1.8kHz)       45.0k events processed  (45.0k events read)  1.8kHz  (avg.: 1.8kHz)       45.9k events processed  (45.9k events read)  1.8kHz  (avg.: 1.8kHz)       46.8k events processed  (46.8k events read)  1.8kHz  (avg.: 1.8kHz)       47.7k events processed  (47.7k events read)  1.8kHz  (avg.: 1.8kHz)       48.6k events processed  (48.6k events read)  1.8kHz  (avg.: 1.8kHz)       49.5k events processed  (49.5k events read)  1.8kHz  (avg.: 1.8kHz)       50.5k events processed  (50.5k events read)  1.9kHz  (avg.: 1.8kHz)       51.4k events processed  (51.4k events read)  1.8kHz  (avg.: 1.8kHz)       52.3k events processed  (52.3k events read)  1.8kHz  (avg.: 1.8kHz)       53.2k events processed  (53.2k events read)  1.8kHz  (avg.: 1.8kHz)       54.0k events processed  (54.0k events read)  1.8kHz  (avg.: 1.8kHz)       55.0k events processed  (55.0k events read)  1.8kHz  (avg.: 1.8kHz)       55.9k events processed  (55.9k events read)  1.8kHz  (avg.: 1.8kHz)       56.8k events processed  (56.8k events read)  1.8kHz  (avg.: 1.8kHz)       57.7k events processed  (57.7k events read)  1.8kHz  (avg.: 1.8kHz)       58.6k events processed  (58.6k events read)  1.8kHz  (avg.: 1.8kHz)       59.5k events processed  (59.5k events read)  1.8kHz  (avg.: 1.8kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  60.4k events processed  (60.4k events read)  1.8kHz  (avg.: 1.8kHz)       61.3k events processed  (61.3k events read)  1.8kHz  (avg.: 1.8kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  62.2k events processed  (62.2k events read)  1.8kHz  (avg.: 1.8kHz)       63.1k events processed  (63.1k events read)  1.8kHz  (avg.: 1.8kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values  
+  64.0k events processed  (64.0k events read)  1.8kHz  (avg.: 1.8kHz)       64.9k events processed  (64.9k events read)  1.7kHz  (avg.: 1.8kHz)       65.7k events processed  (65.7k events read)  1.7kHz  (avg.: 1.8kHz)       66.6k events processed  (66.6k events read)  1.8kHz  (avg.: 1.8kHz)       67.5k events processed  (67.5k events read)  1.8kHz  (avg.: 1.8kHz)       68.4k events processed  (68.4k events read)  1.8kHz  (avg.: 1.8kHz)       69.3k events processed  (69.3k events read)  1.8kHz  (avg.: 1.8kHz)       70.0k events processed  (70.0k events read)  1434.0Hz  (avg.: 1.8kHz)       71.0k events processed  (71.0k events read)  1.9kHz  (avg.: 1.8kHz)       71.9k events processed  (71.9k events read)  1.8kHz  (avg.: 1.8kHz)       72.8k events processed  (72.8k events read)  1.8kHz  (avg.: 1.8kHz)       73.7k events processed  (73.7k events read)  1.8kHz  (avg.: 1.8kHz)       74.6k events processed  (74.6k events read)  1.8kHz  (avg.: 1.8kHz)       75.5k events processed  (75.5k events read)  1.8kHz  (avg.: 1.8kHz)       76.4k events processed  (76.4k events read)  1.8kHz  (avg.: 1.8kHz)       77.4k events processed  (77.4k events read)  1.8kHz  (avg.: 1.8kHz)       78.3k events processed  (78.3k events read)  1.8kHz  (avg.: 1.8kHz)       79.2k events processed  (79.2k events read)  1.8kHz  (avg.: 1.8kHz)       80.1k events processed  (80.1k events read)  1.8kHz  (avg.: 1.8kHz)       81.0k events processed  (81.0k events read)  1.8kHz  (avg.: 1.8kHz)       81.9k events processed  (81.9k events read)  1.9kHz  (avg.: 1.8kHz)     JANA >> WARNING Df250EmulatorAlgorithm_v3::EmulateFirmware No Df250BORConfig == Using default values == LAST WARNING
+  82.8k events processed  (82.8k events read)  1.8kHz  (avg.: 1.8kHz)       83.7k events processed  (83.7k events read)  1.8kHz  (avg.: 1.8kHz)       84.6k events processed  (84.6k events read)  1.8kHz  (avg.: 1.8kHz)       85.5k events processed  (85.5k events read)  1.8kHz  (avg.: 1.8kHz)       86.4k events processed  (86.4k events read)  1.8kHz  (avg.: 1.8kHz)       87.4k events processed  (87.4k events read)  1.8kHz  (avg.: 1.8kHz)       88.2k events processed  (88.2k events read)  1.7kHz  (avg.: 1.8kHz)       89.1k events processed  (89.1k events read)  1.8kHz  (avg.: 1.8kHz)       90.1k events processed  (90.1k events read)  1.8kHz  (avg.: 1.8kHz)       90.9k events processed  (90.9k events read)  1.8kHz  (avg.: 1.8kHz)       91.8k events processed  (91.8k events read)  1.8kHz  (avg.: 1.8kHz)       92.7k events processed  (92.7k events read)  1.8kHz  (avg.: 1.8kHz)       93.6k events processed  (93.6k events read)  1.8kHz  (avg.: 1.8kHz)       94.5k events processed  (94.5k events read)  1.8kHz  (avg.: 1.8kHz)       95.5k events processed  (95.5k events read)  1.8kHz  (avg.: 1.8kHz)       96.4k events processed  (96.4k events read)  1.8kHz  (avg.: 1.8kHz)       97.3k events processed  (97.3k events read)  1.8kHz  (avg.: 1.8kHz)       98.2k events processed  (98.2k events read)  1.8kHz  (avg.: 1.8kHz)       99.1k events processed  (99.1k events read)  1.8kHz  (avg.: 1.8kHz)       100.0k events processed  (100.0k events read)  1.8kHz  (avg.: 1.8kHz)       100.9k events processed  (100.9k events read)  1.8kHz  (avg.: 1.8kHz)       101.8k events processed  (101.8k events read)  1.8kHz  (avg.: 1.8kHz)       102.6k events processed  (102.6k events read)  1.7kHz  (avg.: 1.8kHz)       103.5k events processed  (103.5k events read)  1.7kHz  (avg.: 1.8kHz)       104.4k events processed  (104.4k events read)  1.7kHz  (avg.: 1.8kHz)       105.2k events processed  (105.2k events read)  1.7kHz  (avg.: 1.8kHz)       106.1k events processed  (106.1k events read)  1.7kHz  (avg.: 1.8kHz)       106.9k events processed  (106.9k events read)  1.7kHz  (avg.: 1.8kHz)       107.8k events processed  (107.8k events read)  1.8kHz  (avg.: 1.8kHz)       108.7k events processed  (108.7k events read)  1.7kHz  (avg.: 1.8kHz)       109.5k events processed  (109.5k events read)  1.7kHz  (avg.: 1.8kHz)       110.4k events processed  (110.4k events read)  1.7kHz  (avg.: 1.8kHz)       111.3k events processed  (111.3k events read)  1.7kHz  (avg.: 1.8kHz)       112.1k events processed  (112.1k events read)  1.7kHz  (avg.: 1.8kHz)       113.0k events processed  (113.0k events read)  1.7kHz  (avg.: 1.8kHz)       113.9k events processed  (113.9k events read)  1.8kHz  (avg.: 1.8kHz)       114.8k events processed  (114.8k events read)  1.8kHz  (avg.: 1.8kHz)       115.7k events processed  (115.7k events read)  1.8kHz  (avg.: 1.8kHz)     No more events
+JANA >>
+JANA >>No more event sources
+JANA >>
+JANA >>
+JANA >>No more event sources
+JANA >>No more event sources
+JANA >>Thread 0x7fcddb58b640 completed gracefully: Wed Nov 20 21:48:23 2024
+JANA >>Thread 0x7fcddcd8e640 completed gracefully: Wed Nov 20 21:48:23 2024
+JANA >>Thread 0x7fcddc58d640 completed gracefully: Wed Nov 20 21:48:23 2024
+JANA >>
+JANA >>No more event sources
+JANA >>Thread 0x7fcddbd8c640 completed gracefully: Wed Nov 20 21:48:23 2024
+JANA >>Merging thread 0 (0x7fcddb58b640) ...
+JANA >>Merging thread 1 (0x7fcddc58d640) ...
+JANA >>Merging thread 2 (0x7fcddcd8e640) ...
+JANA >>Merging thread 3 (0x7fcddbd8c640) ...
+
+ EVIO Processing rate = 1650.56 Hz
+  NDISPATCHER_STALLED =      65801 (93.3%)
+      NPARSER_STALLED =      11096 ( 7.9%)
+   NEVENTBUFF_STALLED =     118516 (168.1%)
+
+EVIO Statistics for /cache/halld/RunPeriod-2022-08/recon/ver01/ps/110776/ps_110776_109.evio :
+------------------------
+    Nblocks: 1536
+    Nevents: 116392
+    Nerrors: 0
+Nbad_blocks: 0
+Nbad_events: 0
+
+JANA >>Merging event reader thread ...
+JANA >> 116392 events processed  (116392 events read) Average rate: 1.8kHz
+
+Closed ROOT file
+JANA >>Closing shared object handle 0 ...

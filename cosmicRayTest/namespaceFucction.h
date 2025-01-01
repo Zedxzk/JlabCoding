@@ -56,14 +56,26 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
                 double  col, row, xmin, xmax, ymin, ymax;
                 if (!(iss >> col >> row >> xmin >> ymin >> xmax >> ymax)) { break; }
                 poly->AddBin(xmin, ymin, xmax, ymax);
+                cout << "Bin added:" << line << std::endl;
             }
 
             while (std::getline(binFile2, line)) {
+                    // 去除行首和行尾的空白字符
+                line.erase(0, line.find_first_not_of(" \t\r\n"));
+                line.erase(line.find_last_not_of(" \t\r\n") + 1);
+
                 if (line.empty() || line[0] == '#') continue;
                 std::istringstream iss(line);
                 double xmin, ymin, xmax, ymax, col, row;
-                if (!(iss >> col >> row >> xmin >> ymin >> xmax >> ymax)) { break; }
+                // 确保能正确解析一行中的所有列
+                if (!(iss >> col >> row >> xmin >> ymin >> xmax >> ymax)) {
+                    std::cerr << "Invalid line format: " << line << std::endl;
+                    continue; // 跳过格式错误的行，而不是直接退出循环
+                }
+
+                // 调用 AddBin 添加数据
                 poly->AddBin(xmin, ymin, xmax, ymax);
+                std::cout << "Bin added: " << line << std::endl;
             }
             }
         }
@@ -265,7 +277,7 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
                     std::istringstream iss(line);
                     double  col, row, xmin, xmax, ymin, ymax;
                     if (!(iss >> col >> row >> xmin >> ymin >> xmax >> ymax)) { break; }
-                    poly->Fill(xmin +  EcalLength /2, ymin + FcalLength / 2, EcalArray[col][row]);
+                    poly->Fill(xmin +  EcalLength /2, ymin + EcalLength / 2, EcalArray[col][row]);
                 }
             //Fill Fcal bins;
                 while (std::getline(binFile2, line)) {

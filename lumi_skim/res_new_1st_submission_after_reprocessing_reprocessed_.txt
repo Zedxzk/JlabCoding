@@ -1,0 +1,733 @@
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110737/ps_110737_002.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110743/ps_110743_028.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110746/ps_110746_003.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110771/ps_110771_014.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110772/ps_110772_021.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110773/ps_110773_017.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110774/ps_110774_052.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110788/ps_110788_078.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110795/ps_110795_074.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110800/ps_110800_122.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110801/ps_110801_113.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110802/ps_110802_064.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110808/ps_110808_005.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110810/ps_110810_022.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110812/ps_110812_075.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110814/ps_110814_056.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110815/ps_110815_119.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110820/ps_110820_018.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110820/ps_110820_045.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110822/ps_110822_022.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110822/ps_110822_080.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110829/ps_110829_015.log 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110829/ps_110829_024.log
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110830 is empty.
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110846/ps_110846_036.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110852/ps_110852_017.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110852/ps_110852_083.log 
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110853 is empty.
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110854 is empty.
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110855 is empty.
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110856/ps_110856_033.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110858/ps_110858_015.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110865/ps_110865_061.log 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110865/ps_110865_066.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110867/ps_110867_023.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110868/ps_110868_010.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110869/ps_110869_029.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110874/ps_110874_044.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110874/ps_110874_062.log 
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110875/ps_110875_046.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110877/ps_110877_023.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110878/ps_110878_030.log
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110905 is empty.
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110907 is empty.
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110919/ps_110919_011.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110923/ps_110923_010.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110931/ps_110931_002.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110931/ps_110931_055.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110937/ps_110937_002.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110942/ps_110942_108.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110943/ps_110943_059.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110943/ps_110943_111.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110944/ps_110944_036.log
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110946 is empty.
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110951/ps_110951_014.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110951/ps_110951_015.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110953/ps_110953_057.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110954/ps_110954_051.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110954/ps_110954_060.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110955/ps_110955_092.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110955/ps_110955_102.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110958/ps_110958_038.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110959/ps_110959_120.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110961/ps_110961_030.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110961/ps_110961_113.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110965/ps_110965_106.log
+ 
+Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110966/ps_110966_029.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110968/ps_110968_020.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110971/ps_110971_028.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110971/ps_110971_034.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110972/ps_110972_050.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110972/ps_110972_074.log
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110972/ps_110972_085.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110993/ps_110993_001.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110999/ps_110999_057.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111003/ps_111003_039.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111005/ps_111005_006.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111006/ps_111006_004.log
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111007 is empty.
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111009/ps_111009_050.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111009/ps_111009_055.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111009/ps_111009_086.log
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111018 is empty.
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111019/ps_111019_015.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111022/ps_111022_006.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111024/ps_111024_034.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111025/ps_111025_016.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111030/ps_111030_015.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111031/ps_111031_014.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111048/ps_111048_088.log
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111048/ps_111048_122.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111054/ps_111054_038.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111055/ps_111055_039.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111062/ps_111062_061.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111063/ps_111063_028.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111064/ps_111064_011.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111064/ps_111064_028.log 
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111068/ps_111068_015.log 
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111070/ps_111070_012.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111078/ps_111078_007.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111078/ps_111078_098.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111082/ps_111082_038.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111083/ps_111083_023.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111093/ps_111093_018.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111099/ps_111099_028.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111101/ps_111101_016.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111112/ps_111112_012.log
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111112/ps_111112_037.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111114/ps_111114_000.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111120/ps_111120_008.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111124/ps_111124_075.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111124/ps_111124_111.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111128/ps_111128_032.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111131/ps_111131_015.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111132/ps_111132_048.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111133/ps_111133_081.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111134/ps_111134_009.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111135/ps_111135_090.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111136/ps_111136_028.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111136/ps_111136_103.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111140/ps_111140_016.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111145/ps_111145_043.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111146/ps_111146_066.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111148/ps_111148_095.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111148/ps_111148_096.log 
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111150/ps_111150_028.log 
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111151/ps_111151_022.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111151/ps_111151_092.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111153/ps_111153_059.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111156/ps_111156_065.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111158/ps_111158_069.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111163/ps_111163_059.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111163/ps_111163_084.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111164/ps_111164_019.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111165/ps_111165_039.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111171/ps_111171_072.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111172/ps_111172_070.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111172/ps_111172_071.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111173/ps_111173_036.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111178/ps_111178_000.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111184/ps_111184_008.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111187/ps_111187_008.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111187/ps_111187_017.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111188/ps_111188_015.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111210/ps_111210_017.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111217/ps_111217_033.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111222/ps_111222_037.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111232/ps_111232_101.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111234/ps_111234_030.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111235/ps_111235_011.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111237/ps_111237_097.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111238/ps_111238_045.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111239/ps_111239_013.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111239/ps_111239_066.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111243/ps_111243_011.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111257/ps_111257_088.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111259/ps_111259_040.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111260/ps_111260_044.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111267/ps_111267_036.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111268/ps_111268_078.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111268/ps_111268_081.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111269/ps_111269_097.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111272/ps_111272_007.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111275/ps_111275_002.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111282/ps_111282_119.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111283/ps_111283_013.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111285/ps_111285_020.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111285/ps_111285_089.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111287/ps_111287_005.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111291/ps_111291_041.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111292/ps_111292_020.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111294/ps_111294_037.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111294/ps_111294_042.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111294/ps_111294_044.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111298/ps_111298_027.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111300/ps_111300_037.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111305/ps_111305_015.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111330/ps_111330_052.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111332/ps_111332_084.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111335/ps_111335_053.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111335/ps_111335_078.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111338/ps_111338_069.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111342/ps_111342_006.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111342/ps_111342_017.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111342/ps_111342_048.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111345/ps_111345_063.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111350/ps_111350_031.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111353/ps_111353_021.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111353/ps_111353_059.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111353/ps_111353_090.log 
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111356 is empty.
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111358/ps_111358_070.log 
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111359 is empty.
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111360 is empty.
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111361 is empty.
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111366/ps_111366_011.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111366/ps_111366_055.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111367/ps_111367_088.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111369/ps_111369_103.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111370/ps_111370_091.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111370/ps_111370_092.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111372/ps_111372_050.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111375/ps_111375_013.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111375/ps_111375_056.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111378/ps_111378_058.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111381/ps_111381_018.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111382/ps_111382_053.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111391/ps_111391_031.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111391/ps_111391_041.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111393/ps_111393_029.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111396/ps_111396_024.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111410/ps_111410_009.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111419/ps_111419_034.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111433/ps_111433_007.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111437/ps_111437_007.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111438/ps_111438_032.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111443/ps_111443_012.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111446/ps_111446_006.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111446/ps_111446_026.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111460/ps_111460_124.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111461/ps_111461_085.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111475/ps_111475_086.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111478/ps_111478_006.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111478/ps_111478_114.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111480/ps_111480_026.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111489/ps_111489_032.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111489/ps_111489_044.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111492/ps_111492_081.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111496/ps_111496_027.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111497/ps_111497_010.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111498/ps_111498_063.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111501/ps_111501_105.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111504/ps_111504_067.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111508/ps_111508_033.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111510/ps_111510_049.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111512/ps_111512_070.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111513/ps_111513_051.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111513/ps_111513_125.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111514/ps_111514_030.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111528/ps_111528_018.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111529/ps_111529_033.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111530/ps_111530_017.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111530/ps_111530_057.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111535/ps_111535_055.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111539/ps_111539_018.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111539/ps_111539_093.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111541/ps_111541_006.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111541/ps_111541_040.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111548/ps_111548_011.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111553/ps_111553_022.log
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111553/ps_111553_026.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111554/ps_111554_009.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111558/ps_111558_031.log
+ 
+Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111559/ps_111559_007.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111562/ps_111562_031.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111565/ps_111565_009.log
+ 
+Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111569/ps_111569_001.log
+Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111569/ps_111569_003.log
+Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111569/ps_111569_005.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111570/ps_111570_021.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111573/ps_111573_021.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111575/ps_111575_064.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111576/ps_111576_003.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111580/ps_111580_018.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111581/ps_111581_074.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111582/ps_111582_005.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111584/ps_111584_097.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111584/ps_111584_114.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111585/ps_111585_131.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111586/ps_111586_112.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111587/ps_111587_072.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111588/ps_111588_068.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111590/ps_111590_063.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111592/ps_111592_024.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111594/ps_111594_064.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111595/ps_111595_044.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111602/ps_111602_012.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111603/ps_111603_047.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111606/ps_111606_045.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111607/ps_111607_015.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111611/ps_111611_094.log
+Error: 'There was a crash.' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111611/ps_111611_112.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111617/ps_111617_114.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111618/ps_111618_059.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111624/ps_111624_137.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111625/ps_111625_064.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111628/ps_111628_024.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111640/ps_111640_067.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111640/ps_111640_113.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111643/ps_111643_080.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111643/ps_111643_081.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111653/ps_111653_002.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111656/ps_111656_015.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111663/ps_111663_015.log
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111663/ps_111663_023.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111665/ps_111665_037.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111666/ps_111666_016.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111687/ps_111687_011.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111700/ps_111700_023.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111712/ps_111712_004.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111712/ps_111712_068.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111715/ps_111715_048.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111723/ps_111723_046.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111723/ps_111723_105.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111728/ps_111728_040.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111731/ps_111731_028.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111740/ps_111740_038.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111746/ps_111746_036.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111749/ps_111749_101.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111752/ps_111752_043.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111756/ps_111756_070.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111759/ps_111759_094.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111759/ps_111759_116.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111763/ps_111763_065.log 
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111772 is empty.
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111775/ps_111775_117.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111777/ps_111777_009.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111778/ps_111778_089.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111781/ps_111781_039.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111781/ps_111781_076.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111781/ps_111781_077.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111781/ps_111781_081.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111785/ps_111785_077.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111785/ps_111785_107.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111789/ps_111789_007.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111790/ps_111790_045.log 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111790/ps_111790_070.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111792/ps_111792_015.log
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111794 is empty.
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111795/ps_111795_014.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111795/ps_111795_033.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111801/ps_111801_022.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111803/ps_111803_011.log 
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111804 is empty.
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111805/ps_111805_003.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111820/ps_111820_106.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111821/ps_111821_064.log 
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111822 is empty.
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111824/ps_111824_016.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111824/ps_111824_057.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111831/ps_111831_096.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111831/ps_111831_097.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111838/ps_111838_086.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111850/ps_111850_067.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111856/ps_111856_047.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111857/ps_111857_047.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111859/ps_111859_096.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111860/ps_111860_106.log
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111863 is empty.
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111865/ps_111865_017.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111865/ps_111865_063.log 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111865/ps_111865_081.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111866/ps_111866_017.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111866/ps_111866_041.log
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111867 is empty.
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111869 is empty.
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111872 is empty.
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111873 is empty.
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111880/ps_111880_025.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111883/ps_111883_083.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111884/ps_111884_005.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111885/ps_111885_014.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111885/ps_111885_068.log 
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111889/ps_111889_003.log 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111889/ps_111889_012.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111896/ps_111896_014.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111908/ps_111908_020.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111910/ps_111910_000.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111910/ps_111910_014.log 
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111913 is empty.
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111915 is empty.
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111917 is empty.
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111924/ps_111924_017.log 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111924/ps_111924_028.log
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111927 is empty.
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111928/ps_111928_009.log 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111928/ps_111928_021.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111933/ps_111933_000.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111933/ps_111933_004.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111936/ps_111936_002.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111944/ps_111944_007.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111950/ps_111950_011.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111950/ps_111950_025.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111960/ps_111960_004.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111962/ps_111962_002.log
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111965/ps_111965_021.log 
+ 
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111971/ps_111971_076.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111972/ps_111972_032.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111972/ps_111972_061.log
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111972/ps_111972_118.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111974/ps_111974_027.log
+ 
+Error: 'words_left_in_file' found in /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111976/ps_111976_010.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111977/ps_111977_090.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111978/ps_111978_020.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111978/ps_111978_055.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111978/ps_111978_121.log 
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111984/ps_111984_016.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111986/ps_111986_055.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111987/ps_111987_044.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111988/ps_111988_054.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111988/ps_111988_078.log
+Error: Log file not found /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111988/ps_111988_117.log 
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111989 is empty.
+ 
+Error: The directory /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111993 is empty.
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111997/ps_111997_035.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111997/ps_111997_096.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111997/ps_111997_128.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111998/ps_111998_033.log
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111998/ps_111998_079.log
+ 
+Error: No events in file /work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111999/ps_111999_086.log
+ 

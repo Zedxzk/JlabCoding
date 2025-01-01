@@ -6,36 +6,55 @@ import glob
 import subprocess
 
 
-he_version = "he10"
+# he_version = "he10"
+he_version = "he5"
 
 
-# Paths Setup
-# extraInfo = "v2"
-# rootDir1 = "/volatile/halld/home/zhikun/ver05_lumi/"
-# logDir1 = "/w/halld-scshelf2101/home/zhikun/lumi_skim/lumi_primex3/individual/log"
-# resDir1 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
+# # Paths Setup
+extraInfo = "after_reprocessing"
+rootDir1 = "/volatile/halld/home/zhikun/ver05_lumi/"
+logDir1 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log"
+res_path_1 = f"/work/halld/home/zhikun/lumi_skim/scan_res_dir/res_old_{he_version}_{extraInfo}.txt"
 
-# rootDir2 = "/volatile/halld/home/somov/ver05_lumi/"
-# logDir2 = "/w/halld-scshelf2101/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
-# resDir2 = f"/w/halld-scshelf2101/home/zhikun/lumi_skim/res_new_{he_version}_test.txt"
-
-
-extraInfo = "after_resubmission"
-rootDir2 = "/volatile/halld/home/zhikun/ver05_lumi/"
-logDir2 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log"
-# resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_{extraInfo}.txt"
-resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
-
-rootDir1 = "/volatile/halld/home/somov/ver05_lumi/"
-logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
-resDir1 = f"/work/halld/home/zhikun/lumi_skim/res_new_{he_version}_{extraInfo}.txt"
+rootDir2 = "/volatile/halld/home/zhikun/merged_new_runs"
+logDir2 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log"
+res_path_2 = f"/work/halld/home/zhikun/lumi_skim/scan_res_dir/res_new_{he_version}_{extraInfo}.txt"
 
 
+# extraInfo = "after_resubmission"
+# rootDir2 = "/volatile/halld/home/zhikun/ver05_lumi/"
+# logDir2 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log"
+# # resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_{extraInfo}.txt"
+# res_path_2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
 
-destination_root_dir = "/volatile/halld/home/test_lumi/"
-destination_log_dir = "/volatile/halld/home/test_lumi/log/"
+# extraInfo = "after_reprocess"
+# rootDir1 = "/volatile/halld/home/somov/ver05_lumi/"
+# logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log"
+# # resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_{extraInfo}.txt"
+# res_path_1 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_before_reprocess.txt"
 
-destination_res_dir = f"/volatile/halld/home/test_lumi/copy_and_replace_res_{he_version}_test_{extraInfo}.txt"
+# rootDir2 = "/volatile/halld/home/somov/ver06_lumi/"
+# logDir2 = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
+# res_path_2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_reprocessed.txt"
+
+# extraInfo = "after_reprocess"
+# rootDir2 = "/volatile/halld/home/somov/ver06_lumi/"
+# logDir2 = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log"
+# # resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_{extraInfo}.txt"
+# res_path_2 = f"/work/halld/home/zhikun/lumi_skim/res_new_1st_submission_after_reprocessing_reprocessed_.txt"
+
+# rootDir1 = "/volatile/halld/home/somov/ver05_lumi/"
+# logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
+# res_path_1 = f"/work/halld/home/zhikun/lumi_skim/res_new_1st_submission_before_reprocessing_reprocessed_.txt"
+
+
+destination_root_dir = "/volatile/halld/home/test_lumi"
+destination_log_dir = "/work/halld/home/test_lumi/log"
+
+# destination_root_dir = "/volatile/halld/home/zhikun/merged_new_runs"
+# destination_log_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log"
+
+destination_res_path = f"/volatile/halld/home/test_lumi/copy_and_replace_res_{he_version}_test_{extraInfo}.txt"
 logfile_path = f"/volatile/halld/home/test_lumi/loginfo_{he_version}_test_{extraInfo}.log"
 manual_check_path = f"/volatile/halld/home/test_lumi/manual_check_{he_version}_{extraInfo}.log"
 
@@ -44,6 +63,10 @@ list_file_path = f"/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_o
 # change copy_files as you like if you want to debug, look at log files and don't need to copy files.
 # copy_files = False
 copy_files = True
+replace_root_files = True
+# replace_root_files = False
+replace_log_files = True
+# replace_log_files = False
 
 def main():
     # 执行所有操作
@@ -51,10 +74,8 @@ def main():
     errors_1, errors_2 = check_all()
     replace_all(errors_1, errors_2)
     # 保存快速浏览日志到目标文件
-    save_log(destination_res_dir)
+    save_log(destination_res_path)
     save_manual_check_log(manual_check_path)
-
-
 
 
 
@@ -91,7 +112,7 @@ def save_log(destination):
 
 def save_manual_check_log(message):
     """将需要人工检查的消息保存到 manual_check.log 文件"""
-    with open(manual_check_path, 'w') as f:  # 以追加方式打开文件
+    with open(manual_check_path, 'w') as f:  
         f.write(f"Total files to be checked mannually =  {events_manual_check}")
         for message in manual_check_messages:
             message = message.strip()
@@ -101,64 +122,70 @@ def save_manual_check_log(message):
         f.write(f"\n\nTotal files to be checked mannually =  {events_manual_check}\n")
 
 def copy_with_subprocess(src, dst, is_dir=False):
-    """使用 subprocess 复制文件或目录"""
-    if is_dir:
-        command = ["rsync", "-r", src + "/", dst + "/"]  # 使用 rsync 复制目录
-        # command = ["rsync", "-r","--no-times", "--no-perms", src + "/", dst + "/"]  # 使用 rsync 复制目录
-    else:
-        command = ["cp", "-p", src, dst]  # 使用 cp 复制文件
+    if copy_files:
+        """使用 subprocess 复制文件或目录"""
+        if is_dir:
+            command = ["rsync", "-av", src + "/", dst + "/"]  # 使用 rsync 复制目录
+            # command = ["rsync", "-r","--no-times", "--no-perms", src + "/", dst + "/"]  # 使用 rsync 复制目录
+        else:
+            command = ["cp", "-p", src, dst]  # 使用 cp 复制文件
 
-    try:
-        subprocess.run(command, check=True)
-        log(f"Successfully copied from {src} to {dst}")
-    except subprocess.CalledProcessError as e:
-        log(f"Error occurred while copying: {e}", is_error=True)
+        try:
+            subprocess.run(command, check=True)
+            log(f"Successfully copied from {src} to {dst}")
+        except subprocess.CalledProcessError as e:
+            log(f"Error occurred while copying: {e}", is_error=True)
+    else:
+        pass
+
 
 def copy_one_root(run_id, file_id):
-    """复制根目录中的单个文件到目标目录。"""
-    run_dir = f"Run{run_id}"  # 构建目录名称
-    source_run_dir = os.path.join(rootDir2, run_dir)  # 源目录
-    destination_run_dir = os.path.join(destination_root_dir, run_dir)  # 目标目录
-    
-    # 构建源文件路径
-    source_file_pattern = os.path.join(source_run_dir, f"*{run_id}_{file_id}.root")
+    if replace_root_files:
+        """复制根目录中的单个文件到目标目录。"""
+        run_dir = f"Run{run_id}"  # 构建目录名称
+        source_run_dir = os.path.join(rootDir2, run_dir)  # 源目录
+        destination_run_dir = os.path.join(destination_root_dir, run_dir)  # 目标目录
+        
+        # 构建源文件路径
+        source_file_pattern = os.path.join(source_run_dir, f"*{run_id}_{file_id}.root")
 
-    if not os.path.exists(destination_run_dir):
-        os.makedirs(destination_run_dir)
+        if not os.path.exists(destination_run_dir):
+            os.makedirs(destination_run_dir)
 
-    source_file_paths = glob.glob(source_file_pattern)
+        source_file_paths = glob.glob(source_file_pattern)
 
-    if source_file_paths:
-        for source_file_path in source_file_paths:
-            file_name = os.path.basename(source_file_path)
-            destination_file_path = os.path.join(destination_run_dir, file_name)
-            if copy_files:
-                copy_with_subprocess(source_file_path, destination_file_path, is_dir=False)
-    else:
-        log(f"No source files match the pattern: {source_file_pattern}")
+        if source_file_paths:
+            for source_file_path in source_file_paths:
+                file_name = os.path.basename(source_file_path)
+                destination_file_path = os.path.join(destination_run_dir, file_name)
+                if copy_files:
+                    copy_with_subprocess(source_file_path, destination_file_path, is_dir=False)
+        else:
+            log(f"No source files match the pattern: {source_file_pattern}",is_error = True)
 
 def copy_one_log(run_id, file_id):
-    """复制日志目录中的单个文件到目标目录。"""
-    file_type = ".log"
-    run_dir = f"Run{run_id}"
-    source_run_dir = os.path.join(logDir2, run_dir)
-    destination_run_dir = os.path.join(destination_log_dir, run_dir)
-    
-    source_file_pattern = os.path.join(source_run_dir, f"*{run_id}_{file_id}" + file_type)
+    if replace_log_files:
+        """复制日志目录中的单个文件到目标目录。"""
+        file_type = ".log"
+        run_dir = f"Run{run_id}"
+        source_run_dir = os.path.join(logDir2, run_dir)
+        destination_run_dir = os.path.join(destination_log_dir, run_dir)
+        
+        source_file_pattern = os.path.join(source_run_dir, f"*{run_id}_{file_id}" + file_type)
 
-    if not os.path.exists(destination_run_dir):
-        os.makedirs(destination_run_dir)
+        if not os.path.exists(destination_run_dir):
+            os.makedirs(destination_run_dir)
 
-    source_file_paths = glob.glob(source_file_pattern)
+        source_file_paths = glob.glob(source_file_pattern)
 
-    if source_file_paths:
-        for source_file_path in source_file_paths:
-            file_name = os.path.basename(source_file_path)
-            destination_file_path = os.path.join(destination_run_dir, file_name)
-            if copy_files:
-                copy_with_subprocess(source_file_path, destination_file_path, is_dir=False)
-    else:
-        log(f"No source files match the pattern: {source_file_pattern}")
+        if source_file_paths:
+            for source_file_path in source_file_paths:
+                file_name = os.path.basename(source_file_path)
+                destination_file_path = os.path.join(destination_run_dir, file_name)
+                if copy_files:
+                    copy_with_subprocess(source_file_path, destination_file_path, is_dir=False)
+        else:
+            log(f"No source files match the pattern: {source_file_pattern}")
 
 def copy_all_log():
     """复制所有日志文件。"""
@@ -239,7 +266,7 @@ def format_error(message):
         return result
 
     match2 = pattern2.search(message)
-    print()
+    # print()
     if match2:
         first_number = match2.group(4)
         second_number = match2.group(5)
@@ -264,8 +291,8 @@ def process_error_messages(messages):
 def check_all():
     """检查所有结果。"""
     try:
-        res_1 = read_res(resDir1)
-        res_2 = read_res(resDir2)
+        res_1 = read_res(res_path_1)
+        res_2 = read_res(res_path_2)
         error_1 = process_error_messages(res_1) if res_1 else {}
         error_2 = process_error_messages(res_2) if res_2 else {}
         return error_1, error_2

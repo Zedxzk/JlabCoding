@@ -1,0 +1,141 @@
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110800/ps_110800_122.log 
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110801/ps_110801_113.log 
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110802/ps_110802_064.log 
+
+
+
+
+
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110808/ps_110808_005.log 
+
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110810/ps_110810_022.log 
+
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110812/ps_110812_075.log 
+
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110814/ps_110814_056.log
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110815/ps_110815_119.log 
+
+
+
+
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110820/ps_110820_018.log 
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110820/ps_110820_045.log 
+
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110822/ps_110822_022.log 
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110822/ps_110822_080.log 
+
+
+
+
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110829/ps_110829_015.log
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110829/ps_110829_024.log 
+
+Error: No events in file /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110830/ps_110830_004.log
+
+
+
+
+
+
+
+
+
+
+
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110846/ps_110846_036.log 
+
+
+
+
+
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110852/ps_110852_017.log 
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110852/ps_110852_083.log
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110853/ps_110853_017.log 
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110853/ps_110853_074.log
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110854/ps_110854_026.log 
+
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110855/ps_110855_011.log
+
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110856/ps_110856_033.log
+
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110858/ps_110858_015.log 
+
+
+
+
+
+
+
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110865/ps_110865_061.log
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110865/ps_110865_066.log 
+
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110867/ps_110867_023.log 
+
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110868/ps_110868_010.log
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110869/ps_110869_029.log 
+
+
+
+
+
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110874/ps_110874_044.log
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110874/ps_110874_062.log
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110875/ps_110875_046.log 
+
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110877/ps_110877_023.log 
+
+Error: Log file not found /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110878/ps_110878_030.log 
+
+
+
+
+
+
+
+
+
+
+
+
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110905/ps_110905_007.log
+
+Error: 'words_left_in_file' found in /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110907/ps_110907_008.log
+
+
+
+
+
+
+
+
+
+
+
+Error: No events in file /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110919/ps_110919_011.log
+
+
+
+
+Error: No events in file /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/Run110923/ps_110923_010.log
+
+
+
+
+

@@ -1,6 +1,10 @@
 import os
 import re
 from pprint import pprint
+
+
+he_versions = [3, 4, 5, 6, 7, 8, 9, 10]
+extra_info = "after_resubmission"
 list_of_runs_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss"
 list_of_good_runs_dir = "/work/halld/home/zhikun/lumi_skim/goodRuns_after_resubmission"
 list_of_good_runs_after_merging_dir = "/work/halld/home/zhikun/lumi_skim/goodRuns_merged_after_resubmission"
@@ -8,18 +12,23 @@ manual_check_log_dir = "/volatile/halld/home/test_lumi/"
 list_of_error_files = "/work/halld/home/zhikun/lumi_skim/error_files"
 evio_dir = "/mss/halld/RunPeriod-2022-08/recon/ver01/ps/"
 jobs_to_resubmit_dir = "/work/halld/home/zhikun/lumi_skim/jobs_to_resubmit/"
+list_of_files_reprocessed_dir = "/work/halld/home/zhikun/lumi_skim/list_of_files_reprocessed"
+list_of_files_reprocessed_template = "list_Run{run_id}"
+list_of_files_reprocessed_contents_template = "ps_{run_id}_{file_id}.evio"
+
 
 
 pattern1 = re.compile(r"(Error: The directory (.+?(\d{6})) is empty.)")
 pattern2 = re.compile(r"(Error: (.+?) (/w.+?/ps_(\d{6})_(\d{3}).log))")
 pattern3 = re.compile(r"\('(\d+)', '(\d+|\*)'\)")
 
-he_version = [3, 4, 5, 6, 7, 8, 9, 10]
-extra_info = "after_resubmission"
 bad_runs_after_merging = set()
 bad_runs = {}
+overlap_truncated = {}
+truncated_runs = {}
 terminated_and_missing_files = {}
 existing_evio_but_missing_log_files = {}
+all_runs = []
 
 num_truncated = 0
 num_missing   = 0
@@ -27,19 +36,23 @@ num_crashed   = 0
 num_terminated = 0
 num_existing_evio_but_missing_log = 0
 num_total     = 0
+num_overlap_truncated = 0
 
 def add_bad_run(key, value, dict = bad_runs):
+    key = str(key)
+    value = str(value)
     if key in dict.keys():
         dict[key].append(value)
     else:
         dict[key] = [value]  # Use list notation to create a new list with the value
 
 
-for i in he_version:
+for i in he_versions:
     with open(os.path.join(list_of_good_runs_dir, f'goodRuns_he{i}.txt'),'w') as goodRuns:
         list_of_runs = os.path.join(list_of_runs_dir, f"list_of_runs_he{i}")
         with open(list_of_runs,'r') as f1:
             runs = [item.strip() for item in f1.readlines()]
+        all_runs.append(runs)
         with open(f"res_new_he{i}_{extra_info}.txt") as f1:
             errors_new = [ item.strip() for item in f1.readlines() if  item.strip() != ""]
         with open(f"res_new_he{i}_{extra_info}.txt") as f2:
@@ -91,6 +104,7 @@ for i in he_version:
                 add_bad_run(first_number, second_number, terminated_and_missing_files)
                 num_terminated += 1
             elif "words_left_in_file" in error:
+                add_bad_run(first_number,second_number,  truncated_runs)
                 num_truncated += 1
             elif "crash" in error:
                 num_crashed += 1
@@ -126,7 +140,7 @@ with open(f"files_need_to_be_reprocessed_{extra_info}.txt", 'w') as f:
     f.write(msg)
         
 num_total = num_missing + num_terminated
-with open(f"files_need_to_be_resubmitted.txt_{extra_info}", 'w') as f:
+with open(f"files_need_to_be_resubmitted_{extra_info}.txt", 'w') as f:
     msg = '\n'.join([
         "***********************************************",
         f"Total error nums    = {num_total}",
@@ -161,5 +175,54 @@ with open(f"list_of_resubmission_{extra_info}", "w") as fi:
         f.write(msg)
 
 
+with open(f"truncated_runs_{extra_info}", "w") as fi:
+    msg = '\n'.join([
+        "****************************************",
+        f"Truncated runs in total = {num_truncated}",
+        "****************************************\n"
+    ])
+    fi.write(msg)
+    for key, value in truncated_runs.items():
+            fi.write(f"{key}\n")
+            fi.write(f"{value}\n\n")
+    fi.write(msg)
+
+with open("stdout.log","r") as f :
+    pattern4 = r'stdout\.(\d+)_(\d+)\.out'
+    # 查找所有匹配项 
+    matches = re.findall(pattern4, f.read())
+    for match in matches:
+        if str(match[0]) in truncated_runs.keys():
+            # print(f"overlaped run id = {match[0]}")
+            if str(match[1]) in truncated_runs[str(match[0])]:
+                add_bad_run(match[0], match[1], overlap_truncated)
+                num_overlap_truncated += 1
+
+with open("overlap_trunated", "w") as fi:
+    msg = "\n".join([
+        "****************************************",
+        f"Overlaped truncated runs  in total = {num_overlap_truncated}",
+        "****************************************\n"
+    ])
+    fi.write(msg)
+    for key, value in overlap_truncated.items():
+            fi.write(f"{key}\n")
+            fi.write(f"{value}\n\n")
+    fi.write(msg)
+
+
+with open("list_of_runs_reprocessed","w") as f:
+    if not os.path.exists(list_of_files_reprocessed_dir):
+        os.makedirs(list_of_files_reprocessed_dir)
+    for key, value in bad_runs.items():
+        f.write(key+"\n")
+        list_of_files_reprocessed_path = os.path.join(list_of_files_reprocessed_dir, list_of_files_reprocessed_template)
+        list_of_files_reprocessed_path = list_of_files_reprocessed_path.format(run_id=key)
+        print(list_of_files_reprocessed_path)
+        with open(list_of_files_reprocessed_path,"w") as f1:
+            for file_id in value:
+                list_of_files_reprocessed_contents = list_of_files_reprocessed_contents_template.format(run_id=key, file_id=file_id)
+                f1.write(list_of_files_reprocessed_contents+"\n")
+        # with open()
 
 

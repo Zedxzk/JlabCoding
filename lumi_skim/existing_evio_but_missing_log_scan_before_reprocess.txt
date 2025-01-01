@@ -1,0 +1,8 @@
+***********************************************
+Total error nums    = 1737
+Terminated files num= 618
+Missing logs nums   = 1119
+Missing log but existing evio = 0
+***********************************************
+
+

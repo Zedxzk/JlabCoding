@@ -4,7 +4,8 @@ empty_line_printed = False
 
 he_version = "he10"
 extra_info = "after_resubmission"
-# 文件路径定义
+
+# file path define
 list_file_path = f"/work/halld3/home/somov/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 # list_file_path = f"/work/halld3/home/somov/lumi_skim/list_of_resubmission"
 # list_of_evio_files_dir = "/work/halld/home/zhikun/lumi_skim/jobs_to_resubmit/"

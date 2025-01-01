@@ -1,0 +1,78 @@
+JANA >>OUTPUT_FILENAME: /volatile/halld/home/somov/ver05_lumi/Run111230/ps_111230_072.root
+JANA >>Initializing plugin "/work/halld3/home/somov/lumi_skim/Linux_Alma9-x86_64-gcc11.4.1/plugins/lumi_skim.so" ...
+Opened ROOT file "/volatile/halld/home/somov/ver05_lumi/Run111230/ps_111230_072.root" ...
+ SASCHA -1
+/volatile/halld/home/somov/ver05_lumi/Run111230/lumi_ps_111230_072.root
+JANA >>Launching threads ....
+JANA >>Opening source "/cache/halld/RunPeriod-2022-08/recon/ver01/ps/111230/ps_111230_072.evio" of type: EVIOpp  - Reads EVIO formatted data from file or ET system
+loading VERSION 3
+
+
+JANA >>Created JCalibration object of type: JCalibrationCCDB
+JANA >>Generated via: JCalibration using CCDB for MySQL and SQLite databases
+JANA >>Run:111230
+JANA >>URL: mysql://ccdb_user@hallddb-farm.jlab.org/ccdb
+JANA >>context: variation=default
+JANA >>comment: Default constants for analyzing data
+  2.0 events processed  (2.0 events read)  4.0Hz  (avg.: 0.0Hz)     JANA >>Creating DGeometry:
+JANA >>  Run requested:111230  found:111230
+JANA >>  Run validity range: 111230-111230
+JANA >>  URL="ccdb:///GEOMETRY/main_HDDS.xml"  context="default"
+JANA >>  Type="JGeometryXML"
+JANA >>Found 25 material maps in calib. DB
+  2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>Read in 25 material maps for run 111230 containing 76153 grid points total
+JANA >>Creating DTranslationTable for run 111230
+JANA >>Reading translation table from calib DB: Translation/DAQ2detector ...
+  2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>40636 channels defined in translation table
+JANA >>Reading translation table from calib DB: Translation/DAQ2detector ...
+JANA >>In DPSHit_factory, loading constants...
+  2.0 events processed  (2.0 events read)  0.0Hz  (avg.: 0.0Hz)     JANA >>40636 channels defined in translation table
+JANA >>In DPSCHit_factory, loading constants...
+JANA >>In DTAGHHit_factory, loading constants...
+JANA >> Correct Beam Photon Energy (TAGH) = 11.555 (GeV)
+JANA >>In DTAGMHit_factory_Calib, loading constants...
+JANA >> Correct Beam Photon Energy (TAGM) = 11.555 (GeV)
+JANA >>
+JANA >> --- Configuration Parameters --
+JANA >>[1m LUMI_PRIMEX:DIR = /volatile/halld/home/somov/ver05_lumi/Run111230/lumi_ps_111230_072.root[0m
+JANA >>[1m NTHREADS        = 4                                                                      [0m
+JANA >>[1m OUTPUT_FILENAME = /volatile/halld/home/somov/ver05_lumi/Run111230/ps_111230_072.root     [0m
+JANA >>[1m PLUGINS         = lumi_skim                                                              [0m
+JANA >>[1m THREAD_TIMEOUT  = 30 seconds                                                             [0m
+JANA >> -------------------------------
+  312.0 events processed  (322.0 events read)  620.0Hz  (avg.: 620.0Hz)       1112.0 events processed  (1112.0 events read)  1.6kHz  (avg.: 1110.0Hz)       1.8k events processed  (1.8k events read)  1420.0Hz  (avg.: 1213.3Hz)       2.5k events processed  (2.5k events read)  1382.0Hz  (avg.: 1255.5Hz)       3.2k events processed  (3.2k events read)  1380.0Hz  (avg.: 1280.4Hz)       3.9k events processed  (3.9k events read)  1438.0Hz  (avg.: 1306.7Hz)       4.6k events processed  (4.6k events read)  1404.0Hz  (avg.: 1320.6Hz)       5.3k events processed  (5.3k events read)  1418.0Hz  (avg.: 1332.8Hz)       6.1k events processed  (6.1k events read)  1440.0Hz  (avg.: 1344.7Hz)       6.8k events processed  (6.8k events read)  1.5kHz  (avg.: 1360.6Hz)       7.6k events processed  (7.6k events read)  1494.0Hz  (avg.: 1372.7Hz)       8.3k events processed  (8.3k events read)  1420.0Hz  (avg.: 1376.7Hz)       9.0k events processed  (9.0k events read)  1.5kHz  (avg.: 1387.7Hz)       9.7k events processed  (9.7k events read)  1354.0Hz  (avg.: 1385.3Hz)       10.4k events processed  (10.4k events read)  1388.0Hz  (avg.: 1385.5Hz)       11.2k events processed  (11.2k events read)  1.6kHz  (avg.: 1396.4Hz)       11.9k events processed  (11.9k events read)  1.5kHz  (avg.: 1404.5Hz)       12.6k events processed  (12.6k events read)  1342.0Hz  (avg.: 1401.0Hz)       13.4k events processed  (13.4k events read)  1.5kHz  (avg.: 1408.1Hz)       14.1k events processed  (14.1k events read)  1.5kHz  (avg.: 1414.6Hz)       14.9k events processed  (14.9k events read)  1.5kHz  (avg.: 1419.4Hz)     No more events
+JANA >>
+JANA >>No more event sources
+JANA >>Thread 0x7f6aa6775640 completed gracefully: Wed Nov 27 12:07:44 2024
+JANA >>
+JANA >>
+JANA >>
+JANA >>No more event sources
+JANA >>No more event sources
+JANA >>No more event sources
+JANA >>Thread 0x7f6aa6f76640 completed gracefully: Wed Nov 27 12:07:44 2024
+JANA >>Thread 0x7f6aa5f74640 completed gracefully: Wed Nov 27 12:07:44 2024
+JANA >>Thread 0x7f6aa5773640 completed gracefully: Wed Nov 27 12:07:44 2024
+JANA >>Merging thread 0 (0x7f6aa6775640) ...
+JANA >>Merging thread 1 (0x7f6aa6f76640) ...
+JANA >>Merging thread 2 (0x7f6aa5f74640) ...
+JANA >>Merging thread 3 (0x7f6aa5773640) ...
+
+ EVIO Processing rate = 1102.1 Hz
+  NDISPATCHER_STALLED =      10749 (78.4%)
+      NPARSER_STALLED =       4841 (17.6%)
+   NEVENTBUFF_STALLED =       9262 (67.5%)
+
+EVIO Statistics for /cache/halld/RunPeriod-2022-08/recon/ver01/ps/111230/ps_111230_072.evio :
+------------------------
+    Nblocks: 756
+    Nevents: 15118
+    Nerrors: 0
+Nbad_blocks: 0
+Nbad_events: 0
+
+JANA >>Merging event reader thread ...
+JANA >> 15118 events processed  (15118 events read) Average rate: 1374.2Hz
+
+Closed ROOT file
+JANA >>Closing shared object handle 0 ...
