@@ -6,22 +6,22 @@ set runlist=$1
 set n = 1
 
 # foreach file (`awk '{print}' ../list_of_runs_primex3/test`)
-# foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he3.txt`)
+# foreach file (`awk '{print}' list_of_good_runs_after_merging/goodRuns_he3.txt`)
 
-# foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he4.txt`)
+# foreach file (`awk '{print}' list_of_good_runs_after_merging/goodRuns_he4.txt`)
 
-# foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he5.txt`)
+# foreach file (`awk '{print}' list_of_good_runs_after_merging/goodRuns_he5.txt`)
 
-# foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he6.txt`)
+# foreach file (`awk '{print}' list_of_good_runs_after_merging/goodRuns_he6.txt`)
 
-# foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he7.txt`)
+# foreach file (`awk '{print}' list_of_good_runs_after_merging/goodRuns_he7.txt`)
 # 
-# foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he8.txt`)
+# foreach file (`awk '{print}' list_of_good_runs_after_merging/goodRuns_he8.txt`)
 
-# foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he9.txt`)
+# foreach file (`awk '{print}' list_of_good_runs_after_merging/goodRuns_he9.txt`)
 
 
-foreach file (`awk '{print}' goodRuns_merged_after_resubmission/goodRuns_he10.txt`)
+foreach file (`awk '{print}' list_of_good_runs_after_merging/goodRuns_he10.txt`)
 
 
 # foreach file (`awk '{print}' ../list_of_runs_primex2/list_of_runs_he_empty2`)

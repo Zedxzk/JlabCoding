@@ -57,14 +57,14 @@ destination_log_dir = "/work/halld/home/test_lumi/log"
 # destination_log_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log"
 
 destination_res_path_template = "/volatile/halld/home/test_lumi/copy_and_replace_res_{he_version}_test_{extraInfo}.txt"
-logfile_path_template = "/volatile/halld/home/test_lumi/loginfo_he_scan_{extraInfo}.log"
+logfile_path = f"/volatile/halld/home/test_lumi/loginfo_he_scan_{len(he_versions)}_blocks_{extraInfo}.log"
 manual_check_path_template = "/volatile/halld/home/test_lumi/manual_check_{he_version}_{extraInfo}.log"
 
 list_file_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 
 # change copy_files as you like if you want to debug, look at log files and don't need to copy files.
-# copy_files = False
-copy_files = True
+copy_files = False
+# copy_files = True
 replace_root_files = True
 # replace_root_files = False
 replace_log_files = True
@@ -74,17 +74,23 @@ replace_log_files = True
 res_path_1   = ""
 res_path_2   = ""
 destination_res_path = ""
-logfile_path = ""
 manual_check_path    = ""
 list_file_path = ""
 
+
+with open(logfile_path, "w") as f:
+    f.write("")
+
+# Logger configuration
+logging.basicConfig(filename=logfile_path,
+                    level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+
 def main():
+    global events_manual_check
     for he_version in he_versions:
         format_paths(he_version, extraInfo)
-        # Logger configuration
-        logging.basicConfig(filename=logfile_path,
-                            level=logging.INFO,
-                            format='%(asctime)s - %(levelname)s - %(message)s')
             # 执行所有操作
         copy_all()  # Uncomment to run copy operations
         errors_1, errors_2 = check_all()
@@ -92,13 +98,13 @@ def main():
         # 保存快速浏览日志到目标文件
         save_log(destination_res_path)
         save_manual_check_log(manual_check_path)
+        events_manual_check = 0
 
 def format_paths(he_version, extraInfo):
     global res_path_1, res_path_2, destination_res_path, logfile_path, manual_check_path, list_file_path
     res_path_1 = res_path_1_template.format(he_version=he_version, extraInfo=extraInfo)
     res_path_2 = res_path_2_template.format(he_version=he_version, extraInfo=extraInfo)
     destination_res_path = destination_res_path_template.format(he_version=he_version, extraInfo=extraInfo)
-    logfile_path = logfile_path_template.format(he_version=he_version, extraInfo=extraInfo)
     manual_check_path = manual_check_path_template.format(he_version=he_version, extraInfo=extraInfo)
     list_file_path = list_file_path_template.format(he_version=he_version, extraInfo=extraInfo)
 
@@ -129,12 +135,15 @@ def log(msg, is_error=False):
 
 def save_log(destination):
     """将收集的快速浏览日志保存到指定文件"""
+    global quick_view_messages
     with open(destination, 'w') as f:
         for message in quick_view_messages:
             f.write(message + '\n\n')
+        quick_view_messages = [] 
 
 def save_manual_check_log(message):
     """将需要人工检查的消息保存到 manual_check.log 文件"""
+    global manual_check_messages
     with open(manual_check_path, 'w') as f:  
         f.write(f"Total files to be checked mannually =  {events_manual_check}")
         for message in manual_check_messages:
@@ -143,12 +152,13 @@ def save_manual_check_log(message):
             message += "\n"
             f.write(message)
         f.write(f"\n\nTotal files to be checked mannually =  {events_manual_check}\n")
+        manual_check_messages = []
 
 def copy_with_subprocess(src, dst, is_dir=False):
     if copy_files:
         """使用 subprocess 复制文件或目录"""
         if is_dir:
-            command = ["rsync", "-r", src + "/", dst + "/"]  # 使用 rsync 复制目录
+            command = ["rsync", "-av", src + "/", dst + "/"]  # 使用 rsync 复制目录
             # command = ["rsync", "-r","--no-times", "--no-perms", src + "/", dst + "/"]  # 使用 rsync 复制目录
         else:
             command = ["cp", "-p", src, dst]  # 使用 cp 复制文件
