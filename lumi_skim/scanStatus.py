@@ -3,17 +3,24 @@ import os
 empty_line_printed = False
 
 he_versions = ["he3", "he4", "he5", "he6", "he7", "he8", "he9", "he10"]
+# he_versions = ["reprocessed"]
 # he_version = "he3"
 # extra_info = "reprocessed"
-extra_info = "after_reprocessing"
+extra_info = "after_exclusion"
 
 # 文件路径定义
-list_file_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/list_of_runs_{he_version}"
-list_of_evio_files = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"
+# list_of_runs_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/list_of_runs_{he_version}"
+list_of_runs_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/list_of_runs_{he_version}"
+list_of_evio_files = "/work/halld/home/zhikun/lumi_skim/list_of_files/list_of_files_after_exclusion/"
 log_base_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/"
-res_file_dir = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/"
+# log_base_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
+# log_base_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log"
+res_file_dir = "/work/halld/home/zhikun/lumi_skim/exclusion_dir/"
 res_file_name_template = "res_new_{he_version}_{extra_info}.txt"
 
+
+# rootDir2 = "/volatile/halld/home/somov/ver06_lumi/"
+# logDir2 = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log"
 
 # list_file_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/list_of_runs_{he_version}"
 # list_of_evio_files = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"
@@ -80,7 +87,7 @@ all_errors = []
 
 for he_version in he_versions:
     part_of_errors = []
-    list_file_path = list_file_path_template.format(he_version=he_version)
+    list_file_path = list_of_runs_path_template.format(he_version=he_version)
     res_file_name = res_file_name_template.format(he_version=he_version, extra_info=extra_info)
     res_file_path = os.path.join(res_file_dir, res_file_name)
     # input(f"he_version =  {he_version}, list_file_path = {list_file_path},\nres_file_path = {res_file_path}")

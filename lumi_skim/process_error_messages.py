@@ -2,6 +2,15 @@ import re
 import os
 import sys
 
+def add_bad_run(key, value, dict):
+    key = str(key)
+    value = str(value)
+    if key in dict.keys():
+        dict[key].append(value)
+    else:
+        dict[key] = [value]  # Use list notation to create a new list with the value
+
+
 def log(msg, is_error=False):
     if is_error:
         formatted_msg = "[ERROR] " + msg  # 添加 [ERROR] 标志
@@ -60,11 +69,11 @@ def process_error_messages(messages):
 
     return all_results
 
-def check_all(resDir1, resDir2):
+def check_all(res_path_1, res_path_2):
     """检查所有结果。"""
     try:
-        res_1 = read_res(resDir1)
-        res_2 = read_res(resDir2)
+        res_1 = read_res(res_path_1)
+        res_2 = read_res(res_path_2)
         errors_1 = process_error_messages(res_1) if res_1 else {}
         errors_2 = process_error_messages(res_2) if res_2 else {}
         return errors_1, errors_2
@@ -74,16 +83,16 @@ def check_all(resDir1, resDir2):
     
 
 def compare_result(errors_1, errors_2):
-    bad_runs = {}
+    bad_files = {}
     for key, value in errors_1.items():
         run_id = key[0]  
         run_dir = f"Run{run_id}"  
         if key[1] == "*":
             if key in errors_2:
-                bad_runs[key] = f"{value} \n{errors_2[key]}"
+                bad_files[key] = f"{value} \n{errors_2[key]}"
             else:
                 matching_errors = {k: f"{value}\n{v}" for k, v in errors_2.items() if k[0] == run_id}
-                bad_runs.update(matching_errors)
+                bad_files.update(matching_errors)
             
         else:
             if key in errors_2.keys():
@@ -97,6 +106,6 @@ def compare_result(errors_1, errors_2):
 
             if msg_key is not None:
                 # 生成错误消息
-                bad_runs[key] = f"{value}\n{errors_2[msg_key]}"
-    return bad_runs
+                bad_files[key] = f"{value}\n{errors_2[msg_key]}"
+    return bad_files
 # res1, res2  = check_all()
