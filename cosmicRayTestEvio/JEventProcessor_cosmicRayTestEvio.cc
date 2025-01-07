@@ -400,7 +400,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		my_canvas->cd();
 		gPad->SetGrid(1);
 		my_canvas->Update();
-		if(ecalHits.size() >= MinEcalSizeToAccept && nGood >= 5){
+		if(ecalHits.size() >= MinEcalSizeToAccept && nGood >= MinEcalSizeToAccept){
 			// for(int i = 0; i < ecalHits.size(); i++ ){
 			// 	i
 			// }
@@ -408,7 +408,6 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d.pdf", plotIndex));
 			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d.png", plotIndex));
 			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d.svg", plotIndex));
-			plotIndex ++;
 		}
 		my_canvas->Clear();
 		plot->Reset();
@@ -446,16 +445,16 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		my_canvas->cd();
 		gPad->SetGrid(1);
 		my_canvas->Update();
-		if(ecalHits.size() >= MinEcalSizeToAccept && nGood >= 5){
+		if(ecalHits.size() >= MinEcalSizeToAccept && nGoodD >= MinEcalSizeToAccept){
 			plot->Draw("zcol");
 			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.pdf", plotIndex));
 			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.png", plotIndex));
 			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.svg", plotIndex));
-			plotIndex ++;
 		}
 		my_canvas->Clear();
 		plot->Reset();
 	}
+	plotIndex ++;
 
 	// outputFile << endl << endl;
 	// outputFile << "ENEVT LOOPED = " << eventNo << endl << endl;
