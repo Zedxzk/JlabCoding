@@ -3,6 +3,8 @@
 #include "TPaletteAxis.h"
 #include "TLatex.h"
 
+const Int_t minEventsPer5Channel = 20;
+
 namespace figuresInCosmicRaysTest {
     void initPlotStyleOfHits2D(plotEcalHits2D& obj);
     void setPlotStyleOfHits1D(plotEcalHits1D& hist1D, bool ecal);
@@ -311,6 +313,111 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
     }
 }
 
+namespace cutsFunctions{
+    void neighborCut(vector<Int_t> column, vector<Int_t> row, vector<bool> & hasNeighbor, vector<bool> & multiNeighbor){
+            // 假设坐标数组 coords 格式为 {{x1, y1}, {x2, y2}, ...}
+            // cut those events without neighbor
+            if(column.size() != row.size()){
+                cout 
+                << "Invalid input of cutsFunctions::neighborCuts()"<< endl;
+                exit(1);
+            }
+            vector<pair<int, int>> coordinatesEcal (column.size(),{100, 100});
+            for(size_t i = 0; i < column.size(); i++){
+                coordinatesEcal[i].first =  column[0];
+                coordinatesEcal[i].second = row[1];
+            }
+            //  define the neighbros that we want to accept
+            vector<pair<int, int>> offsets = {
+                {-1,  3}, {0,  3}, { 1,  3},
+                {-1,  2}, {0,  2}, { 1,  2},
+                {-1,  1}, {0,  1}, { 1,  1},
+                {-1,  0},          { 1,  0}, 
+                {-1, -1}, {0, -1}, { 1, -1},
+                {-1, -2}, {0, -2}, { 1, -2},
+                {-1, -3}, {0, -3}, { 1, -3}
+            };
+            // looking for a neighbor
+            // use set to speed up searching
+            set<pair<int, int>> coords_set (coordinatesEcal.begin() , coordinatesEcal.end());
+            vector<pair<int, int>> result;
+            // 使用基于索引的循环遍历所有的坐标
+            for (size_t i = 0; i < coordinatesEcal.size(); ++i) {
+                // if(hasNeighbor[i]) continue;
+                int x = coordinatesEcal[i].first;
+                int y = coordinatesEcal[i].second;
+                for (auto &offset : offsets) {
+                    int dx = offset.first;
+                    int dy = offset.second;
+                    pair<int, int> neighbor = {x + dx, y + dy};
+                    auto it = coords_set.find(neighbor);
+                    if (it != coords_set.end()) {
+                        size_t neighborIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), neighbor));
+                        hasNeighbor[i] = true;
+                        hasNeighbor[neighborIndex] = true;
+                        // 检查特定邻居 (x-1, y) 和 (x+1, y)
+                        pair<int, int> leftNeighbor = {x - 1, y};  // (x-1, y)
+                        pair<int, int> rightNeighbor = {x + 1, y};  // (x+1, y)
 
+                        bool foundLeft = (coords_set.find(leftNeighbor) != coords_set.end());
+                        bool foundRight = (coords_set.find(rightNeighbor) != coords_set.end());
+
+                        // 如果都找到了，修改 multiNeighbor 标志
+                        // if (foundLeft && foundRight) {
+                        // 	size_t leftIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), leftNeighbor));
+                        // 	size_t rightIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), rightNeighbor));
+                        // 	multiNeighbor[i] = true;
+                        // 	multiNeighbor[leftIndex] = true;  // 修改 (x-1, y) 对应的 multiNeighbor
+                        // 	multiNeighbor[rightIndex] = true;  // 修改 (x+1, y) 对应的 multiNeighbor
+                        // }
+
+                        if (foundRight) {
+                            size_t leftIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), leftNeighbor));
+                            multiNeighbor[i] = true;
+                            multiNeighbor[leftIndex] = true;  // 修改 (x-1, y) 对应的 multiNeighbor
+                        }
+
+                        if (foundLeft) {
+                            size_t rightIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), rightNeighbor));
+                            multiNeighbor[i] = true;
+                            multiNeighbor[rightIndex] = true;  // 修改 (x+1, y) 对应的 multiNeighbor
+                        }
+                        break;
+                    }
+                }
+            }
+            return ;
+    }
+
+    void goodTrackIn5Columns(vector<Int_t> column, vector<Int_t> row, vector<bool> & insideNarrowTrack){
+        if(column.size() != insideNarrowTrack.size()){
+            cout<< "Size of insideNarrowTrack = " << insideNarrowTrack.size() << "; size of Column = " << column.size() << endl;
+            cout << "Invalid Input of cutsFunctions::goodTrackIn5Columns(vector<Int_t> column, vector<Int_t> row, vector<bool> & insideNarrowTrack)" << endl;
+            exit(1);
+        }
+        vector<Int_t> eventsPerColumn(sizeOfEcal, 0);
+        vector<bool>  goodColumn(sizeOfEcal, false);
+        for(auto i : column){
+            eventsPerColumn[i] += 1;
+        }
+        for(int i = 0; i < sizeOfEcal; i++){
+            Int_t sum = eventsPerColumn[i] + eventsPerColumn[i + 1] + eventsPerColumn[i + 2] + eventsPerColumn[i + 3] + eventsPerColumn[i + 4] ;
+            if(sum >= minEventsPer5Channel){
+                goodColumn[i] = true;
+                goodColumn[i + 1] = true;
+                goodColumn[i + 2] = true;
+                goodColumn[i + 3] = true;
+                goodColumn[i + 4] = true;
+            }
+        }
+        for (int i = 0; i < column.size(); i++) {
+        if (goodColumn[i]) {
+            insideNarrowTrack[i] = true;  // 标记满足条件的列
+        }
+    }
+}
+
+}
 using namespace figuresInCosmicRaysTest;
+using namespace cutsFunctions;
 #endif

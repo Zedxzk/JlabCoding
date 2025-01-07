@@ -176,9 +176,26 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	//  ... fill historgrams or trees ...
 	// japp->RootFillUnLock(this);
 	vector<const DECALDigiHit *> ecalDigitHits;
+	vector<Int_t> col_ECAL_digiHits;
+	vector<Int_t> row_ECAL_digiHits;
+	
 	vector<const DECALHit *> ecalHits;
+	vector<Int_t> col_ECAL_Hits;
+	vector<Int_t> row_ECAL_Hits;
+
 	loop->Get(ecalDigitHits);
 	loop->Get(ecalHits);
+
+	for(int i = 0; i < ecalDigitHits.size(); i++){
+		col_ECAL_digiHits.push_back(ecalDigitHits[i]->column);
+		row_ECAL_digiHits.push_back(ecalDigitHits[i]->row);
+	}
+
+	for(int i = 0; i < ecalHits.size(); i++){
+		col_ECAL_Hits.push_back(ecalHits[i]->column);
+		row_ECAL_Hits.push_back(ecalHits[i]->row);
+	}
+
 	// vector<const DFCALHit *>fcalhits;
 	// loop->Get(fcalhits);
 
@@ -193,134 +210,24 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 
 	std::vector<bool> hasNeighbor   (ecalHits.size(), false);
 	std::vector<bool> multiNeighbor (ecalHits.size(), false);
+	std::vector<bool> insideNarrowTrack   (ecalHits.size(), false);
+
 	std::vector<bool> hasNeighborD  (ecalDigitHits.size(), false);
 	std::vector<bool> multiNeighborD(ecalDigitHits.size(), false);
+	std::vector<bool> insideNarrowTrackD   (ecalDigitHits.size(), false);
 
 	// ************************* Start Cutting condition *****************************
 	// cout<<__LINE__<endl;
 	if(addCuts && ecalHits.size() >= MinEcalSizeToAccept){
-		// 假设坐标数组 coords 格式为 {{x1, y1}, {x2, y2}, ...}
-		// cut those events without neighbor
-		vector<pair<int, int>> coordinatesEcal (ecalHits.size(),{100, 100});
-		vector<pair<int, int>> coordinatesEcalD(ecalDigitHits.size(),{100, 100});
-		for(size_t i = 0; i < ecalHits.size(); i++){
-			coordinatesEcal[i].first =  ecalHits[i] -> column;
-			coordinatesEcal[i].second = ecalHits[i] -> row;
-		}
-		for(size_t i = 0; i < ecalHits.size(); i++){
-			coordinatesEcalD[i].first =  ecalDigitHits[i] -> column;
-			coordinatesEcalD[i].second = ecalDigitHits[i] -> row;
-		}
-		//  define the neighbros that we want to accept
-		vector<pair<int, int>> offsets = {
-			{-1,  3}, {0,  3}, { 1,  3},
-			{-1,  2}, {0,  2}, { 1,  2},
-			{-1,  1}, {0,  1}, { 1,  1},
-			{-1,  0},          { 1,  0}, 
-			{-1, -1}, {0, -1}, { 1, -1},
-			{-1, -2}, {0, -2}, { 1, -2},
-			{-1, -3}, {0, -3}, { 1, -3}
-		};
-		// looking for a neighbor
-		set<pair<int, int>> coords_set (coordinatesEcal.begin() , coordinatesEcal.end() );
-		set<pair<int, int>> coords_setD(coordinatesEcalD.begin(), coordinatesEcalD.end());
-        vector<pair<int, int>> result;
-		// 使用基于索引的循环遍历所有的坐标
-		for (size_t i = 0; i < coordinatesEcal.size(); ++i) {
-			// if(hasNeighbor[i]) continue;
-			int x = coordinatesEcal[i].first;
-			int y = coordinatesEcal[i].second;
-			for (auto &offset : offsets) {
-				int dx = offset.first;
-				int dy = offset.second;
-				pair<int, int> neighbor = {x + dx, y + dy};
-				auto it = coords_set.find(neighbor);
-				if (it != coords_set.end()) {
-					size_t neighborIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), neighbor));
-					hasNeighbor[i] = true;
-					hasNeighbor[neighborIndex] = true;
-					// 检查特定邻居 (x-1, y) 和 (x+1, y)
-					pair<int, int> leftNeighbor = {x - 1, y};  // (x-1, y)
-					pair<int, int> rightNeighbor = {x + 1, y};  // (x+1, y)
-
-					bool foundLeft = coords_set.find(leftNeighbor) != coords_set.end();
-					bool foundRight = coords_set.find(rightNeighbor) != coords_set.end();
-
-					// 如果都找到了，修改 multiNeighbor 标志
-					// if (foundLeft && foundRight) {
-					// 	size_t leftIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), leftNeighbor));
-					// 	size_t rightIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), rightNeighbor));
-					// 	multiNeighbor[i] = true;
-					// 	multiNeighbor[leftIndex] = true;  // 修改 (x-1, y) 对应的 multiNeighbor
-					// 	multiNeighbor[rightIndex] = true;  // 修改 (x+1, y) 对应的 multiNeighbor
-					// }
-
-					if (foundRight) {
-						size_t leftIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), leftNeighbor));
-						multiNeighbor[i] = true;
-						multiNeighbor[leftIndex] = true;  // 修改 (x-1, y) 对应的 multiNeighbor
-					}
-
-					if (foundLeft) {
-						size_t rightIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), rightNeighbor));
-						multiNeighbor[i] = true;
-						multiNeighbor[rightIndex] = true;  // 修改 (x+1, y) 对应的 multiNeighbor
-					}
-
-					break;
-				}
-			}
-		}
-
-
-		for (size_t i = 0; i < coordinatesEcalD.size(); ++i) {
-			// if(hasNeighborD[i] && multiNeighborD[i]) continue;
-			int x = coordinatesEcalD[i].first;
-			int y = coordinatesEcalD[i].second;
-			for (auto &offset : offsets) {
-				int dx = offset.first;
-				int dy = offset.second;
-				pair<int, int> neighbor = {x + dx, y + dy};
-				auto it = coords_setD.find(neighbor);
-				if (it != coords_setD.end()) {
-					size_t neighborIndex = distance(coordinatesEcalD.begin(), find(coordinatesEcalD.begin(), coordinatesEcalD.end(), neighbor));
-					hasNeighborD[i] = true;
-					hasNeighborD[neighborIndex] = true;
-					// 检查特定邻居 (x-1, y) 和 (x+1, y)
-					pair<int, int> leftNeighbor = {x - 1, y};  // (x-1, y)
-					pair<int, int> rightNeighbor = {x + 1, y};  // (x+1, y)
-
-					bool foundLeft = coords_setD.find(leftNeighbor) != coords_setD.end();
-					bool foundRight = coords_setD.find(rightNeighbor) != coords_setD.end();
-
-					// 如果都找到了，修改 multiNeighbor 标志
-					// if (foundLeft && foundRight) {
-					// 	size_t leftIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), leftNeighbor));
-					// 	size_t rightIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), rightNeighbor));
-					// 	multiNeighbor[i] = true;
-					// 	multiNeighbor[leftIndex] = true;  // 修改 (x-1, y) 对应的 multiNeighbor
-					// 	multiNeighbor[rightIndex] = true;  // 修改 (x+1, y) 对应的 multiNeighbor
-					// }
-
-					if (foundRight) {
-						size_t leftIndex = distance(coordinatesEcalD.begin(), find(coordinatesEcalD.begin(), coordinatesEcalD.end(), leftNeighbor));
-						multiNeighborD[i] = true;
-						multiNeighborD[leftIndex] = true;  // 修改 (x-1, y) 对应的 multiNeighbor
-					}
-
-					if (foundLeft) {
-						size_t rightIndex = distance(coordinatesEcal.begin(), find(coordinatesEcal.begin(), coordinatesEcal.end(), rightNeighbor));
-						multiNeighborD[i] = true;
-						multiNeighborD[rightIndex] = true;  // 修改 (x+1, y) 对应的 multiNeighbor
-					}
-					break;
-				}
-			}
-		}
+		neighborCut(col_ECAL_digiHits, row_ECAL_digiHits, hasNeighborD, multiNeighborD);
+		neighborCut(col_ECAL_Hits, row_ECAL_Hits, hasNeighbor, multiNeighbor);
+		goodTrackIn5Columns(col_ECAL_digiHits, row_ECAL_digiHits, insideNarrowTrackD);
+		goodTrackIn5Columns(col_ECAL_Hits, row_ECAL_Hits, insideNarrowTrack);
 		
 		}
+
 		for(size_t i = 0; i < ecalHits.size(); i++){
-			if(addCuts){
+			if(addNeighborCuts){
 			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> column >= 20);
 			goodChannelEvent[i] = goodChannelEvent[i] && (hasNeighbor[i]);
 			goodChannelEvent[i] = goodChannelEvent[i] && (!multiNeighbor[i]);
@@ -329,12 +236,15 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 				goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> t >= cutsConstants::HitsPeakPosLowerLimit );
 				goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> t <= cutsConstants::HitsPeakPosUpperLimit);
 			}
+			if(addNarrowTracnCut){
+				goodChannelEvent[i] = goodChannelEvent[i] && insideNarrowTrack[i];
+			}
 			if(goodChannelEvent[i]) nGood ++;
 		}
 		// cout << "goodChannelEvent = " << goodChannelEvent << endl;
 
 		for(size_t i = 0; i < ecalDigitHits.size(); i++){
-			if(addCuts){
+			if(addNeighborCuts){
 			// goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> column >= 20);
 			goodChannelEventD[i] = goodChannelEventD[i] && (hasNeighborD[i]);
 			goodChannelEventD[i] = goodChannelEventD[i] && (!multiNeighborD[i]);
@@ -342,6 +252,10 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			if(addTimeCuts){
 			goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> pulse_time >= cutsConstants::digiHitsPeakPosLowerLimit );
 			goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> pulse_time <= cutsConstants::digiHitsPeakPosUpperLimit);
+			}
+			if(addNarrowTracnCut){
+				goodChannelEventD[i] = goodChannelEventD[i] && insideNarrowTrackD[i];
+
 			}
 			if(goodChannelEventD[i]) nGoodD ++;
 		}
@@ -450,11 +364,12 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.pdf", plotIndex));
 			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.png", plotIndex));
 			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.svg", plotIndex));
+			plotIndex ++;
 		}
 		my_canvas->Clear();
 		plot->Reset();
+
 	}
-	plotIndex ++;
 
 	// outputFile << endl << endl;
 	// outputFile << "ENEVT LOOPED = " << eventNo << endl << endl;

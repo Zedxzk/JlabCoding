@@ -28,8 +28,8 @@ const bool addFit = true;
 // #define addBkg
 const bool addBkg = true;
 // const bool addBkg = false;
-const bool needOverView = true;
-// const bool needOverView = false;
+// const bool needOverView = true;
+const bool needOverView = false;
 
 const char perfix[] = "PulseAmplitude";
 const char varName[] = "Amplitude/ADC Counts";
@@ -144,6 +144,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             // }
             hist1D->GetXaxis()->SetTitle("Peak Position/");
             hist1D->GetYaxis()->SetTitle(TString::Format(anotherAxisName,  hist1D->GetXaxis()->GetBinWidth(1)));
+
             if(addFit){
             RooRealVar mean("mean", "mean", 8, varLowerLimit, varUpperLimit);
             RooRealVar sigma("sigma", "sigma", 3, 1e-4, 5);
@@ -159,8 +160,6 @@ void channelsFit(TH2D* hist2D, dataType type) {
             if(!addBkg){
                 frac.setConstant();
             }
-
-
             // model.fitTo(data,RooFit::Extended(kTRUE));
             RooFitResult* result = model.fitTo(data,RooFit::Save(kTRUE),RooFit::Extended(kTRUE));
 
@@ -173,23 +172,41 @@ void channelsFit(TH2D* hist2D, dataType type) {
             data.plotOn(frame);
             model.plotOn(frame);
             model.plotOn(frame, RooFit::Components("cheb"), RooFit::LineStyle(kDashed));
+            // if (frame->GetHist()) {
+            //     frame->GetHist()->SetStats(kTRUE);  // 显示统计信息
+            //     gStyle->SetOptStat("e");  // 选择显示条目、均值和标准差
+            // }
+
+            // // 获取绘制的对象
+            // TH1* hist = dynamic_cast<TH1*>(frame->getObject(0));  // getObject(0) 返回第一个绘制对象
+
+            // // 如果对象是 TH1 类型，设置统计信息
+            // if (hist) {
+            //     hist->SetStats(kTRUE);  // 启用统计框
+            // }
             int dof = 32;  // 这里假设你已经知道自由度的数量
             RooChi2Var chi2("chi2", "chi2", model, data);
 
             // 计算 chi2/dof
             double chi2_dof = frame->chiSquare(3);  // 这里的3是模型参数的个数
 
-            // 创建文本框来显示 chi2/dof
-            TPaveText *pt = new TPaveText(0.60, 0.70, 0.89, 0.89, "BRNDC");
+            // 创建文本框来显示 chi²/dof 和条目数
+            TPaveText *pt = new TPaveText(0.60, 0.70, 0.9, 0.80, "BRNDC");
             pt->SetBorderSize(0);
             pt->SetFillColor(0);
             pt->SetTextAlign(12);  // 文本居中
-            pt->SetTextSize(0.03);
-            pt->SetTextFont(42);
-            // 显示 chi2/dofs
-            pt->AddText(TString::Format("#chi^{2}/dof=%2.2f/%d=%2.1f", chi2_dof * dof, dof, chi2_dof));
-            model.paramOn(frame, RooFit::Parameters(RooArgSet(mean,sigma)), RooFit::Layout(0.6, 0.9,0.7));
-                                    
+            pt->SetTextSize(0.04);
+            pt->SetTextFont(132);
+
+            // 获取数据集的条目数
+            int entries = tempHist->GetEntries();
+
+            // 显示 chi²/dof 和条目数
+            pt->AddText(TString::Format("#chi^{2}/dof = %2.2f/%d = %2.1f", chi2_dof * dof, dof, chi2_dof));
+            pt->AddText(TString::Format("Entries = %d", entries));
+
+            model.paramOn(frame, RooFit::Parameters(RooArgSet(mean,sigma)), RooFit::Layout(0.6, 0.9, 0.7));
+
             zhikunPlotConfig::setRooFitPlotStyleV1(frame);
             frame->SetXTitle(varName);            
             frame->SetYTitle(TString::Format(anotherAxisName,  hist1D->GetXaxis()->GetBinWidth(1)));
