@@ -33,9 +33,14 @@
 using namespace classByZhikun;
 using namespace std;
 namespace cutsConstants{
-	const bool addCuts = true;
-	const Double_t digiHitsPeakPosLowerLimit = 80 ;
-	const Double_t digiHitsPeakPosUpperLimit = 200;
+	// const bool addCuts = true;
+	const bool addCuts = false;
+	const bool addTimeCuts = true;
+	// const bool addTimeCuts = false;
+	const Double_t digiHitsPeakPosLowerLimit = 2400 ;
+	const Double_t digiHitsPeakPosUpperLimit = 2800;
+	const Double_t HitsPeakPosLowerLimit = 66;
+	const Double_t HitsPeakPosUpperLimit = 92;
 }
 
 using namespace std;

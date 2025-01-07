@@ -63,8 +63,8 @@ manual_check_path_template = "/volatile/halld/home/test_lumi/manual_check_{he_ve
 list_file_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 
 # change copy_files as you like if you want to debug, look at log files and don't need to copy files.
-copy_files = False
-# copy_files = True
+# copy_files = False
+copy_files = True
 replace_root_files = True
 # replace_root_files = False
 replace_log_files = True
@@ -92,7 +92,7 @@ def main():
     for he_version in he_versions:
         format_paths(he_version, extraInfo)
             # 执行所有操作
-        copy_all()  # Uncomment to run copy operations
+        # copy_all()  # Uncomment to run copy operations
         errors_1, errors_2 = check_all()
         replace_all(errors_1, errors_2)
         # 保存快速浏览日志到目标文件

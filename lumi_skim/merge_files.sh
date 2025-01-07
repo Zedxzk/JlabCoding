@@ -30,7 +30,10 @@ set n = 1
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he7`)
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he8`)
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he9`)
-foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he10`)
+# foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he10`)
+
+
+foreach file (`awk '{print}' /work/halld/home/zhikun/lumi_skim/list_of_runs/list_of_blanks/list_of_blanks`)
 
 
 
@@ -56,7 +59,7 @@ foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he10`)
   
 #  foreach file1 (`awk '{print}'  individual/list_Run$my_file `)
   
-  foreach file1 (`awk '{print}'  /w/halld-scshelf2101/home/zhikun/lumi_skim/list_of_files/list_of_files_after_exclusion/list_Run$my_file `)
+  foreach file1 (`awk '{print}'  /work/halld/home/zhikun/lumi_skim/list_of_files/list_of_files_after_exclusion/list_Run$my_file `)
      set tmp  = `echo $file1 | sed -e s/.ps//g -e s/evio/root/g`
 
 #     set tmp1 = `echo $tmp | sed -e s/hd_rawdata/ps/g`
@@ -72,7 +75,8 @@ foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he10`)
 
   echo Number of files $nfile
   
-cd /volatile/halld/home/test_lumi/Run$my_file
+# cd /volatile/halld/home/test_lumi/Run$my_file
+cd /volatile/halld/home/zhikun/merged_new_runs/Run$my_file
 
 # rm  ps_$my_file.root
 
@@ -82,7 +86,7 @@ echo `hadd -f ps_$my_file.root $stringList`
 
 echo $stringList 
 
-cd  /work/halld3/home/somov/lumi_skim/lumi_primex3
+cd  /work/halld/home/zhikun/lumi_skim/
 
 end 
 

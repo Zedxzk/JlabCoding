@@ -9,7 +9,8 @@
 using namespace jana;
 using namespace cutsConstants;
 
-const bool printAllAcceptedEventsAfterCuts = false;
+const bool printAllAcceptedEventsAfterCuts = true;
+// const bool printAllAcceptedEventsAfterCuts = false;
 
 
 // Routine used to create our JEventProcessor
@@ -20,7 +21,7 @@ const bool printAllAcceptedEventsAfterCuts = false;
 #include <set>
 
 Int_t plotIndex = 1;
-Int_t MinEcalSizeToAccept = 8;
+Int_t MinEcalSizeToAccept = 0;
 Double_t Threshold = 4;
 extern "C"{
 void InitPlugin(JApplication *app){
@@ -72,14 +73,14 @@ jerror_t JEventProcessor_cosmicRayTestEvio::init(void)
 
 
 	ecalHitsTree = new TTree("EcalHits", "EcalHits"       );
-	ecalHitsTree->Branch("EcalChannelNo"                              , &channelNoByColumn       );
-	ecalHitsTree->Branch("EcalEnergyDistributionByColumn"             , &energyBranchVar        );
-	ecalHitsTree->Branch("EcalTimeDistributionByColumn"               , &timeBranchVar          );
+	ecalHitsTree->Branch("EcalChannelNo"                              , & channelNoByColumn       );
+	ecalHitsTree->Branch("EcalEnergyDistributionByColumn"             , & energyBranchVar        );
+	ecalHitsTree->Branch("EcalTimeDistributionByColumn"               , & timeBranchVar          );
 	ecalDigitHitsTree = new TTree("EcalDigitHits", "EcalDigitHits" );
-	ecalDigitHitsTree->Branch("EcalChannelNo"                              , &digiChannelNoByColumn  );
-	ecalDigitHitsTree->Branch("EcalpulsePeakDistributionByColumn"          , &pulsePeakBranchVar     );
-	ecalDigitHitsTree->Branch("EcalpulseIntegralDistributionByColumn"      , &pulseIntegralBranchVar );
-	ecalDigitHitsTree->Branch("EcalpulseTimeDistributionByColumn"          , &pulseTimeBranchVar     );
+	ecalDigitHitsTree->Branch("EcalChannelNo"                              , & digiChannelNoByColumn  );
+	ecalDigitHitsTree->Branch("EcalpulsePeakDistributionByColumn"          , & pulsePeakBranchVar     );
+	ecalDigitHitsTree->Branch("EcalpulseIntegralDistributionByColumn"      , & pulseIntegralBranchVar );
+	ecalDigitHitsTree->Branch("EcalpulseTimeDistributionByColumn"          , & pulseTimeBranchVar     );
 	// This is called once at program startup. 
 	for(int i = 0;i < 40 ; i++){
 		for(int j = 0; j < 40; j++){
@@ -186,7 +187,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	int nGoodD = 0;
 
 	int col, row;
-	Double_t pulse_integral, pulse_time, pulse_peak, pedestal ;
+	// Double_t pulse_integral, pulse_time, pulse_peak, pedestal ;
 	std::vector<bool> goodChannelEvent(ecalHits.size(), true);
 	std::vector<bool> goodChannelEventD(ecalDigitHits.size(), true);
 
@@ -317,22 +318,31 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			}
 		}
 		
-
+		}
 		for(size_t i = 0; i < ecalHits.size(); i++){
-			goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> column >= 20);
-			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time >= cutsConstants::digiHitsPeakPosLowerLimit );
-			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time <= cutsConstants::digiHitsPeakPosUpperLimit);
+			if(addCuts){
+			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> column >= 20);
 			goodChannelEvent[i] = goodChannelEvent[i] && (hasNeighbor[i]);
 			goodChannelEvent[i] = goodChannelEvent[i] && (!multiNeighbor[i]);
+			}
+			if(addTimeCuts){
+				goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> t >= cutsConstants::HitsPeakPosLowerLimit );
+				goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> t <= cutsConstants::HitsPeakPosUpperLimit);
+			}
 			if(goodChannelEvent[i]) nGood ++;
 		}
-	}
+		// cout << "goodChannelEvent = " << goodChannelEvent << endl;
+
 		for(size_t i = 0; i < ecalDigitHits.size(); i++){
-			goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> column >= 20);
-			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time >= cutsConstants::digiHitsPeakPosLowerLimit );
-			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalDigitHits[i] -> pulse_time <= cutsConstants::digiHitsPeakPosUpperLimit);
+			if(addCuts){
+			// goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> column >= 20);
 			goodChannelEventD[i] = goodChannelEventD[i] && (hasNeighborD[i]);
 			goodChannelEventD[i] = goodChannelEventD[i] && (!multiNeighborD[i]);
+			}
+			if(addTimeCuts){
+			goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> pulse_time >= cutsConstants::digiHitsPeakPosLowerLimit );
+			goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> pulse_time <= cutsConstants::digiHitsPeakPosUpperLimit);
+			}
 			if(goodChannelEventD[i]) nGoodD ++;
 		}
 	
@@ -361,31 +371,43 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	//   *******************        Start to Fill Tree  **********************
 	//   *******************      Ecal Hits Tree       ***********************
 	for (unsigned int i=0;i<ecalHits.size();i++){
+		// cout << "TEST";
 	//if no enough good channel in a single event, or the channels that passed cuts are not enough, discard the trigger
 		if(ecalHits.size() < MinEcalSizeToAccept) break;
+		// cout << "condition 1";
 		if(nGood < 5) break;
+		// cout << "condition 2";
 	// 	if accept the trigger, then go on
 	// 	if the channel did not pass cuts, then it is background, ignore this channel
 		if(!goodChannelEvent[i]) continue;
+		// cout << "condition 3";
 	// 	if it is signal, then fill the tree
 		col = ecalHits[i]->column;
 		row = ecalHits[i]->row;
 		channelNoByColumn      = channelMapByCol[col][row];
 		energyBranchVar        = ecalHits[i] -> E;
 		timeBranchVar          = ecalHits[i] -> t;
+		// cout 
+		// << "timeBranchVar = " << timeBranchVar << endl 
+		// << "energyBranchVar = " << energyBranchVar <<endl;
+
 		ecalHitsTree->Fill();
-		
 		numberGoodChannelEvents ++;
 		plot->Fill(col,row,energyBranchVar);
 	}
+
 	if(printAllAcceptedEventsAfterCuts){
 		my_canvas->cd();
 		gPad->SetGrid(1);
 		my_canvas->Update();
 		if(ecalHits.size() >= MinEcalSizeToAccept && nGood >= 5){
+			// for(int i = 0; i < ecalHits.size(); i++ ){
+			// 	i
+			// }
 			plot->Draw("zcol");
-			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%03d.pdf", plotIndex));
-			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%03d.png", plotIndex));
+			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d.pdf", plotIndex));
+			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d.png", plotIndex));
+			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d.svg", plotIndex));
 			plotIndex ++;
 		}
 		my_canvas->Clear();
@@ -407,14 +429,16 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		pulseIntegralBranchVar = ecalDigitHits[i]->pulse_integral;
 		pulseTimeBranchVar     = ecalDigitHits[i]->pulse_time    ;
 		pulsePeakBranchVar     = ecalDigitHits[i]->pulse_peak - ecalDigitHits[i]->pedestal / 4.0;
-		if(pulsePeakBranchVar < Threshold) continue;
+		// if(pulsePeakBranchVar < Threshold) continue;
 		digiChannelNoByColumn  = channelMapByCol[col][row];
-		if(digiChannelNoByColumn > 800){
-			cout << "(col, row) =  "<< col << " , " << row  << endl;
+		// if(digiChannelNoByColumn > 800){
+		// 	cout << "(col, row) =  "<< col << " , " << row  << endl;
 			
-		}
+		// }
+
 		ecalDigitHitsTree->Fill();
 		numberGoodChannelEvents ++;
+		plot->Fill(col,row,pulsePeakBranchVar);
 	}
 	// getchar();
 	//    ********************** End filling Tree   ********************************
@@ -424,8 +448,9 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		my_canvas->Update();
 		if(ecalHits.size() >= MinEcalSizeToAccept && nGood >= 5){
 			plot->Draw("zcol");
-			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%03d_Digit.pdf", plotIndex));
-			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%03d_Digit.png", plotIndex));
+			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.pdf", plotIndex));
+			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.png", plotIndex));
+			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.svg", plotIndex));
 			plotIndex ++;
 		}
 		my_canvas->Clear();

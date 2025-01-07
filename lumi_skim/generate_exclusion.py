@@ -18,7 +18,7 @@ res_path_1_template = "/work/halld/home/zhikun/lumi_skim/exclusion_dir/res_sasha
 logDir2 = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log"
 res_path_2_template = "/work/halld/home/zhikun/lumi_skim/exclusion_dir/res_alex_{he_version}_{extraInfo}.txt"
 
-files_to_delete_template = "/volatile/halld/home/test_lumi/Run{run_id}/ps_{run_id}_{file_id}.root"
+files_to_delete_template = "/volatile/halld/home/zhikun/merged_new_runs/Run{run_id}/ps_{run_id}_{file_id}.root"
 
 
 list_of_runs_from_mss_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"

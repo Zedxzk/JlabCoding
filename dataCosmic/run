@@ -1,0 +1,1 @@
+hd_root -PPLUGINS=cosmicRayTestEvio -PTT:NO_CCDB=1 -PTT:XML_FILENAME=tt_RunPeriod-2025-01-default.xml evioFiles/hd_rawdata_130161_000.evio

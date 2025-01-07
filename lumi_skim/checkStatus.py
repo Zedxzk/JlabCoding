@@ -7,7 +7,7 @@ he_version = "reprocessed"
 # extra_info = "reprocessed"
 extra_info = ""
 
-# 文件路径定义
+# Variables definition
 # list_file_path = f"/work/halld3/home/somov/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 list_file_path = f"/work/halld/home/zhikun/lumi_skim/list_of_runs_{he_version}"
 # list_of_evio_files = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"
@@ -17,20 +17,20 @@ log_base_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/"
 # log_base_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/"
 res_file = f"res_new_1st_submission_before_reprocessing_{he_version}_{extra_info}.txt"
 
-# 初始化标志变量
+# Initialize flag variable
 has_error = False
 
 
-# 清空或创建 res.txt 文件
+# Clear or create res.txt file
 open(res_file, "w").close()
 
 def print_error(message, color_code):
-    """打印带颜色的错误消息"""
+    """Print message with color"""
     color_code = "\033[1;31m" if color_code == "red" else "\033[1;33m" if color_code == "yellow" else "\033[1;34m"
     print(f"{color_code}{message}\033[0m")
 
 def parse_log_file(log_path):
-    """解析日志文件，返回错误信息和事件数"""
+    """Parse the log file and return error messages and event count"""
     try:
         with open(log_path, "r",errors="ignore") as log_file:
         # with open(log_path, "r") as log_file:
@@ -39,13 +39,15 @@ def parse_log_file(log_path):
         errors = []
         event_count = 0
 
-        # 检查 "There was a crash."
+        # Check "There was a crash."
         if "There was a crash." in log_content:
             errors.append(("red", f"Error: 'There was a crash.' found in {log_path}"))
+            event_count += 1
             return errors, event_count
 
-        # 检查 "words_left_in_file" 错误
+        # Check "words_left_in_file" 错误
         if "words_left_in_file" in log_content:
+            event_count += 1
             errors.append(("blue", f"Error: 'words_left_in_file' found in {log_path}"))
         
         # 提取事件数量
@@ -66,7 +68,7 @@ def parse_log_file(log_path):
         # exit(1)
         return [("red", f"Error reading log file {log_path}: {e}")], 0
 
-# 定义错误严重度的顺序
+# Define the order of error severity
 severity_order = {
     "red": 1,
     "yellow": 2,

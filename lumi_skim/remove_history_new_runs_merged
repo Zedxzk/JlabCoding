@@ -1,0 +1,2182 @@
+{('110737', '002'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110737/ps_110737_002.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110737/ps_110737_002.log',
+ ('110743', '028'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110743/ps_110743_028.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110743/ps_110743_028.log',
+ ('110746', '003'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110746/ps_110746_003.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110746/ps_110746_003.log',
+ ('110771', '014'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110771/ps_110771_014.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110771/ps_110771_014.log',
+ ('110772', '021'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110772/ps_110772_021.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110772/ps_110772_021.log',
+ ('110773', '017'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110773/ps_110773_017.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110773/ps_110773_017.log',
+ ('110774', '052'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110774/ps_110774_052.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110774/ps_110774_052.log',
+ ('110788', '078'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110788/ps_110788_078.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110788/ps_110788_078.log',
+ ('110795', '074'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110795/ps_110795_074.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110795/ps_110795_074.log',
+ ('110800', '122'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110800/ps_110800_122.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110800/ps_110800_122.log',
+ ('110801', '113'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110801/ps_110801_113.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110801/ps_110801_113.log',
+ ('110802', '064'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110802/ps_110802_064.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110802/ps_110802_064.log',
+ ('110808', '005'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110808/ps_110808_005.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110808/ps_110808_005.log',
+ ('110810', '022'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110810/ps_110810_022.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110810/ps_110810_022.log',
+ ('110812', '075'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110812/ps_110812_075.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110812/ps_110812_075.log',
+ ('110814', '056'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110814/ps_110814_056.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110814/ps_110814_056.log',
+ ('110815', '119'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110815/ps_110815_119.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110815/ps_110815_119.log',
+ ('110820', '018'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110820/ps_110820_018.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110820/ps_110820_018.log',
+ ('110820', '045'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110820/ps_110820_045.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110820/ps_110820_045.log',
+ ('110822', '022'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110822/ps_110822_022.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110822/ps_110822_022.log',
+ ('110822', '080'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110822/ps_110822_080.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110822/ps_110822_080.log',
+ ('110829', '015'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110829/ps_110829_015.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110829/ps_110829_015.log',
+ ('110829', '024'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110829/ps_110829_024.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110829/ps_110829_024.log',
+ ('110830', '004'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110830/ps_110830_004.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110830 '
+                    'is empty.',
+ ('110846', '036'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110846/ps_110846_036.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110846/ps_110846_036.log',
+ ('110852', '017'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110852/ps_110852_017.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110852/ps_110852_017.log',
+ ('110852', '083'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110852/ps_110852_083.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110852/ps_110852_083.log',
+ ('110853', '017'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110853/ps_110853_017.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110853 '
+                    'is empty.',
+ ('110853', '074'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110853/ps_110853_074.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110853 '
+                    'is empty.',
+ ('110854', '026'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110854/ps_110854_026.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110854 '
+                    'is empty.',
+ ('110855', '011'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110855/ps_110855_011.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110855 '
+                    'is empty.',
+ ('110856', '033'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110856/ps_110856_033.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110856/ps_110856_033.log',
+ ('110858', '015'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110858/ps_110858_015.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110858/ps_110858_015.log',
+ ('110865', '061'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110865/ps_110865_061.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110865/ps_110865_061.log',
+ ('110865', '066'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110865/ps_110865_066.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110865/ps_110865_066.log',
+ ('110867', '023'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110867/ps_110867_023.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110867/ps_110867_023.log',
+ ('110868', '010'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110868/ps_110868_010.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110868/ps_110868_010.log',
+ ('110869', '029'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110869/ps_110869_029.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110869/ps_110869_029.log',
+ ('110874', '044'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110874/ps_110874_044.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110874/ps_110874_044.log',
+ ('110874', '062'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110874/ps_110874_062.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110874/ps_110874_062.log',
+ ('110875', '046'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110875/ps_110875_046.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110875/ps_110875_046.log',
+ ('110877', '023'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110877/ps_110877_023.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110877/ps_110877_023.log',
+ ('110878', '030'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110878/ps_110878_030.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110878/ps_110878_030.log',
+ ('110905', '007'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110905/ps_110905_007.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110905 '
+                    'is empty.',
+ ('110907', '008'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110907/ps_110907_008.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110907 '
+                    'is empty.',
+ ('110919', '011'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110919/ps_110919_011.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110919/ps_110919_011.log',
+ ('110923', '010'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110923/ps_110923_010.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110923/ps_110923_010.log',
+ ('110931', '002'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110931/ps_110931_002.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110931/ps_110931_002.log',
+ ('110931', '055'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110931/ps_110931_055.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110931/ps_110931_055.log',
+ ('110937', '002'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110937/ps_110937_002.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110937/ps_110937_002.log',
+ ('110942', '108'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110942/ps_110942_108.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110942/ps_110942_108.log',
+ ('110943', '059'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110943/ps_110943_059.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110943/ps_110943_059.log',
+ ('110943', '111'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110943/ps_110943_111.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110943/ps_110943_111.log',
+ ('110944', '036'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110944/ps_110944_036.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110944/ps_110944_036.log',
+ ('110946', '068'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110946/ps_110946_068.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110946 '
+                    'is empty.',
+ ('110951', '014'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110951/ps_110951_014.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110951/ps_110951_014.log',
+ ('110951', '015'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110951/ps_110951_015.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110951/ps_110951_015.log',
+ ('110953', '057'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110953/ps_110953_057.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110953/ps_110953_057.log',
+ ('110954', '051'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110954/ps_110954_051.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110954/ps_110954_051.log',
+ ('110954', '060'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110954/ps_110954_060.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110954/ps_110954_060.log',
+ ('110955', '092'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110955/ps_110955_092.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110955/ps_110955_092.log',
+ ('110955', '102'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110955/ps_110955_102.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110955/ps_110955_102.log',
+ ('110958', '038'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110958/ps_110958_038.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110958/ps_110958_038.log',
+ ('110959', '120'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110959/ps_110959_120.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110959/ps_110959_120.log',
+ ('110961', '030'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110961/ps_110961_030.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110961/ps_110961_030.log',
+ ('110961', '113'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110961/ps_110961_113.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110961/ps_110961_113.log',
+ ('110965', '106'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110965/ps_110965_106.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110965/ps_110965_106.log',
+ ('110966', '029'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110966/ps_110966_029.log\n'
+                    "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110966/ps_110966_029.log',
+ ('110968', '020'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110968/ps_110968_020.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110968/ps_110968_020.log',
+ ('110971', '028'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110971/ps_110971_028.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110971/ps_110971_028.log',
+ ('110971', '034'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110971/ps_110971_034.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110971/ps_110971_034.log',
+ ('110972', '050'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110972/ps_110972_050.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110972/ps_110972_050.log',
+ ('110972', '074'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110972/ps_110972_074.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110972/ps_110972_074.log',
+ ('110972', '085'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110972/ps_110972_085.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110972/ps_110972_085.log',
+ ('110993', '001'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110993/ps_110993_001.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110993/ps_110993_001.log',
+ ('110999', '057'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run110999/ps_110999_057.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run110999/ps_110999_057.log',
+ ('111003', '039'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111003/ps_111003_039.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111003/ps_111003_039.log',
+ ('111005', '006'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111005/ps_111005_006.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111005/ps_111005_006.log',
+ ('111006', '004'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111006/ps_111006_004.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111006/ps_111006_004.log',
+ ('111007', '092'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111007/ps_111007_092.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111007 '
+                    'is empty.',
+ ('111007', '102'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111007/ps_111007_102.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111007 '
+                    'is empty.',
+ ('111009', '050'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111009/ps_111009_050.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111009/ps_111009_050.log',
+ ('111009', '055'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111009/ps_111009_055.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111009/ps_111009_055.log',
+ ('111009', '086'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111009/ps_111009_086.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111009/ps_111009_086.log',
+ ('111018', '033'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111018/ps_111018_033.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111018 '
+                    'is empty.',
+ ('111019', '015'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111019/ps_111019_015.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111019/ps_111019_015.log',
+ ('111022', '006'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111022/ps_111022_006.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111022/ps_111022_006.log',
+ ('111024', '034'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111024/ps_111024_034.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111024/ps_111024_034.log',
+ ('111025', '016'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111025/ps_111025_016.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111025/ps_111025_016.log',
+ ('111030', '015'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111030/ps_111030_015.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111030/ps_111030_015.log',
+ ('111031', '014'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111031/ps_111031_014.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111031/ps_111031_014.log',
+ ('111048', '088'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111048/ps_111048_088.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111048/ps_111048_088.log',
+ ('111048', '122'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111048/ps_111048_122.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111048/ps_111048_122.log',
+ ('111054', '038'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111054/ps_111054_038.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111054/ps_111054_038.log',
+ ('111055', '039'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111055/ps_111055_039.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111055/ps_111055_039.log',
+ ('111062', '061'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111062/ps_111062_061.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111062/ps_111062_061.log',
+ ('111063', '028'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111063/ps_111063_028.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111063/ps_111063_028.log',
+ ('111064', '011'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111064/ps_111064_011.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111064/ps_111064_011.log',
+ ('111064', '028'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111064/ps_111064_028.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111064/ps_111064_028.log',
+ ('111068', '015'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111068/ps_111068_015.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111068/ps_111068_015.log',
+ ('111070', '012'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111070/ps_111070_012.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111070/ps_111070_012.log',
+ ('111078', '007'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111078/ps_111078_007.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111078/ps_111078_007.log',
+ ('111078', '098'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111078/ps_111078_098.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111078/ps_111078_098.log',
+ ('111082', '038'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111082/ps_111082_038.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111082/ps_111082_038.log',
+ ('111083', '023'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111083/ps_111083_023.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111083/ps_111083_023.log',
+ ('111093', '018'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111093/ps_111093_018.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111093/ps_111093_018.log',
+ ('111099', '028'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111099/ps_111099_028.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111099/ps_111099_028.log',
+ ('111101', '016'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111101/ps_111101_016.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111101/ps_111101_016.log',
+ ('111112', '012'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111112/ps_111112_012.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111112/ps_111112_012.log',
+ ('111112', '037'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111112/ps_111112_037.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111112/ps_111112_037.log',
+ ('111114', '000'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111114/ps_111114_000.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111114/ps_111114_000.log',
+ ('111120', '008'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111120/ps_111120_008.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111120/ps_111120_008.log',
+ ('111124', '075'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111124/ps_111124_075.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111124/ps_111124_075.log',
+ ('111124', '111'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111124/ps_111124_111.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111124/ps_111124_111.log',
+ ('111128', '032'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111128/ps_111128_032.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111128/ps_111128_032.log',
+ ('111131', '015'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111131/ps_111131_015.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111131/ps_111131_015.log',
+ ('111132', '048'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111132/ps_111132_048.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111132/ps_111132_048.log',
+ ('111133', '081'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111133/ps_111133_081.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111133/ps_111133_081.log',
+ ('111134', '009'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111134/ps_111134_009.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111134/ps_111134_009.log',
+ ('111135', '090'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111135/ps_111135_090.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111135/ps_111135_090.log',
+ ('111136', '028'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111136/ps_111136_028.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111136/ps_111136_028.log',
+ ('111136', '103'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111136/ps_111136_103.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111136/ps_111136_103.log',
+ ('111140', '016'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111140/ps_111140_016.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111140/ps_111140_016.log',
+ ('111145', '043'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111145/ps_111145_043.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111145/ps_111145_043.log',
+ ('111146', '066'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111146/ps_111146_066.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111146/ps_111146_066.log',
+ ('111148', '095'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111148/ps_111148_095.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111148/ps_111148_095.log',
+ ('111148', '096'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111148/ps_111148_096.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111148/ps_111148_096.log',
+ ('111150', '028'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111150/ps_111150_028.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111150/ps_111150_028.log',
+ ('111151', '022'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111151/ps_111151_022.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111151/ps_111151_022.log',
+ ('111151', '092'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111151/ps_111151_092.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111151/ps_111151_092.log',
+ ('111153', '059'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111153/ps_111153_059.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111153/ps_111153_059.log',
+ ('111156', '065'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111156/ps_111156_065.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111156/ps_111156_065.log',
+ ('111158', '069'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111158/ps_111158_069.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111158/ps_111158_069.log',
+ ('111163', '059'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111163/ps_111163_059.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111163/ps_111163_059.log',
+ ('111163', '084'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111163/ps_111163_084.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111163/ps_111163_084.log',
+ ('111164', '019'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111164/ps_111164_019.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111164/ps_111164_019.log',
+ ('111165', '039'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111165/ps_111165_039.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111165/ps_111165_039.log',
+ ('111171', '072'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111171/ps_111171_072.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111171/ps_111171_072.log',
+ ('111172', '070'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111172/ps_111172_070.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111172/ps_111172_070.log',
+ ('111172', '071'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111172/ps_111172_071.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111172/ps_111172_071.log',
+ ('111173', '036'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111173/ps_111173_036.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111173/ps_111173_036.log',
+ ('111178', '000'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111178/ps_111178_000.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111178/ps_111178_000.log',
+ ('111184', '008'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111184/ps_111184_008.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111184/ps_111184_008.log',
+ ('111187', '008'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111187/ps_111187_008.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111187/ps_111187_008.log',
+ ('111187', '017'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111187/ps_111187_017.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111187/ps_111187_017.log',
+ ('111188', '015'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111188/ps_111188_015.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111188/ps_111188_015.log',
+ ('111210', '017'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111210/ps_111210_017.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111210/ps_111210_017.log',
+ ('111217', '033'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111217/ps_111217_033.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111217/ps_111217_033.log',
+ ('111222', '037'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111222/ps_111222_037.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111222/ps_111222_037.log',
+ ('111232', '101'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111232/ps_111232_101.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111232/ps_111232_101.log',
+ ('111234', '030'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111234/ps_111234_030.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111234/ps_111234_030.log',
+ ('111235', '011'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111235/ps_111235_011.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111235/ps_111235_011.log',
+ ('111237', '097'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111237/ps_111237_097.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111237/ps_111237_097.log',
+ ('111238', '045'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111238/ps_111238_045.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111238/ps_111238_045.log',
+ ('111239', '013'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111239/ps_111239_013.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111239/ps_111239_013.log',
+ ('111239', '066'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111239/ps_111239_066.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111239/ps_111239_066.log',
+ ('111243', '011'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111243/ps_111243_011.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111243/ps_111243_011.log',
+ ('111257', '088'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111257/ps_111257_088.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111257/ps_111257_088.log',
+ ('111259', '040'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111259/ps_111259_040.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111259/ps_111259_040.log',
+ ('111260', '044'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111260/ps_111260_044.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111260/ps_111260_044.log',
+ ('111267', '036'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111267/ps_111267_036.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111267/ps_111267_036.log',
+ ('111268', '078'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111268/ps_111268_078.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111268/ps_111268_078.log',
+ ('111268', '081'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111268/ps_111268_081.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111268/ps_111268_081.log',
+ ('111269', '097'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111269/ps_111269_097.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111269/ps_111269_097.log',
+ ('111272', '007'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111272/ps_111272_007.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111272/ps_111272_007.log',
+ ('111275', '002'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111275/ps_111275_002.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111275/ps_111275_002.log',
+ ('111282', '119'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111282/ps_111282_119.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111282/ps_111282_119.log',
+ ('111283', '013'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111283/ps_111283_013.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111283/ps_111283_013.log',
+ ('111285', '020'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111285/ps_111285_020.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111285/ps_111285_020.log',
+ ('111285', '089'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111285/ps_111285_089.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111285/ps_111285_089.log',
+ ('111287', '005'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111287/ps_111287_005.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111287/ps_111287_005.log',
+ ('111291', '041'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111291/ps_111291_041.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111291/ps_111291_041.log',
+ ('111292', '020'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111292/ps_111292_020.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111292/ps_111292_020.log',
+ ('111294', '037'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111294/ps_111294_037.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111294/ps_111294_037.log',
+ ('111294', '042'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111294/ps_111294_042.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111294/ps_111294_042.log',
+ ('111294', '044'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111294/ps_111294_044.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111294/ps_111294_044.log',
+ ('111298', '027'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111298/ps_111298_027.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111298/ps_111298_027.log',
+ ('111300', '037'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111300/ps_111300_037.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111300/ps_111300_037.log',
+ ('111305', '015'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111305/ps_111305_015.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111305/ps_111305_015.log',
+ ('111330', '052'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111330/ps_111330_052.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111330/ps_111330_052.log',
+ ('111332', '084'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111332/ps_111332_084.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111332/ps_111332_084.log',
+ ('111335', '053'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111335/ps_111335_053.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111335/ps_111335_053.log',
+ ('111335', '078'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111335/ps_111335_078.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111335/ps_111335_078.log',
+ ('111338', '069'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111338/ps_111338_069.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111338/ps_111338_069.log',
+ ('111342', '006'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_006.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111342/ps_111342_006.log',
+ ('111342', '017'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_017.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111342/ps_111342_017.log',
+ ('111342', '048'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111342/ps_111342_048.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111342/ps_111342_048.log',
+ ('111345', '063'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111345/ps_111345_063.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111345/ps_111345_063.log',
+ ('111350', '031'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111350/ps_111350_031.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111350/ps_111350_031.log',
+ ('111353', '021'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111353/ps_111353_021.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111353/ps_111353_021.log',
+ ('111353', '059'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111353/ps_111353_059.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111353/ps_111353_059.log',
+ ('111353', '090'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111353/ps_111353_090.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111353/ps_111353_090.log',
+ ('111356', '014'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111356/ps_111356_014.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111356 '
+                    'is empty.',
+ ('111356', '019'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111356/ps_111356_019.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111356 '
+                    'is empty.',
+ ('111356', '062'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111356/ps_111356_062.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111356 '
+                    'is empty.',
+ ('111356', '088'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111356/ps_111356_088.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111356 '
+                    'is empty.',
+ ('111358', '070'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111358/ps_111358_070.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111358/ps_111358_070.log',
+ ('111359', '005'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111359/ps_111359_005.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111359 '
+                    'is empty.',
+ ('111360', '014'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111360/ps_111360_014.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111360 '
+                    'is empty.',
+ ('111360', '048'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111360/ps_111360_048.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111360 '
+                    'is empty.',
+ ('111361', '011'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111361/ps_111361_011.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111361 '
+                    'is empty.',
+ ('111361', '033'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111361/ps_111361_033.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111361 '
+                    'is empty.',
+ ('111366', '011'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111366/ps_111366_011.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111366/ps_111366_011.log',
+ ('111366', '055'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111366/ps_111366_055.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111366/ps_111366_055.log',
+ ('111367', '088'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111367/ps_111367_088.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111367/ps_111367_088.log',
+ ('111369', '103'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111369/ps_111369_103.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111369/ps_111369_103.log',
+ ('111370', '091'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111370/ps_111370_091.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111370/ps_111370_091.log',
+ ('111370', '092'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111370/ps_111370_092.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111370/ps_111370_092.log',
+ ('111372', '050'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111372/ps_111372_050.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111372/ps_111372_050.log',
+ ('111375', '013'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111375/ps_111375_013.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111375/ps_111375_013.log',
+ ('111375', '056'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111375/ps_111375_056.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111375/ps_111375_056.log',
+ ('111378', '058'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111378/ps_111378_058.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111378/ps_111378_058.log',
+ ('111381', '018'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111381/ps_111381_018.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111381/ps_111381_018.log',
+ ('111382', '053'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111382/ps_111382_053.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111382/ps_111382_053.log',
+ ('111391', '031'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111391/ps_111391_031.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111391/ps_111391_031.log',
+ ('111391', '041'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111391/ps_111391_041.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111391/ps_111391_041.log',
+ ('111393', '029'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111393/ps_111393_029.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111393/ps_111393_029.log',
+ ('111396', '024'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111396/ps_111396_024.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111396/ps_111396_024.log',
+ ('111410', '009'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111410/ps_111410_009.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111410/ps_111410_009.log',
+ ('111419', '034'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111419/ps_111419_034.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111419/ps_111419_034.log',
+ ('111433', '007'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111433/ps_111433_007.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111433/ps_111433_007.log',
+ ('111437', '007'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111437/ps_111437_007.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111437/ps_111437_007.log',
+ ('111438', '032'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111438/ps_111438_032.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111438/ps_111438_032.log',
+ ('111443', '012'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111443/ps_111443_012.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111443/ps_111443_012.log',
+ ('111446', '006'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111446/ps_111446_006.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111446/ps_111446_006.log',
+ ('111446', '026'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111446/ps_111446_026.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111446/ps_111446_026.log',
+ ('111460', '124'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111460/ps_111460_124.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111460/ps_111460_124.log',
+ ('111461', '085'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111461/ps_111461_085.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111461/ps_111461_085.log',
+ ('111475', '086'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111475/ps_111475_086.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111475/ps_111475_086.log',
+ ('111478', '006'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111478/ps_111478_006.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111478/ps_111478_006.log',
+ ('111478', '114'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111478/ps_111478_114.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111478/ps_111478_114.log',
+ ('111480', '026'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111480/ps_111480_026.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111480/ps_111480_026.log',
+ ('111489', '032'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111489/ps_111489_032.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111489/ps_111489_032.log',
+ ('111489', '044'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111489/ps_111489_044.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111489/ps_111489_044.log',
+ ('111492', '081'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111492/ps_111492_081.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111492/ps_111492_081.log',
+ ('111496', '027'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111496/ps_111496_027.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111496/ps_111496_027.log',
+ ('111497', '010'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111497/ps_111497_010.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111497/ps_111497_010.log',
+ ('111498', '063'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111498/ps_111498_063.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111498/ps_111498_063.log',
+ ('111501', '105'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111501/ps_111501_105.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111501/ps_111501_105.log',
+ ('111504', '067'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111504/ps_111504_067.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111504/ps_111504_067.log',
+ ('111508', '033'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111508/ps_111508_033.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111508/ps_111508_033.log',
+ ('111510', '049'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111510/ps_111510_049.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111510/ps_111510_049.log',
+ ('111512', '070'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111512/ps_111512_070.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111512/ps_111512_070.log',
+ ('111513', '051'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111513/ps_111513_051.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111513/ps_111513_051.log',
+ ('111513', '125'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111513/ps_111513_125.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111513/ps_111513_125.log',
+ ('111514', '030'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111514/ps_111514_030.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111514/ps_111514_030.log',
+ ('111528', '018'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111528/ps_111528_018.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111528/ps_111528_018.log',
+ ('111529', '033'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111529/ps_111529_033.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111529/ps_111529_033.log',
+ ('111530', '017'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111530/ps_111530_017.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111530/ps_111530_017.log',
+ ('111530', '057'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111530/ps_111530_057.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111530/ps_111530_057.log',
+ ('111535', '055'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111535/ps_111535_055.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111535/ps_111535_055.log',
+ ('111539', '018'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111539/ps_111539_018.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111539/ps_111539_018.log',
+ ('111539', '093'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111539/ps_111539_093.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111539/ps_111539_093.log',
+ ('111541', '006'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111541/ps_111541_006.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111541/ps_111541_006.log',
+ ('111541', '040'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111541/ps_111541_040.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111541/ps_111541_040.log',
+ ('111548', '011'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111548/ps_111548_011.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111548/ps_111548_011.log',
+ ('111553', '022'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111553/ps_111553_022.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111553/ps_111553_022.log',
+ ('111553', '026'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111553/ps_111553_026.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111553/ps_111553_026.log',
+ ('111554', '009'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111554/ps_111554_009.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111554/ps_111554_009.log',
+ ('111558', '031'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111558/ps_111558_031.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111558/ps_111558_031.log',
+ ('111559', '007'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111559/ps_111559_007.log\n'
+                    "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111559/ps_111559_007.log',
+ ('111562', '031'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111562/ps_111562_031.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111562/ps_111562_031.log',
+ ('111565', '009'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111565/ps_111565_009.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111565/ps_111565_009.log',
+ ('111569', '001'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111569/ps_111569_001.log\n'
+                    "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111569/ps_111569_001.log',
+ ('111569', '003'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111569/ps_111569_003.log\n'
+                    "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111569/ps_111569_003.log',
+ ('111569', '005'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111569/ps_111569_005.log\n'
+                    "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111569/ps_111569_005.log',
+ ('111570', '021'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111570/ps_111570_021.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111570/ps_111570_021.log',
+ ('111573', '021'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111573/ps_111573_021.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111573/ps_111573_021.log',
+ ('111575', '064'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111575/ps_111575_064.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111575/ps_111575_064.log',
+ ('111576', '003'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111576/ps_111576_003.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111576/ps_111576_003.log',
+ ('111580', '018'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111580/ps_111580_018.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111580/ps_111580_018.log',
+ ('111581', '074'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111581/ps_111581_074.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111581/ps_111581_074.log',
+ ('111582', '005'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111582/ps_111582_005.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111582/ps_111582_005.log',
+ ('111584', '097'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111584/ps_111584_097.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111584/ps_111584_097.log',
+ ('111584', '114'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111584/ps_111584_114.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111584/ps_111584_114.log',
+ ('111585', '131'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111585/ps_111585_131.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111585/ps_111585_131.log',
+ ('111586', '112'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111586/ps_111586_112.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111586/ps_111586_112.log',
+ ('111587', '072'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111587/ps_111587_072.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111587/ps_111587_072.log',
+ ('111588', '068'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111588/ps_111588_068.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111588/ps_111588_068.log',
+ ('111590', '063'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111590/ps_111590_063.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111590/ps_111590_063.log',
+ ('111592', '024'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111592/ps_111592_024.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111592/ps_111592_024.log',
+ ('111594', '064'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111594/ps_111594_064.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111594/ps_111594_064.log',
+ ('111595', '044'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111595/ps_111595_044.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111595/ps_111595_044.log',
+ ('111602', '012'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111602/ps_111602_012.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111602/ps_111602_012.log',
+ ('111603', '047'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111603/ps_111603_047.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111603/ps_111603_047.log',
+ ('111606', '045'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111606/ps_111606_045.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111606/ps_111606_045.log',
+ ('111607', '015'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111607/ps_111607_015.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111607/ps_111607_015.log',
+ ('111611', '094'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111611/ps_111611_094.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111611/ps_111611_094.log',
+ ('111611', '112'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111611/ps_111611_112.log\n'
+                    "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111611/ps_111611_112.log',
+ ('111617', '114'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111617/ps_111617_114.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111617/ps_111617_114.log',
+ ('111618', '059'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111618/ps_111618_059.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111618/ps_111618_059.log',
+ ('111624', '137'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111624/ps_111624_137.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111624/ps_111624_137.log',
+ ('111625', '064'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111625/ps_111625_064.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111625/ps_111625_064.log',
+ ('111628', '024'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111628/ps_111628_024.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111628/ps_111628_024.log',
+ ('111640', '067'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111640/ps_111640_067.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111640/ps_111640_067.log',
+ ('111640', '113'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111640/ps_111640_113.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111640/ps_111640_113.log',
+ ('111643', '080'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111643/ps_111643_080.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111643/ps_111643_080.log',
+ ('111643', '081'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111643/ps_111643_081.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111643/ps_111643_081.log',
+ ('111653', '002'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111653/ps_111653_002.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111653/ps_111653_002.log',
+ ('111656', '015'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111656/ps_111656_015.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111656/ps_111656_015.log',
+ ('111663', '015'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111663/ps_111663_015.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111663/ps_111663_015.log',
+ ('111663', '023'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111663/ps_111663_023.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111663/ps_111663_023.log',
+ ('111665', '037'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111665/ps_111665_037.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111665/ps_111665_037.log',
+ ('111666', '016'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111666/ps_111666_016.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111666/ps_111666_016.log',
+ ('111687', '011'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111687/ps_111687_011.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111687/ps_111687_011.log',
+ ('111700', '023'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111700/ps_111700_023.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111700/ps_111700_023.log',
+ ('111712', '004'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111712/ps_111712_004.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111712/ps_111712_004.log',
+ ('111712', '068'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111712/ps_111712_068.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111712/ps_111712_068.log',
+ ('111715', '048'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111715/ps_111715_048.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111715/ps_111715_048.log',
+ ('111723', '046'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111723/ps_111723_046.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111723/ps_111723_046.log',
+ ('111723', '105'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111723/ps_111723_105.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111723/ps_111723_105.log',
+ ('111728', '040'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111728/ps_111728_040.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111728/ps_111728_040.log',
+ ('111731', '028'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111731/ps_111731_028.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111731/ps_111731_028.log',
+ ('111740', '038'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111740/ps_111740_038.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111740/ps_111740_038.log',
+ ('111746', '036'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111746/ps_111746_036.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111746/ps_111746_036.log',
+ ('111749', '101'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111749/ps_111749_101.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111749/ps_111749_101.log',
+ ('111752', '043'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111752/ps_111752_043.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111752/ps_111752_043.log',
+ ('111756', '070'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111756/ps_111756_070.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111756/ps_111756_070.log',
+ ('111759', '094'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111759/ps_111759_094.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111759/ps_111759_094.log',
+ ('111759', '116'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111759/ps_111759_116.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111759/ps_111759_116.log',
+ ('111763', '065'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111763/ps_111763_065.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111763/ps_111763_065.log',
+ ('111772', '049'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111772/ps_111772_049.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111772 '
+                    'is empty.',
+ ('111772', '064'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111772/ps_111772_064.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111772 '
+                    'is empty.',
+ ('111775', '117'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111775/ps_111775_117.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111775/ps_111775_117.log',
+ ('111777', '009'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111777/ps_111777_009.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111777/ps_111777_009.log',
+ ('111778', '089'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111778/ps_111778_089.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111778/ps_111778_089.log',
+ ('111781', '039'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111781/ps_111781_039.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111781/ps_111781_039.log',
+ ('111781', '076'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111781/ps_111781_076.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111781/ps_111781_076.log',
+ ('111781', '077'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111781/ps_111781_077.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111781/ps_111781_077.log',
+ ('111781', '081'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111781/ps_111781_081.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111781/ps_111781_081.log',
+ ('111785', '077'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111785/ps_111785_077.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111785/ps_111785_077.log',
+ ('111785', '107'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111785/ps_111785_107.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111785/ps_111785_107.log',
+ ('111789', '007'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111789/ps_111789_007.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111789/ps_111789_007.log',
+ ('111790', '045'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111790/ps_111790_045.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111790/ps_111790_045.log',
+ ('111790', '070'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111790/ps_111790_070.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111790/ps_111790_070.log',
+ ('111792', '015'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111792/ps_111792_015.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111792/ps_111792_015.log',
+ ('111794', '004'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111794/ps_111794_004.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111794 '
+                    'is empty.',
+ ('111795', '014'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111795/ps_111795_014.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111795/ps_111795_014.log',
+ ('111795', '033'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111795/ps_111795_033.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111795/ps_111795_033.log',
+ ('111801', '022'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111801/ps_111801_022.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111801/ps_111801_022.log',
+ ('111803', '011'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111803/ps_111803_011.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111803/ps_111803_011.log',
+ ('111804', '008'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111804/ps_111804_008.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111804 '
+                    'is empty.',
+ ('111804', '010'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111804/ps_111804_010.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111804 '
+                    'is empty.',
+ ('111804', '018'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111804/ps_111804_018.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111804 '
+                    'is empty.',
+ ('111804', '023'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111804/ps_111804_023.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111804 '
+                    'is empty.',
+ ('111805', '003'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111805/ps_111805_003.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111805/ps_111805_003.log',
+ ('111820', '106'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111820/ps_111820_106.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111820/ps_111820_106.log',
+ ('111821', '064'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111821/ps_111821_064.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111821/ps_111821_064.log',
+ ('111822', '004'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111822/ps_111822_004.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111822 '
+                    'is empty.',
+ ('111824', '016'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111824/ps_111824_016.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111824/ps_111824_016.log',
+ ('111824', '057'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111824/ps_111824_057.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111824/ps_111824_057.log',
+ ('111831', '096'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111831/ps_111831_096.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111831/ps_111831_096.log',
+ ('111831', '097'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111831/ps_111831_097.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111831/ps_111831_097.log',
+ ('111838', '086'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111838/ps_111838_086.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111838/ps_111838_086.log',
+ ('111850', '067'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111850/ps_111850_067.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111850/ps_111850_067.log',
+ ('111856', '047'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111856/ps_111856_047.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111856/ps_111856_047.log',
+ ('111857', '047'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111857/ps_111857_047.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111857/ps_111857_047.log',
+ ('111859', '096'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111859/ps_111859_096.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111859/ps_111859_096.log',
+ ('111860', '106'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111860/ps_111860_106.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111860/ps_111860_106.log',
+ ('111863', '092'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111863/ps_111863_092.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111863 '
+                    'is empty.',
+ ('111865', '017'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111865/ps_111865_017.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111865/ps_111865_017.log',
+ ('111865', '063'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111865/ps_111865_063.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111865/ps_111865_063.log',
+ ('111865', '081'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111865/ps_111865_081.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111865/ps_111865_081.log',
+ ('111866', '017'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111866/ps_111866_017.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111866/ps_111866_017.log',
+ ('111866', '041'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111866/ps_111866_041.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111866/ps_111866_041.log',
+ ('111867', '002'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111867/ps_111867_002.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111867 '
+                    'is empty.',
+ ('111867', '072'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111867/ps_111867_072.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111867 '
+                    'is empty.',
+ ('111867', '112'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111867/ps_111867_112.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111867 '
+                    'is empty.',
+ ('111869', '093'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111869/ps_111869_093.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111869 '
+                    'is empty.',
+ ('111872', '005'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111872/ps_111872_005.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111872 '
+                    'is empty.',
+ ('111873', '068'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111873/ps_111873_068.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111873 '
+                    'is empty.',
+ ('111873', '095'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111873/ps_111873_095.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111873 '
+                    'is empty.',
+ ('111873', '098'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111873/ps_111873_098.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111873 '
+                    'is empty.',
+ ('111880', '025'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111880/ps_111880_025.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111880/ps_111880_025.log',
+ ('111883', '083'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111883/ps_111883_083.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111883/ps_111883_083.log',
+ ('111884', '005'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111884/ps_111884_005.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111884/ps_111884_005.log',
+ ('111885', '014'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111885/ps_111885_014.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111885/ps_111885_014.log',
+ ('111885', '068'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111885/ps_111885_068.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111885/ps_111885_068.log',
+ ('111889', '003'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111889/ps_111889_003.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111889/ps_111889_003.log',
+ ('111889', '012'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111889/ps_111889_012.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111889/ps_111889_012.log',
+ ('111896', '014'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111896/ps_111896_014.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111896/ps_111896_014.log',
+ ('111908', '020'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111908/ps_111908_020.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111908/ps_111908_020.log',
+ ('111910', '000'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111910/ps_111910_000.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111910/ps_111910_000.log',
+ ('111910', '014'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111910/ps_111910_014.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111910/ps_111910_014.log',
+ ('111913', '014'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111913/ps_111913_014.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111913 '
+                    'is empty.',
+ ('111913', '017'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111913/ps_111913_017.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111913 '
+                    'is empty.',
+ ('111915', '020'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111915/ps_111915_020.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111915 '
+                    'is empty.',
+ ('111917', '035'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111917/ps_111917_035.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111917 '
+                    'is empty.',
+ ('111924', '017'): "Error: 'There was a crash.' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111924/ps_111924_017.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111924/ps_111924_017.log',
+ ('111924', '028'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111924/ps_111924_028.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111924/ps_111924_028.log',
+ ('111927', '039'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111927/ps_111927_039.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111927 '
+                    'is empty.',
+ ('111927', '056'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111927/ps_111927_056.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111927 '
+                    'is empty.',
+ ('111928', '009'): 'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111928/ps_111928_009.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111928/ps_111928_009.log',
+ ('111928', '021'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111928/ps_111928_021.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111928/ps_111928_021.log',
+ ('111933', '000'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111933/ps_111933_000.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111933/ps_111933_000.log',
+ ('111933', '004'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111933/ps_111933_004.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111933/ps_111933_004.log',
+ ('111936', '002'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111936/ps_111936_002.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111936/ps_111936_002.log',
+ ('111944', '007'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111944/ps_111944_007.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111944/ps_111944_007.log',
+ ('111950', '011'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111950/ps_111950_011.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111950/ps_111950_011.log',
+ ('111950', '025'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111950/ps_111950_025.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111950/ps_111950_025.log',
+ ('111960', '004'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111960/ps_111960_004.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111960/ps_111960_004.log',
+ ('111962', '002'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111962/ps_111962_002.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111962/ps_111962_002.log',
+ ('111965', '021'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111965/ps_111965_021.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111965/ps_111965_021.log',
+ ('111971', '076'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111971/ps_111971_076.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111971/ps_111971_076.log',
+ ('111972', '032'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111972/ps_111972_032.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111972/ps_111972_032.log',
+ ('111972', '061'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111972/ps_111972_061.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111972/ps_111972_061.log',
+ ('111972', '118'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111972/ps_111972_118.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111972/ps_111972_118.log',
+ ('111974', '027'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111974/ps_111974_027.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111974/ps_111974_027.log',
+ ('111976', '010'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111976/ps_111976_010.log\n'
+                    "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111976/ps_111976_010.log',
+ ('111977', '090'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111977/ps_111977_090.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111977/ps_111977_090.log',
+ ('111978', '020'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111978/ps_111978_020.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111978/ps_111978_020.log',
+ ('111978', '055'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111978/ps_111978_055.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111978/ps_111978_055.log',
+ ('111978', '121'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111978/ps_111978_121.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111978/ps_111978_121.log',
+ ('111984', '016'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111984/ps_111984_016.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111984/ps_111984_016.log',
+ ('111986', '055'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111986/ps_111986_055.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111986/ps_111986_055.log',
+ ('111987', '044'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111987/ps_111987_044.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111987/ps_111987_044.log',
+ ('111988', '054'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111988/ps_111988_054.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111988/ps_111988_054.log',
+ ('111988', '078'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111988/ps_111988_078.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111988/ps_111988_078.log',
+ ('111988', '117'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111988/ps_111988_117.log\n'
+                    'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111988/ps_111988_117.log',
+ ('111989', '040'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111989/ps_111989_040.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111989 '
+                    'is empty.',
+ ('111993', '000'): "Error: 'words_left_in_file' found in "
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111993/ps_111993_000.log\n'
+                    'Error: The directory '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111993 '
+                    'is empty.',
+ ('111997', '035'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111997/ps_111997_035.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111997/ps_111997_035.log',
+ ('111997', '096'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111997/ps_111997_096.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111997/ps_111997_096.log',
+ ('111997', '128'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111997/ps_111997_128.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111997/ps_111997_128.log',
+ ('111998', '033'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111998/ps_111998_033.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111998/ps_111998_033.log',
+ ('111998', '079'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111998/ps_111998_079.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111998/ps_111998_079.log',
+ ('111999', '086'): 'Error: Log file not found '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log/Run111999/ps_111999_086.log\n'
+                    'Error: No events in file '
+                    '/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log/Run111999/ps_111999_086.log'}
+File /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_002.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110743/ps_110743_028.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110746/ps_110746_003.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110771/ps_110771_014.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110772/ps_110772_021.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110773/ps_110773_017.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110774/ps_110774_052.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110788/ps_110788_078.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110795/ps_110795_074.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110800/ps_110800_122.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110801/ps_110801_113.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110802/ps_110802_064.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110808/ps_110808_005.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110810/ps_110810_022.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110812/ps_110812_075.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110814/ps_110814_056.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110815/ps_110815_119.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110820/ps_110820_018.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110820/ps_110820_045.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110822/ps_110822_022.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110822/ps_110822_080.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110829/ps_110829_015.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110829/ps_110829_024.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110830/ps_110830_004.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110846/ps_110846_036.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110852/ps_110852_017.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110852/ps_110852_083.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110853/ps_110853_017.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110853/ps_110853_074.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110854/ps_110854_026.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110855/ps_110855_011.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110856/ps_110856_033.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110858/ps_110858_015.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110865/ps_110865_061.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110865/ps_110865_066.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110867/ps_110867_023.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110868/ps_110868_010.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110869/ps_110869_029.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110874/ps_110874_044.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110874/ps_110874_062.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110875/ps_110875_046.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110877/ps_110877_023.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110878/ps_110878_030.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110905/ps_110905_007.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110907/ps_110907_008.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110919/ps_110919_011.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110923/ps_110923_010.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110931/ps_110931_002.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110931/ps_110931_055.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110937/ps_110937_002.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110942/ps_110942_108.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110943/ps_110943_059.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110943/ps_110943_111.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110944/ps_110944_036.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110946/ps_110946_068.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110951/ps_110951_014.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110951/ps_110951_015.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110953/ps_110953_057.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110954/ps_110954_051.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110954/ps_110954_060.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110955/ps_110955_092.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110955/ps_110955_102.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110958/ps_110958_038.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110959/ps_110959_120.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110961/ps_110961_030.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110961/ps_110961_113.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110965/ps_110965_106.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110966/ps_110966_029.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110968/ps_110968_020.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110971/ps_110971_028.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110971/ps_110971_034.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110972/ps_110972_050.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110972/ps_110972_074.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110972/ps_110972_085.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110993/ps_110993_001.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run110999/ps_110999_057.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111003/ps_111003_039.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111005/ps_111005_006.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111006/ps_111006_004.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111007/ps_111007_092.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111007/ps_111007_102.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111009/ps_111009_050.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111009/ps_111009_055.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111009/ps_111009_086.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111018/ps_111018_033.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111019/ps_111019_015.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111022/ps_111022_006.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111024/ps_111024_034.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111025/ps_111025_016.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111030/ps_111030_015.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111031/ps_111031_014.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111048/ps_111048_088.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111048/ps_111048_122.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111054/ps_111054_038.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111055/ps_111055_039.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111062/ps_111062_061.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111063/ps_111063_028.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111064/ps_111064_011.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111064/ps_111064_028.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111068/ps_111068_015.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111070/ps_111070_012.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111078/ps_111078_007.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111078/ps_111078_098.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111082/ps_111082_038.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111083/ps_111083_023.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111093/ps_111093_018.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111099/ps_111099_028.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111101/ps_111101_016.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111112/ps_111112_012.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111112/ps_111112_037.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111114/ps_111114_000.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111120/ps_111120_008.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111124/ps_111124_075.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111124/ps_111124_111.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111128/ps_111128_032.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111131/ps_111131_015.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111132/ps_111132_048.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111133/ps_111133_081.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111134/ps_111134_009.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111135/ps_111135_090.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111136/ps_111136_028.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111136/ps_111136_103.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111140/ps_111140_016.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111145/ps_111145_043.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111146/ps_111146_066.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111148/ps_111148_095.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111148/ps_111148_096.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111150/ps_111150_028.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111151/ps_111151_022.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111151/ps_111151_092.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111153/ps_111153_059.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111156/ps_111156_065.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111158/ps_111158_069.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111163/ps_111163_059.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111163/ps_111163_084.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111164/ps_111164_019.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111165/ps_111165_039.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111171/ps_111171_072.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111172/ps_111172_070.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111172/ps_111172_071.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111173/ps_111173_036.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111178/ps_111178_000.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111184/ps_111184_008.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111187/ps_111187_008.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111187/ps_111187_017.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111188/ps_111188_015.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111210/ps_111210_017.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111217/ps_111217_033.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111222/ps_111222_037.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111232/ps_111232_101.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111234/ps_111234_030.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111235/ps_111235_011.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111237/ps_111237_097.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111238/ps_111238_045.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111239/ps_111239_013.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111239/ps_111239_066.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111243/ps_111243_011.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111257/ps_111257_088.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111259/ps_111259_040.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111260/ps_111260_044.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111267/ps_111267_036.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111268/ps_111268_078.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111268/ps_111268_081.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111269/ps_111269_097.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111272/ps_111272_007.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111275/ps_111275_002.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111282/ps_111282_119.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111283/ps_111283_013.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111285/ps_111285_020.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111285/ps_111285_089.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111287/ps_111287_005.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111291/ps_111291_041.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111292/ps_111292_020.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111294/ps_111294_037.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111294/ps_111294_042.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111294/ps_111294_044.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111298/ps_111298_027.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111300/ps_111300_037.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111305/ps_111305_015.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111330/ps_111330_052.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111332/ps_111332_084.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111335/ps_111335_053.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111335/ps_111335_078.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111338/ps_111338_069.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111342/ps_111342_006.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111342/ps_111342_017.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111342/ps_111342_048.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111345/ps_111345_063.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111350/ps_111350_031.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111353/ps_111353_021.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111353/ps_111353_059.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111353/ps_111353_090.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111356/ps_111356_014.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111356/ps_111356_019.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111356/ps_111356_062.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111356/ps_111356_088.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111358/ps_111358_070.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111359/ps_111359_005.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111360/ps_111360_014.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111360/ps_111360_048.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111361/ps_111361_011.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111361/ps_111361_033.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111366/ps_111366_011.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111366/ps_111366_055.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111367/ps_111367_088.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111369/ps_111369_103.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111370/ps_111370_091.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111370/ps_111370_092.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111372/ps_111372_050.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111375/ps_111375_013.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111375/ps_111375_056.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111378/ps_111378_058.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111381/ps_111381_018.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111382/ps_111382_053.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111391/ps_111391_031.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111391/ps_111391_041.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111393/ps_111393_029.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111396/ps_111396_024.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111410/ps_111410_009.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111419/ps_111419_034.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111433/ps_111433_007.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111437/ps_111437_007.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111438/ps_111438_032.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111443/ps_111443_012.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111446/ps_111446_006.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111446/ps_111446_026.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111460/ps_111460_124.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111461/ps_111461_085.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111475/ps_111475_086.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111478/ps_111478_006.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111478/ps_111478_114.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111480/ps_111480_026.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111489/ps_111489_032.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111489/ps_111489_044.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111492/ps_111492_081.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111496/ps_111496_027.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111497/ps_111497_010.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111498/ps_111498_063.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111501/ps_111501_105.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111504/ps_111504_067.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111508/ps_111508_033.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111510/ps_111510_049.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111512/ps_111512_070.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111513/ps_111513_051.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111513/ps_111513_125.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111514/ps_111514_030.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111528/ps_111528_018.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111529/ps_111529_033.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111530/ps_111530_017.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111530/ps_111530_057.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111535/ps_111535_055.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111539/ps_111539_018.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111539/ps_111539_093.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111541/ps_111541_006.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111541/ps_111541_040.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111548/ps_111548_011.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111553/ps_111553_022.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111553/ps_111553_026.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111554/ps_111554_009.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111558/ps_111558_031.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111559/ps_111559_007.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111562/ps_111562_031.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111565/ps_111565_009.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111569/ps_111569_001.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111569/ps_111569_003.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111569/ps_111569_005.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111570/ps_111570_021.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111573/ps_111573_021.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111575/ps_111575_064.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111576/ps_111576_003.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111580/ps_111580_018.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111581/ps_111581_074.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111582/ps_111582_005.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111584/ps_111584_097.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111584/ps_111584_114.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111585/ps_111585_131.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111586/ps_111586_112.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111587/ps_111587_072.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111588/ps_111588_068.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111590/ps_111590_063.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111592/ps_111592_024.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111594/ps_111594_064.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111595/ps_111595_044.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111602/ps_111602_012.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111603/ps_111603_047.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111606/ps_111606_045.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111607/ps_111607_015.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111611/ps_111611_094.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111611/ps_111611_112.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111617/ps_111617_114.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111618/ps_111618_059.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111624/ps_111624_137.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111625/ps_111625_064.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111628/ps_111628_024.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111640/ps_111640_067.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111640/ps_111640_113.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111643/ps_111643_080.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111643/ps_111643_081.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111653/ps_111653_002.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111656/ps_111656_015.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111663/ps_111663_015.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111663/ps_111663_023.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111665/ps_111665_037.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111666/ps_111666_016.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111687/ps_111687_011.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111700/ps_111700_023.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111712/ps_111712_004.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111712/ps_111712_068.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111715/ps_111715_048.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111723/ps_111723_046.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111723/ps_111723_105.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111728/ps_111728_040.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111731/ps_111731_028.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111740/ps_111740_038.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111746/ps_111746_036.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111749/ps_111749_101.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111752/ps_111752_043.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111756/ps_111756_070.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111759/ps_111759_094.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111759/ps_111759_116.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111763/ps_111763_065.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111772/ps_111772_049.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111772/ps_111772_064.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111775/ps_111775_117.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111777/ps_111777_009.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111778/ps_111778_089.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111781/ps_111781_039.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111781/ps_111781_076.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111781/ps_111781_077.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111781/ps_111781_081.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111785/ps_111785_077.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111785/ps_111785_107.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111789/ps_111789_007.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111790/ps_111790_045.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111790/ps_111790_070.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111792/ps_111792_015.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111794/ps_111794_004.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111795/ps_111795_014.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111795/ps_111795_033.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111801/ps_111801_022.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111803/ps_111803_011.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111804/ps_111804_008.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111804/ps_111804_010.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111804/ps_111804_018.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111804/ps_111804_023.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111805/ps_111805_003.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111820/ps_111820_106.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111821/ps_111821_064.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111822/ps_111822_004.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111824/ps_111824_016.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111824/ps_111824_057.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111831/ps_111831_096.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111831/ps_111831_097.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111838/ps_111838_086.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111850/ps_111850_067.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111856/ps_111856_047.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111857/ps_111857_047.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111859/ps_111859_096.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111860/ps_111860_106.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111863/ps_111863_092.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111865/ps_111865_017.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111865/ps_111865_063.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111865/ps_111865_081.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111866/ps_111866_017.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111866/ps_111866_041.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111867/ps_111867_002.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111867/ps_111867_072.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111867/ps_111867_112.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111869/ps_111869_093.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111872/ps_111872_005.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111873/ps_111873_068.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111873/ps_111873_095.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111873/ps_111873_098.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111880/ps_111880_025.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111883/ps_111883_083.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111884/ps_111884_005.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111885/ps_111885_014.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111885/ps_111885_068.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111889/ps_111889_003.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111889/ps_111889_012.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111896/ps_111896_014.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111908/ps_111908_020.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111910/ps_111910_000.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111910/ps_111910_014.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111913/ps_111913_014.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111913/ps_111913_017.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111915/ps_111915_020.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111917/ps_111917_035.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111924/ps_111924_017.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111924/ps_111924_028.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111927/ps_111927_039.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111927/ps_111927_056.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111928/ps_111928_009.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111928/ps_111928_021.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111933/ps_111933_000.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111933/ps_111933_004.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111936/ps_111936_002.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111944/ps_111944_007.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111950/ps_111950_011.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111950/ps_111950_025.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111960/ps_111960_004.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111962/ps_111962_002.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111965/ps_111965_021.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111971/ps_111971_076.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111972/ps_111972_032.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111972/ps_111972_061.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111972/ps_111972_118.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111974/ps_111974_027.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111976/ps_111976_010.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111977/ps_111977_090.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111978/ps_111978_020.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111978/ps_111978_055.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111978/ps_111978_121.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111984/ps_111984_016.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111986/ps_111986_055.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111987/ps_111987_044.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111988/ps_111988_054.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111988/ps_111988_078.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111988/ps_111988_117.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111989/ps_111989_040.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111993/ps_111993_000.root deleted successfully.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111997/ps_111997_035.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111997/ps_111997_096.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111997/ps_111997_128.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111998/ps_111998_033.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111998/ps_111998_079.root does not exist.
+File /volatile/halld/home/zhikun/merged_new_runs/Run111999/ps_111999_086.root does not exist.
+Total excluded files number = 427
+(dpl) [zhikun@ifarm2401 lumi_skim]$ 
