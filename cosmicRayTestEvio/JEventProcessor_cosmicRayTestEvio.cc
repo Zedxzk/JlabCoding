@@ -21,7 +21,7 @@ const bool printAllAcceptedEventsAfterCuts = true;
 #include <set>
 
 Int_t plotIndex = 1;
-Int_t MinEcalSizeToAccept = 0;
+Int_t MinEcalSizeToAccept = 8;
 Double_t Threshold = 4;
 extern "C"{
 void InitPlugin(JApplication *app){
