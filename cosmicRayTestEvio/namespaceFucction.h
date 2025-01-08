@@ -453,15 +453,15 @@ namespace cutsFunctions{
                 goodColumn[i + 2] = true;
                 goodColumn[i + 3] = true;
                 goodColumn[i + 4] = true;
-                cout 
-                <<"******************" << " i = "  << i  << "******************" << endl
-                << "column " << i << ", events = " << eventsPerColumn[i] << endl
-                << "column " << i + 1 << ", events = " << eventsPerColumn[i + 1] << endl
-                << "column " << i + 2 << ", events = " << eventsPerColumn[i + 2] << endl
-                << "column " << i + 3 << ", events = " << eventsPerColumn[i + 3] << endl
-                << "column " << i + 4 << ", events = " << eventsPerColumn[i + 4] << endl
-                <<"******************" << " i = "  << i  << "******************" << endl << endl;
-                ;
+                // cout 
+                // <<"******************" << " i = "  << i  << "******************" << endl
+                // << "column " << i << ", events = " << eventsPerColumn[i] << endl
+                // << "column " << i + 1 << ", events = " << eventsPerColumn[i + 1] << endl
+                // << "column " << i + 2 << ", events = " << eventsPerColumn[i + 2] << endl
+                // << "column " << i + 3 << ", events = " << eventsPerColumn[i + 3] << endl
+                // << "column " << i + 4 << ", events = " << eventsPerColumn[i + 4] << endl
+                // <<"******************" << " i = "  << i  << "******************" << endl << endl;
+                // ;
             }
         }
         for (int i = 0; i < Int_t(column.size()); i++) {

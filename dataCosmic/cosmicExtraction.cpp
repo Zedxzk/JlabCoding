@@ -23,13 +23,13 @@
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
 
 using namespace std;
-const bool addFit = true;
-// const bool addFit = false;
+// const bool addFit = true;
+const bool addFit = false;
 // #define addBkg
 const bool addBkg = true;
 // const bool addBkg = false;
-// const bool needOverView = true;
-const bool needOverView = false;
+const bool needOverView = true;
+// const bool needOverView = false;
 
 const char perfix[] = "PulseAmplitude";
 const char varName[] = "Amplitude/ADC Counts";
@@ -347,8 +347,8 @@ void cosmicExtraction() {
         hist2d->SetMinimum(0);
         hist2d->SetMaximum(maxZ);
         hist2d->Draw("COLZ");
-        tempCanvas->Print("test.pdf");
-        tempCanvas->Print("test.png");
+        tempCanvas->Print("channels_Overview.pdf");
+        tempCanvas->Print("channels_Overview.png");
             // 遍历 X 轴范围，每 40 个 bin 输出一个图像
         for (int i = 0; i < maxColumnIndex; i += 40) {
             // 设置用户范围，限制 x 轴和 y 轴的显示范围
@@ -398,8 +398,8 @@ void cosmicExtraction() {
         overview->GetYaxis()->CenterTitle();
         overview->GetZaxis()->CenterTitle();
         overview->Draw("COLZ");
-        tempCanvas2->Print("overview.pdf");
-        tempCanvas2->Print("overview.png");
+        tempCanvas2->Print("ECAL_overview.pdf");
+        tempCanvas2->Print("ECAL_overview.png");
     }
     
     channelsFit(hist2d, Energy);
