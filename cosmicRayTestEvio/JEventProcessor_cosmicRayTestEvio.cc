@@ -222,12 +222,12 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	// ************************* Start Cutting condition *****************************
 	// cout<<__LINE__<endl;
 	if(addCuts){
-		// timeWindowCut(time_ECAL_Hits,cutsConstants:: HitsPeakPosLowerLimit, cutsConstants::HitsPeakPosUpperLimit, goodChannelEvent);
-		// timeWindowCut(time_ECAL_digiHits, cutsConstants::digiHitsPeakPosLowerLimit, cutsConstants::digiHitsPeakPosUpperLimit, goodChannelEventD);
+		timeWindowCut(time_ECAL_Hits,cutsConstants:: HitsPeakPosLowerLimit, cutsConstants::HitsPeakPosUpperLimit, goodChannelEvent);
+		timeWindowCut(time_ECAL_digiHits, cutsConstants::digiHitsPeakPosLowerLimit, cutsConstants::digiHitsPeakPosUpperLimit, goodChannelEventD);
 		// // neighborCut(col_ECAL_digiHits, row_ECAL_digiHits, hasNeighborD, multiNeighborD);
 		// // neighborCut(col_ECAL_Hits, row_ECAL_Hits, hasNeighbor, multiNeighbor);
-		// goodTrackIn5Columns(col_ECAL_Hits, row_ECAL_Hits, insideNarrowTrack, goodChannelEvent);
-		// goodTrackIn5Columns(col_ECAL_digiHits, row_ECAL_digiHits, insideNarrowTrackD, goodChannelEventD);
+		goodTrackIn5Columns(col_ECAL_Hits,goodChannelEvent);
+		goodTrackIn5Columns(col_ECAL_digiHits,  goodChannelEventD);
 		}
 
 		for(size_t i = 0; i < ecalHits.size(); i++){
@@ -343,8 +343,8 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.pdf", plotIndex));
 			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.png", plotIndex));
 			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.svg", plotIndex));
-			plotIndex ++;
 		}
+		plotIndex ++;
 		my_canvas->Clear();
 		plot->Reset();
 
