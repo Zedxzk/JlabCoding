@@ -226,8 +226,8 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		timeWindowCut(time_ECAL_digiHits, cutsConstants::digiHitsPeakPosLowerLimit, cutsConstants::digiHitsPeakPosUpperLimit, goodChannelEventD);
 		// // // neighborCut(col_ECAL_digiHits, row_ECAL_digiHits, hasNeighborD, multiNeighborD);
 		// // // neighborCut(col_ECAL_Hits, row_ECAL_Hits, hasNeighbor, multiNeighbor);
-		// goodTrackIn5Columns(col_ECAL_Hits,goodChannelEvent);
-		// goodTrackIn5Columns(col_ECAL_digiHits,  goodChannelEventD);
+		goodTrackIn5Columns(col_ECAL_Hits,goodChannelEvent);
+		goodTrackIn5Columns(col_ECAL_digiHits,  goodChannelEventD);
 		}
 
 		for(size_t i = 0; i < ecalHits.size(); i++){

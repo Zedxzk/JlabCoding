@@ -5,7 +5,7 @@
 </title>
 <desc>
 Creator: ROOT Version 6.24/04
-CreationDate: Tue Jan  7 20:11:34 2025</desc>
+CreationDate: Tue Jan  7 20:16:26 2025</desc>
 <defs>
 </defs>
 <rect x="0.5" y="0" width="566.929" height="371.959" fill="white"/>
@@ -40,18 +40,14 @@ CreationDate: Tue Jan  7 20:11:34 2025</desc>
 <rect x="408.689" y="282.688" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="454.043" y="282.688" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="488.059" y="282.688" width="11.3386" height="7.43917" fill="#263da8"/>
-<rect x="57.1929" y="275.249" width="11.3386" height="7.43917" fill="#263da8"/>
-<rect x="68.5315" y="275.249" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="170.579" y="275.249" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="238.61" y="275.249" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="431.366" y="275.249" width="11.3386" height="7.43917" fill="#263da8"/>
-<rect x="57.1929" y="267.81" width="11.3386" height="7.43917" fill="#1652cc"/>
 <rect x="170.579" y="267.81" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="238.61" y="267.81" width="11.3386" height="7.43917" fill="#1652cc"/>
 <rect x="386.012" y="267.81" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="431.366" y="267.81" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="499.398" y="267.81" width="11.3386" height="7.43917" fill="#263da8"/>
-<rect x="57.1929" y="260.371" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="261.287" y="260.371" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="306.642" y="260.371" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="317.98" y="260.371" width="11.3386" height="7.43917" fill="#263da8"/>
@@ -172,7 +168,6 @@ CreationDate: Tue Jan  7 20:11:34 2025</desc>
 <rect x="181.917" y="89.2701" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="317.98" y="89.2701" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="386.012" y="89.2701" width="11.3386" height="7.43917" fill="#263da8"/>
-<rect x="102.547" y="81.8309" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="170.579" y="81.8309" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="204.594" y="81.8309" width="11.3386" height="7.43917" fill="#263da8"/>
 <rect x="272.626" y="81.8309" width="11.3386" height="7.43917" fill="#263da8"/>

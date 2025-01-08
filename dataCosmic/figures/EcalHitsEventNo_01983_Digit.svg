@@ -5,7 +5,7 @@
 </title>
 <desc>
 Creator: ROOT Version 6.24/04
-CreationDate: Tue Jan  7 20:11:17 2025</desc>
+CreationDate: Tue Jan  7 20:16:15 2025</desc>
 <defs>
 </defs>
 <rect x="0.5" y="0" width="566.929" height="371.959" fill="white"/>
@@ -36,7 +36,6 @@ CreationDate: Tue Jan  7 20:11:17 2025</desc>
 <rect x="147.902" y="141.344" width="11.3386" height="7.43917" fill="#fae61c"/>
 <rect x="147.902" y="133.905" width="11.3386" height="7.43917" fill="#73bd80"/>
 <rect x="147.902" y="111.588" width="11.3386" height="7.43917" fill="#52ba91"/>
-<rect x="204.594" y="104.148" width="11.3386" height="7.43917" fill="#1063db"/>
 <rect x="136.563" y="96.7092" width="11.3386" height="7.43917" fill="#b2bc65"/>
 <rect x="136.563" y="89.2701" width="11.3386" height="7.43917" fill="#0e8ed0"/>
 <rect x="136.563" y="81.8309" width="11.3386" height="7.43917" fill="#73bd80"/>
@@ -45,7 +44,6 @@ CreationDate: Tue Jan  7 20:11:17 2025</desc>
 <rect x="136.563" y="52.0742" width="11.3386" height="7.43917" fill="#94be71"/>
 <rect x="193.256" y="52.0742" width="11.3386" height="7.43917" fill="#1063db"/>
 <rect x="136.563" y="44.635" width="11.3386" height="7.43917" fill="#73bd80"/>
-<rect x="397.35" y="44.635" width="11.3386" height="7.43917" fill="#1063db"/>
 <rect x="136.563" y="37.1959" width="11.3386" height="7.43917" fill="#73bd80"/>
 <path d="M57.1929,334.763h 453.543" fill="none" stroke="black"/>
 <path d="M57.1929,325.836v 8.927" fill="none" stroke="black"/>

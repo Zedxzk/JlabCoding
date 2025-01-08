@@ -5,7 +5,7 @@
 </title>
 <desc>
 Creator: ROOT Version 6.24/04
-CreationDate: Tue Jan  7 20:11:21 2025</desc>
+CreationDate: Tue Jan  7 20:16:18 2025</desc>
 <defs>
 </defs>
 <rect x="0.5" y="0" width="566.929" height="371.959" fill="white"/>
@@ -13,9 +13,6 @@ CreationDate: Tue Jan  7 20:11:21 2025</desc>
 <rect x="57.1929" y="37.1959" width="453.543" height="297.567" fill="none" stroke="black"/>
 <rect x="57.1929" y="37.1959" width="453.543" height="297.567" fill="white"/>
 <rect x="57.1929" y="37.1959" width="453.543" height="297.567" fill="none" stroke="black"/>
-<rect x="340.657" y="327.323" width="11.3386" height="7.43917" fill="#1380d5"/>
-<rect x="340.657" y="312.445" width="11.3386" height="7.43917" fill="#1380d5"/>
-<rect x="340.657" y="305.006" width="11.3386" height="7.43917" fill="#1380d5"/>
 <rect x="329.319" y="290.128" width="11.3386" height="7.43917" fill="#1171d8"/>
 <rect x="329.319" y="275.249" width="11.3386" height="7.43917" fill="#1171d8"/>
 <rect x="329.319" y="267.81" width="11.3386" height="7.43917" fill="#1063db"/>
@@ -26,7 +23,6 @@ CreationDate: Tue Jan  7 20:11:21 2025</desc>
 <rect x="317.98" y="238.053" width="11.3386" height="7.43917" fill="#73bd80"/>
 <rect x="317.98" y="230.614" width="11.3386" height="7.43917" fill="#d0ba59"/>
 <rect x="317.98" y="223.175" width="11.3386" height="7.43917" fill="#94be71"/>
-<rect x="351.996" y="223.175" width="11.3386" height="7.43917" fill="#0da7c2"/>
 <rect x="306.642" y="215.736" width="11.3386" height="7.43917" fill="#f9f90e"/>
 <rect x="306.642" y="208.297" width="11.3386" height="7.43917" fill="#fae61c"/>
 <rect x="306.642" y="200.858" width="11.3386" height="7.43917" fill="#fcd12b"/>
@@ -42,10 +38,6 @@ CreationDate: Tue Jan  7 20:11:21 2025</desc>
 <rect x="272.626" y="111.588" width="11.3386" height="7.43917" fill="#1dafb3"/>
 <rect x="283.965" y="111.588" width="11.3386" height="7.43917" fill="#94be71"/>
 <rect x="272.626" y="66.9525" width="11.3386" height="7.43917" fill="#0da7c2"/>
-<rect x="261.287" y="59.5134" width="11.3386" height="7.43917" fill="#089dcc"/>
-<rect x="261.287" y="52.0742" width="11.3386" height="7.43917" fill="#1dafb3"/>
-<rect x="261.287" y="44.635" width="11.3386" height="7.43917" fill="#0da7c2"/>
-<rect x="261.287" y="37.1959" width="11.3386" height="7.43917" fill="#1dafb3"/>
 <path d="M57.1929,334.763h 453.543" fill="none" stroke="black"/>
 <path d="M57.1929,325.836v 8.927" fill="none" stroke="black"/>
 <path d="M57.1929,37.1959v 297.567" fill="none" stroke="black" stroke-dasharray=" 1, 2"/>
