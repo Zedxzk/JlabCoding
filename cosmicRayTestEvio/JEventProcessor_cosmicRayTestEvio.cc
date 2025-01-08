@@ -221,6 +221,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 
 	// ************************* Start Cutting condition *****************************
 	// cout<<__LINE__<endl;
+	cout << "Event ID = " << plotIndex << endl;
 	if(addCuts){
 		timeWindowCut(time_ECAL_Hits,cutsConstants:: HitsPeakPosLowerLimit, cutsConstants::HitsPeakPosUpperLimit, goodChannelEvent);
 		timeWindowCut(time_ECAL_digiHits, cutsConstants::digiHitsPeakPosLowerLimit, cutsConstants::digiHitsPeakPosUpperLimit, goodChannelEventD);
