@@ -31,8 +31,8 @@ const bool needChannelView = true;
 // const bool needChannelView = false;
 const bool addFit = true;
 // const bool addFit = false;
-// const bool convolveGaussian = true;
-const bool convolveGaussian = false;
+const bool convolveGaussian = true;
+// const bool convolveGaussian = false;
 // const bool addBkg = false;
 // #define addBkg
 const bool addBkg = true;
