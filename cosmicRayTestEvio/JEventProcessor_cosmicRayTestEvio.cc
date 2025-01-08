@@ -268,7 +268,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	//if no enough good channel in a single event, or the channels that passed cuts are not enough, discard the trigger
 		if(Int_t(ecalHits.size()) < MinEcalSizeToAccept) break;
 		// cout << "condition 1";
-		if(nGood < 5) break;
+		if(nGood < MinEcalSizeToAccept) break;
 		// cout << "condition 2";
 	// 	if accept the trigger, then go on
 	// 	if the channel did not pass cuts, then it is background, ignore this channel
@@ -311,7 +311,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	for (unsigned int i=0;i<ecalDigitHits.size();i++){
 		//if no enough good channel in a single event, or the channels that passed cuts are not enough, discard the trigger
 		if(Int_t(ecalDigitHits.size()) < MinEcalSizeToAccept) break;
-		if(nGoodD < 5) break;
+		if(nGoodD < MinEcalSizeToAccept) break;
 		// 	if accept the trigger, then go on
 		// 	if the channel did not pass cuts, then it is background, ignore this channel
 		if(!goodChannelEventD[i]) continue;
