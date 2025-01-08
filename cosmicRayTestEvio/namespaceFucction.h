@@ -314,7 +314,7 @@ void initPlotStyleOfHits2D(plotEcalHits2D& obj) {
 }
 
 namespace cutsFunctions{
-    void neighborCut(vector<Int_t> column, vector<Int_t> row, vector<bool> & hasNeighbor, vector<bool> & multiNeighbor){
+    void neighborCut(vector<Int_t> column, vector<Int_t> row, vector<bool> & hasNeighbor, vector<bool> & multiNeighbor, vector<bool> & goodChannelEvent){
             // 假设坐标数组 coords 格式为 {{x1, y1}, {x2, y2}, ...}
             // cut those events without neighbor
             if(column.size() != row.size()){
@@ -389,16 +389,18 @@ namespace cutsFunctions{
             return ;
     }
 
-    void goodTrackIn5Columns(vector<Int_t> column, vector<Int_t> row, vector<bool> & insideNarrowTrack){
-        if(column.size() != insideNarrowTrack.size()){
+    void goodTrackIn5Columns(vector<Int_t> column, vector<Int_t> row, vector<bool> & insideNarrowTrack, vector<bool> & goodChannelEvent){
+        if(column.size() != insideNarrowTrack.size() || goodChannelEvent.size() != column.size()){
             cout<< "Size of insideNarrowTrack = " << insideNarrowTrack.size() << "; size of Column = " << column.size() << endl;
             cout << "Invalid Input of cutsFunctions::goodTrackIn5Columns(vector<Int_t> column, vector<Int_t> row, vector<bool> & insideNarrowTrack)" << endl;
             exit(1);
         }
         vector<Int_t> eventsPerColumn(sizeOfEcal, 0);
         vector<bool>  goodColumn(sizeOfEcal, false);
-        for(auto i : column){
-            eventsPerColumn[i] += 1;
+        for(Int_t i = 0; i < Int_t(column.size()); i++){
+            if(goodChannelEvent[i]){
+                eventsPerColumn[i] += 1;
+            }
         }
         for(int i = 0; i < sizeOfEcal; i++){
             Int_t sum = eventsPerColumn[i] + eventsPerColumn[i + 1] + eventsPerColumn[i + 2] + eventsPerColumn[i + 3] + eventsPerColumn[i + 4] ;
@@ -408,15 +410,42 @@ namespace cutsFunctions{
                 goodColumn[i + 2] = true;
                 goodColumn[i + 3] = true;
                 goodColumn[i + 4] = true;
+                // cout 
+                // <<"******************" << " i = "  << i  << "******************" << endl
+                // << "column " << i << ", events = " << eventsPerColumn[i] << endl
+                // << "column " << i + 1 << ", events = " << eventsPerColumn[i + 1] << endl
+                // << "column " << i + 2 << ", events = " << eventsPerColumn[i + 2] << endl
+                // << "column " << i + 3 << ", events = " << eventsPerColumn[i + 3] << endl
+                // << "column " << i + 4 << ", events = " << eventsPerColumn[i + 4] << endl
+                // <<"******************" << " i = "  << i  << "******************" << endl
+                // ;
             }
         }
-        for (int i = 0; i < column.size(); i++) {
-        if (goodColumn[i]) {
-            insideNarrowTrack[i] = true;  // 标记满足条件的列
+        for (int i = 0; i < Int_t(column.size()); i++) {
+            if (goodColumn[column[i]]) {
+                insideNarrowTrack[i] = true;  // 标记满足条件的列
+                goodChannelEvent[i] = goodChannelEvent[i] && insideNarrowTrack[i];
+            }
         }
     }
-}
 
+    void timeWindowCut(vector<Double_t> time, Double_t time1, Double_t time2, vector<bool> & goodChannelEvent ){
+            if(time.size() != goodChannelEvent.size() || time.size() != goodChannelEvent.size()){
+                cout 
+                << "Invalid input of cutsFunctions::timeWindowCut()"<< endl;
+                exit(1);
+            }
+            for(Int_t i = 0; i < Int_t(time.size()); i++){
+                if(goodChannelEvent[i]){
+                    if(time[i] < time1){
+                        goodChannelEvent[i] = false;
+                    }
+                    if(time[i] > time2){
+                        goodChannelEvent[i] = false;
+                    }
+                }
+            }
+    }
 }
 using namespace figuresInCosmicRaysTest;
 using namespace cutsFunctions;

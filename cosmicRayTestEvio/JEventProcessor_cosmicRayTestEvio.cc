@@ -178,27 +178,31 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	vector<const DECALDigiHit *> ecalDigitHits;
 	vector<Int_t> col_ECAL_digiHits;
 	vector<Int_t> row_ECAL_digiHits;
-	
+	vector<Double_t> time_ECAL_digiHits;
+
 	vector<const DECALHit *> ecalHits;
 	vector<Int_t> col_ECAL_Hits;
 	vector<Int_t> row_ECAL_Hits;
+	vector<Double_t> time_ECAL_Hits;
+
 
 	loop->Get(ecalDigitHits);
 	loop->Get(ecalHits);
 
-	for(int i = 0; i < ecalDigitHits.size(); i++){
+	for(int i = 0; i < Int_t(ecalDigitHits.size()); i++){
 		col_ECAL_digiHits.push_back(ecalDigitHits[i]->column);
 		row_ECAL_digiHits.push_back(ecalDigitHits[i]->row);
+		time_ECAL_digiHits.push_back(ecalDigitHits[i]->pulse_time);
 	}
 
-	for(int i = 0; i < ecalHits.size(); i++){
+	for(int i = 0; i < Int_t(ecalHits.size()); i++){
 		col_ECAL_Hits.push_back(ecalHits[i]->column);
 		row_ECAL_Hits.push_back(ecalHits[i]->row);
+		time_ECAL_Hits.push_back(ecalHits[i]->t);
 	}
 
 	// vector<const DFCALHit *>fcalhits;
 	// loop->Get(fcalhits);
-
 
 	int nGood  = 0;
 	int nGoodD = 0;
@@ -206,57 +210,32 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	int col, row;
 	// Double_t pulse_integral, pulse_time, pulse_peak, pedestal ;
 	std::vector<bool> goodChannelEvent(ecalHits.size(), true);
-	std::vector<bool> goodChannelEventD(ecalDigitHits.size(), true);
-
 	std::vector<bool> hasNeighbor   (ecalHits.size(), false);
 	std::vector<bool> multiNeighbor (ecalHits.size(), false);
 	std::vector<bool> insideNarrowTrack   (ecalHits.size(), false);
 
+	std::vector<bool> goodChannelEventD(ecalDigitHits.size(), true);
 	std::vector<bool> hasNeighborD  (ecalDigitHits.size(), false);
 	std::vector<bool> multiNeighborD(ecalDigitHits.size(), false);
 	std::vector<bool> insideNarrowTrackD   (ecalDigitHits.size(), false);
 
 	// ************************* Start Cutting condition *****************************
 	// cout<<__LINE__<endl;
-	if(addCuts && ecalHits.size() >= MinEcalSizeToAccept){
-		neighborCut(col_ECAL_digiHits, row_ECAL_digiHits, hasNeighborD, multiNeighborD);
-		neighborCut(col_ECAL_Hits, row_ECAL_Hits, hasNeighbor, multiNeighbor);
-		goodTrackIn5Columns(col_ECAL_digiHits, row_ECAL_digiHits, insideNarrowTrackD);
-		goodTrackIn5Columns(col_ECAL_Hits, row_ECAL_Hits, insideNarrowTrack);
-		
+	if(addCuts){
+		// timeWindowCut(time_ECAL_Hits,cutsConstants:: HitsPeakPosLowerLimit, cutsConstants::HitsPeakPosUpperLimit, goodChannelEvent);
+		// timeWindowCut(time_ECAL_digiHits, cutsConstants::digiHitsPeakPosLowerLimit, cutsConstants::digiHitsPeakPosUpperLimit, goodChannelEventD);
+		// // neighborCut(col_ECAL_digiHits, row_ECAL_digiHits, hasNeighborD, multiNeighborD);
+		// // neighborCut(col_ECAL_Hits, row_ECAL_Hits, hasNeighbor, multiNeighbor);
+		// goodTrackIn5Columns(col_ECAL_Hits, row_ECAL_Hits, insideNarrowTrack, goodChannelEvent);
+		// goodTrackIn5Columns(col_ECAL_digiHits, row_ECAL_digiHits, insideNarrowTrackD, goodChannelEventD);
 		}
 
 		for(size_t i = 0; i < ecalHits.size(); i++){
-			if(addNeighborCuts){
-			// goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> column >= 20);
-			goodChannelEvent[i] = goodChannelEvent[i] && (hasNeighbor[i]);
-			goodChannelEvent[i] = goodChannelEvent[i] && (!multiNeighbor[i]);
-			}
-			if(addTimeCuts){
-				goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> t >= cutsConstants::HitsPeakPosLowerLimit );
-				goodChannelEvent[i] = goodChannelEvent[i] && (ecalHits[i] -> t <= cutsConstants::HitsPeakPosUpperLimit);
-			}
-			if(addNarrowTracnCut){
-				goodChannelEvent[i] = goodChannelEvent[i] && insideNarrowTrack[i];
-			}
 			if(goodChannelEvent[i]) nGood ++;
 		}
 		// cout << "goodChannelEvent = " << goodChannelEvent << endl;
 
 		for(size_t i = 0; i < ecalDigitHits.size(); i++){
-			if(addNeighborCuts){
-			// goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> column >= 20);
-			goodChannelEventD[i] = goodChannelEventD[i] && (hasNeighborD[i]);
-			goodChannelEventD[i] = goodChannelEventD[i] && (!multiNeighborD[i]);
-			}
-			if(addTimeCuts){
-			goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> pulse_time >= cutsConstants::digiHitsPeakPosLowerLimit );
-			goodChannelEventD[i] = goodChannelEventD[i] && (ecalDigitHits[i] -> pulse_time <= cutsConstants::digiHitsPeakPosUpperLimit);
-			}
-			if(addNarrowTracnCut){
-				goodChannelEventD[i] = goodChannelEventD[i] && insideNarrowTrackD[i];
-
-			}
 			if(goodChannelEventD[i]) nGoodD ++;
 		}
 	
@@ -287,7 +266,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	for (unsigned int i=0;i<ecalHits.size();i++){
 		// cout << "TEST";
 	//if no enough good channel in a single event, or the channels that passed cuts are not enough, discard the trigger
-		if(ecalHits.size() < MinEcalSizeToAccept) break;
+		if(Int_t(ecalHits.size()) < MinEcalSizeToAccept) break;
 		// cout << "condition 1";
 		if(nGood < 5) break;
 		// cout << "condition 2";
@@ -314,12 +293,12 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		my_canvas->cd();
 		gPad->SetGrid(1);
 		my_canvas->Update();
-		if(ecalHits.size() >= MinEcalSizeToAccept && nGood >= MinEcalSizeToAccept){
+		if(Int_t(ecalHits.size()) >= MinEcalSizeToAccept && nGood >= MinEcalSizeToAccept){
 			// for(int i = 0; i < ecalHits.size(); i++ ){
 			// 	i
 			// }
 			plot->Draw("zcol");
-			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d.pdf", plotIndex));
+			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d.pdf", plotIndex));
 			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d.png", plotIndex));
 			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d.svg", plotIndex));
 		}
@@ -331,7 +310,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	//   ******************     ECAL Digit Hits Tree      ***************************
 	for (unsigned int i=0;i<ecalDigitHits.size();i++){
 		//if no enough good channel in a single event, or the channels that passed cuts are not enough, discard the trigger
-		if(ecalDigitHits.size() < MinEcalSizeToAccept) break;
+		if(Int_t(ecalDigitHits.size()) < MinEcalSizeToAccept) break;
 		if(nGoodD < 5) break;
 		// 	if accept the trigger, then go on
 		// 	if the channel did not pass cuts, then it is background, ignore this channel
@@ -359,9 +338,9 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 		my_canvas->cd();
 		gPad->SetGrid(1);
 		my_canvas->Update();
-		if(ecalHits.size() >= MinEcalSizeToAccept && nGoodD >= MinEcalSizeToAccept){
+		if(Int_t(ecalHits.size()) >= MinEcalSizeToAccept && nGoodD >= MinEcalSizeToAccept){
 			plot->Draw("zcol");
-			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.pdf", plotIndex));
+			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.pdf", plotIndex));
 			// my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.png", plotIndex));
 			my_canvas->Print(TString::Format("./figures/EcalHitsEventNo_%05d_Digit.svg", plotIndex));
 			plotIndex ++;
@@ -376,6 +355,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 	// eventNo += 1;
 
 	// cout << numberGoodChannelEvents << endl;
+	// getchar();
 	return NOERROR;
 }
 
