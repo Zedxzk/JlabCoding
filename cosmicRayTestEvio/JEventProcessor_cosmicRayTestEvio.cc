@@ -9,8 +9,8 @@
 using namespace jana;
 using namespace cutsConstants;
 
-const bool printAllAcceptedEventsAfterCuts = true;
-// const bool printAllAcceptedEventsAfterCuts = false;
+// const bool printAllAcceptedEventsAfterCuts = true;
+const bool printAllAcceptedEventsAfterCuts = false;
 
 
 // Routine used to create our JEventProcessor

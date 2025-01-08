@@ -30,10 +30,10 @@ set n = 1
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he7`)
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he8`)
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he9`)
-# foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he10`)
+foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he10`)
 
 
-foreach file (`awk '{print}' /work/halld/home/zhikun/lumi_skim/list_of_runs/list_of_blanks/list_of_blanks`)
+# foreach file (`awk '{print}' /work/halld/home/zhikun/lumi_skim/list_of_runs/list_of_blanks/list_of_blanks`)
 
 
 

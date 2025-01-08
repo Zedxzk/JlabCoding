@@ -6,12 +6,13 @@ he_versions = ["reprocessed"]
 extraInfo = "for_exclusion"
 
 num_excluded_files = 0
-# delete_files = True
-delete_files = False
+delete_files = True
+# delete_files = False
 
 # # Paths Setup
 rootDir1 = "/volatile/halld/home/zhikun/ver05_lumi/"
 logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
+
 res_path_1_template = "/work/halld/home/zhikun/lumi_skim/exclusion_dir/res_sasha_{he_version}_{extraInfo}.txt"
 
 # rootDir2 = "/volatile/halld/home/zhikun/merged_new_runs"

@@ -23,13 +23,20 @@
 #include "/work/halld/home/zhikun/zhikunTemplates/zhikunPlotStyle/zhikunPalette.h"
 
 using namespace std;
-// const bool addFit = true;
-const bool addFit = false;
+const bool needOverView = true;
+// const bool needOverView = false;
+const bool needColumnView = true;
+// const bool needColumnView = false;
+const bool needChannelView = true;
+// const bool needChannelView = false;
+const bool addFit = true;
+// const bool addFit = false;
+// const bool convolveGaussian = true;
+const bool convolveGaussian = false;
+// const bool addBkg = false;
 // #define addBkg
 const bool addBkg = true;
 // const bool addBkg = false;
-const bool needOverView = true;
-// const bool needOverView = false;
 
 const char perfix[] = "PulseAmplitude";
 const char varName[] = "Amplitude/ADC Counts";
@@ -152,11 +159,33 @@ void channelsFit(TH2D* hist2D, dataType type) {
             RooRealVar a1("a1", "a1", 0.5, -1.0, 1.0); // 切比雪夫多项式的一阶系数
             RooRealVar x("x", "x", varLowerLimit, varUpperLimit);
 
+            RooRealVar gaussMean("gaussMean", "Mean of Gaussian", 0);
+            RooRealVar gaussSigma("gaussSigma", "Width of Gaussian", 1, 0.001, 10);
+            RooGaussian gauss("gauss", "Gaussian PDF", x, gaussMean, gaussSigma);
+
             RooLandau landau("landau", "landau", x, mean, sigma);
+            RooFFTConvPdf landauGauss("landauGauss", "Landau (X) Gaussian", x, landau, gauss);
             RooChebychev cheb("cheb", "cheb", x, RooArgList(a0));
+
+            RooAbsPdf* signalModel = nullptr;
+
+            if (convolveGaussian) {
+                // 使用卷积模型
+                signalModel = new RooFFTConvPdf("landauGauss", "Landau (X) Gaussian", x, landau, gauss);
+                // std::cout << "Using convoluted Landau + Gaussian model." << std::endl;
+            } else {
+                // 直接使用Landau模型
+                signalModel = &landau;
+                // std::cout << "Using Landau model without convolution." << std::endl;
+            }
+
             RooRealVar frac("frac", "frac", 1.0, 0.0, 1.0);  // 加权参数
             RooDataHist data("data", "data", x, hist1D);
-            RooAddPdf model("model", "landau + cheb", RooArgList(landau, cheb), RooArgList(frac));
+            // RooAddPdf model("model", "landau + cheb", RooArgList(landau, cheb), RooArgList(frac));
+            RooAddPdf model("model", "signal + cheb", RooArgList(*signalModel, cheb), RooArgList(frac));
+
+            model.fitTo(data);
+
             if(!addBkg){
                 frac.setConstant();
             }
@@ -213,8 +242,15 @@ void channelsFit(TH2D* hist2D, dataType type) {
             frame->Draw();
             c->Update();
             pt->Draw();
-            c->SaveAs(outputDir + histName.Data() + "_FIT.pdf");
-            c->SaveAs(outputDir + histName.Data() + "_FIT.png");
+            if(convolveGaussian){
+                c->SaveAs(outputDir + histName.Data() + "_FIT_Convolved_Gaussian.pdf");
+                c->SaveAs(outputDir + histName.Data() + "_FIT_Convolved_Gaussian.png");
+            }
+            else{
+                c->SaveAs(outputDir + histName.Data() + "_FIT.pdf");
+                c->SaveAs(outputDir + histName.Data() + "_FIT.png");
+            }
+
             
             Double_t width = estimateFWHM(landau, mean, sigma);
             // std::cout<<__LINE__<<endl;
@@ -323,8 +359,9 @@ void cosmicExtraction() {
     hist2d->GetYaxis()->SetTitle(varName);
     hist2d->GetXaxis()->CenterTitle();
     hist2d->GetYaxis()->CenterTitle();
-    tree->Project("hist2d", Form("%s:%s", branNameVar.Data(), branNameChannelNo.Data()));
-
+    // tree->Project("hist2d", Form("%s:%s", branNameVar.Data(), branNameChannelNo.Data()));
+    tree->Project("hist2d", Form("%s:%s", branNameVar.Data(), branNameChannelNo.Data()), Form("%s>4", branNameVar.Data()));
+    // tree->Project("hist2d", Form("%s:%s", branNameVar.Data(), branNameChannelNo.Data()), Form("%s > 4", branNameVar.Data()));
     if(needOverView){
         // 检查目录是否存在
         if (gSystem->AccessPathName(dirPath.c_str()) == 0) {
@@ -350,32 +387,31 @@ void cosmicExtraction() {
         tempCanvas->Print("channels_Overview.pdf");
         tempCanvas->Print("channels_Overview.png");
             // 遍历 X 轴范围，每 40 个 bin 输出一个图像
-        for (int i = 0; i < maxColumnIndex; i += 40) {
-            // 设置用户范围，限制 x 轴和 y 轴的显示范围
-            hist2d->GetXaxis()->SetRangeUser(i, i + 40);
+        if(needColumnView){
+            for (int i = 0; i < maxColumnIndex; i += 40) {
+                // 设置用户范围，限制 x 轴和 y 轴的显示范围
+                hist2d->GetXaxis()->SetRangeUser(i, i + 40);
 
-            // 创建临时画布并绘制直方图
-            TCanvas* tempCanvas = new TCanvas("", "", 2400, 2400);
-            hist2d->Draw("COLZ");
+                // 创建临时画布并绘制直方图
+                TCanvas* tempCanvas = new TCanvas("", "", 2400, 2400);
+                hist2d->Draw("COLZ");
 
-            // 设置轴标签和标题
-            hist2d->GetXaxis()->SetTitle("Channel Number");
-            hist2d->GetYaxis()->SetTitle(varName);
-            hist2d->GetXaxis()->CenterTitle();
-            hist2d->GetYaxis()->CenterTitle();
-            hist2d->SetTitle(Form("column %02d",39 -  i / 40));
-            // gStyle->SetTitleAlign(23);  //
-            // 保存图像
-            tempCanvas->Print(Form((columnViewName+".pdf").c_str(),39 -  i / 40));
-            tempCanvas->Print(Form((columnViewName+".png").c_str(),39 -  i / 40));
+                // 设置轴标签和标题
+                hist2d->GetXaxis()->SetTitle("Channel Number");
+                hist2d->GetYaxis()->SetTitle(varName);
+                hist2d->GetXaxis()->CenterTitle();
+                hist2d->GetYaxis()->CenterTitle();
+                hist2d->SetTitle(Form("column %02d",39 -  i / 40));
+                // gStyle->SetTitleAlign(23);  //
+                // 保存图像
+                tempCanvas->Print(Form((columnViewName+".pdf").c_str(),39 -  i / 40));
+                tempCanvas->Print(Form((columnViewName+".png").c_str(),39 -  i / 40));
 
-            // 清理临时画布
-            delete tempCanvas;
+                // 清理临时画布
+                delete tempCanvas;
+            }
         }
         TCanvas* tempCanvas2 = new TCanvas("","", 2400, 1600);
-
-
-        
 
         Long64_t nEntries = tree->GetEntries();
         for (Long64_t i = 0; i < nEntries; ++i) {
@@ -390,19 +426,26 @@ void cosmicExtraction() {
         }
         tempCanvas2->cd();
         gPad->SetGrid();
-        zhikunPalette::setPaletteStyleV1(overview);
         overview->GetXaxis()->SetTitle("column");
         overview->GetYaxis()->SetTitle("row");
         overview->GetZaxis()->SetTitle("entries");
         overview->GetXaxis()->CenterTitle();
         overview->GetYaxis()->CenterTitle();
         overview->GetZaxis()->CenterTitle();
+        // tempCanvas2->SetPad(0.1, 0.1, 0.5, 0.5);  // 保持边距，不覆盖调色板
+        // TPad *pad1 = new TPad("pad1", "Pad for 2D Histogram", 0.1, 0.1, 0.9, 0.9);
+        // pad1->Draw();
+        // pad1->cd();
+        tempCanvas2->SetMargin(0.08, 0.20, 0.10, 0.05); // 左边距 0.1, 右边距 0.05, 下边距 0.1, 上边距 0.05
         overview->Draw("COLZ");
+        zhikunPalette::setPaletteStyleV2(overview);
+
         tempCanvas2->Print("ECAL_overview.pdf");
         tempCanvas2->Print("ECAL_overview.png");
     }
-    
-    channelsFit(hist2d, Energy);
+    if(needChannelView){
+        channelsFit(hist2d, Energy);
+    }
 
     fileInPtr->Close();
     delete fileInPtr;
