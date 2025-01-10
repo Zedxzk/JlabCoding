@@ -109,14 +109,15 @@ def processAimConfig(line, dataDict):
             target_column = dataDict[index]['column']
             target_row = dataDict[index]['row']
             currentADC = dataDict[index]['mean']
+            channel_index = dataDict[index]['index']
             # 对比 col_2 和 row_2 是否与 target_column 和 target_row 匹配
             if col_2 == target_column and row_2 == target_row:
                 # print(f"成果比对: 在 index {index} 下，col_2={col_2} 和 row_2={row_2} 与目标值 column={target_column} 和 row={target_row} 匹配。")
                 newHV = calculateVoltage(currentVoltage, currentADC)
                 # print(f"(column, row) = ({col_2}, {row_2})")
                 if(newHV == False):
-                    print(f"(column, row) = ({col_2}, {row_2})")
-                    print("Illigal fitting result of mean! Return current voltage setting of this channel.")
+                    print(f"(column, row) = ({col_2}, {row_2}) or index = {index}")
+                    print(f"Illigal fitting result of mean! Return current voltage setting of this channel. Current ADC = {currentADC}")
                     input("Please check manually! Type Enter to continue")
                     newHV = currentVoltage if currentVoltage <= hvCap else currentVoltage if currentVoltage > hvBot else hvBot
                 return f"ECAL:hv:{col}:{row}:{itemToConfig}{newHV:.3f}\n"
