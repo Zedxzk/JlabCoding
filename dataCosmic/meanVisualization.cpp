@@ -1,154 +1,130 @@
 #include "TCanvas.h"
 #include "TGraphErrors.h"
-#include "TH1F.h"
 #include <fstream>
 #include <vector>
 #include <string>
-#include "TString.h"
-#include "/w/halld-scshelf2101/home/zhikun/zhikunTemplates/zhikunConstants.h"
-
-
+#include <sstream>
+#include <algorithm>
 
 const char xLabel[] = "Row";
 const char yLabel[] = "Peak Amplitude Mean/ADC Counts";
-const char title[]  = "Column %02d";
+const char title[] = "Column %02d";
 
-const int channels = 800;    // should be the size of "res.txt"
-const int amplifierRigon[2][2] = {{10, 29}, {10, 29}};
+const int channels = 1600;  // Number of entries in "res.txt"
 const Double_t markerSize = 3;
-const Double_t errorSize = 2;
 const Double_t lineWidth = 2;
 
+std::string outputPattern = "./meanView/meanViewCol_%02d";
 
-std::string outputPattern = "./columnView/meanViewCol_%02d";
-
+// Function to set graph points and errors
 void SetGraphErrors(TGraphErrors* graph, const std::vector<double>& x, const std::vector<double>& yMeans, const std::vector<double>& yErrors) {
-    for (int i = 0; i < yErrors.size(); i++) {
-        // std::cout << "Setting point: (" << x[i] << ", " << yMeans[i] << ")" << std::endl;
-        // getchar();
+    for (size_t i = 0; i < yErrors.size(); i++) {
         graph->SetPoint(i, x[i], yMeans[i]);
         graph->SetPointError(i, 0.0, yErrors[i]);
     }
 }
 
-void meanVisualization() {
-    TGraphErrors *graph = new TGraphErrors();
-    TCanvas* canvas = new TCanvas("", "", 2400, 1600);
-    Double_t index, col, row, mean, meanErr;
-    std::vector<Double_t> indexVector, colVector, rowVector, meanVector, meanErrVector;
-    std::vector<Double_t> indexVectorA, colVectorA, rowVectorA, meanVectorA, meanErrVectorA;
-    
-    std::ifstream inputFile("./DigitHits/res.txt");
-    std::string line;
+// Function to find the maximum value of (mean + meanErr) for corresponding elements
+double GetMaxYFromSums(const std::vector<Double_t>& means, const std::vector<Double_t>& errors) {
+    if (means.size() != errors.size()) {
+        std::cerr << "Error: meanVector and meanErrVector sizes do not match!" << std::endl;
+        return 0.0;
+    }
+    double maxSum = 0.0;
+    for (size_t i = 0; i < means.size(); i++) {
+        maxSum = std::max(maxSum, means[i] + errors[i]);
+    }
+    return maxSum;
+}
 
-    // 检查文件是否成功打开
+void meanVisualization() {
+    int lineCount = 0;
+    // Create canvas and graph objects
+    TCanvas* canvas = new TCanvas("", "", 1600, 1200);
+    TGraphErrors* graph = new TGraphErrors();
+
+    // Vectors to store data
+    std::vector<Double_t> indexVector, colVector, rowVector, meanVector, meanErrVector;
+
+    // Open the input file
+    std::ifstream inputFile("./DigitHits/res.txt");
     if (!inputFile.is_open()) {
         std::cerr << "Unable to open file!" << std::endl;
         return;
     }
 
+    Double_t index, col, row, mean, meanErr;
+    std::string line;
+
+
+
+    // Read the file line by line
     for (int i = 0; i < channels; i++) {
-        std::getline(inputFile, line);
-        std::stringstream ss(line);
-        if (ss >> index >> col >> row >> mean >> meanErr) {
-            if (col < amplifierRigon[0][0] || col > amplifierRigon[0][1]) {
-                indexVector.push_back(index);
-                colVector.push_back(col);
-                rowVector.push_back(row);
-                meanVector.push_back(mean);
-                meanErrVector.push_back(meanErr);
-            } 
-            else {
-                if (row < amplifierRigon[0][0] || row > amplifierRigon[0][1]) {
-                    indexVector.push_back(index);
-                    colVector.push_back(col);
-                    rowVector.push_back(row);
-                    meanVector.push_back(mean);
-                    meanErrVector.push_back(meanErr);
-                } 
-                else {
-                    indexVectorA.push_back(index);
-                    colVectorA.push_back(col);
-                    rowVectorA.push_back(row);
-                    meanVectorA.push_back(mean);
-                    meanErrVectorA.push_back(meanErr);
-                }
-            }
-        } 
-        else {
-            std::cerr << "Failed to parse line: " << line << std::endl;
+    std::string line;
+        while (std::getline(inputFile, line)) {
+            lineCount++;
+            if (line.empty()) {
+                std::cerr << "Empty line at: " << lineCount << std::endl;
+                continue;
         }
-        
-        if (colVectorA.size() + colVector.size()  == 40)  {
-            // 如果已经有数据，绘制图形
-            if (!colVectorA.empty()) {
-                TCanvas  * canvas = new TCanvas("", "", 1600, 1200);
-                TGraphErrors* graph = new TGraphErrors;
-                canvas->cd();
-                canvas->Clear();
-                graph->Clear();
-                SetGraphErrors(graph, rowVectorA, meanVectorA, meanErrVectorA);
-                graph->GetXaxis()->SetTitle(xLabel);
-                graph->GetYaxis()->SetTitle(yLabel);
-                graph->GetXaxis()->CenterTitle();
-                graph->GetYaxis()->CenterTitle();
-                canvas->SetGrid();
-                graph->SetTitle(Form(title, int(colVectorA[0])));
-                graph->SetMarkerStyle(21);
-                graph->SetMarkerSize(3);
-                graph->SetLineWidth(lineWidth);
-                // graph->SetErrorSize(errorSize);
-                graph->SetMarkerColor(kBlue);
-                // graph->GetYaxis()->SetRangeUser(graph->GetMinimum() - 2, graph->GetMaximum() + 5);
-                graph->Draw("AP");
-                canvas->Update();
-                canvas->Print(Form((outputPattern+"_AMP.pdf").c_str(), int(colVectorA[0])));
-                canvas->Print(Form((outputPattern+"_AMP.png").c_str(), int(colVectorA[0])));
-                // for(int i = 0; i < colVectorA.size();i++){
-                //     cout << "(col ,row) = " << colVectorA[i] <<"  " << rowVectorA[i] << endl;
-                // }
-                // getchar();
-                colVectorA.clear();
-                rowVectorA.clear();
-                meanVectorA.clear();
-                meanErrVectorA.clear();
-                delete canvas;
-                delete graph;
-            }
-            TCanvas  * canvas = new TCanvas("", "", 1600, 1200);
-            TGraphErrors* graph = new TGraphErrors;
-            canvas->cd();
+
+        std::stringstream ss(line);
+        if (!(ss >> index >> col >> row >> mean >> meanErr)) {
+            std::cerr << "Failed to parse line " << lineCount << ": " << line << std::endl;
+            continue;
+        }
+        // cout << "Lines read = " << lines_read << " ,lines = " << line << endl;
+        std::cout << "Total lines read: " << lineCount << std::endl;
+        // Adjust mean error values
+        if (meanErr > mean) meanErr = mean;
+        if (meanErr <= 0.1) meanErr = 0.1;
+
+        // Store data in vectors
+        colVector.push_back(col);
+        rowVector.push_back(row);
+        meanVector.push_back(mean);
+        meanErrVector.push_back(meanErr);
+
+        // Draw and save the graph for every 40 entries
+        if (colVector.size() == 40) {
             canvas->Clear();
             graph->Clear();
-            
             SetGraphErrors(graph, rowVector, meanVector, meanErrVector);
+
+            // Configure graph appearance
             graph->GetXaxis()->SetTitle(xLabel);
-            graph->GetYaxis()->SetTitle(yLabel);            
+            graph->GetYaxis()->SetTitle(yLabel);
             graph->GetXaxis()->CenterTitle();
             graph->GetYaxis()->CenterTitle();
-            // graph->GetYaxis()->SetRangeUser(0, 40);
-            // graph->GetXaxis()->SetNdivisions(20, false);  // 设置 X 轴的分区数量，使得间隔为 1
-            // graph->GetYaxis()->SetNdivisions(10, false);  // 可以根据需要设置 Y 轴的分区
-            canvas->SetGrid();
             graph->SetTitle(Form(title, int(colVector[0])));
             graph->SetMarkerStyle(21);
-            graph->SetMarkerSize(3);
+            graph->SetMarkerSize(markerSize);
             graph->SetMarkerColor(kBlue);
             graph->SetLineWidth(lineWidth);
-            graph->GetXaxis()->SetRangeUser(-1, 40);
-            cout << graph->GetMinimum() << endl;
-            // graph->SetErrorSize(errorSize);
+            graph->GetXaxis()->SetRangeUser(0, 40);
+
+            // Get the maximum Y value and set the Y-axis range
+            Double_t maxY = GetMaxYFromSums(meanVector, meanErrVector);
+            graph->GetYaxis()->SetRangeUser(0, maxY *1.05);
+
+            canvas->SetGrid();
+
+            // Draw and save the graph
             graph->Draw("AP");
             canvas->Update();
             canvas->Print(Form((outputPattern + ".pdf").c_str(), int(colVector[0])));
             canvas->Print(Form((outputPattern + ".png").c_str(), int(colVector[0])));
+
+            // Clear vectors for the next set of data
             colVector.clear();
             rowVector.clear();
             meanVector.clear();
             meanErrVector.clear();
-
         }
     }
+    }
 
-    canvas->Update();
+    // Clean up dynamically allocated memory
+    delete canvas;
+    delete graph;
 }

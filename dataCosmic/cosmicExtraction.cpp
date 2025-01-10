@@ -153,13 +153,21 @@ void channelsFit(TH2D* hist2D, dataType type) {
             hist1D->GetYaxis()->SetTitle(TString::Format(anotherAxisName,  hist1D->GetXaxis()->GetBinWidth(1)));
 
             if(addFit){
-            RooRealVar mean("mean", "mean", 28, 5 , varUpperLimit);
+            Double_t initialMean;
+            // 判断是否在中心区域
+            if (col >= 10 && col <= 29 && row >= 10 && row <= 29) {
+                initialMean = 25;
+            } else {
+                initialMean = 9;
+            }
+            RooRealVar mean("mean", "mean", initialMean, 5, varUpperLimit);
             RooRealVar sigma("sigma", "sigma", 3, 1e-4, 5);
             RooRealVar a0("a0", "a0", 0.0, -1.0, 1.0); // 切比雪夫多项式的一阶系数
             RooRealVar a1("a1", "a1", 0.5, -1.0, 1.0); // 切比雪夫多项式的一阶系数
             RooRealVar x("x", "x", varLowerLimit, varUpperLimit);
 
-            RooRealVar gaussMean("gaussMean", "Mean of Gaussian", 0, -3, 3);
+            // RooRealVar gaussMean("gaussMean", "Mean of Gaussian", 0, -5, 5);
+            RooRealVar gaussMean("gaussMean", "Mean of Gaussian", 0, -1, 1);
             RooRealVar gaussSigma("gaussSigma", "Width of Gaussian", 1, 1e-5, 10);
             RooGaussian gauss("gauss", "Gaussian PDF", x, gaussMean, gaussSigma);
 
