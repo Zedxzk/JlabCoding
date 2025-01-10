@@ -2,7 +2,7 @@ import os
 
 empty_line_printed = False
 
-he_version = "he10"
+he_version = "he2"
 extra_info = "after_resubmission"
 
 # file path define
@@ -111,7 +111,7 @@ with open(list_file_path, "r") as list_file:
 
                 my_file_log = file1.replace("ps.", "").replace("hd_rawdata", "ps").replace("evio", "log")
                 log_dir = os.path.join(log_base_dir, f"Run{my_file}")
-                if not os.listdir(log_dir):
+                if not os.path.exists(log_dir) or not os.listdir(log_dir):
                     error_message = f"Error: The directory {log_dir} is empty."
                     print_error(error_message,"red")
                     all_errors.append(("red", error_message))

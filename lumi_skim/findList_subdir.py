@@ -2,36 +2,44 @@ import os
 import re
 from pprint import pprint
 import process_error_messages
+# from  findList_function_definition import add_bad_run, create_dirs,  write_files
 
+# he_versions = ["he3", "he4", "he5", "he6", "he7", "he8", "he9", "he10"]
+he_versions = ["he2"]
+extra_info = "of_he2"
 
-he_versions = ["he3", "he4", "he5", "he6", "he7", "he8", "he9", "he10"]
-extra_info = "after_reprocessing"
-
-list_of_runs_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss"
+# list_of_runs_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss"
+list_of_runs_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/list_of_runs_{he_version}"
 list_of_files_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss"
-evio_dir = "/mss/halld/RunPeriod-2022-08/recon/ver01/ps/"
-res_dir_1 = "/work/halld/home/zhikun/lumi_skim/scan_res_dir"
-res_dir_2 = "/work/halld/home/zhikun/lumi_skim/scan_res_dir"
+# evio_dir = "/mss/halld/RunPeriod-2022-08/recon/ver01/ps/"
+evio_name_template = "ps_{run_id}_{file_id}.evio"
+evio_path_template = "/mss/halld/RunPeriod-2022-08/recon/ver01/ps/ps_{run_id}_{file_id}.evio"
+res_dir_1 = "/work/halld/home/zhikun/lumi_skim/"
+res_dir_2 = "/work/halld/home/zhikun/lumi_skim/"
+res_file_name_template_1 = "res_new_{he_version}_{extra_info}.txt"
+res_file_name_template_2 = "res_new_{he_version}_{extra_info}.txt"
 
-list_of_good_runs_dir = "/work/halld/home/zhikun/lumi_skim/goodRuns_after_resubmission"
-list_of_good_runs_after_merging_dir = "/work/halld/home/zhikun/lumi_skim/list_of_good_runs_after_merging"
-list_of_bad_runs_after_merging_dir = "/work/halld/home/zhikun/lumi_skim/list_of_bad_runs_after_merging"
-list_of_bad_runs_before_merging_dir = "/work/halld/home/zhikun/lumi_skim/list_of_bad_runs_before_merging"
+
+list_of_runs_dir  = "/work/halld/home/zhikun/lumi_skim/list_of_runs/he2"
+list_of_runs_name_template = "list_of_runs_{he_version}"
+list_of_files_dir = "/work/halld/home/zhikun/lumi_skim/list_of_files/he2"
+list_of_good_runs_before_merging_dir         = "/work/halld/home/zhikun/lumi_skim/goodRuns_after_resubmission"
+list_of_good_runs_after_merging_dir          = "/work/halld/home/zhikun/lumi_skim/list_of_good_runs_after_merging"
+list_of_bad_runs_before_merging_dir          = "/work/halld/home/zhikun/lumi_skim/list_of_bad_runs_before_merging"
+list_of_bad_runs_after_merging_dir           = "/work/halld/home/zhikun/lumi_skim/list_of_bad_runs_after_merging"
 
 # manual_check_log_dir = "/volatile/halld/home/test_lumi/"
 
 list_of_error_files = "/work/halld/home/zhikun/lumi_skim/error_files"
 evio_dir = "/mss/halld/RunPeriod-2022-08/recon/ver01/ps/"
-list_of_files_reprocessed_dir = "/work/halld/home/zhikun/lumi_skim/list_of_files_reprocessed"
+list_of_files_to_reprocess_dir = "/work/halld/home/zhikun/lumi_skim/list_of_files_reprocessed"
 jobs_to_resubmit_dir = "/work/halld/home/zhikun/lumi_skim/jobs_to_resubmit/"
 visualized_dir = "/work/halld/home/zhikun/lumi_skim/visualized_dir"
 
 
 
-res_file_name_template_1 = "res_new_{he_version}_{extra_info}.txt"
-res_file_name_template_2 = "res_old_{he_version}_{extra_info}.txt"
-list_of_files_reprocessed_template = "list_Run{run_id}"
-list_of_files_reprocessed_contents_template = "ps_{run_id}_{file_id}.evio"
+
+list_of_files_name_template = "list_Run{run_id}"
 good_runs_file_name_template = "goodRuns_{he_version}_{extra_info}.txt"
 list_of_bad_runs_after_merging_name_template = "bad_runs_{he_version}_{extra_info}.txt"
 list_of_bad_runs_before_merging_name_template = "bad_runs_{he_version}_{extra_info}.txt"
@@ -50,20 +58,29 @@ all_good_runs_run_id_after_merging = set()
 all_bad_runs_of_source_1 = {}
 # bad_runs_after_merging = {}
 overlap_truncated = {}
-truncated_runs = {}
-terminated_and_missing_files = {}
-existing_evio_but_missing_log_files = {}
+
 empty_runs  = {}
+truncated_runs_and_files = {}
+existing_evio_but_missing_log_runs_and_files = {}
+missing_evio_runs_and_files = {}
+terminated_runs_and_files = {}
+crashed_runs_and_files = {}
+
+terminated_runs_and_files = {}
 all_runs = []
 
 num_truncated = 0
-num_missing   = 0
+num_missing_evio   = 0
 num_crashed   = 0
 num_terminated = 0
 num_existing_evio_but_missing_log = 0
 num_total     = 0
 num_overlap_truncated = 0
 num_empty_run = 0
+
+
+error_types = ["truncated", "missing_evio", "existing_evio_but_missing_log", "crashed", "terminated", "empty_folder"]
+error_dicts = [truncated_runs_and_files, missing_evio_runs_and_files, existing_evio_but_missing_log_runs_and_files, crashed_runs_and_files, terminated_runs_and_files, empty_runs]
 
 def add_bad_run(key, value, dict):
     key = str(key)
@@ -74,16 +91,83 @@ def add_bad_run(key, value, dict):
         dict[key] = [value]  # Use list notation to create a new list with the value
 
 
+def create_dirs(list_of_error_types):
+    for error_type in list_of_error_types:
+        dir1 =os.path.join(list_of_runs_dir, error_type)
+        dir2 =os.path.join(list_of_files_dir, error_type)
+        if not os.path.exists(dir1):
+            os.makedirs(dir1)
+        if not os.path.exists(dir2):
+            os.makedirs(dir2)
+
+def write_files(list_of_error_types,  error_dicts):
+    for error_type, error_dict in zip(list_of_error_types, error_dicts):
+        dir1 =os.path.join(list_of_runs_dir, error_type)
+        dir2 =os.path.join(list_of_files_dir, error_type)
+        list_of_runs_path = os.path.join(dir1, f"list_of_runs_all")
+        with open(list_of_runs_path, "w") as f1:
+            for key, value in error_dict.items():
+                run_id = key
+                f1.write(run_id+"\n")
+                list_of_files_path = os.path.join(dir2,list_of_files_name_template).format(run_id = run_id)
+                with open(list_of_files_path, "w") as f2:
+                    for file_id in value:
+                        f2.write(evio_name_template.format(run_id=run_id, file_id=file_id))
+                        f2.write("\n")
+        if len(all_runs) != len(he_versions):
+            exit("Error: length of he_versions does not equal to length of all_runs")
+        for index in range(len(all_runs)):
+            he_version  = he_versions[index]
+            list_of_runs_path = os.path.join(dir1, list_of_runs_name_template).format(he_version=he_version)
+            with open(list_of_runs_path, "w") as f3:
+                for run_id in all_runs[index]:
+                    if run_id in error_dict:
+                        f3.write(run_id)
+                        f3.write("\n")
+
+        
+                        
+
+def write_user_define_error_type(dicts):
+    user_define_error_type_dict = {}
+    for error_dict in dicts:
+        user_define_error_type_dict.update(error_dict)
+    create_dirs(["user_define_error_type"])
+    dir1 =os.path.join(list_of_runs_dir, "user_define_error_type")
+    dir2 =os.path.join(list_of_files_dir, "user_define_error_type")
+    list_of_runs_path = os.path.join(dir1, f"list_of_runs_all")
+    with open(list_of_runs_path, "w") as f1:
+        for key, value in user_define_error_type_dict.items():
+            run_id = key
+            f1.write(run_id+"\n")
+            list_of_files_path = os.path.join(dir2,list_of_files_name_template).format(run_id = run_id)
+            with open(list_of_files_path, "w") as f2:
+                for file_id in value:
+                    f2.write(evio_name_template.format(run_id=run_id, file_id=file_id))
+                    f2.write("\n")
+
+        if len(all_runs) != len(he_versions):
+            exit("Error: length of he_versions does not equal to length of all_runs")
+        for index in range(len(all_runs)):
+            he_version  = he_versions[index]
+            list_of_runs_path = os.path.join(dir1, list_of_runs_name_template).format(he_version=he_version)
+            with open(list_of_runs_path, "w") as f3:
+                for run_id in all_runs[index]:
+                    if run_id in user_define_error_type_dict:
+                        f3.write(run_id)
+                        f3.write("\n")
+
+
 for he_version in he_versions:
     part_of_bad_runs_run_id_after_merging = set()
     part_of_bad_runs_run_id_source_1 = set()
-    if not os.path.exists(list_of_good_runs_dir):
-        os.makedirs(list_of_good_runs_dir)
+    if not os.path.exists(list_of_good_runs_before_merging_dir):
+        os.makedirs(list_of_good_runs_before_merging_dir)
     if not os.path.exists(list_of_bad_runs_after_merging_dir):
         os.makedirs(list_of_bad_runs_after_merging_dir)
-    with open(os.path.join(list_of_good_runs_dir, good_runs_file_name_template.format(he_version=he_version,extra_info=extra_info)),'w') as goodRuns:
+    with open(os.path.join(list_of_good_runs_before_merging_dir, good_runs_file_name_template.format(he_version=he_version,extra_info=extra_info)),'w') as goodRuns:
         # with open(os.path.join(list_of_good_runs_dir, f'goodRuns_{i}.txt'),'w') as goodRuns:
-        list_of_runs = os.path.join(list_of_runs_dir, f"list_of_runs_{he_version}")
+        list_of_runs = os.path.join(list_of_runs_path_template.format(he_version=he_version, extra_info=extra_info))
         with open(list_of_runs,'r') as f1:
             runs = [str(item.strip()) for item in f1.readlines()]
         all_runs.append(runs.copy())
@@ -173,19 +257,21 @@ for he_version in he_versions:
 
             
             if "Log file not found" in error :
-                add_bad_run(first_number, second_number, terminated_and_missing_files)
                 evio_path = os.path.join(evio_dir, first_number, f"ps_{first_number}_{second_number}.evio")
                 if os.path.exists(evio_path):
                     num_existing_evio_but_missing_log += 1
-                    add_bad_run(first_number, second_number, existing_evio_but_missing_log_files)
-                num_missing += 1
+                    add_bad_run(first_number, second_number, existing_evio_but_missing_log_runs_and_files)
+                else:
+                    num_missing_evio += 1
+                    add_bad_run(first_number, second_number, missing_evio_runs_and_files)
             elif  "No events in file" in error:
-                add_bad_run(first_number, second_number, terminated_and_missing_files)
+                add_bad_run(first_number, second_number, terminated_runs_and_files)
                 num_terminated += 1
             elif "words_left_in_file" in error:
-                add_bad_run(first_number,second_number,  truncated_runs)
+                add_bad_run(first_number,second_number,  truncated_runs_and_files)
                 num_truncated += 1
             elif "crash" in error:
+                add_bad_run(first_number,second_number,  crashed_runs_and_files)
                 num_crashed += 1
             elif "is empty" in error:
                 num_empty_run += 1
@@ -208,7 +294,7 @@ for he_version in he_versions:
                 f3.write("\n")
 
             
-num_total = num_missing + num_crashed + num_truncated + num_terminated + num_empty_run
+num_total = num_missing_evio + num_crashed + num_truncated + num_terminated + num_empty_run + num_existing_evio_but_missing_log
 
 print("All bad runs and files of source 1 include:")
 pprint(all_bad_runs_of_source_1)
@@ -219,16 +305,16 @@ print("All bad runs and files of source 1 are include above")
 if not os.path.exists(visualized_dir):
     os.makedirs(visualized_dir)
 
-with open(os.path.join(visualized_dir, f"files_need_to_be_reprocessed_{extra_info}.txt"), 'w') as f:
+with open(os.path.join(visualized_dir, f"files_of_all_errors_{extra_info}.txt"), 'w') as f:
     msg = '\n'.join([
         "***********************************************",
-        f"Total error nums    = {num_total}",
-        f"Truncated files num = {num_truncated}",
-        f"Crashed files num   = {num_crashed}",
-        f"Terminated files num= {num_terminated}",
-        f"Missing logs nums   = {num_missing}",
-        f"Missing log but existing evio = {num_existing_evio_but_missing_log}",
-        f"Empty runs = {num_empty_run}",
+        f"Total error nums              = {num_total}",
+        f"Empty runs                    = {num_empty_run}",
+        f"Truncated files num           = {num_truncated}",
+        f"Crashed files num             = {num_crashed}",
+        f"Terminated files num          = {num_terminated}",
+        f"Missing evio nums             = {num_missing_evio}",
+        f"Missing log but existing evio = {num_existing_evio_but_missing_log} (jobs did not start)",
         "***********************************************",
         "\n\n"
     ])
@@ -241,40 +327,43 @@ with open(os.path.join(visualized_dir, f"files_need_to_be_reprocessed_{extra_inf
         f.write("\n\n\n")
     f.write(msg)
         
-num_total = num_missing + num_terminated
-with open(os.path.join(visualized_dir, f"files_need_to_be_resubmitted_{extra_info}.txt"), 'w') as f:
+# num_total = num_existing_evio_but_missing_log + num_terminated
+# with open(os.path.join(visualized_dir, f"files_of_missing_log_{extra_info}.txt"), 'w') as f:
+#     msg = '\n'.join([
+#         "***********************************************",
+#         f"Total error nums    = {num_total}",
+#         f"Terminated files num= {num_terminated} (may need to resubmit)",
+#         f"Missing log but existing evio = {num_existing_evio_but_missing_log}\n"
+#         "***********************************************",
+#         "\n\n"
+#     ])
+
+#     f.write(msg)
+#     for key, value in terminated_and_missing_files.items():
+#         f.write(key+'\n')
+#         f.write(f"{value}")
+#         f.write("\n\n\n")
+#     f.write(msg)
+
+
+with open(os.path.join(visualized_dir, f"files_of_existing_evio_but_missing_log_{extra_info}"), "w") as f1:
     msg = '\n'.join([
         "***********************************************",
-        f"Total error nums    = {num_total}",
-        f"Terminated files num= {num_terminated}",
-        f"Missing logs nums   = {num_missing}",
         f"Missing log but existing evio = {num_existing_evio_but_missing_log}\n"
         "***********************************************",
         "\n\n"
     ])
-
-    f.write(msg)
-    for key, value in terminated_and_missing_files.items():
-        
-        f.write(key+'\n')
-        f.write(f"{value}")
-        f.write("\n\n\n")
-    f.write(msg)
-
-with open(os.path.join(visualized_dir,f"list_of_resubmission_{extra_info}"), "w") as fi:
-    with open(os.path.join(visualized_dir,f"existing_evio_but_missing_log_{extra_info}.txt"), 'w') as f:
-        for key, value in existing_evio_but_missing_log_files.items():
-            fi.write(f"{key}\n")
-            with open(os.path.join(jobs_to_resubmit_dir, f"list_Run{key}"),"w") as file:
-                for file_id in value:
-                    evio_path = os.path.join(evio_dir, key, f"ps_{key}_{file_id}.evio")
-                    f.write(f"{evio_path}\n")
-                    file.write(f"ps_{key}_{file_id}.evio\n")
-            f.write(key+'\n')
-            f.write(f"{value}\n")
-
-            f.write("\n\n")
-        f.write(msg)
+    f1.write(msg + "\n\n")
+    with open(os.path.join(visualized_dir,f"list_of_resubmission_{extra_info}"), "w") as fi:
+        with open(os.path.join(visualized_dir,f"existing_evio_but_missing_log_{extra_info}.txt"), 'w') as f:
+            for key, value in existing_evio_but_missing_log_runs_and_files.items():
+                f1.write(f"{key}\n")
+                fi.write(f"{key}\n")
+                with open(os.path.join(jobs_to_resubmit_dir, f"list_Run{key}"),"w") as file:
+                    for file_id in value:
+                        evio_name_template.format(run_id = key, file_id=file_id)
+                        file.write(f"ps_{key}_{file_id}.evio\n")
+                f1.write(f"{value}\n")
 
 
 with open(os.path.join(visualized_dir,f"truncated_runs_{extra_info}"), "w") as fi:
@@ -284,51 +373,56 @@ with open(os.path.join(visualized_dir,f"truncated_runs_{extra_info}"), "w") as f
         "****************************************\n"
     ])
     fi.write(msg)
-    for key, value in truncated_runs.items():
+    for key, value in truncated_runs_and_files.items():
             fi.write(f"{key}\n")
             fi.write(f"{value}\n\n")
     fi.write(msg)
 
-with open("stdout.log","r") as f :
-    pattern4 = r'stdout\.(\d+)_(\d+)\.out'
-    # 查找所有匹配项 
-    matches = re.findall(pattern4, f.read())
-    for match in matches:
-        if str(match[0]) in truncated_runs.keys():
-            # print(f"overlaped run id = {match[0]}")
-            if str(match[1]) in truncated_runs[str(match[0])]:
-                add_bad_run(match[0], match[1], overlap_truncated)
-                num_overlap_truncated += 1
-
-with open(os.path.join(visualized_dir,f"overlap_trunated_{extra_info}"), "w") as fi:
-    msg = "\n".join([
-        "****************************************",
-        f"Overlaped truncated runs  in total = {num_overlap_truncated}",
-        "****************************************\n"
-    ])
-    fi.write(msg)
-    for key, value in overlap_truncated.items():
-            fi.write(f"{key}\n")
-            fi.write(f"{value}\n\n")
-    fi.write(msg)
+# with open("stdout.log","r") as f :
+#     pattern4 = r'stdout\.(\d+)_(\d+)\.out'
+#     # 查找所有匹配项 
+#     matches = re.findall(pattern4, f.read())
+#     for match in matches:
+#         if str(match[0]) in truncated_runs_and_files.keys():
+#             # print(f"overlaped run id = {match[0]}")
+#             if str(match[1]) in truncated_runs_and_files[str(match[0])]:
+#                 add_bad_run(match[0], match[1], overlap_truncated)
+#                 num_overlap_truncated += 1
 
 
-with open(os.path.join(visualized_dir, f"list_of_runs_reprocessed_{extra_info}"),"w") as f:
-    if not os.path.exists(list_of_files_reprocessed_dir):
-        os.makedirs(list_of_files_reprocessed_dir)
+        
+
+create_dirs(error_types)
+write_files(error_types, error_dicts)
+# with open(os.path.join(visualized_dir,f"overlap_trunated_{extra_info}"), "w") as fi:
+#     msg = "\n".join([
+#         "****************************************",
+#         f"Overlaped truncated runs  in total = {num_overlap_truncated}",
+#         "****************************************\n"
+#     ])
+#     fi.write(msg)
+#     for key, value in overlap_truncated.items():
+#             fi.write(f"{key}\n")
+#             fi.write(f"{value}\n\n")
+#     fi.write(msg)
+
+
+with open(os.path.join(list_of_runs_dir, f"list_of_all_errors_of_source_1_{extra_info}"),"w") as f:
+    if not os.path.exists(list_of_files_to_reprocess_dir):
+        os.makedirs(list_of_files_to_reprocess_dir)
     for key, value in all_bad_runs_of_source_1.items():
         
         f.write(key+"\n")
-        list_of_files_reprocessed_path = os.path.join(list_of_files_reprocessed_dir, list_of_files_reprocessed_template)
+        list_of_files_reprocessed_path = os.path.join(list_of_files_to_reprocess_dir, list_of_files_name_template)
         list_of_files_reprocessed_path = list_of_files_reprocessed_path.format(run_id=key)
         # print(list_of_files_reprocessed_path)
         with open(list_of_files_reprocessed_path,"w") as f1:
             for file_id in value:
-                list_of_files_reprocessed_contents = list_of_files_reprocessed_contents_template.format(run_id=key, file_id=file_id)
+                list_of_files_reprocessed_contents = evio_name_template.format(run_id=key, file_id=file_id)
                 f1.write(list_of_files_reprocessed_contents+"\n")
         # with open()
         
-with open(os.path.join(visualized_dir, f"list_of_good_runs_after_merging_{extra_info}"), "w") as f:
+with open(os.path.join(list_of_runs_dir, f"list_of_good_runs_after_merging_{extra_info}"), "w") as f:
     # print(len(all_runs))
     for index in range(len(all_runs)):
         # print(index)
@@ -345,7 +439,7 @@ with open(os.path.join(visualized_dir, f"list_of_good_runs_after_merging_{extra_
 
 
 
-with open(os.path.join(visualized_dir, f"list_of_bad_runs_after_merging_{extra_info}"), "w") as f:
+with open(os.path.join(list_of_runs_dir, f"list_of_bad_runs_after_merging_{extra_info}"), "w") as f:
     # print(len(all_runs))
     for index in range(len(all_runs)):
         # print(index)
@@ -361,3 +455,5 @@ with open(os.path.join(visualized_dir, f"list_of_bad_runs_after_merging_{extra_i
         f.write(msg)
 
 
+
+write_user_define_error_type([terminated_runs_and_files, existing_evio_but_missing_log_runs_and_files])
