@@ -25,10 +25,10 @@
 using namespace std;
 const bool needOverView = true;
 // const bool needOverView = false;
-const bool needColumnView = true;
-// const bool needColumnView = false;
-const bool needChannelView = true;
-// const bool needChannelView = false;
+// const bool needColumnView = true;
+const bool needColumnView = false;
+// const bool needChannelView = true;
+ const bool needChannelView = false;
 const bool addFit = true;
 // const bool addFit = false;
 const bool convolveGaussian = true;
@@ -419,19 +419,47 @@ void cosmicExtraction() {
                 delete tempCanvas;
             }
         }
-        TCanvas* tempCanvas2 = new TCanvas("","", 2400, 1600);
+        TCanvas* tempCanvas2 = new TCanvas("","", 2000, 1600);
 
         Long64_t nEntries = tree->GetEntries();
+        int nums = 0;
+        int num2 = 0;
         for (Long64_t i = 0; i < nEntries; ++i) {
             tree->GetEntry(i);
             col = 39 - channelIndex / 40;
             // if(col <= 0)  col --;
             row = 39 - channelIndex % 40;
+            if(col == 6 && row == 21){
+                num2++;
+            }
+            if(energy < 4) { 
+                nums++;
+                continue;
+            }
             overview->Fill(col,row);
             // std::cout << "Entry " << i << ": Channel Index = " << channelIndex 
             // << ", col, row = " << col << ", " << row 
             // << ", Energy = " << energy << std::endl;
         }
+        // cout << "Total number of entries with energy < 4: " << nums << endl;
+        // cout << "Total number of entries in (6,21): " << num2 << endl;
+        // cout << "Total number of entries with energy >= 4: " << nEntries - nums << endl;
+        TH2D  * h2 = overview;
+        h2->GetXaxis()->SetNdivisions(440); // 主刻度5个，次刻度每个主刻度分5份
+        h2->GetXaxis()->SetLabelSize(0.015); // 设置刻度标签的大小
+        // h2->GetXaxis()->SetLabelOffset(0.01); // 设置刻度标签的偏移
+        h2->GetXaxis()->SetLimits(-0.5, 39.5); // 原始范围为 [0, 10]，向右平移 0.5 单位
+    // 设置刻度线长度
+        h2->GetXaxis()->SetTickLength(0.001); // 设置 X 轴刻度线长度为 0.05
+        h2->LabelsOption("v");
+        // 自定义 Y 轴刻度
+        h2->GetYaxis()->SetNdivisions(440); // 主刻度5个，次刻度每个主刻度分10份
+        h2->GetYaxis()->SetLabelSize(0.015);
+        // h2->GetYaxis()->SetLabelOffset(0.01);
+        h2->GetYaxis()->SetLimits(-0.5, 39.5); // 原始范围为 [0, 10]，向右平移 0.5 单位
+        h2->GetYaxis()->SetTickLength(0.001); // 设置 Y 轴刻度线长度为 0.02
+        
+        cout << overview->GetBinContent(6,21);
         tempCanvas2->cd();
         gPad->SetGrid();
         overview->GetXaxis()->SetTitle("column");

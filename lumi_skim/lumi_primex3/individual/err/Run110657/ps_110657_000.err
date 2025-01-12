@@ -1,0 +1,4 @@
+slurmstepd: error: couldn't chdir to `/lustre/enp/swif2/jobs/zhikun/110657/50181519': Input/output error: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/lustre/enp/swif2/jobs/zhikun/110657/50181519': Cannot send after transport endpoint shutdown: going to /tmp instead
+export: Command not found.
+export: Command not found.

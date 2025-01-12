@@ -3,8 +3,8 @@ import re
 from collections import defaultdict
 
 log_file = "merge_log_he10_real.txt"
-id_list = [3, 4, 5, 6, 7, 8, 9, 10]
-log_files = [f"log_merging_he{i}.log" for i in id_list]
+id_list = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+log_files = [f"merge_log/merge_new_runs_he{i}.log" for i in id_list]
 column_to_write = 7
 # name_template = r"ps_(\d{6})_(\d{3}).root"
 length_of_file_name = 18

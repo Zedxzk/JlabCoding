@@ -2,27 +2,26 @@ import os
 
 empty_line_printed = False
 
-he_versions = ["he3", "he4", "he5", "he6", "he7", "he8", "he9", "he10"]
-# he_versions = ["reprocessed"]
+# he_versions = ["he3", "he4", "he5", "he6", "he7", "he8", "he9", "he10"]
+he_versions = ["he2"]
 # he_version = "he3"
 # extra_info = "reprocessed"
-extra_info = "after_exclusion"
+extra_info = "of_he2_merged"
 
 # 文件路径定义
-# list_of_runs_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/list_of_runs_{he_version}"
 list_of_runs_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/list_of_runs_{he_version}"
-list_of_evio_files = "/work/halld/home/zhikun/lumi_skim/list_of_files/list_of_files_after_exclusion/"
+# list_of_evio_files = "/work/halld/home/zhikun/lumi_skim/list_of_files/list_of_files_after_exclusion/"
+list_of_evio_files = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"
 log_base_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log/"
 # log_base_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
+# log_base_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log_first"
 # log_base_dir = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log"
-res_file_dir = "/work/halld/home/zhikun/lumi_skim/exclusion_dir/"
+res_file_dir = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/"
 res_file_name_template = "res_new_{he_version}_{extra_info}.txt"
 
 
-# rootDir2 = "/volatile/halld/home/somov/ver06_lumi/"
-# logDir2 = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log"
 
-# list_file_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/list_of_runs_{he_version}"
+# list_of_runs_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/list_of_runs_{he_version}"
 # list_of_evio_files = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"
 # log_base_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log"
 # # log_base_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log"
@@ -88,8 +87,7 @@ all_errors = []
 for he_version in he_versions:
     part_of_errors = []
     list_file_path = list_of_runs_path_template.format(he_version=he_version)
-    res_file_name = res_file_name_template.format(he_version=he_version, extra_info=extra_info)
-    res_file_path = os.path.join(res_file_dir, res_file_name)
+    res_file_path = os.path.join(res_file_dir, res_file_name_template).format(he_version=he_version, extra_info=extra_info)
     # input(f"he_version =  {he_version}, list_file_path = {list_file_path},\nres_file_path = {res_file_path}")
     with open(list_file_path, "r") as list_file:
         for file in list_file:
@@ -131,7 +129,7 @@ for he_version in he_versions:
 
                     my_file_log = file1.replace("ps.", "").replace("hd_rawdata", "ps").replace("evio", "log")
                     log_dir = os.path.join(log_base_dir, f"Run{my_file}")
-                    if not os.listdir(log_dir):
+                    if not os.path.exists(log_dir) or  not os.listdir(log_dir) :
                         error_message = f"Error: The directory {log_dir} is empty."
                         print_error(error_message,"red")
                         all_errors.append(("red", error_message))
@@ -162,7 +160,7 @@ for he_version in he_versions:
             all_errors.append((" ", " "))
 
         # 如果有错误，则对错误进行排序并写入文件
-        if has_error:
+        if len(part_of_errors) > 0:
             # 根据严重程度对所有错误进行排序
             # sorted_errors = sorted(all_errors, key=lambda error: severity_order[error[0]])
             sorted_errors = part_of_errors  

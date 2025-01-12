@@ -1,8 +1,8 @@
 import os
 from pprint import pprint
 
-mss_dir = "/mss/halld/RunPeriod-2022-08/rawdata"
-target_file_dir = "list_of_runs_from_mss"
+mss_dir = "/mss/halld/RunPeriod-2022-08/calib/ver01/PS/"
+target_file_dir = "list_of_old_runs_from_mss"
 list_perfix = "list_"
 mss_perfix = "hd_rawdata_"
 perfix = "ps_"
@@ -23,7 +23,7 @@ with open(os.path.join(target_file_dir, "last_run.data"),"w") as dataSet:
         fileName = list_perfix + run_id
         fileName = os.path.join(target_file_dir, fileName)
         # pprint(fileName)
-        evio_files = [i.replace(mss_perfix, perfix) for i in os.listdir(run_dir) if '.evio' in i]
+        evio_files = [i for i in os.listdir(run_dir) if '.evio' in i]
         evio_files = sorted(evio_files)
         with open(fileName,'w') as file:
             dataSet.write(f"{run_id}           {evio_files[-1]} \n")

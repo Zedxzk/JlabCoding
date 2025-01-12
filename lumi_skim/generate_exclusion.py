@@ -2,24 +2,26 @@ import process_error_messages
 import os
 from pprint import pprint
 import subprocess
-he_versions = ["reprocessed"]
-extraInfo = "for_exclusion"
+he_versions = ["he2"]
+extraInfo = "of_he2"
 
 num_excluded_files = 0
 delete_files = True
 # delete_files = False
 
 # # Paths Setup
-rootDir1 = "/volatile/halld/home/zhikun/ver05_lumi/"
-logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
-
-res_path_1_template = "/work/halld/home/zhikun/lumi_skim/exclusion_dir/res_sasha_{he_version}_{extraInfo}.txt"
+# rootDir1 = "/volatile/halld/home/zhikun/ver05_lumi/"
+# logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
+res_path_1_template = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/res_new_{he_version}_{extraInfo}_merged.txt"
+logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/new_runs_merged-log"
 
 # rootDir2 = "/volatile/halld/home/zhikun/merged_new_runs"
 logDir2 = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log"
-res_path_2_template = "/work/halld/home/zhikun/lumi_skim/exclusion_dir/res_alex_{he_version}_{extraInfo}.txt"
+res_path_2_template = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/res_old_{he_version}_{extraInfo}.txt"
 
-files_to_delete_template = "/volatile/halld/home/zhikun/merged_new_runs/Run{run_id}/ps_{run_id}_{file_id}.root"
+
+# files_to_delete_template = "/volatile/halld/home/zhikun/merged_new_runs/Run{run_id}/ps_{run_id}_{file_id}.root"
+files_to_delete_template = "/volatile/halld/home/test_lumi/Run{run_id}/ps_{run_id}_{file_id}.root"
 
 
 list_of_runs_from_mss_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/"

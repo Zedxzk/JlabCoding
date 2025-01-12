@@ -1,0 +1,2 @@
+slurmstepd: error: couldn't chdir to `/lustre/enp/swif2/jobs/zhikun/110691/50175058': Cannot send after transport endpoint shutdown: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/lustre/enp/swif2/jobs/zhikun/110691/50175058': Cannot send after transport endpoint shutdown: going to /tmp instead

@@ -4,6 +4,8 @@ from pprint import pprint
 import process_error_messages
 # from  findList_function_definition import add_bad_run, create_dirs,  write_files
 
+# **********************   User Setting Starts ************************
+# ********************** Input Setting Starts ************************
 # he_versions = ["he3", "he4", "he5", "he6", "he7", "he8", "he9", "he10"]
 he_versions = ["he2"]
 extra_info = "of_he2"
@@ -14,19 +16,22 @@ list_of_files_dir = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss"
 # evio_dir = "/mss/halld/RunPeriod-2022-08/recon/ver01/ps/"
 evio_name_template = "ps_{run_id}_{file_id}.evio"
 evio_path_template = "/mss/halld/RunPeriod-2022-08/recon/ver01/ps/ps_{run_id}_{file_id}.evio"
-res_dir_1 = "/work/halld/home/zhikun/lumi_skim/"
-res_dir_2 = "/work/halld/home/zhikun/lumi_skim/"
-res_file_name_template_1 = "res_new_{he_version}_{extra_info}.txt"
-res_file_name_template_2 = "res_new_{he_version}_{extra_info}.txt"
+res_dir_1 = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/"
+res_dir_2 = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/"
+res_file_name_template_1 = "res_new_{he_version}_{extra_info}_merged.txt"
+res_file_name_template_2 = "res_old_{he_version}_{extra_info}.txt"
+
+# ********************** Input Setting Ends ************************
 
 
+# ********************** Output Setting Starts ************************
 list_of_runs_dir  = "/work/halld/home/zhikun/lumi_skim/list_of_runs/he2"
 list_of_runs_name_template = "list_of_runs_{he_version}"
 list_of_files_dir = "/work/halld/home/zhikun/lumi_skim/list_of_files/he2"
-list_of_good_runs_before_merging_dir         = "/work/halld/home/zhikun/lumi_skim/goodRuns_after_resubmission"
-list_of_good_runs_after_merging_dir          = "/work/halld/home/zhikun/lumi_skim/list_of_good_runs_after_merging"
-list_of_bad_runs_before_merging_dir          = "/work/halld/home/zhikun/lumi_skim/list_of_bad_runs_before_merging"
-list_of_bad_runs_after_merging_dir           = "/work/halld/home/zhikun/lumi_skim/list_of_bad_runs_after_merging"
+list_of_seperate_good_runs_before_merging_dir         = "/work/halld/home/zhikun/lumi_skim/goodRuns_after_resubmission/"
+list_of_seperate_good_runs_after_merging_dir          = "/work/halld/home/zhikun/lumi_skim/list_of_good_runs_after_merging/"
+list_of_seperate_bad_runs_before_merging_dir          = "/work/halld/home/zhikun/lumi_skim/list_of_bad_runs_before_merging/"
+list_of_seperate_bad_runs_after_merging_dir           = "/work/halld/home/zhikun/lumi_skim/list_of_bad_runs_after_merging/"
 
 # manual_check_log_dir = "/volatile/halld/home/test_lumi/"
 
@@ -36,13 +41,14 @@ list_of_files_to_reprocess_dir = "/work/halld/home/zhikun/lumi_skim/list_of_file
 jobs_to_resubmit_dir = "/work/halld/home/zhikun/lumi_skim/jobs_to_resubmit/"
 visualized_dir = "/work/halld/home/zhikun/lumi_skim/visualized_dir"
 
-
-
-
 list_of_files_name_template = "list_Run{run_id}"
 good_runs_file_name_template = "goodRuns_{he_version}_{extra_info}.txt"
 list_of_bad_runs_after_merging_name_template = "bad_runs_{he_version}_{extra_info}.txt"
 list_of_bad_runs_before_merging_name_template = "bad_runs_{he_version}_{extra_info}.txt"
+# ********************** Output Setting Ends ************************
+
+# **********************   User Setting Ends ************************
+
 
 
 
@@ -161,11 +167,11 @@ def write_user_define_error_type(dicts):
 for he_version in he_versions:
     part_of_bad_runs_run_id_after_merging = set()
     part_of_bad_runs_run_id_source_1 = set()
-    if not os.path.exists(list_of_good_runs_before_merging_dir):
-        os.makedirs(list_of_good_runs_before_merging_dir)
-    if not os.path.exists(list_of_bad_runs_after_merging_dir):
-        os.makedirs(list_of_bad_runs_after_merging_dir)
-    with open(os.path.join(list_of_good_runs_before_merging_dir, good_runs_file_name_template.format(he_version=he_version,extra_info=extra_info)),'w') as goodRuns:
+    if not os.path.exists(list_of_seperate_good_runs_before_merging_dir):
+        os.makedirs(list_of_seperate_good_runs_before_merging_dir)
+    if not os.path.exists(list_of_seperate_bad_runs_after_merging_dir):
+        os.makedirs(list_of_seperate_bad_runs_after_merging_dir)
+    with open(os.path.join(list_of_seperate_good_runs_before_merging_dir, good_runs_file_name_template.format(he_version=he_version,extra_info=extra_info)),'w') as goodRuns:
         # with open(os.path.join(list_of_good_runs_dir, f'goodRuns_{i}.txt'),'w') as goodRuns:
         list_of_runs = os.path.join(list_of_runs_path_template.format(he_version=he_version, extra_info=extra_info))
         with open(list_of_runs,'r') as f1:
@@ -192,7 +198,7 @@ for he_version in he_versions:
         # for key in formated_errors_source_2:
         #     print(f"old: {key}" )
         part_of_bad_runs_after_merging = process_error_messages.compare_result(formated_errors_source_1, formated_errors_source_2)
-        list_of_bad_runs_after_merging_path = os.path.join(list_of_bad_runs_after_merging_dir, list_of_bad_runs_after_merging_name_template)
+        list_of_bad_runs_after_merging_path = os.path.join(list_of_seperate_bad_runs_after_merging_dir, list_of_bad_runs_after_merging_name_template)
         list_of_bad_runs_after_merging_path = list_of_bad_runs_after_merging_path.format(he_version=he_version, extra_info=extra_info)
 
         for key in  part_of_bad_runs_after_merging:
@@ -215,18 +221,18 @@ for he_version in he_versions:
         #             # 添加第一个数字到集合中
         #             bad_runs_after_merging.add(match[0])
 
-        if not os.path.exists(list_of_good_runs_after_merging_dir):
-            os.makedirs(list_of_good_runs_after_merging_dir)
-        with open(os.path.join(list_of_good_runs_after_merging_dir, f'goodRuns_{he_version}.txt'),'w') as goodRuns_merged:
+        if not os.path.exists(list_of_seperate_good_runs_after_merging_dir):
+            os.makedirs(list_of_seperate_good_runs_after_merging_dir)
+        with open(os.path.join(list_of_seperate_good_runs_after_merging_dir, f'goodRuns_{he_version}.txt'),'w') as goodRuns_merged:
             for run in runs:
                 if run not in all_bad_runs_run_id_after_merging:
                     goodRuns_merged.write(f"{run}\n")
 
 
         # print(runs)
-        if not os.path.exists(list_of_bad_runs_before_merging_dir):
-            os.makedirs(list_of_bad_runs_before_merging_dir)
-        list_of_bad_runs_before_merging_path = os.path.join(list_of_bad_runs_before_merging_dir, list_of_bad_runs_before_merging_name_template).format(he_version=he_version, extra_info=extra_info)
+        if not os.path.exists(list_of_seperate_bad_runs_before_merging_dir):
+            os.makedirs(list_of_seperate_bad_runs_before_merging_dir)
+        list_of_bad_runs_before_merging_path = os.path.join(list_of_seperate_bad_runs_before_merging_dir, list_of_bad_runs_before_merging_name_template).format(he_version=he_version, extra_info=extra_info)
             
         for error in errors_new:
             match1 = pattern1.search(error)
@@ -346,7 +352,7 @@ with open(os.path.join(visualized_dir, f"files_of_all_errors_{extra_info}.txt"),
 #     f.write(msg)
 
 
-with open(os.path.join(visualized_dir, f"files_of_existing_evio_but_missing_log_{extra_info}"), "w") as f1:
+with open(os.path.join(visualized_dir, f"files_of_existing_evio_but_missing_log_{extra_info}.txt"), "w") as f1:
     msg = '\n'.join([
         "***********************************************",
         f"Missing log but existing evio = {num_existing_evio_but_missing_log}\n"
@@ -354,19 +360,18 @@ with open(os.path.join(visualized_dir, f"files_of_existing_evio_but_missing_log_
         "\n\n"
     ])
     f1.write(msg + "\n\n")
-    with open(os.path.join(visualized_dir,f"list_of_resubmission_{extra_info}"), "w") as fi:
-        with open(os.path.join(visualized_dir,f"existing_evio_but_missing_log_{extra_info}.txt"), 'w') as f:
-            for key, value in existing_evio_but_missing_log_runs_and_files.items():
-                f1.write(f"{key}\n")
-                fi.write(f"{key}\n")
-                with open(os.path.join(jobs_to_resubmit_dir, f"list_Run{key}"),"w") as file:
-                    for file_id in value:
-                        evio_name_template.format(run_id = key, file_id=file_id)
-                        file.write(f"ps_{key}_{file_id}.evio\n")
-                f1.write(f"{value}\n")
+    with open(os.path.join(list_of_runs_dir, f"list_of_resubmission_{extra_info}"), "w") as fi:
+        for key, value in existing_evio_but_missing_log_runs_and_files.items():
+            f1.write(f"{key}\n")
+            fi.write(f"{key}\n")
+            with open(os.path.join(jobs_to_resubmit_dir, f"list_Run{key}"),"w") as file:
+                for file_id in value:
+                    evio_name_template.format(run_id = key, file_id=file_id)
+                    file.write(f"ps_{key}_{file_id}.evio\n")
+            f1.write(f"{value}\n")
 
 
-with open(os.path.join(visualized_dir,f"truncated_runs_{extra_info}"), "w") as fi:
+with open(os.path.join(visualized_dir,f"files_of_truncated_runs_{extra_info}.txt"), "w") as fi:
     msg = '\n'.join([
         "****************************************",
         f"Truncated runs in total = {num_truncated}",
@@ -422,7 +427,7 @@ with open(os.path.join(list_of_runs_dir, f"list_of_all_errors_of_source_1_{extra
                 f1.write(list_of_files_reprocessed_contents+"\n")
         # with open()
         
-with open(os.path.join(list_of_runs_dir, f"list_of_good_runs_after_merging_{extra_info}"), "w") as f:
+with open(os.path.join(list_of_runs_dir, f"list_of_all_good_runs_after_merging_{extra_info}"), "w") as f:
     # print(len(all_runs))
     for index in range(len(all_runs)):
         # print(index)
@@ -439,7 +444,7 @@ with open(os.path.join(list_of_runs_dir, f"list_of_good_runs_after_merging_{extr
 
 
 
-with open(os.path.join(list_of_runs_dir, f"list_of_bad_runs_after_merging_{extra_info}"), "w") as f:
+with open(os.path.join(list_of_runs_dir, f"list_of_all_bad_runs_after_merging_{extra_info}"), "w") as f:
     # print(len(all_runs))
     for index in range(len(all_runs)):
         # print(index)

@@ -23,6 +23,7 @@ set n = 1
 
 # foreach file (`awk '{print}' list_of_good_runs_after_merging/goodRuns_he10.txt`)
 
+foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he2`)
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he3`)
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he4`)
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he5`)
@@ -30,7 +31,7 @@ set n = 1
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he7`)
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he8`)
 # foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he9`)
-foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he10`)
+# foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he10`)
 
 
 # foreach file (`awk '{print}' /work/halld/home/zhikun/lumi_skim/list_of_runs/list_of_blanks/list_of_blanks`)
@@ -76,7 +77,8 @@ foreach file (`awk '{print}' list_of_runs_from_mss/list_of_runs_he10`)
   echo Number of files $nfile
   
 # cd /volatile/halld/home/test_lumi/Run$my_file
-cd /volatile/halld/home/zhikun/merged_new_runs/Run$my_file
+cd /volatile/halld/home/test_lumi/Run$my_file
+# cd /volatile/halld/home/zhikun/merged_new_runs/Run$my_file
 
 # rm  ps_$my_file.root
 

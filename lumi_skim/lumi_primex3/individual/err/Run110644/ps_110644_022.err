@@ -1,0 +1,5 @@
+slurmstepd: error: couldn't chdir to `/lustre/enp/swif2/jobs/zhikun/110644/50181518': Cannot send after transport endpoint shutdown: going to /tmp instead
+slurmstepd: error: couldn't chdir to `/lustre/enp/swif2/jobs/zhikun/110644/50181518': Cannot send after transport endpoint shutdown: going to /tmp instead
+export: Command not found.
+export: Command not found.
+Abort (core dumped)

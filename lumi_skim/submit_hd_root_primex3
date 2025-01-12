@@ -34,7 +34,7 @@ mkdir -p /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/err/$out_dir
 
 mkdir -p /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/scripts/$out_dir
 
-foreach file1 (`awk '{print}' list_of_runs_from_mss/list_Run$my_run `)
+foreach file1 (`awk '{print}' list_of_old_runs_from_mss/list_Run$my_run `)
 
      echo $file1
      
@@ -74,7 +74,7 @@ foreach file1 (`awk '{print}' list_of_runs_from_mss/list_Run$my_run `)
 
   echo "SUBMIT to SWIF2"
      
-# swif2 add-job -workflow $wf -account halld  -partition production -name $ntuple -cores 4 -disk 3GB -ram 4GB -time 12h -stdout $outfile -stderr $errfile /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/scripts/${out_dir}/run_ps_skims_$file1.csh
+swif2 add-job -workflow $wf -account halld  -partition production -name $ntuple -cores 4 -disk 3GB -ram 4GB -time 12h -stdout $outfile -stderr $errfile /work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/scripts/${out_dir}/run_ps_skims_$file1.csh
 
   end
 

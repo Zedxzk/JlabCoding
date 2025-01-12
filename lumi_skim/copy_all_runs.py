@@ -6,48 +6,36 @@ import glob
 import subprocess
 
 
-# he_version = "he10"
-he_versions = ["he3", "he4", "he5", "he6", "he7", "he8", "he9", "he10"]
-
-
-
+# # he_version = "he10"
+# he_versions = ["he3", "he4", "he5", "he6", "he7", "he8", "he9", "he10"]
+he_versions = ["he2"]
 
 # # Paths Setup
-extraInfo = "after_reprocessing"
-rootDir1 = "/volatile/halld/home/zhikun/ver05_lumi/"
-logDir1 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log"
-res_path_1_template = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/res_old_{he_version}_{extraInfo}.txt"
-
-rootDir2 = "/volatile/halld/home/zhikun/merged_new_runs"
-logDir2 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log"
-res_path_2_template = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/res_new_{he_version}_{extraInfo}.txt"
-
-
-# extraInfo = "after_resubmission"
-# rootDir2 = "/volatile/halld/home/zhikun/ver05_lumi/"
-# logDir2 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log"
-# # resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_{extraInfo}.txt"
-# res_path_2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_test.txt"
-
-# extraInfo = "after_reprocess"
+# list_file_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_prmix3/list_of_runs_{he_version}"
+list_file_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_from_mss/list_of_runs_{he_version}"
+# extraInfo = "of_he2"
+# # rootDir1 = "/volatile/halld/home/zhikun/ver05_lumi/"
 # rootDir1 = "/volatile/halld/home/somov/ver05_lumi/"
-# logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log"
-# # resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_{extraInfo}.txt"
-# res_path_1 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_before_reprocess.txt"
+# logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log_first"
+# # logDir2 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log"
+# res_path_1_template = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/res_new_{he_version}_{extraInfo}_merged.txt"
 
-# rootDir2 = "/volatile/halld/home/somov/ver06_lumi/"
+# # rootDir2 = "/volatile/halld/home/zhikun/merged_new_runs"
+# rootDir2 = "/volatile/halld/home/somov/ver05_lumi_he2/"
 # logDir2 = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
-# res_path_2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_reprocessed.txt"
+# res_path_2_template = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/res_old_{he_version}_{extraInfo}.txt"
 
-# extraInfo = "after_reprocess"
-# rootDir2 = "/volatile/halld/home/somov/ver06_lumi/"
-# logDir2 = "/work/halld3/home/somov/lumi_skim/lumi_primex3_new/individual/log"
-# # resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_{extraInfo}.txt"
-# res_path_2 = f"/work/halld/home/zhikun/lumi_skim/res_new_1st_submission_after_reprocessing_reprocessed_.txt"
 
-# rootDir1 = "/volatile/halld/home/somov/ver05_lumi/"
-# logDir1 = "/work/halld3/home/somov/lumi_skim/lumi_primex3/individual/log"
-# res_path_1 = f"/work/halld/home/zhikun/lumi_skim/res_new_1st_submission_before_reprocessing_reprocessed_.txt"
+extraInfo = "of_he2"
+rootDir1 = "/volatile/halld/home/zhikun/merged_new_runs/"
+logDir1 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log"
+# resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_{extraInfo}.txt"
+res_path_1_template = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/res_new_{he_version}_{extraInfo}_merged.txt"
+
+rootDir2 = "/volatile/halld/home/zhikun/ver05_lumi/"
+logDir2 = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/log"
+# resDir2 = f"/work/halld/home/zhikun/lumi_skim/res_old_{he_version}_{extraInfo}.txt"
+res_path_2_template = "/work/halld/home/zhikun/lumi_skim/scan_res_dir/res_old_{he_version}_{extraInfo}.txt"
 
 
 destination_root_dir = "/volatile/halld/home/test_lumi"
@@ -56,15 +44,16 @@ destination_log_dir = "/work/halld/home/test_lumi/log"
 # destination_root_dir = "/volatile/halld/home/zhikun/merged_new_runs"
 # destination_log_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log"
 
-destination_res_path_template = "/volatile/halld/home/test_lumi/copy_and_replace_res_{he_version}_test_{extraInfo}.txt"
-logfile_path = f"/volatile/halld/home/test_lumi/loginfo_he_scan_{len(he_versions)}_blocks_{extraInfo}.log"
-manual_check_path_template = "/volatile/halld/home/test_lumi/manual_check_{he_version}_{extraInfo}.log"
+destination_res_path_template = "/volatile/halld/home/test_lumi/copy_and_replace_res_{he_version}_test_{extraInfo}_from_old_source.txt"
+logfile_path = f"/volatile/halld/home/test_lumi/loginfo_he_scan_{len(he_versions)}_blocks_{extraInfo}_from_old_source.log"
+manual_check_path_template = "/volatile/halld/home/test_lumi/manual_check_{he_version}_{extraInfo}_from_old_source.log"
 
-list_file_path_template = "/work/halld/home/zhikun/lumi_skim/list_of_runs_primex3/list_of_runs_{he_version}"
 
 # change copy_files as you like if you want to debug, look at log files and don't need to copy files.
-# copy_files = False
+copy_all_files = True
+# copy_all_files = False
 copy_files = True
+# copy_files = False
 replace_root_files = True
 # replace_root_files = False
 replace_log_files = True
@@ -92,7 +81,8 @@ def main():
     for he_version in he_versions:
         format_paths(he_version, extraInfo)
             # 执行所有操作
-        # copy_all()  # Uncomment to run copy operations
+        if copy_all_files:
+            copy_all()  # Uncomment to run copy operations
         errors_1, errors_2 = check_all()
         replace_all(errors_1, errors_2)
         # 保存快速浏览日志到目标文件
@@ -145,7 +135,7 @@ def save_manual_check_log(message):
     """将需要人工检查的消息保存到 manual_check.log 文件"""
     global manual_check_messages
     with open(manual_check_path, 'w') as f:  
-        f.write(f"Total files to be checked mannually =  {events_manual_check}")
+        f.write(f"Total files to be checked mannually =  {events_manual_check}\n")
         for message in manual_check_messages:
             message = message.strip()
             message = f"\n\n{message}" if message[0] == "*" else message
@@ -224,7 +214,7 @@ def copy_all_log():
     """复制所有日志文件。"""
     if not os.path.exists(list_file_path):
         log(f"List file {list_file_path} does not exist.", is_error=True)
-        return
+        exit(1)
 
     with open(list_file_path, "r") as list_file:
         for run_id in list_file:
@@ -248,7 +238,7 @@ def copy_all_root():
     """复制所有根文件。"""
     if not os.path.exists(list_file_path):
         log(f"List file {list_file_path} does not exist.", is_error=True)
-        return
+        exit(1)
 
     with open(list_file_path, "r") as list_file:
         for run_id in list_file:
@@ -353,7 +343,7 @@ def replace_all(errors_1, errors_2):
 
             if key in errors_2:
                 log(f"source_run_dir = {source_run_dir} is also empty, PLEASE CHECK MANUALLY!!!!", is_error=True)
-                manual_check_messages.append(f"source_run_dir = {source_run_dir} is also empty, PLEASE CHECK MANUALLY!!!!")
+                # manual_check_messages.append(f"source_run_dir = {source_run_dir} is also empty, PLEASE CHECK MANUALLY!!!!")
                 events_manual_check += 1
             else:
                 destination_run_dir = os.path.join(destination_log_dir, run_dir)
