@@ -37,8 +37,8 @@ namespace cutsConstants{
 	// const bool addCuts = false;
 	// const bool addNeighborCuts = true;
 	const bool addNeighborCuts = false;
-	// const bool addTimeCuts = true;
-	const bool addTimeCuts = false;
+	const bool addTimeCuts = true;
+	// const bool addTimeCuts = false;
 	// const bool addNarrowTracnCut = true;
 	const bool addNarrowTracnCut = false;
 	const Double_t digiHitsPeakPosLowerLimit = 2400 ;

@@ -11,7 +11,7 @@ using namespace cutsConstants;
 
 // const bool printAllAcceptedEventsAfterCuts = true;
 const bool printAllAcceptedEventsAfterCuts = false;
-
+Int_t event_id = 0;
 
 // Routine used to create our JEventProcessor
 #include <JANA/JApplication.h>
@@ -73,11 +73,13 @@ jerror_t JEventProcessor_cosmicRayTestEvio::init(void)
 
 
 	ecalHitsTree = new TTree("EcalHits", "EcalHits"       );
-	ecalHitsTree->Branch("EcalChannelNo"                              , & channelNoByColumn       );
+	ecalHitsTree->Branch("Event_ID"                                   , & event_id               );
+	ecalHitsTree->Branch("EcalChannelNo"                              , & channelNoByColumn      );
 	ecalHitsTree->Branch("EcalEnergyDistributionByColumn"             , & energyBranchVar        );
 	ecalHitsTree->Branch("EcalTimeDistributionByColumn"               , & timeBranchVar          );
 	ecalDigitHitsTree = new TTree("EcalDigitHits", "EcalDigitHits" );
 	ecalDigitHitsTree->Branch("EcalChannelNo"                              , & digiChannelNoByColumn  );
+	ecalDigitHitsTree->Branch("Event_ID"                                   , & event_id    	          );
 	ecalDigitHitsTree->Branch("EcalpulsePeakDistributionByColumn"          , & pulsePeakBranchVar     );
 	ecalDigitHitsTree->Branch("EcalpulseIntegralDistributionByColumn"      , & pulseIntegralBranchVar );
 	ecalDigitHitsTree->Branch("EcalpulseTimeDistributionByColumn"          , & pulseTimeBranchVar     );
@@ -142,9 +144,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::init(void)
 
 	cout<< "ALL PLOTS INITIALIZED SUCCESSFULLY\n\n\n\n\n";
 
-
 	// hitsDistrubution = new TH2Poly();
-
 	return NOERROR;
 }
 
@@ -361,6 +361,7 @@ jerror_t JEventProcessor_cosmicRayTestEvio::evnt(JEventLoop *loop, uint64_t even
 
 	// cout << numberGoodChannelEvents << endl;
 	// getchar();
+    event_id ++;
 	return NOERROR;
 }
 

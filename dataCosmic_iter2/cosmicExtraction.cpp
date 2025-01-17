@@ -25,12 +25,12 @@
 using namespace std;
 const bool needOverView = true;
 // const bool needOverView = false;
-// const bool needColumnView = true;
-const bool needColumnView = false;
-// const bool needChannelView = true;
- const bool needChannelView = false;
-const bool addFit = true;
-// const bool addFit = false;
+const bool needColumnView = true;
+// const bool needColumnView = false;
+const bool needChannelView = true;
+//  const bool needChannelView = false;
+// const bool addFit = true;
+const bool addFit = false;
 const bool convolveGaussian = true;
 // const bool convolveGaussian = false;
 // const bool addBkg = false;
@@ -67,7 +67,8 @@ float channelMapByCol[sizeOfEcal][sizeOfEcal] = {0,};
 
 
 
-const TString fileName = "outputRootFiles/allRuns.root";       // The ROOT file to open
+// const TString fileName = "outputRootFiles/allRuns.root";       // The ROOT file to open
+const TString fileName = "hd_root.root";       // The ROOT file to open
 const TString treeName = "EcalDigitHits";       // The ROOT file to open
 
 
