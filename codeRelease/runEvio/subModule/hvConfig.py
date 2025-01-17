@@ -19,6 +19,13 @@ import re
 
 linesToWrite =[]
 
+__run_hv_aimADCSettings_dict__ = {}
+__run_hv_alphaSettings_dict__ = {}
+__run_hv_hvCapSettings_dict__ = {}
+__run_hv_hvBotSettings_dict__ = {}
+
+nums_proceeded = 0
+
 def get_hv_numbers(line):
     match = re.search(r"hv:(-?\d+):(-?\d+)", line)
     if match:
@@ -82,10 +89,67 @@ def readResTable(fileIn):
     # input()
     return data
 
+def readSettingFile():
+    # try:
+        if(aimADCSettings != None):
+            with open(aimADCSettings, "r") as f:
+                lines = f.readlines()
+                for line in lines[1:]:
+                    values = line.strip().split()
+                    if values[0] == '#' or values[0] == '//':
+                        continue
+                    index = int(values[0])
+                    column = int(values[1])
+                    row = int(values[2])
+                    value = float(values[3])
+                    __run_hv_aimADCSettings_dict__[index] = {'index': index, 'column': column, 'row' : row, 'value': value}
+        if(alphaSettings != None):
+            with open(alphaSettings, "r") as f:
+                lines = f.readlines()
+                for line in lines[1:]:
+                    values = line.strip().split()
+                    if values[0] == '#' or values[0] == '//':
+                        continue
+                    index = int(values[0])
+                    column = int(values[1])
+                    row = int(values[2])
+                    value = float(values[3])
+                    __run_hv_alphaSettings_dict__[index] = {'index': index, 'column': column, 'row' : row, 'value': value}
+        if(hvCapSettings != None):
+            with open(hvCapSettings, "r") as f:
+                lines = f.readlines()
+                for line in lines[1:]:
+                    values = line.strip().split()
+                    if values[0] == '#' or values[0] == '//':
+                        continue
+                    index = int(values[0])
+                    column = int(values[1])
+                    row = int(values[2])
+                    value = float(values[3])
+                    __run_hv_hvCapSettings_dict__[index] = {'index': index, 'column': column, 'row' : row, 'value': value}
+        if(hvBotSettings != None):  
+            with open(hvBotSettings, "r") as f:
+                lines = f.readlines()
+                for line in lines[1:]:
+                    values = line.strip().split()
+                    if values[0] == '#' or values[0] == '//':
+                        continue
+                    index = int(values[0])
+                    column = int(values[1])
+                    row = int(values[2])
+                    value = float(values[3])
+                    __run_hv_hvBotSettings_dict__[index] = {'index': index, 'column': column, 'row' : row, 'value': value}
+    # except Exception as e:
+    #     print(yellow + f"Error: {e}")
+    #     print("Operation cancelled." + reset)
+    #     exit(1)
 
+ 
 
 #ECAL:hv:-10:-10:i0set 1 5.000000000000000e+02
 def processAimConfig(line, dataDict):
+    global nums_proceeded
+    readSettingFile()
     # 使用正则表达式匹配：ECAL:hv:<数字>:<数字>:<itemToConfig> <科学计数法的数字>
     pattern = re.compile(rf"ECAL:hv:(-?\d+):(-?\d+):({itemToConfig})([+-]?\d*(\.\d+)?([eE][+-]?\d+)?)")
     # 查找匹配
@@ -102,6 +166,9 @@ def processAimConfig(line, dataDict):
         index = 40 * (39 - col_2) + (39 - row_2) 
         # print(f"Match Success: hv1={col}, hv2={row}, index={index}, config={config}, scientific_number={currentVoltage}")
         if index in dataDict:
+            nums_proceeded += 1
+            if nums_proceeded % 100 == 0:
+                print(green + f"Proceeded {nums_proceeded} items" +reset)
             # 获取对应的配置数据
             current_config = dataDict[index]
             # print(f"Found Config for index {index}: {current_config}")
@@ -112,14 +179,21 @@ def processAimConfig(line, dataDict):
             channel_index = dataDict[index]['index']
             # 对比 col_2 和 row_2 是否与 target_column 和 target_row 匹配
             if col_2 == target_column and row_2 == target_row:
+                # print(index)
                 # print(f"成果比对: 在 index {index} 下，col_2={col_2} 和 row_2={row_2} 与目标值 column={target_column} 和 row={target_row} 匹配。")
-                newHV = calculateVoltage(currentVoltage, currentADC)
+                # print(len(__run_hv_aimADCSettings_dict__))
+                # input()
+                __run_hv_aimADC__ = __run_hv_aimADCSettings_dict__[index]['value'] if aimADCSettings != None else aimADC
+                __run_hv_alpha__  = __run_hv_alphaSettings_dict__[index]['value'] if alphaSettings != None else alpha
+                __run_hv_hvCap__  = __run_hv_hvCapSettings_dict__[index]['value'] if hvCapSettings != None else hvCap
+                __run_hv_hvBot__  = __run_hv_hvBotSettings_dict__[index]['value'] if hvBotSettings != None else hvBot
+                newHV = calculateVoltage(currentVoltage, currentADC,aimADC= __run_hv_aimADC__, hvCap=__run_hv_hvCap__, hvBot=__run_hv_hvBot__, alpha=__run_hv_alpha__)
                 # print(f"(column, row) = ({col_2}, {row_2})")
                 if(newHV == False):
                     print(f"(column, row) = ({col_2}, {row_2}) or index = {index}")
                     print(f"Illigal fitting result of mean! Return current voltage setting of this channel. Current ADC = {currentADC}")
                     input("Please check manually! Type Enter to continue")
-                    newHV = currentVoltage if currentVoltage <= hvCap else currentVoltage if currentVoltage > hvBot else hvBot
+                    newHV = currentVoltage if currentVoltage <= __run_hv_hvCap__ else currentVoltage if currentVoltage > __run_hv_hvBot__ else __run_hv_hvBot__
                 return f"ECAL:hv:{col}:{row}:{itemToConfig}{newHV:.3f}\n"
             else:
                 # print(red + f"成果比对失败: 在 index {index} 下，col={col} 和 row={row} ,col_2={col_2} 和 row_2={row_2} 不匹配目标值 column={target_column} 和 row={target_row}。")

@@ -26,3 +26,12 @@ aimADC         = 8
 alpha          = 8
 hvCap          = 1050
 hvBot          = 850
+aimADCSettings = None
+alphaSettings = None
+hvCapSettings = None
+hvBotSettings = None
+
+aimADCSettings = "aimADCSettings.txt"
+alphaSettings = "alphaSettings.txt"
+# hvCapSettings = "hvCapSettings.txt"
+# hvBotSettings = "hvBotSettings.txt"
