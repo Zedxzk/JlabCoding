@@ -25,10 +25,10 @@
 using namespace std;
 const bool needOverView = true;
 // const bool needOverView = false;
-const bool needColumnView = true;
-// const bool needColumnView = false;
-const bool needChannelView = true;
-//  const bool needChannelView = false;
+// const bool needColumnView = true;
+const bool needColumnView = false;
+// const bool needChannelView = true;
+ const bool needChannelView = false;
 // const bool addFit = true;
 const bool addFit = false;
 const bool convolveGaussian = true;
@@ -47,15 +47,16 @@ string dirPath = "./columnView/";
 string columnViewName =  dirPath + "column_%02d";
 //
 const Double_t varLowerLimit       = 0;
-const Double_t varUpperLimit       = 60;
-const Int_t    varBinsInThisFile   = 60;
-const Int_t    binsForFit          = 60;
+const Double_t varUpperLimit       = 30;
+const Int_t    varBinsInThisFile   = 30;
+const Int_t    binsForFit          = 30;
 const Double_t varAcceptLowerLimit = 7;
 const Double_t varAcceptUpperLimit = 10;
 const Int_t minColumnIndex = 0;
 const Int_t maxColumnIndex = 1600;
 const Int_t binsColumn     = 1600;
-const Double_t maxZ        = 60;
+const Double_t maxZ        = 80;
+const Int_t    cutOffThreshold     = 0;
 
 const Double_t energyLowerLimit = 0;
 const Double_t energyUpperLimit = 100;
@@ -67,8 +68,8 @@ float channelMapByCol[sizeOfEcal][sizeOfEcal] = {0,};
 
 
 
-// const TString fileName = "outputRootFiles/allRuns.root";       // The ROOT file to open
-const TString fileName = "hd_root.root";       // The ROOT file to open
+const TString fileName = "outputRootFiles/allRuns.root";       // The ROOT file to open
+// const TString fileName = "hd_root.root";       // The ROOT file to open
 const TString treeName = "EcalDigitHits";       // The ROOT file to open
 
 
@@ -369,7 +370,7 @@ void cosmicExtraction() {
     hist2d->GetXaxis()->CenterTitle();
     hist2d->GetYaxis()->CenterTitle();
     // tree->Project("hist2d", Form("%s:%s", branNameVar.Data(), branNameChannelNo.Data()));
-    tree->Project("hist2d", Form("%s:%s", branNameVar.Data(), branNameChannelNo.Data()), Form("%s>4", branNameVar.Data()));
+    tree->Project("hist2d", Form("%s:%s", branNameVar.Data(), branNameChannelNo.Data()), Form("%s>%d", branNameVar.Data(), cutOffThreshold));
     // tree->Project("hist2d", Form("%s:%s", branNameVar.Data(), branNameChannelNo.Data()), Form("%s > 4", branNameVar.Data()));
     if(needOverView){
         // 检查目录是否存在
@@ -460,7 +461,7 @@ void cosmicExtraction() {
         h2->GetYaxis()->SetLimits(-0.5, 39.5); // 原始范围为 [0, 10]，向右平移 0.5 单位
         h2->GetYaxis()->SetTickLength(0.001); // 设置 Y 轴刻度线长度为 0.02
         
-        cout << overview->GetBinContent(6,21);
+        // cout << overview->GetBinContent(6,21);
         tempCanvas2->cd();
         gPad->SetGrid();
         overview->GetXaxis()->SetTitle("column");

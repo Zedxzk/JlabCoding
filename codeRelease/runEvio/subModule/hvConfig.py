@@ -26,29 +26,29 @@ __run_hv_hvBotSettings_dict__ = {}
 
 nums_proceeded = 0
 
-def get_hv_numbers(line):
+def __get_item_numbers__(line):
     match = re.search(r"hv:(-?\d+):(-?\d+)", line)
     if match:
         return int(match.group(1)), int(match.group(2))
     exit(line)
 
 
-def findTemplate():
+def __findTemplate__():
     if hvTemplateFile in os.listdir(os.getcwd()):
         pass
     else:
         print(f"Can't find hv Template : {hvTemplateFile}, please check `parameters.py` or {hvTemplateFile}")
         exit(1)
 
-def calculateVoltage(currentVoltage, currentADC, aimADC=aimADC, hvCap=hvCap, hvBot=hvBot, alpha=alpha):
+def __calculateVoltage__(currentVoltage, currentADC, aimADC=aimADC, hvCap=hvCap, hvBot=hvBot, alpha=alpha):
     if currentADC <= 0.5:
         return False
-    newVoltage = currentVoltage * (aimADC/currentADC) ** (1. / alpha)
-    newVoltage = newVoltage if newVoltage <= hvCap else hvCap
-    newVoltage = newVoltage if newVoltage >= hvBot else hvBot 
+    __newVoltage__ = currentVoltage * (aimADC/currentADC) ** (1. / alpha)
+    __newVoltage__ = __newVoltage__ if __newVoltage__ <= hvCap else hvCap
+    __newVoltage__ = __newVoltage__ if __newVoltage__ >= hvBot else hvBot 
     # print(currentVoltage, currentADC, new
     # print(currentVoltage, currentADC, newVoltage)
-    return newVoltage
+    return __newVoltage__
 
 
 def readResTable(fileIn):
@@ -89,7 +89,7 @@ def readResTable(fileIn):
     # input()
     return data
 
-def readSettingFile():
+def __readAllSettingFile__():
     # try:
         if(aimADCSettings != None):
             with open(aimADCSettings, "r") as f:
@@ -149,7 +149,7 @@ def readSettingFile():
 #ECAL:hv:-10:-10:i0set 1 5.000000000000000e+02
 def processAimConfig(line, dataDict):
     global nums_proceeded
-    readSettingFile()
+    __readAllSettingFile__()
     # 使用正则表达式匹配：ECAL:hv:<数字>:<数字>:<itemToConfig> <科学计数法的数字>
     pattern = re.compile(rf"ECAL:hv:(-?\d+):(-?\d+):({itemToConfig})([+-]?\d*(\.\d+)?([eE][+-]?\d+)?)")
     # 查找匹配
@@ -187,7 +187,7 @@ def processAimConfig(line, dataDict):
                 __run_hv_alpha__  = __run_hv_alphaSettings_dict__[index]['value'] if alphaSettings != None else alpha
                 __run_hv_hvCap__  = __run_hv_hvCapSettings_dict__[index]['value'] if hvCapSettings != None else hvCap
                 __run_hv_hvBot__  = __run_hv_hvBotSettings_dict__[index]['value'] if hvBotSettings != None else hvBot
-                newHV = calculateVoltage(currentVoltage, currentADC,aimADC= __run_hv_aimADC__, hvCap=__run_hv_hvCap__, hvBot=__run_hv_hvBot__, alpha=__run_hv_alpha__)
+                newHV = __calculateVoltage__(currentVoltage, currentADC,aimADC= __run_hv_aimADC__, hvCap=__run_hv_hvCap__, hvBot=__run_hv_hvBot__, alpha=__run_hv_alpha__)
                 # print(f"(column, row) = ({col_2}, {row_2})")
                 if(newHV == False):
                     print(f"(column, row) = ({col_2}, {row_2}) or index = {index}")
@@ -245,7 +245,7 @@ def processConfiguration():
                 
                 # 不匹配的行直接写入输出文件
   
-        sorted_lines = sorted(linesToWrite, key=get_hv_numbers)
+        sorted_lines = sorted(linesToWrite, key=__get_item_numbers__)
         for line in sorted_lines:
             fileOut.write(line)
     print(f"All res Successfully proceeded!New Configuration File: {fileOut}")

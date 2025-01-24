@@ -18,7 +18,7 @@ yellow = Fore.YELLOW
 #common import
 
 
-
+runCommand += " "
 
 import re
 import fnmatch

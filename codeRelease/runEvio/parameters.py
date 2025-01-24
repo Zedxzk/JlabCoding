@@ -38,3 +38,11 @@ hvBotSettings = None
 # alphaSettings = "alphaSettings.txt"
 # hvCapSettings = "hvCapSettings.txt"
 # hvBotSettings = "hvBotSettings.txt"
+
+
+#    ***********  Set specifc Item ***********
+itemSettings = "tripSettings.txt"
+# itemSettings = None
+
+itemValue   = 1
+# itemValue   = None
