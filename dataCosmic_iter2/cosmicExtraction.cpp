@@ -25,12 +25,12 @@
 using namespace std;
 const bool needOverView = true;
 // const bool needOverView = false;
-// const bool needColumnView = true;
-const bool needColumnView = false;
-// const bool needChannelView = true;
- const bool needChannelView = false;
-// const bool addFit = true;
-const bool addFit = false;
+const bool needColumnView = true;
+// const bool needColumnView = false;
+const bool needChannelView = true;
+//  const bool needChannelView = false;
+const bool addFit = true;
+// const bool addFit = false;
 const bool convolveGaussian = true;
 // const bool convolveGaussian = false;
 // const bool addBkg = false;
@@ -57,7 +57,8 @@ const Int_t maxColumnIndex = 1600;
 const Int_t binsColumn     = 1600;
 const Double_t maxZ        = 80;
 const Int_t    cutOffThreshold     = 0;
-
+const Double_t initialMeanInAMP  = 10;
+const Double_t initialMeanOutAMP =  8;
 const Double_t energyLowerLimit = 0;
 const Double_t energyUpperLimit = 100;
 const Int_t      energyBinsInThisFile = 100;
@@ -158,9 +159,9 @@ void channelsFit(TH2D* hist2D, dataType type) {
             Double_t initialMean;
             // 判断是否在中心区域
             if (col >= 10 && col <= 29 && row >= 10 && row <= 29) {
-                initialMean = 25;
+                initialMean = initialMeanInAMP;
             } else {
-                initialMean = 9;
+                initialMean = initialMeanOutAMP;
             }
             RooRealVar mean("mean", "mean", initialMean, 5, varUpperLimit);
             RooRealVar sigma("sigma", "sigma", 3, 1e-4, 5);

@@ -14,18 +14,18 @@ runId = []
 
 # High Voltage Configuration :
 #    ******************  Attention!!!   *****************
-hvTemplateFile = 'Jan_10.snap' # please input your current HV config File!
+hvTemplateFile = 'ECAL_HV_22_Jan_2025_20_55_07.snap' # please input your current HV config File!
 #    ******************  Attention!!!   *****************
 
-# itemToConfig   = "v0set 1 "
-itemToConfig   = "trip 1 "
-fitResDir      = "../muonsCommission/DigitHits/res.txt"
+itemToConfig   = "v0set 1 "
+# itemToConfig   = "trip 1 "
+fitResDir      = "./DigitHits/res.txt"
 #  ADC Countes = A * ( hv ) ^ alpha
 #  Here A is canceled out and not needed
 aimADC         = 10
 alpha          = 8
 hvCap          = 1050
-hvBot          = 950
+hvBot          = 850
 
 # Set config for each channel. If you use detailed settings, please set the following parameters, and run -generateSettings command first. The setting file will be based on the universal settings above.
 # And you can modify this file.
