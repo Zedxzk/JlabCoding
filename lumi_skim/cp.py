@@ -48,11 +48,11 @@ res_path_2 = f"/work/halld/home/zhikun/lumi_skim/scan_res_dir/res_new_{he_versio
 # res_path_1 = f"/work/halld/home/zhikun/lumi_skim/res_new_1st_submission_before_reprocessing_reprocessed_.txt"
 
 
-destination_root_dir = "/volatile/halld/home/test_lumi"
-destination_log_dir = "/work/halld/home/test_lumi/log"
+# destination_root_dir = "/volatile/halld/home/test_lumi"
+# destination_log_dir = "/work/halld/home/test_lumi/log"
 
-# destination_root_dir = "/volatile/halld/home/zhikun/merged_new_runs"
-# destination_log_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log"
+destination_root_dir = "/volatile/halld/home/zhikun/merged_new_runs"
+destination_log_dir = "/work/halld/home/zhikun/lumi_skim/lumi_primex3/individual/new_runs_merged_log"
 
 destination_res_path = f"/volatile/halld/home/test_lumi/copy_and_replace_res_{he_version}_test_{extraInfo}.txt"
 logfile_path = f"/volatile/halld/home/test_lumi/loginfo_{he_version}_test_{extraInfo}.log"

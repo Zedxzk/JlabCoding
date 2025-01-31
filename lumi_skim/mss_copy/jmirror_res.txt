@@ -1,0 +1,732 @@
+(dpl) [zhikun@ifarm2401 lumi_skim]$ python copy_to_mss.py
+Run 110737: Pending (0.0s) | Run 110738: Pending (0.0s) | Run 110739: Pending (0.0s)Traceback (most recent call last):
+  File "/w/halld-scshelf2101/home/zhikun/lumi_skim/copy_to_mss.py", line 77, in <module>
+    asyncio.run(main())
+  File "/home/zhikun/.conda/envs/dpl/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/zhikun/.conda/envs/dpl/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/w/halld-scshelf2101/home/zhikun/lumi_skim/copy_to_mss.py", line 73, in main
+    await asyncio.gather(*tasks)
+  File "/w/halld-scshelf2101/home/zhikun/lumi_skim/copy_to_mss.py", line 23, in mirror_run
+    async with semaphore:  # 控制并发数量
+  File "/home/zhikun/.conda/envs/dpl/lib/python3.9/asyncio/locks.py", line 14, in __aenter__
+    await self.acquire()
+  File "/home/zhikun/.conda/envs/dpl/lib/python3.9/asyncio/locks.py", line 417, in acquire
+    await fut
+RuntimeError: Task <Task pending name='Task-5' coro=<mirror_run() running at /w/halld-scshelf2101/home/zhikun/lumi_skim/copy_to_mss.py:23> cb=[_gather.<locals>._done_callback() at /home/zhikun/.conda/envs/dpl/lib/python3.9/asyncio/tasks.py:767]> got Future <Future pending> attached to a different loop
+(dpl) [zhikun@ifarm2401 lumi_skim]$ Found 76 files, comprising 3,317,616,410 bytes.
+Will process 20 taped files, comprising 745,541,546 bytes.
+Will process 56 untaped files, comprising 2,572,074,864 bytes.
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_019.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_019.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_019.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_019.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_019.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_037.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_037.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_037.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_037.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_037.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_013.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_013.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_013.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_013.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_013.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_034.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_034.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_034.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_034.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_034.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_020.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_020.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_020.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_020.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_020.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_014.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_014.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_014.root).
+Found 87 files, comprising 3,838,285,141 bytes.
+157754207
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_014.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_014.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_017.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_017.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_017.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_017.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_017.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_002.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_002.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_002.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_002.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_002.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_010.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_010.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_010.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_010.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_010.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_005.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_005.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_005.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_005.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_005.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_022.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_022.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_022.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_022.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_022.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_029.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_029.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_029.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_029.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_029.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_032.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_032.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_032.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_032.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_032.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_028.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_028.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_028.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_028.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_028.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_007.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_007.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_007.root).
+Will process 24 taped files, comprising 966,231,872 bytes.
+Will process 63 untaped files, comprising 2,872,053,269 bytes.
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_013.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_013.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_013.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_007.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_007.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_025.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_025.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_025.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_013.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_013.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_005.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_005.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_lumi_ps_110738_005.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_025.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_025.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_001.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_001.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_001.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_001.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_001.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_000.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_000.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_000.root).
+157754208
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_000.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_000.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_021.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_021.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_021.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_005.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_005.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_032.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_032.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_lumi_ps_110738_032.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_032.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_032.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_004.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_004.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_lumi_ps_110738_004.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_021.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_021.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_026.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_026.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_026.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_004.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_004.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_021.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_021.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_021.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_021.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_021.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_026.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_026.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_026.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_026.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_026.root
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_026.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_026.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_024.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_024.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_lumi_ps_110738_024.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_024.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_024.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_040.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_040.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_040.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_040.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_040.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_038.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_038.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_038.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_038.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_038.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_036.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_036.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_lumi_ps_110738_036.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_036.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_036.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_000.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_000.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_lumi_ps_110738_000.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_000.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_000.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_023.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_023.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_lumi_ps_110738_023.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_023.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_023.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_018.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_018.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_018.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_018.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_018.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_002.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_002.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_002.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_002.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_002.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_033.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_033.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_033.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_033.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_033.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_017.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_017.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_lumi_ps_110738_017.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_017.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_017.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_020.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_020.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_lumi_ps_110738_020.root).
+
+(dpl) [zhikun@ifarm2401 lumi_skim]$ 0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_020.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_020.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_029.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_029.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_lumi_ps_110738_029.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_029.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_029.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_012.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_012.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_lumi_ps_110738_012.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_012.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_012.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738.root            /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738.root            /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_006.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_006.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_006.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_006.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_006.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_001.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_001.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_001.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_001.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_001.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_029.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_029.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_029.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_029.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_029.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_014.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_014.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110738_ps_110738_014.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_014.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_014.root
+
+(dpl) [zhikun@ifarm2401 lumi_skim]$ 
+(dpl) [zhikun@ifarm2401 lumi_skim]$ ls  /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_014.root
+/mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_014.root
+(dpl) [zhikun@ifarm2401 lumi_skim]$ ls /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/
+lumi_ps_110738_000.root  lumi_ps_110738_023.root  ps_110738_002.root  ps_110738_026.root
+lumi_ps_110738_004.root  lumi_ps_110738_024.root  ps_110738_006.root  ps_110738_029.root
+lumi_ps_110738_005.root  lumi_ps_110738_029.root  ps_110738_013.root  ps_110738_033.root
+lumi_ps_110738_012.root  lumi_ps_110738_032.root  ps_110738_014.root  ps_110738_038.root
+lumi_ps_110738_017.root  lumi_ps_110738_036.root  ps_110738_018.root  ps_110738_040.root
+lumi_ps_110738_020.root  ps_110738_001.root       ps_110738_021.root  ps_110738.root
+(dpl) [zhikun@ifarm2401 lumi_skim]$ jmirror /volatile/halld/home/zhikun/merged_new_runs/Run110737/ /volatile/halld/home/zhikun/merged_new_runs/Run110737/ /mss/halld/RunPeriod-2022-08/production/all_lumi/Run11737
+Found 76 files, comprising 3,317,616,410 bytes.
+Will process 76 untaped files, comprising 3,317,616,410 bytes.
+157754209
+^C(dpl) [zhikun@ifarm2401 lumi_skim]python copy_to_mss.py                                   
+Run 110737: Pending (0.0s) | Run 110738: Pending (0.0s) | Run 110739: Pending (0.0s)Traceback (most recent call last):
+  File "/w/halld-scshelf2101/home/zhikun/lumi_skim/copy_to_mss.py", line 77, in <module>
+    asyncio.run(main())
+  File "/home/zhikun/.conda/envs/dpl/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/zhikun/.conda/envs/dpl/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/w/halld-scshelf2101/home/zhikun/lumi_skim/copy_to_mss.py", line 73, in main
+    await asyncio.gather(*tasks)
+  File "/w/halld-scshelf2101/home/zhikun/lumi_skim/copy_to_mss.py", line 23, in mirror_run
+    async with semaphore:  # 控制并发数量
+  File "/home/zhikun/.conda/envs/dpl/lib/python3.9/asyncio/locks.py", line 14, in __aenter__
+    await self.acquire()
+  File "/home/zhikun/.conda/envs/dpl/lib/python3.9/asyncio/locks.py", line 417, in acquire
+    await fut
+RuntimeError: Task <Task pending name='Task-4' coro=<mirror_run() running at /w/halld-scshelf2101/home/zhikun/lumi_skim/copy_to_mss.py:23> cb=[_gather.<locals>._done_callback() at /home/zhikun/.conda/envs/dpl/lib/python3.9/asyncio/tasks.py:767]> got Future <Future pending> attached to a different loop
+(dpl) [zhikun@ifarm2401 lumi_skim]$ Found 76 files, comprising 3,317,616,410 bytes.
+Will process 20 taped files, comprising 745,541,546 bytes.
+Will process 56 untaped files, comprising 2,572,074,864 bytes.
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_020.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_020.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_020.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_020.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_020.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_022.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_022.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_022.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_022.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_022.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_037.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_037.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_037.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_037.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_037.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_001.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_001.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_001.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_001.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_001.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_005.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_005.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_005.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_005.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_005.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_014.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_014.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_014.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_014.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_014.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_029.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_029.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_029.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_029.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_029.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_013.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_013.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_013.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_013.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_013.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_034.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_034.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_034.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_034.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_034.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_026.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_026.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_026.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_026.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_026.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_019.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_019.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_019.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_019.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_019.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_000.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_000.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_000.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_000.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_000.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_032.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_032.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_032.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_032.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_032.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_007.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_007.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_007.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_007.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_007.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_010.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_010.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_010.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_010.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_010.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_021.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_021.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_021.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_021.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_021.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_002.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_002.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_002.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_002.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_002.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_028.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_028.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_028.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_028.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_028.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_025.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_025.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_025.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_025.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_025.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_017.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_017.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_017.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_017.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_017.root
+
+(dpl) [zhikun@ifarm2401 lumi_skim]$ 756016275 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_000.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_000.root
+756016275 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_000.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_000.root
+756016237 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_001.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_001.root
+ 83,364,643 bytes in 0.029 seconds (2,741.473 MiB/sec)
+read=0.03, write=0.00, check=0.00, rwait=0.00, wwait=0.03, cwait=0.02
+756016237 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_001.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_001.root
+ 88,698,786 bytes in 0.056 seconds (1,510.531 MiB/sec)
+read=0.05, write=0.00, check=0.00, rwait=0.00, wwait=0.05, cwait=0.05
+756016273 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_003.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_003.root
+756016273 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_003.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_003.root
+756016238 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_004.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_004.root
+756016238 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_004.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_004.root
+756016232 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_005.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_005.root
+ 88,219,239 bytes in 0.057 seconds (1,476.007 MiB/sec)
+read=0.06, write=0.00, check=0.01, rwait=0.00, wwait=0.06, cwait=0.05
+ 88,597,185 bytes in 0.083 seconds (1,017.986 MiB/sec)
+read=0.08, write=0.00, check=0.01, rwait=0.00, wwait=0.08, cwait=0.07
+ 88,046,454 bytes in 0.495 seconds (169.632 MiB/sec)
+read=0.49, write=0.00, check=0.02, rwait=0.00, wwait=0.49, cwait=0.47
+756016232 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_005.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_005.root
+756016228 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_006.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_006.root
+756016228 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_006.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_006.root
+756016257 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_008.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_008.root
+ 88,090,406 bytes in 0.050 seconds (1,680.191 MiB/sec)
+read=0.05, write=0.00, check=0.01, rwait=0.00, wwait=0.05, cwait=0.04
+ 87,406,434 bytes in 0.209 seconds (398.839 MiB/sec)
+read=0.21, write=0.00, check=0.01, rwait=0.00, wwait=0.21, cwait=0.20
+756016257 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_008.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_008.root
+756016261 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_009.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_009.root
+ 87,165,230 bytes in 0.189 seconds (439.827 MiB/sec)
+read=0.18, write=0.00, check=0.02, rwait=0.00, wwait=0.19, cwait=0.17
+756016261 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_009.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_009.root
+756016259 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_011.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_011.root
+756016239 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_012.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_012.root
+ 87,505,607 bytes in 0.092 seconds (907.085 MiB/sec)
+read=0.09, write=0.00, check=0.01, rwait=0.00, wwait=0.09, cwait=0.08
+756016259 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_011.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_011.root
+756016231 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_013.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_013.root
+ 87,423,106 bytes in 0.251 seconds (332.164 MiB/sec)
+read=0.25, write=0.00, check=0.00, rwait=0.00, wwait=0.25, cwait=0.25
+756016239 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_012.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_012.root
+756016236 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_015.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_015.root
+ 87,632,756 bytes in 0.255 seconds (327.738 MiB/sec)
+read=0.25, write=0.00, check=0.01, rwait=0.00, wwait=0.25, cwait=0.25
+756016231 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_013.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_013.root
+756016265 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_016.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_016.root
+ 87,688,990 bytes in 0.158 seconds (529.283 MiB/sec)
+read=0.16, write=0.00, check=0.01, rwait=0.00, wwait=0.16, cwait=0.15
+ 87,970,021 bytes in 0.396 seconds (211.855 MiB/sec)
+read=0.39, write=0.00, check=0.00, rwait=0.00, wwait=0.39, cwait=0.39
+756016265 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_016.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_016.root
+756016266 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_017.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_017.root
+756016236 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_015.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_015.root
+756016234 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_018.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_018.root
+ 87,666,548 bytes in 0.118 seconds (708.520 MiB/sec)
+read=0.12, write=0.00, check=0.00, rwait=0.00, wwait=0.12, cwait=0.11
+ 87,484,923 bytes in 0.126 seconds (662.160 MiB/sec)
+read=0.12, write=0.00, check=0.01, rwait=0.00, wwait=0.13, cwait=0.12
+756016266 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_017.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_017.root
+756016234 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_018.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_018.root
+756016246 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_020.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_020.root
+756016245 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_023.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_023.root
+ 87,293,361 bytes in 0.331 seconds (251.509 MiB/sec)
+read=0.33, write=0.00, check=0.01, rwait=0.00, wwait=0.33, cwait=0.32
+756016246 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_020.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_020.root
+756016245 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_023.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_023.root
+756016263 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_024.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_024.root
+756016255 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_025.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_025.root
+ 87,182,774 bytes in 0.089 seconds (934.202 MiB/sec)
+read=0.09, write=0.00, check=0.01, rwait=0.00, wwait=0.09, cwait=0.08
+ 87,473,360 bytes in 0.287 seconds (290.666 MiB/sec)
+read=0.28, write=0.00, check=0.01, rwait=0.00, wwait=0.29, cwait=0.28
+ 87,315,899 bytes in 0.186 seconds (447.693 MiB/sec)
+read=0.18, write=0.00, check=0.01, rwait=0.00, wwait=0.18, cwait=0.18
+756016255 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_025.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_025.root
+756016263 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_024.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_024.root
+756016233 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_028.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_028.root
+756016227 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_027.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_027.root
+ 87,852,299 bytes in 0.408 seconds (205.349 MiB/sec)
+read=0.41, write=0.00, check=0.00, rwait=0.00, wwait=0.41, cwait=0.40
+756016227 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_027.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_027.root
+ 87,361,895 bytes in 0.429 seconds (194.207 MiB/sec)
+read=0.42, write=0.00, check=0.00, rwait=0.00, wwait=0.42, cwait=0.42
+756016241 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_029.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_029.root
+756016233 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_028.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_028.root
+756016223 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_030.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_030.root
+ 87,600,378 bytes in 0.116 seconds (720.192 MiB/sec)
+read=0.11, write=0.00, check=0.01, rwait=0.00, wwait=0.11, cwait=0.10
+756016223 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_030.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_030.root
+756016252 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_031.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_031.root
+ 87,692,111 bytes in 0.067 seconds (1,248.205 MiB/sec)
+read=0.06, write=0.00, check=0.00, rwait=0.00, wwait=0.07, cwait=0.06
+756016241 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_029.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_029.root
+756016269 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_032.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_032.root
+ 86,867,980 bytes in 0.368 seconds (225.119 MiB/sec)
+read=0.37, write=0.00, check=0.00, rwait=0.00, wwait=0.37, cwait=0.36
+ 86,252,123 bytes in 0.239 seconds (344.169 MiB/sec)
+read=0.24, write=0.00, check=0.01, rwait=0.00, wwait=0.24, cwait=0.23
+756016252 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_031.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_031.root
+756016258 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_033.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_033.root
+756016269 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_032.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_032.root
+756016271 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_035.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_035.root
+ 86,902,470 bytes in 0.348 seconds (238.151 MiB/sec)
+read=0.35, write=0.00, check=0.01, rwait=0.00, wwait=0.35, cwait=0.34
+ 83,428,128 bytes in 0.290 seconds (274.356 MiB/sec)
+read=0.29, write=0.00, check=0.00, rwait=0.00, wwait=0.29, cwait=0.29
+756016258 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_033.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_033.root
+756016271 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_035.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_035.root
+756016221 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_036.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_036.root
+756016244 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_037.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_037.root
+ 87,092,532 bytes in 0.193 seconds (430.352 MiB/sec)
+read=0.19, write=0.00, check=0.01, rwait=0.00, wwait=0.19, cwait=0.19
+756016221 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_036.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_036.root
+756016243 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737.root            /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737.root
+ 39,174,349 bytes in 0.321 seconds (116.385 MiB/sec)
+read=0.32, write=0.00, check=0.00, rwait=0.00, wwait=0.32, cwait=0.32
+756016244 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_037.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_037.root
+756016274 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_003.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_003.root
+ 6,174,540 bytes in 0.281 seconds (20.956 MiB/sec)
+read=0.28, write=0.00, check=0.00, rwait=0.00, wwait=0.28, cwait=0.28
+ 3,222,453 bytes in 0.216 seconds (14.228 MiB/sec)
+read=0.22, write=0.00, check=0.00, rwait=0.00, wwait=0.22, cwait=0.22
+756016243 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737.root            /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737.root
+756016242 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_004.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_004.root
+756016274 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_003.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_003.root
+756016272 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_006.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_006.root
+ 3,217,917 bytes in 0.002 seconds (1,534.422 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+ 3,219,137 bytes in 0.002 seconds (1,535.004 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+756016242 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_004.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_004.root
+756016272 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_006.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_006.root
+756016247 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_007.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_007.root
+756016256 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_008.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_008.root
+756016256 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_008.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_008.root
+756016264 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_009.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_009.root
+756016247 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_007.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_007.root
+ 3,212,388 bytes in 0.111 seconds (27.600 MiB/sec)
+read=0.11, write=0.00, check=0.00, rwait=0.00, wwait=0.11, cwait=0.11
+ 3,199,704 bytes in 0.001 seconds (3,051.476 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+ 3,191,256 bytes in 1.000 seconds (3.043 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+756016268 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_010.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_010.root
+756016264 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_009.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_009.root
+756016260 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_011.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_011.root
+ 3,216,958 bytes in 0.085 seconds (36.093 MiB/sec)
+read=0.08, write=0.00, check=0.00, rwait=0.00, wwait=0.08, cwait=0.08
+756016260 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_011.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_011.root
+756016240 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_012.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_012.root
+ 3,208,065 bytes in 0.145 seconds (21.100 MiB/sec)
+read=0.14, write=0.00, check=0.00, rwait=0.00, wwait=0.14, cwait=0.14
+756016268 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_010.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_010.root
+756016226 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_014.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_014.root
+ 3,214,604 bytes in 0.128 seconds (23.951 MiB/sec)
+read=0.13, write=0.00, check=0.00, rwait=0.00, wwait=0.13, cwait=0.13
+756016240 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_012.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_012.root
+756016235 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_015.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_015.root
+ 3,215,384 bytes in 0.132 seconds (23.231 MiB/sec)
+read=0.13, write=0.00, check=0.00, rwait=0.00, wwait=0.13, cwait=0.13
+756016226 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_014.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_014.root
+756016267 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_016.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_016.root
+ 3,212,591 bytes in 0.119 seconds (25.746 MiB/sec)
+read=0.12, write=0.00, check=0.00, rwait=0.00, wwait=0.12, cwait=0.12
+756016235 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_015.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_015.root
+756016253 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_018.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_018.root
+756016253 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_018.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_018.root
+756016222 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_019.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_019.root
+ 3,212,292 bytes in 0.310 seconds (9.882 MiB/sec)
+read=0.31, write=0.00, check=0.00, rwait=0.00, wwait=0.31, cwait=0.31
+ 3,209,537 bytes in 0.001 seconds (3,060.853 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+756016267 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_016.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_016.root
+756016230 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_021.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_021.root
+ 3,211,188 bytes in 0.146 seconds (20.976 MiB/sec)
+read=0.14, write=0.00, check=0.00, rwait=0.00, wwait=0.15, cwait=0.14
+756016222 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_019.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_019.root
+756016224 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_022.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_022.root
+ 3,205,362 bytes in 0.113 seconds (27.052 MiB/sec)
+read=0.11, write=0.00, check=0.00, rwait=0.00, wwait=0.11, cwait=0.11
+756016230 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_021.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_021.root
+ 3,209,624 bytes in 0.052 seconds (58.864 MiB/sec)
+read=0.05, write=0.00, check=0.00, rwait=0.00, wwait=0.05, cwait=0.05
+756016248 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_023.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_023.root
+756016224 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_022.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_022.root
+756016262 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_024.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_024.root
+ 3,213,730 bytes in 0.118 seconds (25.973 MiB/sec)
+read=0.12, write=0.00, check=0.00, rwait=0.00, wwait=0.12, cwait=0.12
+756016248 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_023.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_023.root
+756016249 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_026.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_026.root
+ 3,212,224 bytes in 0.068 seconds (45.050 MiB/sec)
+read=0.07, write=0.00, check=0.00, rwait=0.00, wwait=0.07, cwait=0.07
+756016262 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_024.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_024.root
+756016229 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_027.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_027.root
+ 3,214,987 bytes in 0.189 seconds (16.222 MiB/sec)
+read=0.19, write=0.00, check=0.00, rwait=0.00, wwait=0.19, cwait=0.19
+756016249 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_026.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_026.root
+ 3,215,154 bytes in 0.179 seconds (17.130 MiB/sec)
+read=0.18, write=0.00, check=0.00, rwait=0.00, wwait=0.18, cwait=0.18
+756016225 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_030.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_030.root
+756016229 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_027.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_027.root
+756016250 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_031.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_031.root
+756016225 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_030.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_030.root
+756016254 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_033.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_033.root
+756016251 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_034.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_034.root
+756016250 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_031.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_031.root
+756016270 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_035.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_035.root
+ 3,175,717 bytes in 0.102 seconds (29.692 MiB/sec)
+read=0.10, write=0.00, check=0.00, rwait=0.00, wwait=0.10, cwait=0.10
+756016254 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_033.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_033.root
+756016220 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_036.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_036.root
+756016251 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_034.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_034.root
+756016285 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_001.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_001.root
+ 3,203,686 bytes in 0.002 seconds (1,527.637 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+ 3,208,201 bytes in 0.200 seconds (15.298 MiB/sec)
+read=0.20, write=0.00, check=0.00, rwait=0.00, wwait=0.20, cwait=0.20
+ 3,206,120 bytes in 0.001 seconds (3,057.594 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+ 3,208,075 bytes in 0.001 seconds (3,059.459 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+ 3,213,983 bytes in 0.001 seconds (3,065.093 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+756016220 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_036.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_036.root
+756016270 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_035.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_035.root
+756016307 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_002.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_002.root
+756016333 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_003.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_003.root
+ 86,810,195 bytes in 0.042 seconds (1,971.158 MiB/sec)
+read=0.04, write=0.00, check=0.01, rwait=0.00, wwait=0.04, cwait=0.04
+756016285 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_001.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_001.root
+ 87,138,320 bytes in 0.104 seconds (799.054 MiB/sec)
+read=0.10, write=0.00, check=0.00, rwait=0.00, wwait=0.10, cwait=0.10
+756016336 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_006.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_006.root
+756016307 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_002.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_002.root
+756016284 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_007.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_007.root
+ 87,112,463 bytes in 0.463 seconds (179.432 MiB/sec)
+read=0.46, write=0.00, check=0.01, rwait=0.00, wwait=0.46, cwait=0.45
+756016336 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_006.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_006.root
+756016333 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_003.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_003.root
+756016304 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_008.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_008.root
+756016340 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_009.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_009.root
+ 87,335,512 bytes in 0.125 seconds (666.317 MiB/sec)
+read=0.12, write=0.00, check=0.01, rwait=0.00, wwait=0.12, cwait=0.12
+756016284 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_007.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_007.root
+756016308 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_010.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_010.root
+ 87,002,748 bytes in 0.204 seconds (406.727 MiB/sec)
+read=0.20, write=0.00, check=0.00, rwait=0.00, wwait=0.20, cwait=0.20
+756016304 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_008.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_008.root
+756016340 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_009.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_009.root
+756016329 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_011.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_011.root
+756016306 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_013.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_013.root
+ 86,560,764 bytes in 0.230 seconds (358.916 MiB/sec)
+read=0.23, write=0.00, check=0.01, rwait=0.00, wwait=0.23, cwait=0.22
+ 87,628,728 bytes in 0.047 seconds (1,778.070 MiB/sec)
+756016308 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_010.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_010.root
+read=0.04, write=0.00, check=0.00, rwait=0.00, wwait=0.04, cwait=0.04
+ 87,881,568 bytes in 0.031 seconds (2,703.561 MiB/sec)
+read=0.03, write=0.00, check=0.00, rwait=0.00, wwait=0.03, cwait=0.03
+756016331 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_014.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_014.root
+ 84,874,364 bytes in 0.100 seconds (809.425 MiB/sec)
+read=0.10, write=0.00, check=0.00, rwait=0.00, wwait=0.10, cwait=0.09
+756016329 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_011.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_011.root
+ 86,621,791 bytes in 0.177 seconds (466.717 MiB/sec)
+read=0.18, write=0.00, check=0.00, rwait=0.00, wwait=0.18, cwait=0.17
+756016296 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_015.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_015.root
+756016306 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_013.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_013.root
+756016290 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_016.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_016.root
+ 87,379,935 bytes in 0.356 seconds (234.079 MiB/sec)
+read=0.35, write=0.00, check=0.01, rwait=0.00, wwait=0.36, cwait=0.35
+756016331 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_014.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_014.root
+756016312 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_018.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_018.root
+ 87,651,783 bytes in 0.100 seconds (835.913 MiB/sec)
+read=0.10, write=0.00, check=0.01, rwait=0.00, wwait=0.10, cwait=0.09
+756016290 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_016.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_016.root
+756016296 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_015.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_015.root
+756016319 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_019.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_019.root
+756016315 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_021.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_021.root
+756016319 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_019.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_019.root
+756016330 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_022.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_022.root
+ 87,480,858 bytes in 0.512 seconds (162.946 MiB/sec)
+read=0.51, write=0.00, check=0.01, rwait=0.00, wwait=0.51, cwait=0.50
+ 87,082,633 bytes in 0.029 seconds (2,863.740 MiB/sec)
+read=0.02, write=0.00, check=0.00, rwait=0.00, wwait=0.02, cwait=0.02
+ 87,118,483 bytes in 0.014 seconds (5,934.476 MiB/sec)
+read=0.01, write=0.00, check=0.00, rwait=0.00, wwait=0.01, cwait=0.01
+ 87,621,665 bytes in 0.035 seconds (2,387.501 MiB/sec)
+read=0.03, write=0.00, check=0.00, rwait=0.00, wwait=0.03, cwait=0.03
+756016312 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_018.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_018.root
+756016315 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_021.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_021.root
+756016327 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_025.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_025.root
+756016321 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_026.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_026.root
+ 87,009,814 bytes in 0.400 seconds (207.448 MiB/sec)
+read=0.40, write=0.00, check=0.00, rwait=0.00, wwait=0.40, cwait=0.40
+ 86,539,536 bytes in 0.322 seconds (256.306 MiB/sec)
+read=0.32, write=0.00, check=0.01, rwait=0.00, wwait=0.32, cwait=0.31
+756016330 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_022.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_022.root
+756016314 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_027.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_027.root
+ 86,083,825 bytes in 0.094 seconds (873.361 MiB/sec)
+read=0.09, write=0.00, check=0.01, rwait=0.00, wwait=0.09, cwait=0.09
+756016321 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_026.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_026.root
+756016326 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_028.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_028.root
+756016327 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_025.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_025.root
+756016335 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_030.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_030.root
+ 86,973,956 bytes in 0.291 seconds (285.034 MiB/sec)
+read=0.29, write=0.00, check=0.00, rwait=0.00, wwait=0.29, cwait=0.29
+ 87,623,872 bytes in 0.082 seconds (1,019.081 MiB/sec)
+read=0.08, write=0.00, check=0.00, rwait=0.00, wwait=0.08, cwait=0.08
+756016314 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_027.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_027.root
+ 87,276,724 bytes in 0.024 seconds (3,468.065 MiB/sec)
+read=0.02, write=0.00, check=0.00, rwait=0.00, wwait=0.02, cwait=0.02
+756016293 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_031.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_031.root
+756016335 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_030.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_030.root
+756016326 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_028.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_028.root
+756016339 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_033.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_033.root
+756016322 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_034.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_034.root
+ 87,630,808 bytes in 0.167 seconds (500.427 MiB/sec)
+read=0.17, write=0.00, check=0.01, rwait=0.00, wwait=0.17, cwait=0.16
+ 87,622,705 bytes in 0.215 seconds (388.668 MiB/sec)
+read=0.21, write=0.00, check=0.01, rwait=0.00, wwait=0.21, cwait=0.21
+756016339 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_033.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_033.root
+ 87,118,508 bytes in 0.245 seconds (339.113 MiB/sec)
+756016310 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_035.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_035.root
+read=0.24, write=0.00, check=0.01, rwait=0.00, wwait=0.24, cwait=0.24
+756016293 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_031.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_031.root
+756016291 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_037.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_037.root
+756016322 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_034.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_034.root
+756016286 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_038.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_038.root
+756016291 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_037.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_037.root
+756016332 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_039.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_039.root
+ 86,915,340 bytes in 0.412 seconds (201.187 MiB/sec)
+read=0.41, write=0.00, check=0.00, rwait=0.00, wwait=0.41, cwait=0.41
+756016310 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_035.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_035.root
+756016289 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_040.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_040.root
+ 87,011,281 bytes in 0.358 seconds (231.789 MiB/sec)
+read=0.36, write=0.00, check=0.01, rwait=0.00, wwait=0.36, cwait=0.35
+756016286 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_038.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_038.root
+756016334 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_041.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_041.root
+ 87,103,339 bytes in 0.362 seconds (229.470 MiB/sec)
+read=0.36, write=0.00, check=0.01, rwait=0.00, wwait=0.36, cwait=0.35
+ 86,951,340 bytes in 0.034 seconds (2,438.919 MiB/sec)
+read=0.03, write=0.00, check=0.00, rwait=0.00, wwait=0.03, cwait=0.03
+756016332 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_039.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_039.root
+756016299 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_042.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_042.root
+ 87,265,472 bytes in 0.384 seconds (216.726 MiB/sec)
+read=0.38, write=0.00, check=0.00, rwait=0.00, wwait=0.38, cwait=0.38
+ 87,296,884 bytes in 0.331 seconds (251.519 MiB/sec)
+read=0.33, write=0.00, check=0.01, rwait=0.00, wwait=0.33, cwait=0.32
+756016289 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_040.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_040.root
+756016297 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_000.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_000.root
+756016334 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_041.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_041.root
+756016324 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_003.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_003.root
+ 3,194,187 bytes in 0.128 seconds (23.799 MiB/sec)
+read=0.13, write=0.00, check=0.00, rwait=0.00, wwait=0.13, cwait=0.13
+ 3,212,405 bytes in 0.001 seconds (3,063.588 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+756016324 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_003.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_003.root
+756016297 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_000.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_000.root
+756016302 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_004.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_004.root
+756016337 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_005.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_005.root
+ 73,275,526 bytes in 0.310 seconds (225.423 MiB/sec)
+read=0.31, write=0.00, check=0.01, rwait=0.00, wwait=0.31, cwait=0.30
+756016299 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/lumi_ps_110738_042.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/lumi_ps_110738_042.root
+756016301 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_007.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_007.root
+ 3,212,713 bytes in 0.134 seconds (22.865 MiB/sec)
+read=0.13, write=0.00, check=0.00, rwait=0.00, wwait=0.13, cwait=0.13
+756016302 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_004.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_004.root
+756016337 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_005.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_005.root
+756016342 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_008.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_008.root
+756016309 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_009.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_009.root
+ 3,212,008 bytes in 0.118 seconds (25.959 MiB/sec)
+read=0.12, write=0.00, check=0.00, rwait=0.00, wwait=0.12, cwait=0.12
+ 3,211,303 bytes in 0.021 seconds (145.835 MiB/sec)
+read=0.02, write=0.00, check=0.00, rwait=0.00, wwait=0.02, cwait=0.02
+756016301 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_007.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_007.root
+756016309 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_009.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_009.root
+ 3,218,453 bytes in 0.036 seconds (85.260 MiB/sec)
+read=0.03, write=0.00, check=0.00, rwait=0.00, wwait=0.04, cwait=0.03
+756016325 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_010.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_010.root
+ 3,212,096 bytes in 0.001 seconds (3,063.293 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+756016323 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_011.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_011.root
+756016342 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_008.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_008.root
+756016317 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_012.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_012.root
+ 3,201,555 bytes in 0.115 seconds (26.550 MiB/sec)
+read=0.11, write=0.00, check=0.00, rwait=0.00, wwait=0.11, cwait=0.11
+756016325 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_010.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_010.root
+ 2,941,747 bytes in 0.041 seconds (68.426 MiB/sec)
+read=0.04, write=0.00, check=0.00, rwait=0.00, wwait=0.04, cwait=0.04
+ 3,191,510 bytes in 0.003 seconds (1,014.554 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+756016292 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_015.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_015.root
+756016323 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_011.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_011.root
+756016317 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_012.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_012.root
+756016344 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_016.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_016.root
+756016316 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_017.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_017.root
+ 3,215,271 bytes in 0.092 seconds (33.330 MiB/sec)
+read=0.09, write=0.00, check=0.00, rwait=0.00, wwait=0.09, cwait=0.09
+ 3,207,891 bytes in 0.004 seconds (764.821 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+756016344 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_016.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_016.root
+ 3,210,660 bytes in 0.103 seconds (29.727 MiB/sec)
+read=0.10, write=0.00, check=0.00, rwait=0.00, wwait=0.10, cwait=0.10
+756016292 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_015.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_015.root
+756016341 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_019.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_019.root
+756016316 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_017.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_017.root
+756016318 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_020.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_020.root
+756016295 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_022.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_022.root
+ 3,215,970 bytes in 0.001 seconds (3,066.988 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+ 3,214,228 bytes in 0.002 seconds (1,532.663 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+756016318 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_020.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_020.root
+756016295 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_022.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_022.root
+756016287 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_023.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_023.root
+756016345 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_024.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_024.root
+ 3,210,147 bytes in 0.264 seconds (11.596 MiB/sec)
+read=0.26, write=0.00, check=0.00, rwait=0.00, wwait=0.26, cwait=0.26
+756016341 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_019.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_019.root
+756016320 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_025.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_025.root
+ 3,187,044 bytes in 0.091 seconds (33.400 MiB/sec)
+read=0.09, write=0.00, check=0.00, rwait=0.00, wwait=0.09, cwait=0.09
+756016345 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_024.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_024.root
+756016328 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_027.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_027.root
+756016287 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_023.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_023.root
+ 3,199,840 bytes in 0.083 seconds (36.766 MiB/sec)
+read=0.08, write=0.00, check=0.00, rwait=0.00, wwait=0.08, cwait=0.08
+756016288 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_028.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_028.root
+756016320 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_025.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_025.root
+756016294 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_030.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_030.root
+ 3,215,379 bytes in 0.087 seconds (35.246 MiB/sec)
+read=0.09, write=0.00, check=0.00, rwait=0.00, wwait=0.09, cwait=0.09
+756016288 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_028.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_028.root
+756016328 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_027.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_027.root
+756016283 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_031.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_031.root
+ 3,215,266 bytes in 0.072 seconds (42.588 MiB/sec)
+read=0.07, write=0.00, check=0.00, rwait=0.00, wwait=0.07, cwait=0.07
+756016343 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_032.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_032.root
+756016294 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_030.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_030.root
+756016313 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_034.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_034.root
+756016343 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_032.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_032.root
+756016338 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_035.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_035.root
+ 3,206,605 bytes in 0.171 seconds (17.883 MiB/sec)
+read=0.17, write=0.00, check=0.00, rwait=0.00, wwait=0.17, cwait=0.17
+ 3,216,294 bytes in 0.002 seconds (1,533.648 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+ 3,203,347 bytes in 0.001 seconds (3,054.950 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+ 3,188,138 bytes in 0.001 seconds (3,040.445 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+756016313 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_034.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_034.root
+756016303 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_036.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_036.root
+ 3,206,732 bytes in 0.192 seconds (15.928 MiB/sec)
+read=0.18, write=0.00, check=0.00, rwait=0.00, wwait=0.18, cwait=0.18
+ 3,215,532 bytes in 0.515 seconds (5.955 MiB/sec)
+read=0.52, write=0.00, check=0.00, rwait=0.00, wwait=0.52, cwait=0.51
+756016338 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_035.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_035.root
+756016283 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_031.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_031.root
+756016298 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_037.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_037.root
+756016305 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_039.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_039.root
+ 3,197,888 bytes in 0.266 seconds (11.465 MiB/sec)
+read=0.27, write=0.00, check=0.00, rwait=0.00, wwait=0.27, cwait=0.27
+756016303 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_036.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_036.root
+ 3,205,637 bytes in 0.036 seconds (84.920 MiB/sec)
+read=0.04, write=0.00, check=0.00, rwait=0.00, wwait=0.04, cwait=0.04
+756016300 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_041.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_041.root
+756016305 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_039.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_039.root
+756016311 Staging        /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_042.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_042.root
+756016311 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_042.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_042.root
+ 3,205,607 bytes in 0.296 seconds (10.328 MiB/sec)
+read=0.30, write=0.00, check=0.00, rwait=0.00, wwait=0.30, cwait=0.30
+ 3,095,496 bytes in 0.001 seconds (2,952.095 MiB/sec)
+read=0.00, write=0.00, check=0.00, rwait=0.00, wwait=0.00, cwait=0.00
+ 3,211,580 bytes in 0.026 seconds (117.800 MiB/sec)
+read=0.03, write=0.00, check=0.00, rwait=0.00, wwait=0.03, cwait=0.03
+756016298 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_037.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_037.root
+756016300 Staged         /volatile/halld/home/zhikun/merged_new_runs/Run110738/ps_110738_041.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110738/ps_110738_041.root
+
+(dpl) [zhikun@ifarm2401 lumi_skim]$ 

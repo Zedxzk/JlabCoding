@@ -20,6 +20,7 @@ Int_t event_id = 0;
 #include <TSystem.h>
 #include <set>
 
+Double_t useless_for_test = 0;
 Int_t plotIndex = 1;
 Int_t MinEcalSizeToAccept = 8;
 Double_t Threshold = 4;

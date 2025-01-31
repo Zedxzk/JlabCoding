@@ -14,9 +14,10 @@ runId = []
 
 # High Voltage Configuration :
 #    ******************  Attention!!!   *****************
-hvTemplateFile = 'ECAL_HV_22_Jan_2025_20_55_07.snap' # please input your current HV config File!
+hvTemplateFile = 'ECAL_HV_27_Jan_2025_18_09_59.snap' # please input your current HV config File!
 #    ******************  Attention!!!   *****************
 
+# itemToConfig   = "ilock:thresh 1 "
 itemToConfig   = "v0set 1 "
 # itemToConfig   = "trip 1 "
 fitResDir      = "./DigitHits/res.txt"
@@ -25,7 +26,7 @@ fitResDir      = "./DigitHits/res.txt"
 aimADC         = 10
 alpha          = 8
 hvCap          = 1050
-hvBot          = 850
+hvBot          = 800
 
 # Set config for each channel. If you use detailed settings, please set the following parameters, and run -generateSettings command first. The setting file will be based on the universal settings above.
 # And you can modify this file.
@@ -45,5 +46,5 @@ hvBotSettings = None
 # itemSettings = "tripSettings.txt"
 itemSettings = None
 
-itemValue   = 1
+itemValue   = 50000
 # itemValue   = None

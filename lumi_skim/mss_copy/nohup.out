@@ -1,0 +1,63 @@
+Found 76 files, comprising 3,317,616,410 bytes.
+Will process 20 taped files, comprising 745,541,546 bytes.
+Will process 56 untaped files, comprising 2,572,074,864 bytes.
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_032.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_032.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_032.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_032.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_032.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_014.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_014.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_014.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_014.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_014.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_022.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_022.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_022.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_022.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_022.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_019.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_019.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_019.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_019.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_019.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_025.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_025.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_025.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_025.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_025.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_005.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_005.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_005.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_005.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_005.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_010.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_010.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_010.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_010.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_010.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_028.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_028.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_028.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_028.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_028.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_029.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_029.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_029.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_029.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_029.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_002.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_002.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_002.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_002.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_002.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_001.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_001.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_001.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_001.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_001.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_017.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_017.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_017.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_017.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_017.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_020.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_020.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_020.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_020.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_020.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_000.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_000.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_000.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_000.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_000.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_034.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_034.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_034.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_034.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_034.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_007.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_007.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_007.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_007.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_007.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_026.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_026.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_026.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_026.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_026.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_013.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_013.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_013.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_013.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_013.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_037.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_037.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_ps_110737_037.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/ps_110737_037.root        /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/ps_110737_037.root
+0         Verifying      /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_021.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_021.root
+WARN  Unable to load previously calculated CRC (No such file: /tmp/crc._mss_halld_RunPeriod-2022-08_production_all_lumi_Run110737_lumi_ps_110737_021.root).
+0         Done           /volatile/halld/home/zhikun/merged_new_runs/Run110737/lumi_ps_110737_021.root   /mss/halld/RunPeriod-2022-08/production/all_lumi/Run110737/lumi_ps_110737_021.root

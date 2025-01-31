@@ -6,6 +6,7 @@ temp/muons_smeared.hddm
 inputFilesEvio/hd_rawdata_130063_000.evio
 scriptArea/evioFiles/hd_rawdata_130063_000.evio
 .git/index
+.git/objects/pack/pack-a5a78eb5d4ca7c472346f41f80b5089d5ee85f12.pack
 .git/objects/pack/pack-93772b21de0a753ee324cd051e4c19f98a030bef.pack
 .git/objects/pack/pack-58b9df7c1bf472c5767588f10dc61a3b9e7b0733.pack
 .git/objects/pack/pack-e8008e86fd37d930703f343df4c3c73b910304e5.pack
