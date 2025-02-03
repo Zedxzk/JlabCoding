@@ -14,7 +14,9 @@ const int channels = 1600;  // Number of entries in "res.txt"
 const Double_t markerSize = 3;
 const Double_t lineWidth = 2;
 
-std::string outputPattern = "./meanView/meanViewCol_%02d";
+std::string outputDir = "./meanView/";
+std::string outputNameTemplate = "meanViewCol_%02d";
+std::string outputPattern = outputDir + outputNameTemplate;
 
 // Function to set graph points and errors
 void SetGraphErrors(TGraphErrors* graph, const std::vector<double>& x, const std::vector<double>& yMeans, const std::vector<double>& yErrors) {
@@ -38,6 +40,18 @@ double GetMaxYFromSums(const std::vector<Double_t>& means, const std::vector<Dou
 }
 
 void meanVisualization() {
+    if (gSystem->AccessPathName(outputDir.c_str()) == 0) {
+        std::cout << "Directory exists. Deleting all files inside..." << std::endl;
+        
+        // 使用系统命令删除目录中的所有文件
+        gSystem->Exec(Form("rm -rf %s/*", outputDir.c_str()));
+        std::cout << "All files deleted inside '" << outputDir << "'." << std::endl;
+    } 
+    else {
+        std::cout << "Directory does not exist. Creating it..." << std::endl;
+        gSystem->Exec(Form("mkdir -p %s", outputDir.c_str()));
+    }
+    // 创建目录
     int lineCount = 0;
     // Create canvas and graph objects
     TCanvas* canvas = new TCanvas("", "", 1600, 1200);
@@ -74,7 +88,7 @@ void meanVisualization() {
             continue;
         }
         // cout << "Lines read = " << lines_read << " ,lines = " << line << endl;
-        std::cout << "Total lines read: " << lineCount << std::endl;
+        // std::cout << "Total lines read: " << lineCount << std::endl;
         // Adjust mean error values
         if (meanErr > mean) meanErr = mean;
         if (meanErr <= 0.1) meanErr = 0.1;
