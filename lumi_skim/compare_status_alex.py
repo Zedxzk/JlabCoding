@@ -494,3 +494,33 @@ with open(os.path.join(list_of_runs_dir, f"list_of_all_bad_runs_after_merging_{e
 
 
 write_user_define_error_type([terminated_runs_and_files, existing_evio_but_missing_log_runs_and_files])
+
+with open("compare_status.txt", "r") as f:
+    all_files_to_compare = [ i.split("_") for i in f.readlines()    ]
+
+
+# for error_type, error_dict in zip(error_types, error_dicts):
+#     print(f"error Type: {error_type}")
+#     pprint( error_dict)
+# input()
+
+
+with open("compare_results.txt", "w")  as f:
+    for run, file in  all_files_to_compare:
+        find_type = False
+        run = str(run)
+        file = f"{int(file):03d}"
+        # print(f"{run}  {file} ")
+        for error_type, error_dict in zip(error_types, error_dicts):
+            # pprint(f"error Type: {error_type}", error_dict)
+            # if (run, file) in error_dict.items():
+            if run in error_dict:
+                # print(f"run {run} in dict, type = {error_type}")
+                if file in error_dict[run]:
+                    f.write(f"{run}  {file}  {error_type}\n")
+                    find_type = True
+                    break
+            else:
+                pass
+        if not find_type:
+            print(f"Can not find {run}  {file} ")
