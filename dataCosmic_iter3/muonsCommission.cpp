@@ -26,8 +26,8 @@ const Double_t energyAcceptLowerLimit = 0.020;
 const Double_t energyAcceptUpperLimit = 0.025;
 const Double_t chi2_ndfAcceptMaximum = 50.0;
 
-
-
+const Double_t energyBinsWidth = 0.001; // Width of energy bins
+const int EcalChannelNums = 1600; // Number of Ecal channels
 
 enum dataType {   
     Energy = 1,
@@ -49,8 +49,6 @@ void channelsFit(TH2D* hist2D, dataType type) {
         std::ofstream outFile(textOut.Data());
         std::ofstream warnFile(textWarn.Data());
 
-
-
         // for (int i = 0; i < 50; i++) {
         for (int i = 1; i <= EcalChannelNums; i++) {
             // zhikunPlotConfig::setFontTimesNewRoman();
@@ -62,8 +60,7 @@ void channelsFit(TH2D* hist2D, dataType type) {
             TString histName = TString::Format("col_row_%02d_%02d_EnergyDeposit", col, row);
             TH1D *hist1D = new TH1D(histName, "Channel Number", energyBinsInThisFile, energyLowerLimit, energyUpperLimit);
 
-            // 从hist2D中填充hist1D
-
+            // Fill hist1D from hist2D
             for (int j = 1; j <= energyBinsInThisFile; j++) {
                 hist1D->SetBinContent(j, hist2D->GetBinContent(i + 1, j + 5));
             }
@@ -72,14 +69,14 @@ void channelsFit(TH2D* hist2D, dataType type) {
 
             RooRealVar mean("mean", "mean", 0.023, energyLowerLimit, energyUpperLimit);
             RooRealVar sigma("sigma", "sigma", 0.001, 1e-4, 0.1);
-            RooRealVar a0("a0", "a0", 0.0, -1.0, 1.0); // 切比雪夫多项式的一阶系数
-            RooRealVar a1("a1", "a1", 0.5, -1.0, 1.0); // 切比雪夫多项式的一阶系数
+            RooRealVar a0("a0", "a0", 0.0, -1.0, 1.0); // First coefficient of Chebyshev polynomial
+            RooRealVar a1("a1", "a1", 0.5, -1.0, 1.0); // First coefficient of Chebyshev polynomial
             RooRealVar x("x", "x", energyLowerLimit, energyUpperLimit);
 
             RooLandau landau("landau", "landau", x, mean, sigma);
             RooChebychev cheb("cheb", "cheb", x, RooArgList(a0));
 
-            RooRealVar frac("frac", "frac", 0.5, 0.0, 1.0);  // 加权参数
+            RooRealVar frac("frac", "frac", 0.5, 0.0, 1.0);  // Weight parameter
             RooAddPdf model("model", "landau + cheb", RooArgList(landau, cheb), RooArgList(frac));
 
             RooDataHist data("data", "data", x, hist1D);
@@ -87,33 +84,29 @@ void channelsFit(TH2D* hist2D, dataType type) {
 
             RooPlot* frame = x.frame();
             frame->SetTitle(TString::Format("Channel %d   (col, row) = (%2d, %2d)", i, col , row).Data());
-            frame->SetTitleSize(0.05);   // 设置标题的字体大小（根据需要调整）
-            frame->SetTitleOffset(1.0);  // 控制标题与图形的距离
+            frame->SetTitleSize(0.05);   // Set the font size of the title (adjust as needed)
+            frame->SetTitleOffset(1.0);  // Control the distance between the title and the graph
             data.plotOn(frame);
             model.plotOn(frame);
             model.plotOn(frame, RooFit::Components("cheb"), RooFit::LineStyle(kDashed));
 
-
-            int dof = 32;  // 这里假设你已经知道自由度的数量
+            int dof = 32;  // Here we assume you already know the number of degrees of freedom
             RooChi2Var chi2("chi2", "chi2", model, data);
 
-            // 计算 chi2/dof
-            double chi2_dof = frame->chiSquare(3);  // 这里的3是模型参数的个数
+            // Calculate chi2/dof
+            double chi2_dof = frame->chiSquare(3);  // Here 3 is the number of model parameters
 
-            // 创建文本框来显示 chi2/dof
+            // Create a text box to display chi2/dof
             TPaveText *pt = new TPaveText(0.60, 0.70, 0.89, 0.890, "BRNDC");
             pt->SetBorderSize(0);
             pt->SetFillColor(0);
-            pt->SetTextAlign(12);  // 文本居中
+            pt->SetTextAlign(12);  // Center text
             pt->SetTextSize(0.03);
             pt->SetTextFont(42);
-            // 显示 chi2/dofs
+            // Display chi2/dof
             pt->AddText(TString::Format("#chi^{2}/dof=%2.2f/%d=%2.1f", chi2_dof * dof, dof, chi2_dof));
 
-            // 将文本框绘制在画布上
-
-
-            
+            // Draw the text box on the canvas
             zhikunPlotConfig::setRooFitPlotStyleV1(frame);
             frame->SetXTitle("Energy deposition/GeV");
             frame->SetYTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetYaxis()->GetBinWidth(1)));
@@ -121,7 +114,6 @@ void channelsFit(TH2D* hist2D, dataType type) {
             c->Update();
             pt->Draw();
             c->SaveAs(outputDir + histName.Data() + ".pdf");
-            
             
             bool warn = false;
             warn = mean.getVal() < energyAcceptLowerLimit || mean.getVal() > energyAcceptUpperLimit || (chi2_dof >= chi2_ndfAcceptMaximum);

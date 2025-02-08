@@ -90,7 +90,8 @@ def readResTable(fileIn):
     return data
 
 def __readAllSettingFile__():
-    # try:
+    global __hv_config_comparison__
+    try:
         if(aimADCSettings != None):
             with open(aimADCSettings, "r") as f:
                 lines = f.readlines()
@@ -139,10 +140,10 @@ def __readAllSettingFile__():
                     row = int(values[2])
                     value = float(values[3])
                     __run_hv_hvBotSettings_dict__[index] = {'index': index, 'column': column, 'row' : row, 'value': value}
-    # except Exception as e:
-    #     print(yellow + f"Error: {e}")
-    #     print("Operation cancelled." + reset)
-    #     exit(1)
+    except Exception as e:
+        print(yellow + f"Error: {e}")
+        print("Operation cancelled." + reset)
+        exit(1)
 
  
 
@@ -169,6 +170,8 @@ def processAimConfig(line, dataDict):
             nums_proceeded += 1
             if nums_proceeded % 100 == 0:
                 print(green + f"Proceeded {nums_proceeded} items" +reset)
+            if nums_proceeded == 1596:
+                print(green + f"Proceeded {nums_proceeded} items" +reset)
             # 获取对应的配置数据
             current_config = dataDict[index]
             # print(f"Found Config for index {index}: {current_config}")
@@ -194,6 +197,8 @@ def processAimConfig(line, dataDict):
                     print(f"Illigal fitting result of mean! Return current voltage setting of this channel. Current ADC = {currentADC}")
                     input("Please check manually! Type Enter to continue")
                     newHV = currentVoltage if currentVoltage <= __run_hv_hvCap__ else currentVoltage if currentVoltage > __run_hv_hvBot__ else __run_hv_hvBot__
+                __hv_config_comparison__.write(f'{col_2:02d}      {row_2:02d}     {currentVoltage:>8.3f}         {newHV:>8.3f}         {("+" if newHV - currentVoltage >= 0 else "-")}{abs(newHV - currentVoltage):7.3f}\n')
+
                 return f"ECAL:hv:{col}:{row}:{itemToConfig}{newHV:.3f}\n"
             else:
                 # print(red + f"成果比对失败: 在 index {index} 下，col={col} 和 row={row} ,col_2={col_2} 和 row_2={row_2} 不匹配目标值 column={target_column} 和 row={target_row}。")
@@ -201,7 +206,7 @@ def processAimConfig(line, dataDict):
                 exit(1)                
 
         else:
-           # print(yellow + f"Warnning!: No config found for index {index}!" +Style.RESET_ALL)
+            print(yellow + f"Warnning!: No config found for index {index}!" +Style.RESET_ALL)
             try:
                 return line
             except Exception as e:
@@ -218,6 +223,9 @@ def processConfiguration():
     current_datetime = datetime.now()
     formatted_datetime = current_datetime.strftime("%d_%b_%Y_%H_%M_%S")
     fileOut = "ECAL_HV_" + formatted_datetime + ".snap"
+
+    
+
     
     # 打开输入文件并读取内容
     with open(hvTemplateFile, 'r') as fileIn:
@@ -232,6 +240,7 @@ def processConfiguration():
 
     # 打开输出文件进行写入
     with open(fileOut, 'w') as fileOut:
+
         # 遍历每一行并处理
         for line in lines:
             if not (f"{itemToConfig}" in line):  # 判断行是否包含 itemToConfig
@@ -254,6 +263,10 @@ def processConfiguration():
 
 def hvConfigureAction():
     # try:
+    global __hv_config_comparison__
+    __hv_config_compare_file_name__ = "HV_Comparison.txt"
+    with  open(__hv_config_compare_file_name__, "w") as __hv_config_comparison__:
+        __hv_config_comparison__.write("column  row  current_HV_Setting  new_HV_Setting  Voltage_change\n")
         processConfiguration()
     # except Exception as e:
     #     print(red + f"Error Occurred! \n{e}" + Style.RESET_ALL)

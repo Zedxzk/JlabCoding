@@ -86,122 +86,112 @@ Double_t estimateFWHM(RooLandau& landau, RooRealVar& mean, RooRealVar& sigma) {
 
 
 void channelsFit(TH2D* hist2D, dataType type) {
-    // std :: cout << energyUpperLimit - varLowerLimit << "           "  << energyBinsWidth << std :: endl;
     if (type == Energy) {
         std::ofstream outFile ("useless.txt",std::ios::out);
         std::ofstream warnFile("useless.txt",std::ios::out);
         if(addFit){
-                // 使用构造函数初始化文件流对象
+            // Initialize file stream objects using constructor
             std::ofstream outFileInner(textOut.Data(),std::ios::out);
             std::ofstream warnFileInner(textWarn.Data(),std::ios::out);
             outFile  = std::move(outFileInner);
             warnFile = std::move(warnFileInner);
         }
-        // for (int i = 0; i < 50; i++) {
         for (int i = 0; i < binsColumn; i++) {
-            // zhikunPlotConfig::setFontTimesNewRoman();
             TCanvas *c = new TCanvas("c", "c", 2400, 1600);
             int col = 39 - i / 40;
-            // if(col <= 0)  col --;
             int row = 39 - i % 40;
-            // if(row <= 0) row--;
             TString histName = TString::Format("col_row_%02d_%02d_", col, row) + perfix;
             TH1D *hist1D = new TH1D(histName, "Channel Number", binsForFit, varLowerLimit, varUpperLimit);
             hist1D->GetXaxis()->SetRangeUser(varLowerLimit, varUpperLimit);
             
-            // 临时投影以获取数据
+            // Temporary projection to get data
             TH1D *tempHist = hist2D->ProjectionY(Form("tempHist_%d", i), i + 1, i + 1);
 
-            // 将投影的数据逐条复制到自定义的 TH1D
+            // Copy the data from the projection to the custom TH1D
             for (int j = 1; j <= tempHist->GetNbinsX(); ++j) {
                 double binContent = tempHist->GetBinContent(j);
                 double binCenter = tempHist->GetBinCenter(j);
                 hist1D->Fill(binCenter, binContent);
             }
 
-            // 手动设置 total entries
+            // Manually set total entries
             hist1D->SetEntries(tempHist->GetEntries());
-            gStyle->SetOptStat("e");  // e: entries, m: mean, r: rms (均值和标准差)
-            hist1D->SetStats(kTRUE);  // 启用统计框     
-            // // 从hist2D中填充hist1D
-            // for (int j = 1; j <= energyBinsInThisFile; j++) {
-            //     hist1D->SetBinContent(j, hist2D->GetBinContent(i + 1 , j));
-            // }
+            gStyle->SetOptStat("e");  // e: entries, m: mean, r: rms (mean and standard deviation)
+            hist1D->SetStats(kTRUE);  // Enable statistics box     
             hist1D->GetXaxis()->SetTitle("Energy deposition/MeV");
             hist1D->GetYaxis()->SetTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
             if(addFit){
-            RooRealVar mean("mean", "mean", 8, varLowerLimit, varUpperLimit);
-            RooRealVar sigma("sigma", "sigma", 3, 1e-4, 5);
-            RooRealVar a0("a0", "a0", 0.0, -1.0, 1.0); // 切比雪夫多项式的一阶系数
-            RooRealVar a1("a1", "a1", 0.5, -1.0, 1.0); // 切比雪夫多项式的一阶系数
-            RooRealVar x("x", "x", varLowerLimit, varUpperLimit);
+                RooRealVar mean("mean", "mean", 8, varLowerLimit, varUpperLimit);
+                RooRealVar sigma("sigma", "sigma", 3, 1e-4, 5);
+                RooRealVar a0("a0", "a0", 0.0, -1.0, 1.0); // Chebyshev polynomial coefficient
+                RooRealVar a1("a1", "a1", 0.5, -1.0, 1.0); // Chebyshev polynomial coefficient
+                RooRealVar x("x", "x", varLowerLimit, varUpperLimit);
 
-            RooLandau landau("landau", "landau", x, mean, sigma);
-            RooChebychev cheb("cheb", "cheb", x, RooArgList(a0));
+                RooLandau landau("landau", "landau", x, mean, sigma);
+                RooChebychev cheb("cheb", "cheb", x, RooArgList(a0));
 
-            RooRealVar frac("frac", "frac", 0.5, 0.0, 1.0);  // 加权参数
-            RooAddPdf model("model", "landau + cheb", RooArgList(landau, cheb), RooArgList(frac));
+                RooRealVar frac("frac", "frac", 0.5, 0.0, 1.0);  // Weight parameter
+                RooAddPdf model("model", "landau + cheb", RooArgList(landau, cheb), RooArgList(frac));
 
-            RooDataHist data("data", "data", x, hist1D);
-            // model.fitTo(data,RooFit::Extended(kTRUE));
-            model.fitTo(data);
+                RooDataHist data("data", "data", x, hist1D);
+                model.fitTo(data);
 
-            RooPlot* frame = x.frame();
-            frame->SetTitle(TString::Format("Channel %4d   (col, row) = (%2d, %2d)", i, col , row).Data());
-            frame->SetTitleSize(0.05);   // 设置标题的字体大小（根据需要调整）
-            frame->SetTitleOffset(1.0);  // 控制标题与图形的距离
-            data.plotOn(frame);
-            model.plotOn(frame);
-            model.plotOn(frame, RooFit::Components("cheb"), RooFit::LineStyle(kDashed));
-            int dof = 32;  // 这里假设你已经知道自由度的数量
-            RooChi2Var chi2("chi2", "chi2", model, data);
+                RooPlot* frame = x.frame();
+                frame->SetTitle(TString::Format("Channel %4d   (col, row) = (%2d, %2d)", i, col , row).Data());
+                frame->SetTitleSize(0.05);   // Set title font size (adjust as needed)
+                frame->SetTitleOffset(1.0);  // Control the distance between title and plot
+                data.plotOn(frame);
+                model.plotOn(frame);
+                model.plotOn(frame, RooFit::Components("cheb"), RooFit::LineStyle(kDashed));
+                int dof = 32;  // Assuming you know the degrees of freedom
+                RooChi2Var chi2("chi2", "chi2", model, data);
 
-            // 计算 chi2/dof
-            double chi2_dof = frame->chiSquare(3);  // 这里的3是模型参数的个数
+                // Calculate chi2/dof
+                double chi2_dof = frame->chiSquare(3);  // 3 is the number of model parameters
 
-            // 创建文本框来显示 chi2/dof
-            TPaveText *pt = new TPaveText(0.60, 0.70, 0.89, 0.89, "BRNDC");
-            pt->SetBorderSize(0);
-            pt->SetFillColor(0);
-            pt->SetTextAlign(12);  // 文本居中
-            pt->SetTextSize(0.03);
-            pt->SetTextFont(42);
-            // 显示 chi2/dofs
-            pt->AddText(TString::Format("#chi^{2}/dof=%2.2f/%d=%2.1f", chi2_dof * dof, dof, chi2_dof));
-            model.paramOn(frame, RooFit::Parameters(RooArgSet(mean,sigma)), RooFit::Layout(0.6, 0.9,0.7));
-                                    
-            zhikunPlotConfig::setRooFitPlotStyleV1(frame);
-            frame->SetXTitle("Energy deposition/MeV");            
-            frame->SetYTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
-            frame->Draw();
-            c->Update();
-            pt->Draw();
-            c->SaveAs(outputDir + histName.Data() + "_FIT.pdf");
-            c->SaveAs(outputDir + histName.Data() + "_FIT.png");
-            
-            Double_t width = estimateFWHM(landau, mean, sigma);
-            bool warn = false;
-            warn = mean.getVal() < varAcceptLowerLimit || mean.getVal() > varAcceptUpperLimit || (chi2_dof >= chi2_ndfAcceptMaximum);
-            if(warn){
-                warnFile << std::setw(4) << std::setfill(' ') << i <<
+                // Create a text box to display chi2/dof
+                TPaveText *pt = new TPaveText(0.60, 0.70, 0.89, 0.89, "BRNDC");
+                pt->SetBorderSize(0);
+                pt->SetFillColor(0);
+                pt->SetTextAlign(12);  // Center text
+                pt->SetTextSize(0.03);
+                pt->SetTextFont(42);
+                // Display chi2/dof
+                pt->AddText(TString::Format("#chi^{2}/dof=%2.2f/%d=%2.1f", chi2_dof * dof, dof, chi2_dof));
+                model.paramOn(frame, RooFit::Parameters(RooArgSet(mean,sigma)), RooFit::Layout(0.6, 0.9,0.7));
+                                        
+                zhikunPlotConfig::setRooFitPlotStyleV1(frame);
+                frame->SetXTitle("Energy deposition/MeV");            
+                frame->SetYTitle(TString::Format("Events / %.1fMeV/c^{2}",  hist1D->GetXaxis()->GetBinWidth(1)));
+                frame->Draw();
+                c->Update();
+                pt->Draw();
+                c->SaveAs(outputDir + histName.Data() + "_FIT.pdf");
+                c->SaveAs(outputDir + histName.Data() + "_FIT.png");
+                
+                Double_t width = estimateFWHM(landau, mean, sigma);
+                bool warn = false;
+                warn = mean.getVal() < varAcceptLowerLimit || mean.getVal() > varAcceptUpperLimit || (chi2_dof >= chi2_ndfAcceptMaximum);
+                if(warn){
+                    warnFile << std::setw(4) << std::setfill(' ') << i <<
+                    "    " << "(" 
+                    << std::setw(3) << std::setfill(' ') << col <<" , "
+                    << std::setw(3) << std::setfill(' ') << row << ")    " 
+                    << TString::Format("%6.3f MeV    ",mean.getVal())
+                    << chi2_dof << std::endl;}
+
+                outFile 
+                << "Channel :"
+                << std::setw(4) << std::setfill(' ') << i <<
                 "    " << "(" 
                 << std::setw(3) << std::setfill(' ') << col <<" , "
                 << std::setw(3) << std::setfill(' ') << row << ")    " 
-                << TString::Format("%6.3f MeV    ",mean.getVal())
-                << chi2_dof << std::endl;}
-
-            outFile 
-            << "Channel :"
-            << std::setw(4) << std::setfill(' ') << i <<
-            "    " << "(" 
-            << std::setw(3) << std::setfill(' ') << col <<" , "
-            << std::setw(3) << std::setfill(' ') << row << ")    " 
-            << TString::Format("MEAN: %6.3f MeV    ",mean.getVal())
-            << "chi2/dof = " << chi2_dof << std::endl
-            << "Width =  " << width << std:: endl;
-            delete c;
-            delete hist1D;
-            
+                << TString::Format("MEAN: %6.3f MeV    ",mean.getVal())
+                << "chi2/dof = " << chi2_dof << std::endl
+                << "Width =  " << width << std:: endl;
+                delete c;
+                delete hist1D;
+                
             }
             else{
                 gPad->SetGrid(0);
@@ -209,29 +199,27 @@ void channelsFit(TH2D* hist2D, dataType type) {
                 hist1D->GetXaxis()->CenterTitle();
                 hist1D->GetYaxis()->CenterTitle();
 
-                // 设置统计框显示内容
+                // Set statistics box display content
                 hist1D->SetTitle(Form("Channel %4d   (col, row) = (%2d, %2d)", i, col, row));
-                // 启用统计框
+                // Enable statistics box
                 hist1D->SetStats(kTRUE);
-                // hist1D->SetErrorOption("e"); // "e" 表示显示误差棒
                 hist1D->Draw("HIST");
                 c->Print(outputDir + histName.Data() + ".pdf");
                 c->Print(outputDir + histName.Data() + ".png");
                 delete c;
                 delete hist1D;
             }
-            }
-            outFile.close();
-            warnFile.close();
-
+        }
+        outFile.close();
+        warnFile.close();
     }
 }
 
 void cosmicExtraction() {   
     for(int i = 0;i < sizeOfEcal ; i++){
-		for(int j = 0; j < sizeOfEcal; j++){
-			channelMapByCol[j][i] = (39 - j) * 40 + (39 - i) + 0.5;
-		}
+        for(int j = 0; j < sizeOfEcal; j++){
+            channelMapByCol[j][i] = (39 - j) * 40 + (39 - i) + 0.5;
+        }
     }
     // Initialization
     gSystem->Load("libRooFit");   // Load RooFit library
@@ -261,17 +249,11 @@ void cosmicExtraction() {
     double energy;
     int col, row;
 
-    // 将树的分支关联到变量
+    // Associate tree branches with variables
     tree->SetBranchAddress(branNameChannelNo.Data(), &channelIndex);
     tree->SetBranchAddress(branNameVar.Data(), &energy);
 
-
-    // RooRealVar channelInexEntries  (branNameChannelNo.Data(),branNameChannelNo.Data(),minColumnIndex    , maxColumnIndex      );
-    // RooRealVar EnergyEntries       (branNameVar.Data()   ,branNameVar.Data()   ,varLowerLimit , energyUpperLimit     );
-    // RooDataSet dataSet("dataSet", "Data Set", RooArgSet(channelIndexEntries, EnergyEntries));
-
-
-    TH2D* hist2d   = new TH2D("hist2d"  ,"", binsColumn, minColumnIndex,maxColumnIndex, varBinsInThisFile, varLowerLimit, varUpperLimit );
+    TH2D* hist2d = new TH2D("hist2d", "", binsColumn, minColumnIndex, maxColumnIndex, varBinsInThisFile, varLowerLimit, varUpperLimit);
     hist2d->GetXaxis()->SetTitle("Channel Number");
     hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
     hist2d->GetXaxis()->CenterTitle();
@@ -279,69 +261,63 @@ void cosmicExtraction() {
     tree->Project("hist2d", Form("%s:%s", branNameVar.Data(), branNameChannelNo.Data()));
 
     if(needOverView){
-        TH2D* overview = new TH2D("overview","", sizeOfEcal, 0, sizeOfEcal, sizeOfEcal, 0, sizeOfEcal );
-        TCanvas* tempCanvas = new TCanvas("","", 2400, 1600);
-        // 设置调色板（这里使用默认调色板，你可以根据需要选择其他调色板）
+        TH2D* overview = new TH2D("overview", "", sizeOfEcal, 0, sizeOfEcal, sizeOfEcal, 0, sizeOfEcal);
+        TCanvas* tempCanvas = new TCanvas("", "", 2400, 1600);
+        // Set palette (using default palette here, you can choose others as needed)
         gStyle->SetPalette(kBird);
-        // 限制 Z 轴的范围
+        // Limit Z axis range
         hist2d->SetMinimum(0);
         hist2d->SetMaximum(20);
         hist2d->Draw("COLZ");
         tempCanvas->Print("test.pdf");
         tempCanvas->Print("test.png");
-            // 遍历 X 轴范围，每 40 个 bin 输出一个图像
+        // Iterate over X axis range, outputting an image every 40 bins
         for (int i = 0; i < 800; i += 40) {
-            // 设置用户范围，限制 x 轴和 y 轴的显示范围
+            // Set user range, limit x and y axis display range
             hist2d->GetXaxis()->SetRangeUser(i, i + 40);
 
-            // 创建临时画布并绘制直方图
+            // Create temporary canvas and draw histogram
             TCanvas* tempCanvas = new TCanvas("", "", 2400, 2400);
             hist2d->Draw("COLZ");
 
-            // 设置轴标签和标题
+            // Set axis labels and titles
             hist2d->GetXaxis()->SetTitle("Channel Number");
             hist2d->GetYaxis()->SetTitle("Energy deposition/MeV");
             hist2d->GetXaxis()->CenterTitle();
             hist2d->GetYaxis()->CenterTitle();
-            hist2d->SetTitle(Form("column %02d",39 -  i / 40));
-            // gStyle->SetTitleAlign(23);  //
+            hist2d->SetTitle(Form("column %02d", 39 - i / 40));
 
+            // Save image
+            tempCanvas->Print(Form("./columnView/column_%02d.png", 39 - i / 40));
+            tempCanvas->Print(Form("./columnView/column_%02d.pdf", 39 - i / 40));
 
-            // 保存图像
-            tempCanvas->Print(Form("./columnView/column_%02d.png",39 -  i / 40));
-            tempCanvas->Print(Form("./columnView/column_%02d.pdf",39 -  i / 40));
-
-            // 清理临时画布
+            // Clean up temporary canvas
             delete tempCanvas;
         }
-        TCanvas* tempCanvas2 = new TCanvas("","", 2400, 1600);
-        // 循环遍历所有条目
-        	const char* dirPath = "columnView";
+        TCanvas* tempCanvas2 = new TCanvas("", "", 2400, 1600);
+        // Loop through all entries
+        const char* dirPath = "columnView";
 
-        // 检查目录是否存在
+        // Check if directory exists
         if (gSystem->AccessPathName(dirPath) == 0) {
             std::cout << "Directory exists. Deleting all files inside..." << std::endl;
             
-            // 使用系统命令删除目录中的所有文件
+            // Use system command to delete all files in the directory
             gSystem->Exec(Form("rm -rf %s/*", dirPath));
             std::cout << "All files deleted inside '" << dirPath << "'." << std::endl;
         } else {
             std::cout << "Directory does not exist. Creating it..." << std::endl;
         }
 
-        // 创建目录
+        // Create directory
         gSystem->Exec(Form("mkdir -p %s", dirPath));
         std::cout << "Directory '" << dirPath << "' is ready for use." << std::endl;
         Long64_t nEntries = tree->GetEntries();
         for (Long64_t i = 0; i < nEntries; ++i) {
             tree->GetEntry(i);
             col = 39 - channelIndex / 40;
-            // if(col <= 0)  col --;
             row = 39 - channelIndex % 40;
-            overview->Fill(col,row);
-            // std::cout << "Entry " << i << ": Channel Index = " << channelIndex 
-            // << ", col, row = " << col << ", " << row 
-            // << ", Energy = " << energy << std::endl;
+            overview->Fill(col, row);
         }
         tempCanvas2->cd();
         gPad->SetGrid();
@@ -355,9 +331,6 @@ void cosmicExtraction() {
         overview->Draw("COLZ");
         tempCanvas2->Print("overview.pdf");
         tempCanvas2->Print("overview.png");
-
-
-
     }
     
     channelsFit(hist2d, Energy);

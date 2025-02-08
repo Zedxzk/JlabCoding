@@ -14,17 +14,17 @@ runId = []
 
 # High Voltage Configuration :
 #    ******************  Attention!!!   *****************
-hvTemplateFile = 'temp.snap' # please input your current HV config File!
+hvTemplateFile = 'ECAL_HV_27_Jan_2025_18_24_05.snap' # please input your current HV config File!
 #    ******************  Attention!!!   *****************
 
 itemToConfig   = "v0set 1 "
 fitResDir      = "./DigitHits/res.txt"
 #  ADC Countes = A * ( hv ) ^ alpha
 #  Here A is canceled out and not needed
-aimADC         = 10
+aimADC         = 8
 alpha          = 8
 hvCap          = 1050
-hvBot          = 950
+hvBot          = 800
 
 # Set config for each channel. If you use detailed settings, please set the following parameters, and run -generateSettings command first. The setting file will be based on the universal settings above.
 # And you can modify this file.
