@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import datetime
+import matplotlib.dates as mdates
 
 files = [f"temperature_log_temp{i}.log" for i in [1, 2, 3, 4]]
 
@@ -29,7 +30,10 @@ def plot_figure(fileName):
     plt.ylabel("Value")
     plt.title(f"Time Series Data: {fileName}")
     # plt.xticks(rotation=45)
-    plt.grid()
+    # 设置 grid 使每天显示 4 条竖线
+    plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=1))
+    plt.gca().xaxis.set_minor_locator(mdates.HourLocator(interval=6))
+    plt.grid(which='both', linestyle='--', linewidth=0.5)
     plt.tight_layout()
     plt.ylim(5, 45)
     # plt.savefig(fileName.replace(".log",".jpg"),dpi=450)
