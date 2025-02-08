@@ -117,7 +117,7 @@ if __name__ == "__main__":
         # plt.setp(ax.get_xminorticklabels(), rotation=0, ha='center', va='top')
         plt.grid(which='both', linestyle='--', linewidth=0.5)
         plt.tight_layout()
-        plt.savefig(f"{file}_from_{start}_to_{end}.pdf")
+        plt.savefig(f"{file}_from_{start}_to_{end}.pdf".replace(":","."))
         plt.show()
 
     # 依次绘制所有文件的完整数据
