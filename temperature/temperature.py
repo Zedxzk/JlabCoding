@@ -4,7 +4,7 @@ import matplotlib.dates as mdates
 
 # 原有的读取并绘图函数
 files = [f"temperature_log_temp{i}.log" for i in [1, 2, 3, 4]]
-files = [f"temperature_log_temp{i}.log" for i in [1]]
+# files = [f"temperature_log_temp{i}.log" for i in [1]]
 
 def plot_figure(fileName):
     # 解析数据
